@@ -121,6 +121,10 @@ I plan to use non-curved grade assignment unless there are too few As.
 
  
 
+**FPGA boards & Programming Platforms**: We will use Xilinix Pynq boards for the class. Students will use CRNCH-RG system to log in remotely. For some assignments, the students will access the boards remotely. 
+
+
+
 **Assignments:** Most of the assignments are 2-student projects.  However, each student should submit his/her own report written by individuals. The report collaboration with other students other than the project partner is prohibited but discussions with other students are encouraged. Submitting any work other than you and your partner's own is a violating of the Academic Honor Code. If you are not sure what you can discuss or not, please contact the instructor. 
 
 **1-member team policy**: Most of the projects are 2-team member projects. A 1-member team can be approved by the instructor for some specific cases.  We strongly do not encourage 1-member team but for unexpected situation, For 1-member teams, project 5 is waved. Every deadlines from project #3 will be extended by 1, 2, 3, 4 weeks etc. But all of them should be turn in by Final exam. 
