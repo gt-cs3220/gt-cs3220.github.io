@@ -4,6 +4,8 @@ title: CS 3220 : Processor Design
 
 # CS 3220 Spring 2021 Syllabus
 
+
+
 **Course Title: CS3220 **
 
 **Instructor: Prof. Hyesoon Kim **
@@ -20,7 +22,9 @@ title: CS 3220 : Processor Design
 
 **TA's office location: Team**
 
- 
+**Class homepage **: https://gt-cs3220-spr21.github.io/
+
+**Online platforms for resource**: We will use Canvas for assignment submissions and lecture note distributions. We will also use Piazza for discussions. 
 
 
 In this course, we will study hardware implementation of architecture design. This is an intermediate-level course that follows CS2200. This course is a project-based course in which you will learn pipelined architectures by actually implementing simple instructions using an FPGA (Field-Programmable Gate Array) board. 
