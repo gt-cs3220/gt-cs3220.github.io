@@ -12,7 +12,7 @@ title: CS 3220 : Processor Design
 
 **Class time: M/W 2:00 PM - 3:15 PM** 
 
-**Instructor's Office hours:** **M/W 3:15 -3:00 pm or by appointment  at MS Team** 
+**Instructor's Office hours:** **W 3:15 -3:30 pm or by appointment  at MS Team** 
 
 **TAs: Sam Jijina  (milto:sam.jijina@gatech.edu) and Hanning Chen (mailto:hanningchen97@gatech.edu)**
 
@@ -167,7 +167,7 @@ As members of the Georgia Tech community, we are committed to creating a learnin
 
 
 
-| week | date    | topic                                | Assignment Due Dates          |
+| week | date    | topic                                | Assignment Due                |
 | ---- | ------- | ------------------------------------ | ----------------------------- |
 | 1    | 1/18/21 | MLK                                  |                               |
 |      | 1/20/21 | introduction and  account testing    | Assignment #1 due  (1/24 Sun) |
