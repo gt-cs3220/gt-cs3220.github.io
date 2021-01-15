@@ -83,11 +83,11 @@ FPGA boards: In this semester we don't ask students to purchase boards and stude
 
    Project assignment 2: 10  
 
-   Project assignment 3: 30
+   Project assignment 3: 40
 
    Project assignment 4: 10 
 
-   Project assignment 5: 20
+   Project assignment 5: 10
 
    Final exam: 20
 
