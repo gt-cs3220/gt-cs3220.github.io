@@ -21,7 +21,7 @@ IMP Note for **macOS** users: You need to also download XQuartz as it is a requi
 **Test out your VPN connection, once established that it’s set up and working you may proceed. From this point on, anytime you are accessing the remote system, you need to be on the GT VPN**
 
 ## Create a new connection/session in x2go with the following details
-Host : [pending]
+Host : pending
 
 Login : [your GT username]
 
