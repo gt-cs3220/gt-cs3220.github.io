@@ -5,7 +5,7 @@
 - 2. Please make sure you disk has at least 40G free space. You could install Vivado in portable storage device.
 ```
 ### Supported operating systems for Vivado 2020.1 
-<img src="https://github.com/gt-cs3220-spr21/gt-cs3220-spr21.github.io/blob/master/Vivado_Installation_Steps/step_images/support%20OS.png">
+<img src="https://github.com/gt-cs3220-spr21/gt-cs3220-spr21.github.io/blob/master/Vivado_Installation_Steps/step_images/supportOS.png">
 
 ## Step 1
 Go to https://www.xilinx.com/products/design-tools/vivado/vivado-webpack.html and click "**Download**".
