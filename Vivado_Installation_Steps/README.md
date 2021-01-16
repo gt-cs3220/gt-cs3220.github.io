@@ -73,9 +73,10 @@ Here, **UltraScale** devices are optional but I still recommend installing them 
 Like here if I change "**Xilinx2020**" to "**Xilinx 2020**", then it will cause error.
 <img src="https://github.com/gt-cs3220-spr21/gt-cs3220-spr21.github.io/blob/master/Vivado_Installation_Steps/step_images/step6c.png" width="70%">
 \
-Please remember your installation directory. \
+Please remember your installation directory.
 <img src="https://github.com/gt-cs3220-spr21/gt-cs3220-spr21.github.io/blob/master/Vivado_Installation_Steps/step_images/step6d.png" width="70%">
-Please make sure you PC is connected to internet.
+\
+Please make sure you PC is connected to internet. \
 <img src="https://github.com/gt-cs3220-spr21/gt-cs3220-spr21.github.io/blob/master/Vivado_Installation_Steps/step_images/step6e.png" width="70%">
 
 ## Step7
