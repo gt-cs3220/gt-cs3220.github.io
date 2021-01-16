@@ -70,11 +70,13 @@ Here, **UltraScale** devices are optional but I still recommend installing them 
 <img src="https://github.com/gt-cs3220-spr21/gt-cs3220-spr21.github.io/blob/master/Vivado_Installation_Steps/step_images/step6b.png" width="70%">
 \
 **Important !!!!!! Please make sure your isntallation directory's name has no space.** \
-Like here if I change "**Xilinx2019**" to "**Xilinx 2019**", then it will cause error.
+Like here if I change "**Xilinx2020**" to "**Xilinx 2020**", then it will cause error.
 <img src="https://github.com/gt-cs3220-spr21/gt-cs3220-spr21.github.io/blob/master/Vivado_Installation_Steps/step_images/step6c.png" width="70%">
 \
-Please make sure you PC is connected to internet.
+Please remember your installation directory. \
 <img src="https://github.com/gt-cs3220-spr21/gt-cs3220-spr21.github.io/blob/master/Vivado_Installation_Steps/step_images/step6d.png" width="70%">
+Please make sure you PC is connected to internet.
+<img src="https://github.com/gt-cs3220-spr21/gt-cs3220-spr21.github.io/blob/master/Vivado_Installation_Steps/step_images/step6e.png" width="70%">
 
 ## Step7
 Wait for the installation to be completed. This may take several hours. \
