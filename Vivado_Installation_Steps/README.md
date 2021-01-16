@@ -80,4 +80,4 @@ Please make sure you PC is connected to internet.
 ## Step7
 Wait for the installation to be completed. This may take several hours. \
 **Note** \
-**If there is any problems for installation please post it on Piazza or contact with Sam or Hanning. Also in case, you can also use Vivado on CRNCH server.** 
+**If there is any problems for installation please post it on Piazza or contact with Sam or Hanning. Just in case, you can also use Vivado on CRNCH server.** 
