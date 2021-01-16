@@ -38,7 +38,7 @@ Fill this form, scroll down, and click "**Download**".
 <img src="https://github.com/gt-cs3220-spr21/gt-cs3220-spr21.github.io/blob/master/Vivado_Installation_Steps/step_images/step4b.png" width="70%">
 
 ## Step 5
-CLick the execution file that you just downloaded.
+Click the execution file that you just downloaded.
 
 <img src="https://github.com/gt-cs3220-spr21/gt-cs3220-spr21.github.io/blob/master/Vivado_Installation_Steps/step_images/step5.png" width="70%">
 
