@@ -56,22 +56,25 @@ Agree all the conditions. \
 <img src="https://github.com/gt-cs3220-spr21/gt-cs3220-spr21.github.io/blob/master/Vivado_Installation_Steps/step_images/step5c.png" width="70%">
  
 ## Step 6
+Choose Vivado \
+<img src="https://github.com/gt-cs3220-spr21/gt-cs3220-spr21.github.io/blob/master/Vivado_Installation_Steps/step_images/step6.png" width="70%">
+
 **Important !!!!!! Please choose the Vivado HL WebPACK.** \
 **Although for most of the large project or research project we will prefer Design Edition, in this course please use WebPACK.** 
 \
-<img src="https://github.com/gt-cs3220-spr21/gt-cs3220-spr21.github.io/blob/master/Vivado_Installation_Steps/step_images/step6.png" width="70%">
-\
-Again, please make sure your have at least 40G space on your disk. You could install it on portable storage device. \
-Here, **UltraScale** devices are optional but I still recommend installing them just in case.
-\
 <img src="https://github.com/gt-cs3220-spr21/gt-cs3220-spr21.github.io/blob/master/Vivado_Installation_Steps/step_images/step6a.png" width="70%">
 \
-**Important !!!!!! Please make sure your isntallation directory has no space.** \
-Like here if I change "**Xilinx2019**" to "**Xilinx 2019**", then it will cause error.
+Again, please make sure your have at least 50G space on your disk. You could install it on portable storage device. \
+Here, **UltraScale** devices are optional but I still recommend installing them just in case.
+\
 <img src="https://github.com/gt-cs3220-spr21/gt-cs3220-spr21.github.io/blob/master/Vivado_Installation_Steps/step_images/step6b.png" width="70%">
 \
-Please make sure you PC is connected to internet.
+**Important !!!!!! Please make sure your isntallation directory's name has no space.** \
+Like here if I change "**Xilinx2019**" to "**Xilinx 2019**", then it will cause error.
 <img src="https://github.com/gt-cs3220-spr21/gt-cs3220-spr21.github.io/blob/master/Vivado_Installation_Steps/step_images/step6c.png" width="70%">
+\
+Please make sure you PC is connected to internet.
+<img src="https://github.com/gt-cs3220-spr21/gt-cs3220-spr21.github.io/blob/master/Vivado_Installation_Steps/step_images/step6d.png" width="70%">
 
 ## Step7
 Wait for the installation to be completed. This may take several hours. \
