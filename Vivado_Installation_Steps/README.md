@@ -56,7 +56,7 @@ Agree all the conditions. \
 <img src="https://github.com/gt-cs3220-spr21/gt-cs3220-spr21.github.io/blob/master/Vivado_Installation_Steps/step_images/step5c.png" width="70%">
  
 ## Step 6
-Choose Vivado \
+Choose **Vivado** \
 <img src="https://github.com/gt-cs3220-spr21/gt-cs3220-spr21.github.io/blob/master/Vivado_Installation_Steps/step_images/step6.png" width="70%">
 
 **Important !!!!!! Please choose the Vivado HL WebPACK.** \
