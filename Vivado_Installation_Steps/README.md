@@ -18,12 +18,8 @@ In https://www.xilinx.com/support/download.html , click ""**2020.1**"".
 <img src="https://github.com/gt-cs3220-spr21/gt-cs3220-spr21.github.io/blob/master/Vivado_Installation_Steps/step_images/step2.png" width="70%">
 
 ## Step 3
-Click "**2019.1**".
-
-<img src="https://github.com/gt-cs3220-spr21/gt-cs3220-spr21.github.io/blob/master/Vivado_Installation_Steps/step_images/step3.png" width="70%">
-
-Scroll down to "**Vivado Design Suite - HLx Editions - 2019.1  Full Product Installation**", and click 
-"**Vivado HLx 2019.1: WebPACK and Editions - Windows Self Extracting Web Installer**"
+Scroll down to "**Vivado Design Suite - HLx Editions - 2020.1  Full Product Installation**", and click 
+"**Xilinx Unified Installer 2020.1: Windows Self Extracting Web Installer**"
 
 <img src="https://github.com/gt-cs3220-spr21/gt-cs3220-spr21.github.io/blob/master/Vivado_Installation_Steps/step_images/step3a.png" width="70%">
 
