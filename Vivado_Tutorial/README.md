@@ -10,4 +10,8 @@ PYNQ Z2 board file:\
 https://www.tul.com.tw/ProductsPYNQ-Z2.html
 <img src="https://github.com/gt-cs3220-spr21/gt-cs3220-spr21.github.io/blob/master/Vivado_Tutorial/image/step0a.png" width="70%">
 \
-Download configuration file to: **\<Xilinx installation directory>\Vivado\<version>\data\boards**, extract it like this
+Download configuration file to: **\<Xilinx installation directory>\Vivado\<version>\data\boards\board_files**, extract it like this:
+<img src="https://github.com/gt-cs3220-spr21/gt-cs3220-spr21.github.io/blob/master/Vivado_Tutorial/image/step0b.png" width="70%">
+
+## Step1: Create project in Vivado
+
