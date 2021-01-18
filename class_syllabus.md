@@ -175,36 +175,36 @@ As members of the Georgia Tech community, we are committed to creating a learnin
 
 
 
-| week | date    | topic                                | Assignment Due                |
-| ---- | ------- | ------------------------------------ | ----------------------------- |
-| 1    | 1/18/21 | MLK                                  |                               |
-|      | 1/20/21 | introduction and  account testing    | Assignment #1 due  (1/24 Sun) |
-| 2    | 1/25/21 | lab days                             |                               |
-|      | 1/27/21 | lab days (same  contents as 1/25/21) |                               |
-| 3    | 2/1/21  | lab days                             |                               |
-|      | 2/3/21  | lab days (same contents as 2/1/21)   | assignment #2 due (F)         |
-| 4    | 2/8/21  | work on your project                 |                               |
-|      | 2/10/21 | FPGA  architecture/FPGA synthesis    |                               |
-| 5    | 2/15/21 | work on your project                 |                               |
-|      | 2/17/21 | high-speed arithmetic  (I)           | Assignment #3 part-1  (F)     |
-| 6    | 2/22/21 | work on your project                 |                               |
-|      | 2/24/21 | high-speed arithmetic  (II)          |                               |
-| 7    | 3/1/21  | work on your project                 |                               |
-|      | 3/3/21  | IEEE  Floatingpoint                  | Assignment #3 part-2  (F)     |
-| 8    | 3/8/21  | lab days                             |                               |
-|      | 3/10/21 | lab dyas (same  contents as 3/8/21)  | Assignment #3 part-3  (F)     |
-| 9    | 3/15/21 | lab days                             |                               |
-|      | 3/17/21 | lab days (same contents as 3/15/21)  |                               |
-| 10   | 3/22/21 | Break                                |                               |
-|      | 3/24/21 | GPU architecture                     | asisgnment #4 (F)             |
-| 11   | 3/29/21 | private project  meetings            |                               |
-|      | 3/31/21 | GPU architecture                     |                               |
-| 12   | 4/5/21  | private project  meetings            |                               |
-|      | 4/7/21  | ML accelerators                      | assignment #5 - part  1 (F)   |
-| 13   | 4/12/21 | private project  meetings            |                               |
-|      | 4/14/21 | Quantizations                        |                               |
-| 14   | 4/19/21 | private project  meetings            | assignment #5 - part  2 (F)   |
-|      | 4/21/21 | securty                              |                               |
-| 15   | 4/26/21 | review day                           |                               |
-|      | 4/30/21 | Final exam                           |                               |
-|      |         | Live lecture                         |                               |
+| week | date    | topic                                |                                 |
+| ---- | ------- | ------------------------------------ | ------------------------------- |
+| 1    | 1/18/21 | MLK                                  |                                 |
+|      | 1/20/21 | introduction and  account testing    | Assignment #1 due  (1/24 Sun)   |
+| 2    | 1/25/21 | lab days                             |                                 |
+|      | 1/27/21 | lab days (same  contents as 1/25/21) | in-class assignment  submission |
+| 3    | 2/1/21  | lab days                             |                                 |
+|      | 2/3/21  | lab days (same contents as 2/1/21)   | in-class assignment  submission |
+| 4    | 2/8/21  | office hours                         |                                 |
+|      | 2/10/21 | FPGA  architecture/FPGA synthesis    | assignment #2 due (f)           |
+| 5    | 2/15/21 | lab days                             |                                 |
+|      | 2/17/21 | lab dyas (same  contents as 2/15/21) | in-class assignment  submission |
+| 6    | 2/22/21 | office hours                         |                                 |
+|      | 2/24/21 | high-speed arithmetic  (I)           |                                 |
+| 7    | 3/1/21  | office hours                         |                                 |
+|      | 3/3/21  | high-speed arithmetic  (II)          | Assignment #3 part-1  (F)       |
+| 8    | 3/8/21  | office hours                         |                                 |
+|      | 3/10/21 | IEEE  Floatingpoint                  |                                 |
+| 9    | 3/15/21 | office hours                         |                                 |
+|      | 3/17/21 | GPU architecture                     | Assignment #3 part-2  (F)       |
+| 10   | 3/22/21 | Break                                |                                 |
+|      | 3/24/21 | lab days                             |                                 |
+| 11   | 3/29/21 | lab days  (same contents as 3/24)    | in-class assignment  submssion  |
+|      | 3/31/21 | lab days                             | Assignment #3 part-3  (F)       |
+| 12   | 4/5/21  | lab days (same contents as 3/31)     | in-class assignment  submssion  |
+|      | 4/7/21  | ML accelerators                      | asisgnment #4 (F)               |
+| 13   | 4/12/21 | office hours                         |                                 |
+|      | 4/14/21 | Quantizations                        |                                 |
+| 14   | 4/19/21 | office hours                         | assignment #5 (F)               |
+|      | 4/21/21 | securty                              |                                 |
+| 15   | 4/26/21 | review day                           |                                 |
+|      | 4/30/21 | Final exam                           |                                 |
+
