@@ -1,5 +1,9 @@
 # Running a simple code in Vivado
 
+## Warning
+1. Please make sure you have installed Vivado WebPack 2020.1
+2. We will present the whole process in video, this tutorial is just for reference.
+
 ## Step0: Configure Vivado for PYNQ Z1 and PYNQ Z1 board
 Since PYNQ board is not original supported by Vivado, we need adding board configuration file first. \
 PYNQ Z1 board file:\
