@@ -1,1 +1,1 @@
-# running a simple code in vivado
+# Running a simple code in Vivado
