@@ -125,13 +125,15 @@ I plan to use non-curved grade assignment unless there are too few As.
 
  
 
-**FPGA boards & Programming Platforms**: We will use Xilinix Pynq boards for the class. Students will use CRNCH-RG system to log in remotely. For some assignments, the students will access the boards remotely. 
+**FPGA boards & Programming Platforms**: We will use Xilinix Pynq boards for the class. Students will use VM  system to log in remotely. For some assignments, the students will access the boards remotely. 
 
 
 
 **Assignments:** Most of the assignments are 2-student projects.  However, each student should submit his/her own report written by individuals. The report collaboration with other students other than the project partner is prohibited but discussions with other students are encouraged. Submitting any work other than you and your partner's own is a violating of the Academic Honor Code. If you are not sure what you can discuss or not, please contact the instructor. 
 
-**1-member team policy**: Most of the projects are 2-team member projects. A 1-member team can be approved by the instructor for some specific cases.  We strongly do not encourage 1-member team but for unexpected situation, For 1-member teams, project 5 is waved. Every deadlines from project #3 will be extended by 1, 2, 3, 4 weeks etc. But all of them should be turn in by Final exam. 
+**1-member team policy**: Most of the projects are 2-team member projects. A 1-member team can be approved by the instructor for some specific cases.  Please discuss with the instructor for the details. 
+
+
 
 **Assignment late policy:** All assignments are due on the day specified by the assignment description and posted online. No late submissions are allowed except for the approval from the dean of students. 
 
@@ -143,15 +145,15 @@ Assignment submission rules: You must follow the submission guidelines specified
 
 **Final exam**: A form of digital proctoring might be used in the final exam. 
 
-**Class participation points:** class participation includes in-class activities and online discussion activities (on average 1 per week). Attendance will be recorded for synchronous lectures.  Students who actively participate in online discussion on piazza will get full class participation points. 
+**Class participation points:**   Attending live lectures and office hours are strongly encouraged.  Hence, we are taking attendance for live lectures. Missing more than 1 lecture w/o dean of student's approval will cause losing partial participation points. However, if a student can actively participate in the piazza discussions, the students can also earn participation points. 
 
-**Labday:** On lab days, you will complete a small task in the class. 
+**Labday:** On lab days, you will complete a small task in the class. We will have two lab days with the same contents to provide better hands-on helping and also the limtied VM resource. There are small tasks that you have to submit after the lay days in addition to assignments. 
 
 **Academic Integrity**
 
 The course will follow all relevant and appropriate Georgia Institute of Technology academic regulations (http://www.honor.gatech.edu) including those about academic integrity. All students are expected to maintain traditional standards of academic integrity by giving proper credit for all work. Webster’s defines plagiarizing as “to steal and pass off (the ideas or words of another) as one's own: use (another's production) without crediting the source.” A student shall be guilty of a violation of academic integrity if he or she represents the work of others as his or her own or aids another's misrepresentation. All suspected cases of academic dishonesty will be aggressively pursued according to the Georgia Tech Academic Honor Code (https://policylibrary.gatech.edu/student-affairs/academic-honor-code). Any violation associated with a homework, assignment, project, examination or quiz will result in a zero for the assignment, and the student will be subject to failure for the course. Such violations will be reported to the Office of Student Integrity (OSI), which may impose penalties beyond those by the instructor(s).
 
-In this course, each student is expected to work independently on the first writing assignment; not working independently on the first assignment will be considered a violation of the GT Academic Honor Code. Submitting any work other than your own, including a sentence without proper quotation marks with citation to the original source, is also a violation of the student honor code.
+In this course, each student is expected to work independently on the first writing assignment; not working independently on the first two assignment will be considered a violation of the GT Academic Honor Code. Submitting any work other than your own, including a sentence without proper quotation marks with citation to the original source, is also a violation of the student honor code.
 
 For any questions involving these or any other Academic Honor Code issues, please consult the professor(s) or www.honor.gatech.edu.” Students are also encouraged to read the ACM Code of Ethics (https://www.acm.org/about-acm/acm-code-of-ethics-and-professional-conduct), particularly sections 1.3, 1.5, 1.6, 2.2 and 2.4.
 
@@ -175,36 +177,37 @@ As members of the Georgia Tech community, we are committed to creating a learnin
 
 
 
-| week | date    | topic                                |                                 |
-| ---- | ------- | ------------------------------------ | ------------------------------- |
-| 1    | 1/18/21 | MLK                                  |                                 |
-|      | 1/20/21 | introduction and  account testing    | Assignment #1 due  (1/24 Sun)   |
-| 2    | 1/25/21 | lab days                             |                                 |
-|      | 1/27/21 | lab days (same  contents as 1/25/21) | in-class assignment  submission |
-| 3    | 2/1/21  | lab days                             |                                 |
-|      | 2/3/21  | lab days (same contents as 2/1/21)   | in-class assignment  submission |
-| 4    | 2/8/21  | office hours                         |                                 |
-|      | 2/10/21 | FPGA  architecture/FPGA synthesis    | assignment #2 due (f)           |
-| 5    | 2/15/21 | lab days                             |                                 |
-|      | 2/17/21 | lab dyas (same  contents as 2/15/21) | in-class assignment  submission |
-| 6    | 2/22/21 | office hours                         |                                 |
-|      | 2/24/21 | high-speed arithmetic  (I)           |                                 |
-| 7    | 3/1/21  | office hours                         |                                 |
-|      | 3/3/21  | high-speed arithmetic  (II)          | Assignment #3 part-1  (F)       |
-| 8    | 3/8/21  | office hours                         |                                 |
-|      | 3/10/21 | IEEE  Floatingpoint                  |                                 |
-| 9    | 3/15/21 | office hours                         |                                 |
-|      | 3/17/21 | GPU architecture                     | Assignment #3 part-2  (F)       |
-| 10   | 3/22/21 | Break                                |                                 |
-|      | 3/24/21 | lab days                             |                                 |
-| 11   | 3/29/21 | lab days  (same contents as 3/24)    | in-class assignment  submssion  |
-|      | 3/31/21 | lab days                             | Assignment #3 part-3  (F)       |
-| 12   | 4/5/21  | lab days (same contents as 3/31)     | in-class assignment  submssion  |
-|      | 4/7/21  | ML accelerators                      | asisgnment #4 (F)               |
-| 13   | 4/12/21 | office hours                         |                                 |
-|      | 4/14/21 | Quantizations                        |                                 |
-| 14   | 4/19/21 | office hours                         | assignment #5 (F)               |
-|      | 4/21/21 | securty                              |                                 |
-| 15   | 4/26/21 | review day                           |                                 |
-|      | 4/30/21 | Final exam                           |                                 |
+| week | date     | topic                                |                                 |
+| ---- | -------- | ------------------------------------ | ------------------------------- |
+| 1    | 1/18/21  | MLK                                  |                                 |
+|      | 1/20/21* | introduction and  ISA                | Assignment #1 due  (1/24 Sun)   |
+| 2    | 1/25/21  | lab days                             |                                 |
+|      | 1/27/21  | lab days (same  contents as 1/25/21) | in-class assignment  submission |
+| 3    | 2/1/21   | lab days                             |                                 |
+|      | 2/3/21   | lab days (same contents as 2/1/21)   | in-class assignment  submission |
+| 4    | 2/8/21   | office hours                         |                                 |
+|      | 2/10/21* | FPGA  architecture/FPGA synthesis    | assignment #2 due (f)           |
+| 5    | 2/15/21  | lab days                             |                                 |
+|      | 2/17/21  | lab dyas (same  contents as 2/15/21) | in-class assignment  submission |
+| 6    | 2/22/21  | office hours                         |                                 |
+|      | 2/24/21* | high-speed arithmetic  (I)           |                                 |
+| 7    | 3/1/21   | office hours                         |                                 |
+|      | 3/3/21*  | high-speed arithmetic  (II)          | Assignment #3 part-1  (F)       |
+| 8    | 3/8/21   | office hours                         |                                 |
+|      | 3/10/21* | IEEE  Floatingpoint                  |                                 |
+| 9    | 3/15/21  | office hours                         |                                 |
+|      | 3/17/21* | GPU architecture                     | Assignment #3 part-2  (F)       |
+| 10   | 3/22/21  | Break                                |                                 |
+|      | 3/24/21  | lab days                             |                                 |
+| 11   | 3/29/21  | lab days  (same contents as 3/24)    | in-class assignment  submssion  |
+|      | 3/31/21  | lab days                             | Assignment #3 part-3  (F)       |
+| 12   | 4/5/21   | lab days (same contents as 3/31)     | in-class assignment  submssion  |
+|      | 4/7/21*  | ML accelerators                      | asisgnment #4 (F)               |
+| 13   | 4/12/21  | office hours                         |                                 |
+|      | 4/14/21* | Quantizations                        |                                 |
+| 14   | 4/19/21  | office hours                         | assignment #5 (F)               |
+|      | 4/21/21* | security                             |                                 |
+| 15   | 4/26/21* | review day                           |                                 |
+|      | 4/30/21* | Final exam                           |                                 |
 
+(*) live lectures
