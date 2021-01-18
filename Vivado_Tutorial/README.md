@@ -27,3 +27,6 @@ Choose **pynq-z2** board
 <img src="https://github.com/gt-cs3220-spr21/gt-cs3220-spr21.github.io/blob/master/Vivado_Tutorial/image/step1b.png" width="70%">
 
 Click **Next**.
+
+## Step2: Add HDL (verilog) design file
+<img src="https://github.com/gt-cs3220-spr21/gt-cs3220-spr21.github.io/blob/master/Vivado_Tutorial/image/step2.png" width="70%">
