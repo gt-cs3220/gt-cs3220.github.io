@@ -177,37 +177,37 @@ As members of the Georgia Tech community, we are committed to creating a learnin
 
 
 
-| week | date     | topic                                |                                 |
-| ---- | -------- | ------------------------------------ | ------------------------------- |
-| 1    | 1/18/21  | MLK                                  |                                 |
-|      | 1/20/21* | introduction and  ISA                | Assignment #1 due  (1/24 Sun)   |
-| 2    | 1/25/21  | lab days                             |                                 |
-|      | 1/27/21  | lab days (same  contents as 1/25/21) | in-class assignment  submission |
-| 3    | 2/1/21   | lab days                             |                                 |
-|      | 2/3/21   | lab days (same contents as 2/1/21)   | in-class assignment  submission |
-| 4    | 2/8/21   | office hours                         |                                 |
-|      | 2/10/21* | FPGA  architecture/FPGA synthesis    | assignment #2 due (f)           |
-| 5    | 2/15/21  | lab days                             |                                 |
-|      | 2/17/21  | lab dyas (same  contents as 2/15/21) | in-class assignment  submission |
-| 6    | 2/22/21  | office hours                         |                                 |
-|      | 2/24/21* | high-speed arithmetic  (I)           |                                 |
-| 7    | 3/1/21   | office hours                         |                                 |
-|      | 3/3/21*  | high-speed arithmetic  (II)          | Assignment #3 part-1  (F)       |
-| 8    | 3/8/21   | office hours                         |                                 |
-|      | 3/10/21* | IEEE  Floatingpoint                  |                                 |
-| 9    | 3/15/21  | office hours                         |                                 |
-|      | 3/17/21* | GPU architecture                     | Assignment #3 part-2  (F)       |
-| 10   | 3/22/21  | Break                                |                                 |
-|      | 3/24/21  | lab days                             |                                 |
-| 11   | 3/29/21  | lab days  (same contents as 3/24)    | in-class assignment  submssion  |
-|      | 3/31/21  | lab days                             | Assignment #3 part-3  (F)       |
-| 12   | 4/5/21   | lab days (same contents as 3/31)     | in-class assignment  submssion  |
-|      | 4/7/21*  | ML accelerators                      | asisgnment #4 (F)               |
-| 13   | 4/12/21  | office hours                         |                                 |
-|      | 4/14/21* | Quantizations                        |                                 |
-| 14   | 4/19/21  | office hours                         | assignment #5 (F)               |
-|      | 4/21/21* | security                             |                                 |
-| 15   | 4/26/21* | review day                           |                                 |
-|      | 4/30/21* | Final exam                           |                                 |
+| week | date     | topic                                  |                                 |
+| ---- | -------- | -------------------------------------- | ------------------------------- |
+| 1    | 1/18/21  | MLK                                    |                                 |
+|      | 1/20/21* | introduction and  ISA                  | Assignment #1 due  (1/24 Sun)   |
+| 2    | 1/25/21  | lab day #1                             |                                 |
+|      | 1/27/21  | lab day #1 (same  contents as 1/25/21) | in-class assignment  submission |
+| 3    | 2/1/21   | lab day #2                             |                                 |
+|      | 2/3/21   | lab day #2  (same contents as 2/1/21)  | in-class assignment  submission |
+| 4    | 2/8/21   | office hours                           |                                 |
+|      | 2/10/21* | FPGA  architecture/FPGA synthesis      | assignment #2 due (f)           |
+| 5    | 2/15/21  | lab day #3                             |                                 |
+|      | 2/17/21  | lab dya #3 (same  contents as 2/15/21) | in-class assignment  submission |
+| 6    | 2/22/21  | office hours                           |                                 |
+|      | 2/24/21* | high-speed arithmetic  (I)             |                                 |
+| 7    | 3/1/21   | office hours                           |                                 |
+|      | 3/3/21*  | high-speed arithmetic  (II)            | Assignment #3 part-1  (F)       |
+| 8    | 3/8/21   | office hours                           |                                 |
+|      | 3/10/21* | IEEE  Floatingpoint                    |                                 |
+| 9    | 3/15/21  | office hours                           |                                 |
+|      | 3/17/21* | GPU architecture                       | Assignment #3 part-2  (F)       |
+| 10   | 3/22/21  | Break                                  |                                 |
+|      | 3/24/21  | lab day #4                             |                                 |
+| 11   | 3/29/21  | lab day #4   (same contents as 3/24)   | in-class assignment  submssion  |
+|      | 3/31/21  | lab day #5                             | Assignment #3 part-3  (F)       |
+| 12   | 4/5/21   | lab day #5 (same contents as 3/31)     | in-class assignment  submssion  |
+|      | 4/7/21*  | ML accelerators                        | asisgnment #4 (F)               |
+| 13   | 4/12/21  | office hours                           |                                 |
+|      | 4/14/21* | Quantizations                          |                                 |
+| 14   | 4/19/21  | office hours                           | assignment #5 (F)               |
+|      | 4/21/21* | security                               |                                 |
+| 15   | 4/26/21* | review day                             |                                 |
+|      | 4/30/21* | Final exam                             |                                 |
 
 (*) live lectures
