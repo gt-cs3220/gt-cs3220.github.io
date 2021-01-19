@@ -89,9 +89,11 @@ FPGA boards: In this semester we don't ask students to purchase boards and stude
 
    Project assignment 5: 10
 
-   Final exam: 20
+   Lab day assignments : 5 
 
-   Class participation & ad-hoc homeworks etc.: 5 
+   Final exam: 15
+
+   Class participation:  5 
 
  
 
