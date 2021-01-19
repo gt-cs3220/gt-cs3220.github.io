@@ -14,6 +14,7 @@ Some tips:
 * The Username is your GT Username eg: jdoe3
 * The Password is your GT Account Password (the same one you use to access Canvas)
 * The **Second** Password is your 2FA code (usually given by Duo Mobile)
+    * *Note: You can input* **```push```** *as the **second password** and Duo will send you a verification push to **your phone**.* 
 
 
 ![VPN_config_screen](/access_vm_steps/images/vpn2.PNG "VPN_config_screen")
