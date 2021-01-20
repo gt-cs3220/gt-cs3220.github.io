@@ -29,9 +29,9 @@ Please access [https://wiki.x2go.org/doku.php/download:start](https://wiki.x2go.
 **Test out your VPN connection, once established that it’s set up and working you may proceed. From this point on, anytime you are accessing the remote system, you need to be on the GT VPN**
 
 ## Create a new connection/session in x2go with the following details
-Host : pending
+Host : [your assigned host] eg: ```synestia1.cc.gatech.edu```
 
-Login : [your GT username]
+Login : [your GT username] eg: ```jdoe3```
 
 SSH port : 22
 
