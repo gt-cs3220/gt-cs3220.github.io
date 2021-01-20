@@ -6,9 +6,9 @@ Lab day #1 Assignments
 
 In this assignments, you will get familiar with Xilinix tool chain and verilog. 
 
-Please checkout inclass-lab1 folder from the github. 
+Please checkout labday1 folder from the github. 
 
-Before you start incalss-lab #1 assignments, please watch verilog_intro.mp4 and labday1.mp4. videos. 
+Before you start labday# 1 assignment, please watch verilog_intro.mp4 and labday1.mp4. videos. 
 
 **What to submit**: a screenshot of final simulation. 
 
@@ -16,7 +16,7 @@ Before you start incalss-lab #1 assignments, please watch verilog_intro.mp4 and 
 
 **Note**: Lab day #1 is intentionally designed for short tasks. If you complete lab day #1 tasks, we strongly recommend to start Lab day #2 tasks. 
 
-we won't grade the correctness of tasks. However, we strongly encourage you to complete tasks and ask TAs/instructors during the lab day lecture hours if you face any problems. 
+We won't grade the correctness of tasks in labday#1. However, we strongly encourage you to complete tasks and ask TAs/instructors during the lab day lecture hours if you face any problems. 
 
  
 
@@ -36,5 +36,5 @@ out1 =  in_1 & in_2 & in_3;
 
 out2 = in_1|in_2|in_3; 
 
-We provide testing module for your work. 
+You can use the same testing code to test your designs. 
 
