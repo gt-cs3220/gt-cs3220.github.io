@@ -4,9 +4,9 @@ Lab day #1 Assignments
 
 
 
-In this assignments, you will get familiar with Xilinix tool chain and verilog. 
+In this assignments, you will get familiar with Xilinix tool chain and Verilog. 
 
-Please checkout labday1 folder from the github. 
+Please checkout labday1 folder from the github (gt-cs3220-spr21.github.io/labday1_files) 
 
 Before you start labday# 1 assignment, please watch verilog_intro.mp4 and labday1.mp4. videos. 
 
@@ -20,17 +20,13 @@ We won't grade the correctness of tasks in labday#1. However, we strongly encour
 
  
 
-The folder has three subfolders( example_bus,example_v,simpleio) and simple three tasks. 
+The folder has two subfolders(example_v,simpleio_v) and simple two tasks. 
 
-Task #1: start Vivado and try behavior examplebus simulation. We provide all the source code in a project so it should run w/o any modifications. 
-
-
-
-Task #2: create a new vivado project with  files only in the example_v folder). You start a new project and follow the instructions to set vivado projet including simulation configurations.  Try behavior simulation. 
+Task #1: create a new vivado project with  files only in the example_v folder). You start a new project and follow the instructions to set vivado projet including simulation configurations.  Try behavior simulation.  labday1 video shows how to create a project. 
 
 
 
-Task #3: change the code to have the following design in the module (use simple io folder) the simple in and out module based on the following definition. 
+Task #2: change the code to have the following design in the module (use simple io folder) the simple in and out module based on the following definition. 
 
 out1 =  in_1 & in_2 & in_3; 
 
