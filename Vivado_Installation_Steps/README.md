@@ -37,7 +37,7 @@ Fill this form, scroll down, and click "**Download**".
 ## Step 4
 Click the execution file that you just downloaded.
 
-<img src="https://github.com/gt-cs3220-spr21/gt-cs3220-spr21.github.io/blob/master/Vivado_Installation_Steps/step_images/step5.png" width="70%">
+<img src="https://github.com/gt-cs3220-spr21/gt-cs3220-spr21.github.io/blob/master/Vivado_Installation_Steps/step_images/step2_new.png" width="70%">
 
 **Important !!!!!! Please don't use latest version of Vivado. Here, we use the same version as GT CRNCH** \
 Click "**Continue**". \
