@@ -58,10 +58,10 @@ Choose **Vivado** \
 \
 <img src="https://github.com/gt-cs3220-spr21/gt-cs3220-spr21.github.io/blob/master/Vivado_Installation_Steps/step_images/step6a.png" width="70%">
 \
-Again, please make sure your have at least 50G space on your disk. You could install it on portable storage device. \
+Again, please make sure your have at least 60G space on your disk. You could install it on portable storage device. \
 Here, **UltraScale** devices are optional but I still recommend installing them just in case.
 \
-<img src="https://github.com/gt-cs3220-spr21/gt-cs3220-spr21.github.io/blob/master/Vivado_Installation_Steps/step_images/step6b.png" width="70%">
+<img src="https://github.com/gt-cs3220-spr21/gt-cs3220-spr21.github.io/blob/master/Vivado_Installation_Steps/step_images/step3b_new.png" width="70%">
 \
 **Important !!!!!! Please make sure your isntallation directory's name has no space.** \
 Like here if I change "**Xilinx2020**" to "**Xilinx 2020**", then it will cause error.
