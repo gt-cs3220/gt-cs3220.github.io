@@ -4,7 +4,7 @@
 - 1. This tutorial works for Win10 and Linux. If you use MacOS, you could use VirtualBox or VMWare as virtual machine to isntall Linux.
 - 2. Please make sure you disk has at least 40G free space. You could install Vivado in portable storage device.
 ```
-### Supported operating systems for Vivado 2020.1 
+### Supported operating systems for Vivado 2020.2 
 <img src="https://github.com/gt-cs3220-spr21/gt-cs3220-spr21.github.io/blob/master/Vivado_Installation_Steps/step_images/supportOS.png">
 
 ## Step 1
