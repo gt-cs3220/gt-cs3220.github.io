@@ -20,7 +20,7 @@ title: CS 3220 : Processor Design
 
 **Note about TA office hours**: We cannot hold "a regular Bluejeans office hour" as student teams will not be able to share their screen (containing their code) with the TA if multiple teams are in a single video call. Hence, each TA will be using a sign up sheet for their office hours. **The sign up sheet will be shared in the class Piazza**.
 
-Students: Please use the aforementioned sheet and put your team's bluejeans call link into the sheet. The TA will then join your Bluejeans meeting.
+Students: Please use the aforementioned sheet and put your team's bluejeans call link into the sheet. The TA will then join your Bluejeans meeting. **Since we are using this approach each slot in the sign up sheet will be 10 minutes so that we can maximixe the number of teams we can help in one office hour session**.
 
 **TA's office hours (please also read the note above):**
 
