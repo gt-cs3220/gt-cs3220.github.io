@@ -13,17 +13,14 @@ Go to https://www.xilinx.com/products/design-tools/vivado/vivado-webpack.html an
 <img src="https://github.com/gt-cs3220-spr21/gt-cs3220-spr21.github.io/blob/master/Vivado_Installation_Steps/step_images/step1.png" width="70%">
 
 ## Step 2
-In https://www.xilinx.com/support/download.html , click ""**2020.1**"".
+Scroll down to "**Vivado Design Suite - HLx Editions - 2020.2  Full Product Installation**", and click 
+"**Xilinx Unified Installer 2020.2: Windows Self Extracting Web Installer**"
 
-<img src="https://github.com/gt-cs3220-spr21/gt-cs3220-spr21.github.io/blob/master/Vivado_Installation_Steps/step_images/step2.png" width="70%">
+<img src="https://github.com/gt-cs3220-spr21/gt-cs3220-spr21.github.io/blob/master/Vivado_Installation_Steps/step_images/step.png" width="70%">
+
+<img src="https://github.com/gt-cs3220-spr21/gt-cs3220-spr21.github.io/blob/master/Vivado_Installation_Steps/step_images/step1a.png" width="70%">
 
 ## Step 3
-Scroll down to "**Vivado Design Suite - HLx Editions - 2020.1  Full Product Installation**", and click 
-"**Xilinx Unified Installer 2020.1: Windows Self Extracting Web Installer**"
-
-<img src="https://github.com/gt-cs3220-spr21/gt-cs3220-spr21.github.io/blob/master/Vivado_Installation_Steps/step_images/step3.png" width="70%">
-
-## Step 4
 You may need to register a Xilinx account first, using your personal email or GT email (I recommend using GT email). 
 
 <img src="https://github.com/gt-cs3220-spr21/gt-cs3220-spr21.github.io/blob/master/Vivado_Installation_Steps/step_images/step4.png" height="500">
@@ -37,7 +34,7 @@ Fill this form, scroll down, and click "**Download**".
 
 <img src="https://github.com/gt-cs3220-spr21/gt-cs3220-spr21.github.io/blob/master/Vivado_Installation_Steps/step_images/step4b.png" width="70%">
 
-## Step 5
+## Step 4
 Click the execution file that you just downloaded.
 
 <img src="https://github.com/gt-cs3220-spr21/gt-cs3220-spr21.github.io/blob/master/Vivado_Installation_Steps/step_images/step5.png" width="70%">
@@ -55,7 +52,7 @@ Agree all the conditions. \
 \
 <img src="https://github.com/gt-cs3220-spr21/gt-cs3220-spr21.github.io/blob/master/Vivado_Installation_Steps/step_images/step5c.png" width="70%">
  
-## Step 6
+## Step 5
 Choose **Vivado** \
 <img src="https://github.com/gt-cs3220-spr21/gt-cs3220-spr21.github.io/blob/master/Vivado_Installation_Steps/step_images/step6.png" width="70%">
 
@@ -79,7 +76,7 @@ Please remember your installation directory.
 Please make sure you PC is connected to internet. \
 <img src="https://github.com/gt-cs3220-spr21/gt-cs3220-spr21.github.io/blob/master/Vivado_Installation_Steps/step_images/step6e.png" width="70%">
 
-## Step7
+## Step6
 Wait for the installation to be completed. This may take several hours. \
 **Note** \
 **If there is any problems for installation please post it on Piazza or contact with Sam or Hanning. Just in case, you can also use Vivado on CRNCH server.** 
