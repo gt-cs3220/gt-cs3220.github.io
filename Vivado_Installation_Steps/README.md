@@ -39,10 +39,7 @@ Click the execution file that you just downloaded.
 
 <img src="https://github.com/gt-cs3220-spr21/gt-cs3220-spr21.github.io/blob/master/Vivado_Installation_Steps/step_images/step2_new.png" width="70%">
 
-**Important !!!!!! Please don't use latest version of Vivado. Here, we use the same version as GT CRNCH** \
-Click "**Continue**". \
-\
-<img src="https://github.com/gt-cs3220-spr21/gt-cs3220-spr21.github.io/blob/master/Vivado_Installation_Steps/step_images/step5a.png" width="70%">
+**Important !!!!!! We will use latest version of Vivado. Here, we use the same version as GT CRNCH** \
 
 Input the **User ID (email)** and **Password** of your Xilinx account. \
 \
