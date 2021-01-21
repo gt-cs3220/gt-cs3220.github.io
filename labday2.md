@@ -6,53 +6,70 @@ Lab day #2 Assignments
 
 In this assignments, you will advance your verilog knowledge.  
 
-Please checkout inclass-lab2 folder from the github. 
+Please checkout labday2_files folder from the github. 
 
-Before you start inclass-lab2, please complete inclass-lab1 and watch verilog_examples_part2.mp4 videos.  
+Before you start lab2, please complete lab1 and watch labday2.mp4 videos.  
 
 **What to submit**: a screenshot of final simulation. 
 
-**Grading**: submit any simulation screenshot (0.5 points), a screenshot of the last task simulation (full credit 1 point)
+**Grading**: Submit a screenshot of the last tasks that you have completed. 
 
-We won't grade the correctness of tasks. However, we strongly encourage you to complete tasks and ask TAs/instructors during the lab day lecture hours if you face any problems. 
+We won't grade the correctness of tasks. However, we strongly encourage you to complete tasks and ask TAs/instructors during the lab day lecture hours if you face any problems.  
+
+These labday tasks are designed to help your assignment #2. 
 
  
 
-Task #1: Complete the bus design and complete the testing module (bus_example folder)
+**Task #1**: create a project with bus_example. 
 
-![F326954D-10F9-48B2-BAFD-F6AF03F96B49](/Users/hyesoonkim/Dropbox (GaTech)/classes/spring21/cs3220/homepages/gt-cs3220-spr21.github.io/bus_design.png)
+Draw a bus design diagram based on bus_sigs module. 
+The correct answer is bus_design.png
 
+Test module has 
+``` {in_3, in_2, in_1} = i[8:0];```
+Answer what this statement is doing.  
 
+(you don't need to submit the answer)
 
-Suggested testing scenarios are at every clock, one of three inputs are varied. 
-
-
-
-for (i = 0 ; i < 3; i=i+1) {
-
-​	for (j=0 ; j < 3; j= j+1){
-
-}		
-
-}
+The solution diagram is in the folder. 
 
 
 
-Task #2: Complete D-flop with enable and clear signal  (dflop example folder)
+**Task #2**: Extend D-flop with enable and clear signal  (dflop example folder)
 
 Frame and testing code are provided. 
 
-
-
-[optional] Task #3 Complete the state machine.  (state_example folder)
-
-Frame and testint code are provided
+A solution is also included . 
 
 
 
-Task #4 Initialize the memory with test.mem (mem_example folder)
+**Task #3**: [Optional] Complete the state machine.  (state_example folder)
 
-initialize the memory values and then read the contents of the memory addresses each cycle. 
+Please complet the module to have a following state diagram ![plot](state_diagram.pdf)
 
 
+
+A Frame and testing code are provided. 
+
+A solution is also included. 
+
+
+
+**Task #4**:  Initialize the memory with test.mem (mem_example folder)
+
+First, initialize the memory contents using test.mem file. 
+
+For the first 10 cycles read the contents of memory. Every cycle the memory address is incremented. 
+
+For the second 10 cycles, write values into a memory. Every cycle the memory address is incremented. 
+
+For the third 10 cycles, read the new contents for the memory. 
+
+
+
+
+
+
+
+Note: The example verilog codes are mostly from "Verilog by example: a concise introduction for FPGA design" by Blaine C. Readler"
 
