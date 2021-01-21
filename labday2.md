@@ -8,7 +8,7 @@ In this assignments, you will advance your verilog knowledge.
 
 Please checkout labday2_files folder from the github. 
 
-Before you start lab2, please complete lab1 and watch labday2.mp4 videos.  
+Before you start lab2, please complete lab1 and watch  verilog_part2.mp4 videos.  
 
 **What to submit**: a screenshot of final simulation. 
 
@@ -37,9 +37,11 @@ The solution diagram is in the folder.
 
 **Task #2**: Extend D-flop with enable and clear signal  (dflop example folder)
 
-Frame and testing code are provided. 
+<img src="flop.jpg" width="200">
 
-A solution is also included . 
+
+
+Frame and testing code examples are provided. 
 
 
 
@@ -51,25 +53,25 @@ Please complet the module to have a following state diagram ![plot](state_diagra
 
 A Frame and testing code are provided. 
 
-A solution is also included. 
+An example code is in verilog_part2.pptx
 
 
 
 **Task #4**:  Initialize the memory with test.mem (mem_example folder)
 
-First, initialize the memory contents using test.mem file. 
+First, initialize the memory contents using ex1.mem file. 
 
-For the first 10 cycles read the contents of memory. Every cycle the memory address is incremented. 
+Read the value from the memory every cycle and write a new contents (old content + 1) to the same memory location. 
 
-For the second 10 cycles, write values into a memory. Every cycle the memory address is incremented. 
+Every cycle, the memory address is incremented.  
 
-For the third 10 cycles, read the new contents for the memory. 
-
-
+In this design, you are using synchronous design. 
 
 
 
 
+
+An example code is in verilog_part2.pptx 
 
 Note: The example verilog codes are mostly from "Verilog by example: a concise introduction for FPGA design" by Blaine C. Readler"
 
