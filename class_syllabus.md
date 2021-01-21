@@ -16,7 +16,7 @@ title: CS 3220 : Processor Design
 
 **Instructor's Office hours:** **W 3:15 - 3:30 pm or by appointment  at MS Team** 
 
-**TAs**: Sam Jijina  (milto:sam.jijina@gatech.edu) and Hanning Chen (mailto:hanningchen97@gatech.edu)
+**TAs**: Sam Jijina  (mailto:sam.jijina@gatech.edu) and Hanning Chen (mailto:hanningchen97@gatech.edu)
 
 **Note about TA office hours**: We cannot hold "a regular Bluejeans office hour" as student teams will not be able to share their screen (containing their code) with the TA if multiple teams are in a single video call. Hence, each TA will be using a sign up sheet for their office hours. **The sign up sheet will be shared in the class Piazza**.
 
