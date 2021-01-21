@@ -6,25 +6,35 @@ title: CS 3220 : Processor Design
 
 
 
-**Course Title: CS3220 **
+**Course Title: CS3220**
 
-**Instructor: Prof. Hyesoon Kim **
+**Instructor: Prof. Hyesoon Kim**
 
-**Class location: Bluejean**
+**Class location: Bluejeans**
 
-**Class time: M/W 2:00 PM - 3:15 PM** 
+**Class time: M/W 2:00 PM - 3:15 PM EST** 
 
-**Instructor's Office hours:** **W 3:15 -3:30 pm or by appointment  at MS Team** 
+**Instructor's Office hours:** **W 3:15 - 3:30 pm or by appointment  at MS Team** 
 
-**TAs: Sam Jijina  (milto:sam.jijina@gatech.edu) and Hanning Chen (mailto:hanningchen97@gatech.edu)**
+**TAs**: Sam Jijina  (mailto:sam.jijina@gatech.edu) and Hanning Chen (mailto:hanningchen97@gatech.edu)
 
-**TA's office hours: TBD.**
+**Note about TA office hours**: We cannot hold "a regular Bluejeans office hour" as student teams will not be able to share their screen (containing their code) with the TA if multiple teams are in a single video call. Hence, each TA will be using a sign up sheet for their office hours. **The sign up sheet will be shared in the class Piazza**.
 
-**TA's office location: Team**
+Please use the aforementioned sheet and put your team's bluejeans call link into the sheet. The TA will then join your Bluejeans meeting. **Since we are using this approach each slot in the sign up sheet will be 10 minutes so that we can maximixe the number of teams we can help in one office hour session**.
 
-**Class homepage **: https://gt-cs3220-spr21.github.io/
+**TA's office hours (please also read the note above):**
 
-**Online platforms for resource**: We will use Canvas for assignment submissions and lecture note distributions. We will also use Piazza for discussions. 
+* Sam Jijina : ***Every Wednesday 11am to 12pm EST***
+    * To sign up for Sam's office hours please use the sheet link posted in Piazza
+
+* Hanning Chen : ***Every Thursday 3pm to 4pm EST***
+    * To sign up for Hanning's office hours please use the sheet link posted in Piazza
+
+**TA's office location:** Bluejeans + sign up sheet (instructions above)
+
+**Class homepage**: https://gt-cs3220-spr21.github.io/
+
+**Online platforms for resource**: We will use **Canvas** for assignment submissions and lecture note distributions. We will also use **Piazza** for discussions. 
 
 
 In this course, we will study hardware implementation of architecture design. This is an intermediate-level course that follows CS2200. This course is a project-based course in which you will learn pipelined architectures by actually implementing simple instructions using an FPGA (Field-Programmable Gate Array) board. 
