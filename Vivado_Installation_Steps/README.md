@@ -5,7 +5,7 @@
 - 2. Please make sure you disk has at least 40G free space. You could install Vivado in portable storage device.
 ```
 ### Supported operating systems for Vivado 2020.2 
-<img src="https://github.com/gt-cs3220-spr21/gt-cs3220-spr21.github.io/blob/master/Vivado_Installation_Steps/step_images/supportOS.png">
+<img src="https://github.com/gt-cs3220-spr21/gt-cs3220-spr21.github.io/blob/master/Vivado_Installation_Steps/step_images/supportOS_new.png">
 
 ## Step 1
 Go to https://www.xilinx.com/products/design-tools/vivado/vivado-webpack.html and click "**Download**".
@@ -68,7 +68,7 @@ Like here if I change "**Xilinx2020**" to "**Xilinx 2020**", then it will cause 
 <img src="https://github.com/gt-cs3220-spr21/gt-cs3220-spr21.github.io/blob/master/Vivado_Installation_Steps/step_images/step6c.png" width="70%">
 \
 Please remember your installation directory.
-<img src="https://github.com/gt-cs3220-spr21/gt-cs3220-spr21.github.io/blob/master/Vivado_Installation_Steps/step_images/step6d.png" width="70%">
+<img src="https://github.com/gt-cs3220-spr21/gt-cs3220-spr21.github.io/blob/master/Vivado_Installation_Steps/step_images/step3b_new.png" width="70%">
 \
 Please make sure you PC is connected to internet. \
 <img src="https://github.com/gt-cs3220-spr21/gt-cs3220-spr21.github.io/blob/master/Vivado_Installation_Steps/step_images/step6e.png" width="70%">
