@@ -119,15 +119,12 @@ The research project topics will be announced in the later semester.
 
 **Final grade algorithm** 
 
-80 ~ 90 (out of 90): A 
+90 <=  score <= 100 : A 
+80 <=   score < 90:  B 
+70 <=   score < 80:  C 
+60 <=   score < 70:  D 
+  score < 60:  F 
 
-70 ~ 79: B 
-
-60 ~ 69: C 
-
-50 ~ 59: D 
-
- ~50 : F 
 
 A few notes: 
 
