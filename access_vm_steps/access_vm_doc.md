@@ -79,7 +79,7 @@ To properly terminate your session, please follow these steps:
 
 **In x2go click on the power icon (it should give a hint that says "Terminate")**
 
-![terminate_1](/access_vm_steps/images/terminate_1_edit.JPG "terminate_1")
+![terminate_1](/access_vm_steps/images/terminate_1_edit.jpg "terminate_1")
 
 **Click Yes**
 
