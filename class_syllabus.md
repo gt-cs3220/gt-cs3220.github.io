@@ -25,10 +25,8 @@ Please use the aforementioned sheet and put your team's bluejeans call link into
 **TA's office hours (please also read the note above):**
 
 * Sam Jijina : ***Every Wednesday 11am to 12pm EST***
-    * To sign up for Sam's office hours please use the sheet link posted in Piazza
 
 * Hanning Chen : ***Every Thursday 3pm to 4pm EST***
-    * To sign up for Hanning's office hours please use the sheet link posted in Piazza
 
 **TA's office location:** Bluejeans + sign up sheet (instructions above)
 
