@@ -47,7 +47,9 @@ Frame and testing code examples are provided.
 
 **Task #3**: [Optional] Complete the state machine.  (state_example folder)
 
-Please complet the module to have a following state diagram ![plot](state_diagram.pdf)
+Please complete the module to have a following state diagram 
+
+![plot](state_diagram_converted.png "state diagram")
 
 
 
