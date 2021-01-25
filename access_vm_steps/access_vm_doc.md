@@ -104,7 +104,7 @@ To properly terminate your session, please follow these steps:
 
 **Possibility : Did you try many unsuccessful login attempts? These VMs are hosted by Georgia Tech TSO**.
 
-**Explanation : TSO runs ```fail2ban``` on their systems where if a user tries too many unsuccessful attempts, then they would be banned by the system for a short amount of time. This is done to protect systems.**
+**Explanation : TSO runs a utility called ```fail2ban``` on their systems where if a user tries too many unsuccessful attempts, then they would be banned by the system for a short amount of time. This is done to protect systems.**
 
 **Remedy : Please wait for some time and try again. If the issue persists, contact TAs for further guidance/steps**
 
