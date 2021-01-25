@@ -112,6 +112,6 @@ To properly terminate your session, please follow these steps:
 
 **Possibility : It could be your RTT/ping to the VM**.
 
-**Explanation : Even though the admin team is trying its best, being physically very far away from the server (eg: other country) or using a low-bandwidth connection does lead to some issues.**
+**Explanation : Even though the admin team is trying its best, being physically very far away from the server (eg: other country) or using a low bandwidth connection does lead to some issues.**
 
 **Remedy : Please run ```ping <your assigned VM>``` from your command line and notify the TAs with the output. As an absolute worst case fallback, please install Xilinx WebPack locally on your machine.**
