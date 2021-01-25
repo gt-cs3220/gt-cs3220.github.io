@@ -29,6 +29,8 @@ Click **Next** until **Choose a default Xilinx part or board for your project**,
 Choose **pynq-z2** board
 
 <img src="https://github.com/gt-cs3220-spr21/gt-cs3220-spr21.github.io/blob/master/Vivado_Tutorial/image/step1b.png" width="70%">
+Alternatively you can also choose **xc7z020clg400-1** as a part number if you don't see pynq-z2 board 
+
 
 Click **Next**.
 
