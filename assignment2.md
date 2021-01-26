@@ -39,7 +39,7 @@ An example algorithm of serial bubble sort is as following.
 ````
 
 
-Please use the memory that has only 1 read port and 1 write port.  
+**Please use the memory that has only 1 read port and 1 write port.** 
 
 
 Test code will read the memory locations to check whether the sort is correctly performed. 
