@@ -26,7 +26,7 @@ Task #1: create a new vivado project with  files only in the example_v folder). 
 
 
 
-Task #2: change the code to have the following design in the module (use simple io folder) the simple in and out module based on the following definition. 
+Task #2: change the code (example_bus.v)  to have the following design in the module (use simple io folder) the simple in and out module based on the following definition.  simple_io.v shows the correct answer that you can use it as a reference. 
 
 out1 =  in_1 & in_2 & in_3; 
 

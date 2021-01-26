@@ -1,6 +1,6 @@
 # **CS 3220 Assignment #1: Pipeline design and introduction (video submission)** 
 
-**Due:** 1/24/2021 (Sun) 6 pm
+**Due:** 1/24/2021 (Sun) 11:59 pm EST
 
 **Points** : 5 points of the total grade 
 
