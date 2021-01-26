@@ -48,10 +48,10 @@ Test code will read the memory locations to check whether the sort is correctly 
 
 Hint: draw a state diagram including i and j value  increment. **(please do not use for loops inside the module)** 
 
-**What to submit:** 
-1. bubblesort.v
-2. A screenshot of final simulation as a pdf file format.
-3. Report: hardware design diagrams especially your state diagram. 
+**What to submit:**
+1. **bubblesort.v**
+2. **A screenshot of final simulation as a pdf file format.**
+3. **Report: hardware design diagrams especially your state diagram.**
 
 **How to test the correctness**: Please check the display values. It should print out sorted memory values. 
 
