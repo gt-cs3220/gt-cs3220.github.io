@@ -6,42 +6,51 @@
 
 **Where to submit**: Canvas 
 
-This is an <u> individual project</u>. In this project, you will write a simple bubble sort algorithm. 
-
-
+This is an <u> individual project</u>. 
 
 In this assignment, you will implement a simplifed serial version of  bubble sort in verilog. 
 
-To reduce the complexity of the problem, your solution needs to only work with the following example. 
+To reduce the complexity of the problem, your solution needs to only work with 10 number of items. 
 
-In memory location 0x0100, there is 10 values. 10, 50,100 , 50, 3, 2, 1, 300, 500, 10.  Each value occupies 2 Bytes. So mem[0x100] = 10, mem[0x102] = 50 etc.  
+Starting from the location 0x00, each element has 2 bytes data. 
 
-Algorithm of serial bubble sort 
+
+
+An example of algorithm of serial bubble sort is as following.  
 
 ````c
  % Initialization 
-  for i in 1 to Num_of_data-1 do 
+  for j in 1 to Num_of_data-1 do 
 
-    for j in 1 to Num_of_data-1 do 
+    for i in 1 to Num_of_data-1 do 
+				Read mem(i) // state-1 
+				Read mem(i+1)  // state-2
+       	compare mem(i) with mem(i+1); // state-3 
 
-       compare Input_data(i) with Input_data(i+1);
-
-        if Input_data(i) >  Input_data(i+1) then swap; 
-
+        if mem(i) >  mem(i+1) then swap; // state-4 
+				if (swap)
+			   Write swapped_data in mem(i) // state-5 
+        if (swap)
+         Write swapped_data in mem(i+1)  // state-6 
+		
        end for; 
 
   end for;  
 ````
 
 
+Please use the memory that has only 1 read port and 1 write port.  
+
 
 Test code will read the memory locations to check whether the sort is correctly performed. 
 
 We provide the test code. 
 
+Hint: draw a state diagram including i and j value  increment. (please do not use for loops inside the module) 
 
+**what to submit:** (1) bubblesort.v (2)  A screenshot of final simulation as a pdf file format.  (3) report: hardware design diagrams especially your state diagram. 
 
-**what to submit:** (1) The entire zip file for your project. (2)  A screenshot of final simulation as a pdf file format.  (3) report: hardware design diagrams 
+**How to test the correctness**: Please check the display values. It should print out sorted memory values. 
 
 
 
@@ -49,7 +58,7 @@ We provide the test code.
 
 
 
-**Partial grading Policy**: There is no partial grading. Pleaes test your code to see whether it passes with simulation. 
+**Partial grading Policy**: Partial grade points are very limited. Hence, please check whether the sorted memory values are printed before submission. 
 
  
 
