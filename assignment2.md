@@ -1,22 +1,22 @@
 # CS 3220 Assignment #2: Bubble Sort
 
-**Due:** 2/5/2021 (F) 6 pm
+**Due:** **2/5/2021 (F) 6 pm EST**
 
 **Points**: 10 points ouf the total grade 
 
-**Where to submit**: Canvas 
+**Where to submit**: **Canvas** 
 
-This is an <u> individual project</u>. 
+This is an **<u> individual project</u>**. 
 
-In this assignment, you will implement a simplifed serial version of  bubble sort in verilog. 
+In this assignment, you will implement a simplified serial version of  bubble sort in Verilog. 
 
-To reduce the complexity of the problem, your solution needs to only work with 10 number of items. 
+To reduce the complexity of the problem, your solution needs to only work with **10 number of items**. 
 
 Starting from the location 0x00, each element has 2 bytes data. 
 
 
 
-An example of algorithm of serial bubble sort is as following.  
+An example algorithm of serial bubble sort is as following.  
 
 ````c
  % Initialization 
@@ -44,11 +44,14 @@ Please use the memory that has only 1 read port and 1 write port.
 
 Test code will read the memory locations to check whether the sort is correctly performed. 
 
-We provide the test code. 
+**We have provided the test code (test.v).** 
 
-Hint: draw a state diagram including i and j value  increment. (please do not use for loops inside the module) 
+Hint: draw a state diagram including i and j value  increment. **(please do not use for loops inside the module)** 
 
-**what to submit:** (1) bubblesort.v (2)  A screenshot of final simulation as a pdf file format.  (3) report: hardware design diagrams especially your state diagram. 
+**What to submit:** 
+1. bubblesort.v
+2. A screenshot of final simulation as a pdf file format.
+3. Report: hardware design diagrams especially your state diagram. 
 
 **How to test the correctness**: Please check the display values. It should print out sorted memory values. 
 
