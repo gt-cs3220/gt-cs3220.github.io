@@ -187,10 +187,10 @@ As members of the Georgia Tech community, we are committed to creating a learnin
 | week | date     | topic                                  |                                 |
 | ---- | -------- | -------------------------------------- | ------------------------------- |
 | 1    | 1/18/21  | MLK                                    |                                 |
-|      | 1/20/21* | introduction and  ISA                  | Assignment #1 due  (1/24 Sun)   |
-| 2    | 1/25/21  | lab day #1                             |                                 |
+|      | 1/20/21* | introduction and  ISA                  | [Assignment #1 due  (1/24 Sun)](assignment1.html)   |
+| 2    | 1/25/21  | [lab day #1](labday1.html)                             |                                 |
 |      | 1/27/21  | lab day #1 (same  contents as 1/25/21) | in-class assignment  submission |
-| 3    | 2/1/21   | lab day #2                             |                                 |
+| 3    | 2/1/21   | [lab day #2](labday2.html)                             |                                 |
 |      | 2/3/21   | lab day #2  (same contents as 2/1/21)  | in-class assignment  submission |
 | 4    | 2/8/21   | office hours                           |                                 |
 |      | 2/10/21* | FPGA  architecture/FPGA synthesis      | [assignment #2 due (f)](assignment2.html)           |
