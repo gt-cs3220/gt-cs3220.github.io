@@ -115,3 +115,13 @@ To properly terminate your session, please follow these steps:
 **Explanation : Even though the admin team is trying its best, being physically very far away from the server (eg: other country) or using a low bandwidth connection does lead to some issues.**
 
 **Remedy : Please run ```ping <your assigned VM>``` from your command line and notify the TAs with the output. As an absolute worst case fallback, please install Xilinx WebPack locally on your machine.**
+
+## My desktop background is not displaying/no icons are displaying!
+
+**Possibility : It could be your x2go client resolution**.
+
+**Explanation : Unknown. Seems to be a bug**
+
+**Remedy : Please change the resolution of x2go client and try again (see image below). If that doesn't work please contact the TAs.**
+
+![resolution](/access_vm_steps/images/res_change_pic.png "resolution")
