@@ -124,4 +124,4 @@ To properly terminate your session, please follow these steps:
 
 **Remedy : Please change the resolution of x2go client and try again (see image below). If that doesn't work please contact the TAs.**
 
-![resolution](/access_vm_steps/images/res_change_pic.png "resolution")
+![resolution](/access_vm_steps/images/res_change_pic.PNG "resolution")
