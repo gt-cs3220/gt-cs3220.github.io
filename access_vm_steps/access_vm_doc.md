@@ -110,7 +110,9 @@ To properly terminate your session, please follow these steps:
 
 ## The VM is really slow/laggy to the point I cannot use it
 
-**Possibility : It could be your RTT/ping to the VM**.
+**Possibility 1: It could be your RTT/ping to the VM**.
+
+**Possibility 2: The VM is overloaded. Unfortunately, there is not much the teaching team can do about this but please contact the TAs**.
 
 **Explanation : Even though the admin team is trying its best, being physically very far away from the server (eg: other country) or using a low bandwidth connection does lead to some issues.**
 
