@@ -25,7 +25,7 @@ These labday tasks are designed to help your assignment #2.
 Draw a bus design diagram based on bus_sigs module. 
 The correct answer is bus_design.png (which is also shown below)
 
-![bus diagram](bus_design.PNG "bus diagram")
+![bus diagram](bus_design.png "bus diagram")
 
 Test module has 
 ``` {in_3, in_2, in_1} = i[8:0];```
