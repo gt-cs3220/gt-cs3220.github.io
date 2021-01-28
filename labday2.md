@@ -23,7 +23,7 @@ These labday tasks are designed to help your assignment #2.
 **Task #1**: create a project with bus_example. 
 
 Draw a bus design diagram based on bus_sigs module. 
-The correct answer is bus_design.png (which is also shown below)
+The correct answer is bus_design.jpg (which is also shown below)
 
 ![bus diagram](bus_design.jpg "bus diagram")
 
