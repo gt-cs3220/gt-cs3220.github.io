@@ -25,16 +25,15 @@ An example algorithm of serial bubble sort is as following.
   for j in 1 to Num_of_data-1 do 
 
     for i in 1 to Num_of_data-1 do 
-				Read mem(i) // state-1 
-				Read mem(i+1)  // state-2
+	Read mem(i) // state-1 
+	Read mem(i+1)  // state-2
        	compare mem(i) with mem(i+1); // state-3 
 
         if mem(i) >  mem(i+1) then swap; // state-4 
-				if (swap)
-			   Write swapped_data in mem(i) // state-5 
+	if (swap)
+		Write swapped_data in mem(i) // state-5 
         if (swap)
-         Write swapped_data in mem(i+1)  // state-6 
-		
+         	Write swapped_data in mem(i+1)  // state-6 
        end for; 
 
   end for;  
@@ -48,7 +47,7 @@ Test code will read the memory locations to check whether the sort is correctly 
 
 **We have provided the test code (test.v).** 
 
-Hint: draw a state diagram including i and j value  increment. **(please do not use for loops inside the module)** 
+Hint: draw a state diagram including i and j value increment, understanding 6 states in the algorithm provided above will be a good start. **(please do not use for loops inside the module)** 
 
 **What to submit:**
 1. **bubblesort.v**
