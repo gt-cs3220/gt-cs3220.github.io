@@ -1,6 +1,6 @@
 # CS 3220 Assignment #2: Bubble Sort
 
-**Due:** **2/5/2021 (F) 6 pm EST**
+**Due:** **2/12/2021 (F) 6 pm EST**
 
 **Points**: 10 points ouf the total grade 
 
@@ -9,6 +9,8 @@
 This is an **<u> individual project</u>**. 
 
 In this assignment, you will implement a simplified serial version of  bubble sort in Verilog. 
+
+Pleae use files in https://github.com/gt-cs3220-spr21/gt-cs3220-spr21.github.io/tree/master/assignment2_files 
 
 To reduce the complexity of the problem, your solution needs to only work with **10 number of items**. 
 
