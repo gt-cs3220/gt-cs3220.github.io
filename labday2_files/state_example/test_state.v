@@ -25,7 +25,7 @@ module test(
     integer i; 
 
 
-    simplestate mysimplestate(.clk(sim_clk), .reset(rest), .go(in_1), .done(out_1)); 
+    simplestate mysimplestate(.clk(sim_clk), .reset(reset), .go(in_1), .done(out_1)); 
     
     // generate clock and reset 
     initial sim_clk = 1'b0;
