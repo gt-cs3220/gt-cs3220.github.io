@@ -52,7 +52,7 @@ Hint: draw a state diagram including i and j value increment, understanding 6 st
 
 **What to submit:**
 1. **bubblesort.v**
-2. **A screenshot of final simulation as a pdf file format.**
+2. **A screenshot of final simulation as a <u>pdf file</u> format.**
 3. **Report: hardware design diagrams especially your state diagram.**
 
 **How to test the correctness**: Please check the display values. It should print out sorted memory values. 
