@@ -62,58 +62,72 @@ module test(
         reset = 0;
         #280
         $display("Bubblesort test start");
-        #480
+        #540
+        #40
         if(dat_out9 != 'h500) begin
             $display("Something wrong happened");
             $finish;
         end
-        #420
+        #480
+        #40
         if(dat_out8 != 'h300) begin
             $display("Something wrong happened");
             $finish;
         end
-        #360
+        #420
+        #40
         if(dat_out7 != 'h100) begin
             $display("Something wrong happened");
             $finish;
         end
         #360
+        #40
         if(dat_out6 != 'h50) begin
             $display("Something wrong happened");
             $finish;
         end
-        #360
+        #300
+        #40
         if(dat_out5 != 'h50) begin
             $display("Something wrong happened");
             $finish;
         end
-        #360
+        #240
+        #40
         if(dat_out4 != 'h10) begin
             $display("Something wrong happened");
             $finish;
         end
-        #360
+        #180
+        #40
         if(dat_out3 != 'h10) begin
             $display("Something wrong happened");
             $finish;
         end
-        #360
+        #120
+        #40
         if(dat_out2 != 'h3) begin
             $display("Something wrong happened");
             $finish;
         end
-        #360
+        #60
+        #40
         if(dat_out1 != 'h2) begin
             $display("Something wrong happened");
             $finish;
         end
-        #360
+        #10
+        #40
         if(dat_out0 != 'h1) begin
             $display("Something wrong happened");
             $finish;
         end
-        #10
-        $display("Pass all testcases, congratulation");
+        #20
+        if(dat_out0 != 'h1 || dat_out1 != 'h2 || dat_out2 != 'h3 || dat_out3 != 'h10 || dat_out4 != 'h10 || dat_out5 != 'h50 || dat_out6 != 'h50 || dat_out7 != 'h100 || dat_out8 != 'h300 || dat_out9 != 'h500) begin
+            $display("You didn't finish sorting on time");
+            $finish;
+        end
+        $display("Congradulation it works !!!!");
         $finish;
     end
     
