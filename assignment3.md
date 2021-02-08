@@ -2,11 +2,11 @@
 
 **Due dates**: 
 
-**Part 1**  : 2/19/201 (F) 6 pm  ( 5 points)
+**Part 1**  : 3/3/201 (F) 6 pm  ( 5 points)
 
-**Part 2** : 3/5/2021 (F) 6 pm  (15 points)
+**Part 2** : 3/17/2021 (F) 6 pm  (15 points)
 
-**Part 3** : 3/10/2021 (F) 6 pm  (10 points)
+**Part 3** : 3/31/2021 (F) 6 pm  (10 points)
 
 Total:  30 points of out of the total grade. 
 
@@ -22,7 +22,7 @@ In this assignment, you will design a pipelined processor using verilog.
 
 For part #1, you need to pass 5 tests we create. You can locate those test files under project3/tests directory. You can refer to the README file under project3/tests for more information about each test case. 
 
-You do not implement forwarding in this assignment. Your program should run with test#.mif file.  With a simple pipeline, you should still get the required performance.
+You do not implement forwarding in this assignment. Your program should run with test#.hex file.  
 
 If your design does not show the correct outcome, you will not get any credit.
 
@@ -38,10 +38,12 @@ Please download your submitted file and verify whether your zip file contains al
 
  
 
-Please make it sure your code is running "tests/test5.mif" and submit the compiled version of test5.mif 
+Please make it sure your code is running "tests/test5.hex" and submit the compiled version of test5.hex 
 
-We will test your pre-compiled sof file (test5)'s output so please make it sure the zip file contains it. 
+ Grading: 
 
+ First 4 test cases will count for 0.5 point and test 5 will count for 3 points. 
+ If your design does not pass synthesization and implementation, you will get only 50% of your score. 
  
 
 [2] Report: You don't need to support a report for Part 1. You will submit a report for Part 2. 
@@ -52,43 +54,33 @@ We will test your pre-compiled sof file (test5)'s output so please make it sure 
 
 
 
-## Part 2: Complete the pipeline 
+## Part 2: Complete the pipeline and hardware performance counters 
 
 **Description**: 
 
-In this part, you will complete the entire ISA. Your program should run with two new test cases we provide. You don't need to implement data forwarding in this part.
+In this part, you will complete the entire ISA. Your program should run with test_all.hex case we provide. You don't need to implement data forwarding in this part.
+In addition to complete the pipeline, you will also add two counters: the number of branch taken and not taken. 
+Branch instructions include BEQ, BLT, BLE, BNE, JAL 
 
- 
 
-**To run with board**:
 
-Copy the file to the tests folder.
-
- 
-
-**To run simulation**:
-
-You need to copy test file to directory simulation > modelsim > tests.
-
- 
-
-**Test output**:
-
-**test**: All LEDR lights should be turned on and HEX should display FFFFFF.
-
-**fmedian2**: Your design should execute fmedian2 less than 100 sec and output correct median value. 
-
- 
 
 **Grading**:
 
-To get a full credit, your design need to execute fmedian2.asm and output correct median value in 100 seconds or less. If your design does not show the correct outcome, you will not get any credit. We won't check test.mif output, but your program should run with test.mif file as well.  
+It should pass test.hex file in behavior simulation and the design should pass synthesization. 
+If your hardware performance counters are wrong (-2 points). 
+If the design pass the RTL simulation test but it cannot be synthesized, you will get only 50% of the scores. 
+
+If it does not pass test.hex file, then there is no partial grading. Only for this assignment, we will accept a late submission with penalty. 
+Late submission: If you can submit the successful design  by the due of part-3, you will receive 50% of the part-2 score. 
+
+
 
  
 
 **What to submit**:
 
-[1] project3.zip (including fmedian2.mif and all other files).
+[1] project3.zip (including test.hex and all other files).
 
 You and your partner should submit the same version of the zip file.
 
@@ -110,20 +102,24 @@ Your report might be 1 page excluding diagrams.
 
 
 
-## Part 3: Add hardware performance counters 
+## Part 3:  write bubble sort assembly code. 
+
 
 **Description:** 
 
-In this assignment, you will add the following hardware performance counters. 
+In this design, you will write a bubble sort that you did in assignment #2 in the assembly code. 
+Data should be stored in address 0x800. 
 
-1. the number of instructions  (NumInst)
-2. the number of branch instructions  (NumBr)
-3. the number of taken branches  (NumTakenBr)
-4. the number of memory instructions  (NumMem)
+After the bubble sort is done, display FF in hex0. And read the contents of the value from 0x800 at one cycle at a time, and display the value in the hex1. Both outcomes of the hex values will be used for grading. 
 
 
+Note: 
+test_all.hex do not cover all corner cases. You might need to debug your hardware as well 
 
-Each of the hardware performance counters are stored in the specified hardware performance register files. The hardware performance register file should be initialized and should be reset. 
+## Optional task: Adding a branch predictor 
 
-All the hardware performance counters are incremetned when an instruction is completed. 
+** Description ** 
+
+In this design, you would add a branch predictor using a 64-entry gshare branch predictor. 
+If your design works correctly with a branch predictor, you will get 5 extra point.
 
