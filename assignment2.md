@@ -52,8 +52,9 @@ Hint: draw a state diagram including i and j value increment, understanding 6 st
 
 **What to submit:**
 1. **bubblesort.v**
-2. **A screenshot of final simulation as a <u>pdf file</u> format.**
+2. **A screenshot of final simulation as a <u>pdf file</u> format.** (Please make it sure it shows the "Congratulations it works" message.) 
 3. **Report: hardware design diagrams especially your state diagram.**
+4. **A zip file for your Xilinix directory including project file**
 
 **How to test the correctness**: Please check the display values. It should print out sorted memory values. 
 
