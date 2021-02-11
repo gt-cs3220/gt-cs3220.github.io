@@ -24,7 +24,7 @@ An example algorithm of serial bubble sort is as following.
  % Initialization 
   for j in 1 to Num_of_data-1 do 
 
-    for i in 1 to Num_of_data-1 do 
+    for i in 1 to Num_of_data-j do 
 	read mem(i) // state-1 
 	read mem(i+1)  // state-2
        	compare mem(i) with mem(i+1); // state-3 
