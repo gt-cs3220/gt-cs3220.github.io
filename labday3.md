@@ -8,7 +8,8 @@ In this assignment, you will use **assignment #3 frame**. Please look inside **a
 
 **The purpose of lab day #3 is to help you start on assignment # 3.** 
 
-Before you start lab3, please watch assignment3_help.mp4 video. 
+Before you start lab3, please watch labday3.mp4 video. 
+assignment3_code_navigation.mp4 video is also provided to help you understand the assignment #3 code frame. 
 
 step 1. create a project file and do run simulation.  
 
