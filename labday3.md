@@ -18,13 +18,11 @@ step 3. based on your pipeline design, idetnify what signals need to be propgate
 i.e.) what signals should be in from_de_to_fe from_wb_to_de etc. 
 
 
-step 4. modify the PC increment logic in the FE stage. 
+step 4. modify the stall signal in the front-end. 
 PC will be increamented by instruction size every cycle 
 
-step 5. progagate PC value to all the pipeline latches. 
-and add wires that shows PC contents. eg) PC_DE, PC_AGEX, PC_WB etc. 
-
-step 6. add all PC value in each pipeline latch in the wave form. 
+step 5.look for the code that propogate PC values in each pipeline  
+eg) PC_DE, PC_AGEX, PC_WB etc.  add all PC value in each pipeline latch in the wave form. 
 run simulation (Behavior simulation) 
 
 
