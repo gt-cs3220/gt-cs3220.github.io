@@ -194,7 +194,7 @@ As members of the Georgia Tech community, we are committed to creating a learnin
 |      | 2/3/21   | lab day #2  (same contents as 2/1/21)  | in-class assignment  submission |
 | 4    | 2/8/21   | office hours                           |                                 |
 |      | 2/10/21* | FPGA  architecture/FPGA synthesis      | [assignment #2 due (f)](assignment2.html)           |
-| 5    | 2/15/21  | lab day #3                             |                                 |
+| 5    | 2/15/21  | [lab day #3](labday3.html)                             |                                 |
 |      | 2/17/21  | lab dya #3 (same  contents as 2/15/21) | in-class assignment  submission |
 | 6    | 2/22/21  | office hours                           |                                 |
 |      | 2/24/21* | high-speed arithmetic  (I)             |                                 |
