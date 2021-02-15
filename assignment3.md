@@ -22,7 +22,7 @@ In this assignment, you will design a pipelined processor using verilog.
 
 For part #1, you need to pass 5 tests we create. You can locate those test files under tests directory. You can refer to the README file under tests for more information about each test case. 
 
-You do not implement forwarding in this assignment. Your program should run with test[1-5].hex file.  
+You do not implement forwarding in this assignment. Your program should run with test[1-5].mem file.  
 
 If your design does not show the correct outcome, you will not get any credit. 
 
@@ -36,7 +36,7 @@ you have to fix your design to comply with that.
 
 You and your partner should submit the same version of the zip file.
 
- Please make it sure your code is running all tests and set IDMEMINITFILE as test5.hex and submit the compiled version of  it. 
+ Please make it sure your code is running all tests and set IDMEMINITFILE as test5.mem and submit the compiled version of  it. 
 
  Grading: 
  If your design does not pass synthesization and implementation, you will get only 50% of your score. 
