@@ -1,11 +1,12 @@
 Lab day #3  Assignments 
 
-(Due : 2/17/21)
+(Due : 2/17/21) **6pm EST**
 
 
 
-In this assignment, you will use assignment #3 frame. 
-The purpose of lab day #3 assignment is to help you start on assignment # 3. 
+In this assignment, you will use **assignment #3 frame**. Please look inside **assignment3_files folder**.
+
+**The purpose of lab day #3 is to help you start on assignment # 3.** 
 
 Before you start lab3, please watch assignment3_help.mp4 video. 
 
@@ -29,7 +30,7 @@ run simulation (Behavior simulation)
 
 run simulation (Behavior simulation) and get a screenshopt. 
  
-**What to submit**: a screenshot of simulation.  
+**What to submit**: a screenshot of simulation (**must be PNG or PDF**)
 
 **Grading**: A screenshot that shows the PC value is incremented will be sufficient to get a full credit. 
 
