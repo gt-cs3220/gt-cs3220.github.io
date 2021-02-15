@@ -54,17 +54,17 @@ You and your partner should submit the same version of the zip file.
 
 **Description**: 
 
-In this part, you will complete the entire ISA. Your program should run with testall.hex case we provide. You don't need to implement data forwarding in this part.
+In this part, you will complete the entire ISA. Your program should run with testall.mem case we provide. You don't need to implement data forwarding in this part.
 
 
 
 
 **Grading**:
 
-It should pass testall.hex file in behavior simulation and the design should pass synthesization/implementation.  
+It should pass testall.mem file in behavior simulation and the design should pass synthesization/implementation.  
 If the design pass the behavioral simulation test but it cannot be synthesized, you will get only 50% of the scores. 
 
-If it does not pass testall.hex file, then there is no partial grading. Only for this assignment, we will accept a late submission with a penalty. 
+If it does not pass testall.mem file, then there is no partial grading. Only for this assignment, we will accept a late submission with a penalty. 
 Late submission: If you can submit the successful design  by the due of part-3, you will receive 50% of the part-2 score. 
 
 
@@ -73,7 +73,7 @@ Late submission: If you can submit the successful design  by the due of part-3, 
 
 **What to submit**:
 
-[1] project3.zip (including testall.hex and all other files).
+[1] project3.zip (including testall.mem and all other files).
 
 You and your partner should submit the same version of the zip file.
 
@@ -105,7 +105,7 @@ After the bubble sort is done, display 0F in HEX0. And read the contents of the 
 
 
 Note: 
-testall.hex do not cover all corner cases. You might need to debug your hardware as well 
+testall.mem do not cover all corner cases. You might need to debug your hardware as well 
 
 ## Optional task: Adding a branch predictor 
 
