@@ -199,7 +199,7 @@ As members of the Georgia Tech community, we are committed to creating a learnin
 | 6    | 2/22/21  | office hours                           |                                 |
 |      | 2/24/21* | high-speed arithmetic  (I)             |                                 |
 | 7    | 3/1/21   | office hours                           |                                 |
-|      | 3/3/21*  | high-speed arithmetic  (II)            | Assignment #3 part-1  (F)       |
+|      | 3/3/21*  | high-speed arithmetic  (II)            | [Assignment #3 part-1  (F)](assignment3.html)       |
 | 8    | 3/8/21   | office hours                           |                                 |
 |      | 3/10/21* | IEEE  Floatingpoint                    |                                 |
 | 9    | 3/15/21  | office hours                           |                                 |
