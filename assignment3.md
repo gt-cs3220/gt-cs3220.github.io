@@ -20,13 +20,13 @@ This is a two-member group project. Please discuss this with the instructor if y
 
 In this assignment, you will design a pipelined processor using verilog. 
 
-For part #1, you need to pass 5 tests we create. You can locate those test files under project3/tests directory. You can refer to the README file under project3/tests for more information about each test case. 
+For part #1, you need to pass 5 tests we create. You can locate those test files under tests directory. You can refer to the README file under tests for more information about each test case. 
 
-You do not implement forwarding in this assignment. Your program should run with test#.hex file.  
+You do not implement forwarding in this assignment. Your program should run with test[1-5].hex file.  
 
 If your design does not show the correct outcome, you will not get any credit. 
 
-You should test your design with synthesization and implementation before submission. If your design doesn't synthesized or can't pass implementation, 
+You should test your design with synthesization and implementation before submission. If your design can't be synthesized or can't pass implementation, 
 you have to fix your design to comply with that. 
  
 
@@ -36,7 +36,7 @@ you have to fix your design to comply with that.
 
 You and your partner should submit the same version of the zip file.
 
-Please make it sure your code is running "tests/test5.hex" and submit the compiled version of test5.hex 
+ Please make it sure your code is running all tests and set IDMEMINITFILE as test5.hex and submit the compiled version of  it. 
 
  Grading: 
  If your design does not pass synthesization and implementation, you will get only 50% of your score. 
@@ -54,17 +54,17 @@ Please make it sure your code is running "tests/test5.hex" and submit the compil
 
 **Description**: 
 
-In this part, you will complete the entire ISA. Your program should run with test_all.hex case we provide. You don't need to implement data forwarding in this part.
+In this part, you will complete the entire ISA. Your program should run with testall.hex case we provide. You don't need to implement data forwarding in this part.
 
 
 
 
 **Grading**:
 
-It should pass test_all.hex file in behavior simulation and the design should pass synthesization/implementation.  
-If the design pass the RTL simulation test but it cannot be synthesized, you will get only 50% of the scores. 
+It should pass testall.hex file in behavior simulation and the design should pass synthesization/implementation.  
+If the design pass the behavioral simulation test but it cannot be synthesized, you will get only 50% of the scores. 
 
-If it does not pass test_all.hex file, then there is no partial grading. Only for this assignment, we will accept a late submission with a penalty. 
+If it does not pass testall.hex file, then there is no partial grading. Only for this assignment, we will accept a late submission with a penalty. 
 Late submission: If you can submit the successful design  by the due of part-3, you will receive 50% of the part-2 score. 
 
 
@@ -73,7 +73,7 @@ Late submission: If you can submit the successful design  by the due of part-3, 
 
 **What to submit**:
 
-[1] project3.zip (including test.hex and all other files).
+[1] project3.zip (including testall.hex and all other files).
 
 You and your partner should submit the same version of the zip file.
 
@@ -101,15 +101,15 @@ please note that the part-3 description is subject to change
 In this design, you will write a bubble sort that you did in assignment #2 in the assembly code. 
 Data should be stored in address 0x040.  
 
-After the bubble sort is done, display FF in hex0. And read the contents of the value from 0x040 at one cycle at a time, and display the value in the hex1. Both outcomes of the hex values will be used for grading. 
+After the bubble sort is done, display 0F in HEX0. And read the contents of the value from 0x040 at one cycle at a time, and display the value in the hex1. Both outcomes of the hex values will be used for grading. 
 
 
 Note: 
-test_all.hex do not cover all corner cases. You might need to debug your hardware as well 
+testall.hex do not cover all corner cases. You might need to debug your hardware as well 
 
 ## Optional task: Adding a branch predictor 
 
 ** Description ** 
 
-In this design, you would add a branch predictor using a 16-entry gshare branch predictor. 
-If your design works correctly with a branch predictor, you will get 5 extra point.
+In this design, you would add a branch predictor using a 16-entry gshare branch predictor (i.e. 4-bit branch history length). 
+If your design works correctly with a branch predictor, you will get a 5 extra point. Your branch predictor should work with your bubble sort. 
