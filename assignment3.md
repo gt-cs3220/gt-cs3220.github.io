@@ -2,11 +2,11 @@
 
 **Due dates**: 
 
-**Part 1**  : 3/3/201 (F) 6 pm  ( 10  points)
+**Part 1**  : 3/5/201 (F) 6 pm  ( 10  points)
 
-**Part 2** : 3/17/2021 (F) 6 pm  (10 points)
+**Part 2** : 3/19/2021 (F) 6 pm  (10 points)
 
-**Part 3** : 3/31/2021 (F) 6 pm  (10 points)
+**Part 3** : 4/2/2021 (F) 6 pm  (10 points)
 
 Total:  30 points of out of the total grade. 
 
