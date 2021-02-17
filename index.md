@@ -38,4 +38,4 @@ In this course, we will study hardware implementation of architecture design. Th
 
 #### [Click to view VM instructions](access_vm_steps\access_vm_doc.html)
 
-
+#### [Click to view Pynq FPGA instructions](access_pynq_boards\access_pynq_doc.html)
