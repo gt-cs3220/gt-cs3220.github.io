@@ -32,7 +32,7 @@ you have to fix your design to comply with that.
 
 **What to submit**:
 
-[1] project3.zip (including all files under this directory).
+**[1] project3.zip (including all files under this directory).**
 
 You and your partner should submit the same version of the zip file.
 
@@ -41,8 +41,9 @@ You and your partner should submit the same version of the zip file.
  Grading: 
  If your design does not pass synthesization and implementation, you will get only 50% of your score. 
  
+**[2] A zip file of all your source code files (See Piazza @93)**
 
-[2] Report: You don't need to support a report for Part 1. You will submit a report for Part 2. 
+**[3] Report: You don't need to support a report for Part 1. You will submit a report for Part 2.** 
 
  
 
