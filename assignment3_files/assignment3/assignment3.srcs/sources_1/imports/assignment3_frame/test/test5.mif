@@ -1,0 +1,28 @@
+DEPTH = 16384;
+WIDTH = 32;
+ADDRESS_RADIX = HEX;
+DATA_RADIX = HEX;
+CONTENT
+BEGIN
+    0000 : 20000000; --> 0000 : br	BadPC
+    0001 : 90000000; --> 0004 : andi	zero,zero,0x0
+    0002 : 00b00500; --> 0008 : not 	t0,zero
+    0003 : 68f02005; --> 000c : sw	t0,LEDR(zero)
+    0004 : 800bad05; --> 0010 : addi 	zero,t0,0xBAD
+    0005 : 68f000e5; --> 0014 : sw 	t0,HEX(sp)
+    0006 : 20fffa00; --> 0018 : br	BadPC
+    [0007..00ff] : dead;
+    0040 : 80000008; --> 0100 : addi	zero,s1,0x0
+    0041 : 80000088; --> 0104 : addi 	s1,s1,0x0
+    0042 : 80000088; --> 0108 : addi 	s1,s1,0x0
+    0043 : 80000188; --> 010c : addi 	s1,s1,0x1
+    0044 : 80000088; --> 0110 : addi 	s1,s1,0x0
+    0045 : 68f00008; --> 0114 : sw	s1,HEX(zero)
+    0046 : 20fff988; --> 0118 : beq 	s1,s1,GoodBR
+    0047 : 90000000; --> 011c : andi	zero,zero,0x0
+    0048 : 00b00500; --> 0120 : not 	t0,zero
+    0049 : 68f02005; --> 0124 : sw	t0,LEDR(zero)
+    004a : 80dead05; --> 0128 : addi 	zero,t0,0xDEAD
+    004b : 68f000e5; --> 012c : sw 	t0,HEX(sp)
+    [004c..3fff] : dead;
+END;
