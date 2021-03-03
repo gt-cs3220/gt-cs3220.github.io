@@ -51,6 +51,8 @@ You and your partner should submit the same version of the zip file.
 
 Please make it sure your code is running and passing test[1-5]
 
+Each student must submit a report. You and your partner can submit the same report (just make sure your names are in the report)
+
 Grading: 
 If your design does not pass synthesis and implementation, you will get only 50% of your score. 
  
