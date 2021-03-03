@@ -30,21 +30,29 @@ You should test your design with synthesization and implementation before submis
 you have to fix your design to comply with that. 
  
 
-**What to submit**:
+**What to submit. (See Piazza @112 for reference)**:
 
-**[1] project3.zip (including all files under this directory).**
+**[1] A zip file of your source code. The zip file must contain the following:**
+
+* agex_stage.v
+* de_stage.v
+* fe_stage.v
+* mem_stage.v
+* wb_stage.v
+* project3_frame.v
+* VX_define.vh
+
+**[2] A zip file of your Vivado project directory. Please see Piazza @112.**
+
+
+**[3] A Report PDF file that contains 6 images (Test1-5 and synthesis+implementation). Please see sample report on Piazza @112 and follow the same format. You do not need to write anything just paste clear screenshots. Note: screenshots must be clear and file must be PDF.**
 
 You and your partner should submit the same version of the zip file.
 
- Please make it sure your code is running all tests and set IDMEMINITFILE as test5.mem and submit the compiled version of  it. 
+Please make it sure your code is running and passing test[1-5]
 
- Grading: 
- If your design does not pass synthesization and implementation, you will get only 50% of your score. 
- 
-**[2] A zip file of all your source code files (See Piazza @93)**
-
-**[3] Report: You don't need to support a report for Part 1. You will submit a report for Part 2.** 
-
+Grading: 
+If your design does not pass synthesis and implementation, you will get only 50% of your score. 
  
 
 ***Please do not procrastinate.*** 
