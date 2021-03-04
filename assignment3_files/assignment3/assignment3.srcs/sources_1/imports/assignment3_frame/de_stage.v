@@ -58,10 +58,37 @@ module DE_STAGE(
   assign rd_DE = inst_DE[11:8];
   assign rs_DE = inst_DE[7:4];
   assign rt_DE = inst_DE[3:0];
+  
+  assign regval1_DE = regs[rs_DE];
+  assign reval2_DE = regs[rt_DE];
+  
+  reg [`REGNOBITS-1:0] wregno_DE_REG;
+  reg [`REGNOBITS-1:0] wregno_EX_REG;
+  reg [`REGNOBITS-1:0] wregno_MEM_REG;
+  reg [`INSTBITS-1:0] inst_DE_REG;
 
 // assign wire to send the contents of DE latch to other pipeline stages  
   assign DE_latch_out = DE_latch; 
   
+  // Stalling Logic
+  wire rs_eval = rs_DE != 0 && (wregno_DE_REG == rs_DE || wregno_EX_REG == rs_DE || wregno_MEM_REG == rs_DE);
+  wire rt_eval = rt_DE != 0 && (wregno_DE_REG == rt_DE || wregno_DE_REG == rt_DE || wregno_MEM_REG == rt_DE);
+  
+  wire DE_stall = wregno_DE_REG != 0 && (wregno_DE_REG == rs_DE || wregno_DE_REG == rt_DE);
+  wire EX_stall = wregno_EX_REG != 0 && (wregno_EX_REG == rs_DE || wregno_EX_REG == rt_DE);
+  wire MEM_stall = wregno_MEM_REG != 0 && (wregno_MEM_REG == rs_DE || wregno_MEM_REG == rt_DE);
+  
+  assign stall_pipe = (DE_stall || EX_stall || MEM_stall) && (
+  ((rs_eval || rt_eval) && (op1_DE[5:3] == 3'b000 || op1_DE[5:2] == 4'b0010)) ||
+  (rs_eval && (op1_DE[5:2] == 4'b0011 || op1_DE[5:3] == 3'b010 || op1_DE[5:3] == 3'b100)));
+  
+  assign from_DE_to_FE = {
+    stall_pipe
+  };
+  
+  
+  assign wregno_DE = (op1_DE[5:3] == 3'b000) ? rd_DE : rt_DE;
+
     // Sign extension example 
   SXT mysxt (.IN(imm_DE), .OUT(sxt_imm_DE));
   

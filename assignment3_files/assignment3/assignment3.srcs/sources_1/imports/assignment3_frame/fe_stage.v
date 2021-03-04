@@ -52,7 +52,9 @@ module FE_STAGE(
                                 `BUS_CANARY_VALUE // for an error checking of bus encoding/decoding  
                                 };
    
-  assign stall_pipe = 1; // you need to complete the logic to compute stall FE stage 
+assign {
+    stall_pipe
+} = from_DE_to_FE;
    
   always @ (posedge clk or posedge reset) begin
     if(reset)
