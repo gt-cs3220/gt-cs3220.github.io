@@ -58,7 +58,10 @@ module WB_STAGE(
                                  } = from_MEM_latch; 
         
         // write register by sending data to the DE stage 
-        
+   assign from_WB_to_DE = {
+                                wregno_WB,
+                                wr_reg_WB
+                          };
         
   // **TODO: Write the code for LEDR here
 

@@ -76,7 +76,7 @@ module MEM_STAGE(
                                  bus_canary_MEM
                                  } = from_AGEX_latch;  
  
-
+    assign wr_reg_MEM = aluout_MEM; // so that WB stage can write value to DE stage if needed for reg write
    
    assign MEM_latch_contents = {
                                 inst_MEM,

@@ -42,14 +42,22 @@ module DE_STAGE(
   wire wr_reg_DE;
   wire [`REGNOBITS-1:0] wregno_DE;
   
+  wire wregno_WB;
+  wire wr_reg_WB;
+  
   wire[`DE_latch_WIDTH-1:0] DE_latch_contents; 
   wire[`BUS_CANARY_WIDTH-1:0] bus_canary_DE; 
  // **TODO: Complete the rest of the pipeline 
 
 // extracting a part of opcode 
-  assign op1_DE = inst_DE[31:26];  // example code
+  assign op1_DE = inst_DE[31:26];  // example code 
 
- // complete the rest of instruction decoding 
+ // complete the rest of instruction decoding
+  assign op2_DE = inst_DE[25:18];
+  assign imm_DE = inst_DE[23:8];
+  assign rd_DE = inst_DE[11:8];
+  assign rs_DE = inst_DE[7:4];
+  assign rt_DE = inst_DE[3:0];
 
 // assign wire to send the contents of DE latch to other pipeline stages  
   assign DE_latch_out = DE_latch; 
@@ -67,7 +75,11 @@ module DE_STAGE(
             bus_canary_DE 
             }  = from_FE_latch;  // based on the contents of the latch, you can decode the content 
 
-
+// decoding contents of signals from WB
+    assign {
+            wregno_WB,
+            wr_reg_WB
+            } = from_WB_to_DE;
 
     assign DE_latch_contents = {
                                   inst_DE,
@@ -110,6 +122,9 @@ module DE_STAGE(
 	 end 
    // need to complete register write 
     // else if ... 
+    else if (wregno_WB) begin
+        regs[wregno_WB] <= wr_reg_WB;
+    end
   end
 
   always @ (posedge clk or posedge reset) begin
