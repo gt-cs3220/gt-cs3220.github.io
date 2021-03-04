@@ -47,7 +47,7 @@ module DE_STAGE(
  // **TODO: Complete the rest of the pipeline 
 
 // extracting a part of opcode 
-  assign op1_DE = inst_DE[31:26];  // example code 
+  assign op1_DE = inst_DE[31:26];  // example code
 
  // complete the rest of instruction decoding 
 

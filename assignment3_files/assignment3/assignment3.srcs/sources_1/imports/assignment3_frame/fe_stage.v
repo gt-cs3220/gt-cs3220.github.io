@@ -52,7 +52,7 @@ module FE_STAGE(
                                 `BUS_CANARY_VALUE // for an error checking of bus encoding/decoding  
                                 };
    
-  assign stall_pipe = 1; // you need to complete the logic to compute stall FE stage 
+  assign stall_pipe = 0; // you need to complete the logic to compute stall FE stage 
    
   always @ (posedge clk or posedge reset) begin
     if(reset)
@@ -71,7 +71,8 @@ module FE_STAGE(
         end 
      else   // this is just an example. you need to expand the contents of if/else
         begin  
-            FE_latch <= FE_latch_contents; 
+            FE_latch <= FE_latch_contents;
+            
         end  
   end
  
