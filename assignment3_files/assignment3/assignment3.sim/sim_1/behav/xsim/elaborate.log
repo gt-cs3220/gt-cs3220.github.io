@@ -1,7 +1,7 @@
 Vivado Simulator 2020.2
 Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
-Running: E:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto d1c8f75c64624f14852b094271b671d2 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_project3_behav xil_defaultlib.tb_project3 xil_defaultlib.glbl -log elaborate.log 
-Using 2 slave threads.
+Running: /tools/reconfig/xilinx/Vivado/2020.2/bin/unwrapped/lnx64.o/xelab -wto d1c8f75c64624f14852b094271b671d2 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_project3_behav xil_defaultlib.tb_project3 xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
 Completed static elaboration

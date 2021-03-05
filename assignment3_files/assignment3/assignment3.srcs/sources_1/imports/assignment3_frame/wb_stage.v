@@ -40,9 +40,12 @@ module WB_STAGE(
 
   assign HEX0 = HEX_out[3:0]; // if we are using a board, we should converte hex values with seven segments. 
   assign HEX1 = HEX_out[7:4];
+  assign HEX2 = HEX_out[11:8];
+  assign HEX3 = HEX_out[15:12];
+  assign HEX4 = HEX_out[19:16];
+  assign HEX5 = HEX_out[23:20];
 
- // **TODO: Complete the rest of the pipeline 
- 
+ // **TODO: Complete the rest of the pipeline
     
    assign {
                                 inst_WB,
@@ -64,7 +67,7 @@ module WB_STAGE(
                           };
         
   // **TODO: Write the code for LEDR here
-
+  // Not needed for this assignment I think
   assign LEDR = LEDR_out;
   
 

@@ -2,11 +2,12 @@
 # Webtalk v2020.2 (64-bit)
 # SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
 # IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
-# Start of session at: Fri Mar  5 11:49:26 2021
-# Process ID: 4220
+# Start of session at: Tue Mar  2 17:45:22 2021
+# Process ID: 26401
 # Current directory: /home/hkamath3/gt-cs3220-spr21.github.io/assignment3_files/assignment3/assignment3.sim/sim_1/behav/xsim
 # Command line: wbtcv -mode batch -source /home/hkamath3/gt-cs3220-spr21.github.io/assignment3_files/assignment3/assignment3.sim/sim_1/behav/xsim/xsim.dir/tb_project3_behav/webtalk/xsim_webtalk.tcl -notrace
 # Log file: /home/hkamath3/gt-cs3220-spr21.github.io/assignment3_files/assignment3/assignment3.sim/sim_1/behav/xsim/webtalk.log
 # Journal file: /home/hkamath3/gt-cs3220-spr21.github.io/assignment3_files/assignment3/assignment3.sim/sim_1/behav/xsim/webtalk.jou
 #-----------------------------------------------------------
 source /home/hkamath3/gt-cs3220-spr21.github.io/assignment3_files/assignment3/assignment3.sim/sim_1/behav/xsim/xsim.dir/tb_project3_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Tue Mar  2 17:45:22 2021...

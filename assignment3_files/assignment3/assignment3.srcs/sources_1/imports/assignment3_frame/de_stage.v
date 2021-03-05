@@ -59,6 +59,12 @@ module DE_STAGE(
   assign rs_DE = inst_DE[7:4];
   assign rt_DE = inst_DE[3:0];
   
+  assign is_br_DE = op1_DE[5:2] == 4'b0010;
+  assign is_jmp_DE = op1_DE == 6'b001100;
+  assign rd_mem_DE = op1_DE[5:3] == 3'b010;
+  assign wr_mem_DE = op1_DE[5:3] == 3'b011;
+  assign wr_reg_DE = op1_DE == 6'b000000 || op1_DE == 6'b001100 || op1_DE == 6'b010010 || op1_DE[5:3] == 3'b100;
+  
 // set regval1_DE and regval2_DE to rs and rt
   assign regval1_DE = regs[rs_DE];
   assign regval2_DE = regs[rt_DE];

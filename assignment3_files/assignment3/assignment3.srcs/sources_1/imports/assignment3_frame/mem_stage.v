@@ -94,7 +94,7 @@ module MEM_STAGE(
   always @ (posedge clk or posedge reset) begin
   // this code need to be completed 
     if(reset) begin
-        MEM_latch <={`MEM_latch_WIDTH{1'b0}}; 
+        MEM_latch <={`MEM_latch_WIDTH{1'b0}};
     end
     else 
      begin 
