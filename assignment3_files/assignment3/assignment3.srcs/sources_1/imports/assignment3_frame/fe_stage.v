@@ -31,13 +31,21 @@ module FE_STAGE(
   
   wire [`FE_latch_WIDTH-1:0] FE_latch_contents; 
   
+  // if AGEX calculates branch, use these
+  wire br_cond_FE;
+  wire [`INSTBITS-1:0] pctarget_FE;
+  
   // reading instruction from imem 
   assign inst_FE = imem[PC_FE_latch[`IMEMADDRBITS-1:`IMEMWORDBITS]]; 
   
   // wire to send the FE latch contents to the DE stage 
   assign FE_latch_out = FE_latch; 
 
- 
+  // Read AGEX branch signals
+  assign {
+            br_cond_FE,
+            pctarget_FE
+            } = from_AGEX_to_FE;
 
   // This is the value of "incremented PC", computed in the FE stage
   assign pcplus_FE = PC_FE_latch + `INSTSIZE;
@@ -59,6 +67,8 @@ assign {
   always @ (posedge clk or posedge reset) begin
     if(reset)
       PC_FE_latch <= `STARTPC;
+    else if (br_cond_FE)
+      FE_latch <= pctarget_FE;
     else if(!stall_pipe)
       PC_FE_latch <= pcplus_FE;
     else
@@ -67,11 +77,11 @@ assign {
   
 
   always @ (posedge clk or posedge reset) begin
-    if(reset) 
+    if(reset || br_cond_FE) 
         begin 
         FE_latch <= {`FE_latch_WIDTH{1'b0}}; 
         end 
-     else   // this is just an example. you need to expand the contents of if/else
+     else
         begin  
             FE_latch <= FE_latch_contents; 
         end  

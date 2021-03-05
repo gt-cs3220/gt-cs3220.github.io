@@ -59,8 +59,9 @@ module DE_STAGE(
   assign rs_DE = inst_DE[7:4];
   assign rt_DE = inst_DE[3:0];
   
+// set regval1_DE and regval2_DE to rs and rt
   assign regval1_DE = regs[rs_DE];
-  assign reval2_DE = regs[rt_DE];
+  assign regval2_DE = regs[rt_DE];
   
   reg [`REGNOBITS-1:0] wregno_DE_REG;
   reg [`REGNOBITS-1:0] wregno_EX_REG;
@@ -155,11 +156,11 @@ module DE_STAGE(
   end
 
   always @ (posedge clk or posedge reset) begin
-    if(reset) begin
+    if(reset || from_AGEX_to_DE) begin
       DE_latch <= {`DE_latch_WIDTH{1'b0}};
       // might need more code 
       end
-     else 
+     else
      // need to complete. e.g.) stall? 
       DE_latch <= DE_latch_contents;
   end

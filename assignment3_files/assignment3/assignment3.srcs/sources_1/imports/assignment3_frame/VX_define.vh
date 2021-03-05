@@ -82,11 +82,11 @@
   `define MEM_latch_WIDTH   (`INSTBITS+`DBITS+`DBITS +`DBITS + `DBITS + 1 + 1 + `REGNOBITS + `BUS_CANARY_WIDTH)
 
   `define from_DE_to_FE_WIDTH  1 
-  `define from_AGEX_to_FE_WIDTH 4 
+  `define from_AGEX_to_FE_WIDTH (1 + `INSTBITS) // bit for br_cond 
   `define from_MEM_to_FE_WIDTH 4
   `define from_WB_to_FE_WIDTH 4
 
-  `define from_AGEX_to_DE_WIDTH 4 
+  `define from_AGEX_to_DE_WIDTH 1 // if br_cond, flush pipeline
   `define from_MEM_to_DE_WIDTH 4 
   `define from_WB_to_DE_WIDTH  (`REGNOBITS + `DBITS)
 

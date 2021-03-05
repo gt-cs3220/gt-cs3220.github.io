@@ -90,8 +90,17 @@ module AGEX_STAGE(
 		aluout_AGEX = {`DBITS{1'b0}};
 	 end
 
-// branch target needs to be computed here 
+// branch target needs to be computed here
+assign pctarget_AGEX = PC_AGEX + sxt_imm_AGEX;
+
 // computed branch target needs to send to other pipeline stages
+
+assign from_AGEX_to_FE = {
+                                br_cond_AGEX,
+                                pctarget_AGEX
+                                };
+                                
+assign from_AGEX_to_DE = br_cond_AGEX;
 
     assign  {
                                   inst_AGEX,

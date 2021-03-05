@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb_project3_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="tb_project3" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="985380fs"></ZoomStartTime>
+      <ZoomEndTime time="1142781fs"></ZoomEndTime>
+      <Cursor1Time time="2000000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="129"></NameColumnWidth>
+      <ValueColumnWidth column_width="112"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="24" />
+   <wvobject fp_name="/tb_project3/CLOCK_50" type="logic">
+      <obj_property name="ElementShortName">CLOCK_50</obj_property>
+      <obj_property name="ObjectShortName">CLOCK_50</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_project3/RESET_N" type="logic">
+      <obj_property name="ElementShortName">RESET_N</obj_property>
+      <obj_property name="ObjectShortName">RESET_N</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_project3/KEY" type="array">
+      <obj_property name="ElementShortName">KEY[3:0]</obj_property>
+      <obj_property name="ObjectShortName">KEY[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_project3/HEX0" type="array">
+      <obj_property name="ElementShortName">HEX0[6:0]</obj_property>
+      <obj_property name="ObjectShortName">HEX0[6:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_project3/HEX1" type="array">
+      <obj_property name="ElementShortName">HEX1[6:0]</obj_property>
+      <obj_property name="ObjectShortName">HEX1[6:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_project3/LEDR" type="array">
+      <obj_property name="ElementShortName">LEDR[9:0]</obj_property>
+      <obj_property name="ObjectShortName">LEDR[9:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_project3/i" type="array">
+      <obj_property name="ElementShortName">i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">i[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_project3/myprj/my_FE_stage/PC_FE_latch" type="array">
+      <obj_property name="ElementShortName">PC_FE_latch[31:0]</obj_property>
+      <obj_property name="ObjectShortName">PC_FE_latch[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_project3/myprj/my_DE_stage/PC_DE" type="array">
+      <obj_property name="ElementShortName">PC_DE[31:0]</obj_property>
+      <obj_property name="ObjectShortName">PC_DE[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_project3/myprj/my_AGEX_stage/PC_AGEX" type="array">
+      <obj_property name="ElementShortName">PC_AGEX[31:0]</obj_property>
+      <obj_property name="ObjectShortName">PC_AGEX[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_project3/myprj/my_MEM_stage/PC_MEM" type="array">
+      <obj_property name="ElementShortName">PC_MEM[31:0]</obj_property>
+      <obj_property name="ObjectShortName">PC_MEM[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_project3/myprj/my_WB_stage/PC_WB" type="array">
+      <obj_property name="ElementShortName">PC_WB[31:0]</obj_property>
+      <obj_property name="ObjectShortName">PC_WB[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_project3/myprj/my_DE_stage/inst_DE" type="array">
+      <obj_property name="ElementShortName">inst_DE[31:0]</obj_property>
+      <obj_property name="ObjectShortName">inst_DE[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_project3/myprj/my_DE_stage/op1_DE" type="array">
+      <obj_property name="ElementShortName">op1_DE[5:0]</obj_property>
+      <obj_property name="ObjectShortName">op1_DE[5:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_project3/myprj/my_DE_stage/op2_DE" type="array">
+      <obj_property name="ElementShortName">op2_DE[7:0]</obj_property>
+      <obj_property name="ObjectShortName">op2_DE[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_project3/myprj/my_DE_stage/imm_DE" type="array">
+      <obj_property name="ElementShortName">imm_DE[15:0]</obj_property>
+      <obj_property name="ObjectShortName">imm_DE[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_project3/myprj/my_DE_stage/rd_DE" type="array">
+      <obj_property name="ElementShortName">rd_DE[3:0]</obj_property>
+      <obj_property name="ObjectShortName">rd_DE[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_project3/myprj/my_DE_stage/rs_DE" type="array">
+      <obj_property name="ElementShortName">rs_DE[3:0]</obj_property>
+      <obj_property name="ObjectShortName">rs_DE[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_project3/myprj/my_DE_stage/rt_DE" type="array">
+      <obj_property name="ElementShortName">rt_DE[3:0]</obj_property>
+      <obj_property name="ObjectShortName">rt_DE[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_project3/myprj/my_DE_stage/regval1_DE" type="array">
+      <obj_property name="ElementShortName">regval1_DE[31:0]</obj_property>
+      <obj_property name="ObjectShortName">regval1_DE[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_project3/myprj/my_DE_stage/regval2_DE" type="array">
+      <obj_property name="ElementShortName">regval2_DE[31:0]</obj_property>
+      <obj_property name="ObjectShortName">regval2_DE[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_project3/myprj/my_DE_stage/sxt_imm_DE" type="array">
+      <obj_property name="ElementShortName">sxt_imm_DE[31:0]</obj_property>
+      <obj_property name="ObjectShortName">sxt_imm_DE[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_project3/myprj/my_AGEX_stage/br_cond_AGEX" type="logic">
+      <obj_property name="ElementShortName">br_cond_AGEX</obj_property>
+      <obj_property name="ObjectShortName">br_cond_AGEX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_project3/myprj/my_AGEX_stage/pctarget_AGEX" type="array">
+      <obj_property name="ElementShortName">pctarget_AGEX[31:0]</obj_property>
+      <obj_property name="ObjectShortName">pctarget_AGEX[31:0]</obj_property>
+   </wvobject>
+</wave_config>
