@@ -110,13 +110,22 @@ please note that the part-3 description is subject to change
 **Description:** 
 
 In this design, you will write a bubble sort that you did in assignment #2 in the assembly code. 
-Data should be stored in address 0x040.  
+Data should be stored in address 0x040.  The filename needs to be bubblesort.asm 
 
-After the bubble sort is done, display 0F in HEX0. And read the contents of the value from 0x040 at one cycle at a time, and display the value in the hex1. Both outcomes of the hex values will be used for grading. 
+After the bubble sort is done, display 0F in HEX0. And then read the contents of the value from 0x040 at one at a time, and display the value in the HEX1. Once the display is the over, turn on LEDR 4b'1010.  HEX0, HEX1, and LEDR outcomes will be used for grading. 
 
-
+FAQ) 
+Q1. How to generate mem file ? 
+A1. Use assembler.py to conver your assembly code into mif file format. And then use miftmem.py to generate bubblesort.mem 
 Note: 
 testall.mem do not cover all corner cases. You might need to debug your hardware as well 
+
+**What to submit ** 
+[1] bubblesort.asm 
+[2]  project3.zip (bubblesort.mem should be on the part of that) 
+[3] Report: 
+  a screenshot of showing sorted outcome from hex. 
+  Discuss any issues 
 
 ## Optional task: Adding a branch predictor 
 
