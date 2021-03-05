@@ -91,7 +91,7 @@ module AGEX_STAGE(
 	 end
 
 // branch target needs to be computed here
-assign pctarget_AGEX = PC_AGEX + sxt_imm_AGEX;
+assign pctarget_AGEX = (sxt_imm_AGEX < 0) ? (PC_AGEX - (1 <<< -sxt_imm_AGEX)): (PC_AGEX + (1 <<< sxt_imm_AGEX));
 
 // computed branch target needs to send to other pipeline stages
 

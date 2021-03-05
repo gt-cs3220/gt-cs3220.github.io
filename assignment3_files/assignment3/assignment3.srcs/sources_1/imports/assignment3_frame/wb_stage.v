@@ -62,8 +62,9 @@ module WB_STAGE(
         
         // write register by sending data to the DE stage 
    assign from_WB_to_DE = {
+                                wr_reg_WB,
                                 wregno_WB,
-                                wr_reg_WB
+                                regval_WB
                           };
         
   // **TODO: Write the code for LEDR here

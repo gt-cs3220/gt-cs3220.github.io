@@ -68,7 +68,7 @@ assign {
     if(reset)
       PC_FE_latch <= `STARTPC;
     else if (br_cond_FE)
-      FE_latch <= pctarget_FE;
+      PC_FE_latch <= pctarget_FE;
     else if(!stall_pipe)
       PC_FE_latch <= pcplus_FE;
     else

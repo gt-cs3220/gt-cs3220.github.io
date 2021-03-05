@@ -88,7 +88,7 @@
 
   `define from_AGEX_to_DE_WIDTH 1 // if br_cond, flush pipeline
   `define from_MEM_to_DE_WIDTH 4 
-  `define from_WB_to_DE_WIDTH  (`REGNOBITS + `DBITS)
+  `define from_WB_to_DE_WIDTH  (1 + `REGNOBITS + `DBITS)
 
   `define from_MEM_to_AGEX_WIDTH  4 
   `define from_WB_to_AGEX_WIDTH  4 

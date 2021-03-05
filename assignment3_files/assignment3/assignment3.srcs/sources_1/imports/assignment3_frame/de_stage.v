@@ -42,8 +42,9 @@ module DE_STAGE(
   wire wr_reg_DE;
   wire [`REGNOBITS-1:0] wregno_DE;
   
-  wire wregno_WB;
   wire wr_reg_WB;
+  wire [`REGNOBITS-1:0] wregno_WB;
+  wire [`DBITS-1:0] regval_WB;
   
   wire[`DE_latch_WIDTH-1:0] DE_latch_contents; 
   wire[`BUS_CANARY_WIDTH-1:0] bus_canary_DE; 
@@ -59,36 +60,37 @@ module DE_STAGE(
   assign rs_DE = inst_DE[7:4];
   assign rt_DE = inst_DE[3:0];
   
-  assign is_br_DE = op1_DE[5:2] == 4'b0010;
-  assign is_jmp_DE = op1_DE == 6'b001100;
-  assign rd_mem_DE = op1_DE[5:3] == 3'b010;
-  assign wr_mem_DE = op1_DE[5:3] == 3'b011;
-  assign wr_reg_DE = op1_DE == 6'b000000 || op1_DE == 6'b001100 || op1_DE == 6'b010010 || op1_DE[5:3] == 3'b100;
+  assign is_br_DE = (op1_DE == `OP1_BEQ) || (op1_DE == `OP1_BLT) || (op1_DE == `OP1_BLE) || (op1_DE == `OP1_BNE);
+  assign is_jmp_DE = op1_DE == `OP1_JAL;
+  assign rd_mem_DE = op1_DE == `OP1_LW;
+  assign wr_mem_DE = op1_DE == `OP1_SW;
+  assign wr_reg_DE = (op1_DE == `OP1_ALUR) || rd_mem_DE || (op1_DE[`OP1BITS-1] == 1);
   
 // set regval1_DE and regval2_DE to rs and rt
   assign regval1_DE = regs[rs_DE];
   assign regval2_DE = regs[rt_DE];
   
-  reg [`REGNOBITS-1:0] wregno_DE_REG;
-  reg [`REGNOBITS-1:0] wregno_EX_REG;
-  reg [`REGNOBITS-1:0] wregno_MEM_REG;
-  reg [`INSTBITS-1:0] inst_DE_REG;
+//  reg [`REGNOBITS-1:0] wregno_DE_REG;
+//  reg [`REGNOBITS-1:0] wregno_EX_REG;
+//  reg [`REGNOBITS-1:0] wregno_MEM_REG;
+//  reg [`INSTBITS-1:0] inst_DE_REG;
 
 // assign wire to send the contents of DE latch to other pipeline stages  
   assign DE_latch_out = DE_latch; 
   
   // Stalling Logic
-  wire rs_eval = rs_DE != 0 && (wregno_DE_REG == rs_DE || wregno_EX_REG == rs_DE || wregno_MEM_REG == rs_DE);
-  wire rt_eval = rt_DE != 0 && (wregno_DE_REG == rt_DE || wregno_DE_REG == rt_DE || wregno_MEM_REG == rt_DE);
+//  wire rs_eval = rs_DE != 0 && (wregno_DE_REG == rs_DE || wregno_EX_REG == rs_DE || wregno_MEM_REG == rs_DE);
+//  wire rt_eval = rt_DE != 0 && (wregno_DE_REG == rt_DE || wregno_DE_REG == rt_DE || wregno_MEM_REG == rt_DE);
   
-  wire DE_stall = wregno_DE_REG != 0 && (wregno_DE_REG == rs_DE || wregno_DE_REG == rt_DE);
-  wire EX_stall = wregno_EX_REG != 0 && (wregno_EX_REG == rs_DE || wregno_EX_REG == rt_DE);
-  wire MEM_stall = wregno_MEM_REG != 0 && (wregno_MEM_REG == rs_DE || wregno_MEM_REG == rt_DE);
+//  wire DE_stall = wregno_DE_REG != 0 && (wregno_DE_REG == rs_DE || wregno_DE_REG == rt_DE);
+//  wire EX_stall = wregno_EX_REG != 0 && (wregno_EX_REG == rs_DE || wregno_EX_REG == rt_DE);
+//  wire MEM_stall = wregno_MEM_REG != 0 && (wregno_MEM_REG == rs_DE || wregno_MEM_REG == rt_DE);
   
-  assign stall_pipe = (DE_stall || EX_stall || MEM_stall) && (
-  ((rs_eval || rt_eval) && (op1_DE[5:3] == 3'b000 || op1_DE[5:2] == 4'b0010)) ||
-  (rs_eval && (op1_DE[5:2] == 4'b0011 || op1_DE[5:3] == 3'b010 || op1_DE[5:3] == 3'b100)));
+//  assign stall_pipe = (DE_stall || EX_stall || MEM_stall) && (
+//  ((rs_eval || rt_eval) && (op1_DE[5:3] == 3'b000 || op1_DE[5:2] == 4'b0010)) ||
+//  (rs_eval && (op1_DE[5:2] == 4'b0011 || op1_DE[5:3] == 3'b010 || op1_DE[5:3] == 3'b100)));
   
+  assign stall_pipe = (from_AGEX_to_DE) || is_br_DE;
   assign from_DE_to_FE = {
     stall_pipe
   };
@@ -111,8 +113,9 @@ module DE_STAGE(
 
 // decoding contents of signals from WB
     assign {
+            wr_reg_WB,
             wregno_WB,
-            wr_reg_WB
+            regval_WB
             } = from_WB_to_DE;
 
     assign DE_latch_contents = {
@@ -156,8 +159,8 @@ module DE_STAGE(
 	 end 
    // need to complete register write 
     // else if ... 
-    else if (wregno_WB) begin
-        regs[wregno_WB] <= wr_reg_WB;
+    else if (wr_reg_WB && wregno_WB) begin
+        regs[wregno_WB] <= regval_WB;
     end
   end
 

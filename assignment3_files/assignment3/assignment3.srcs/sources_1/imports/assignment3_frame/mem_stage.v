@@ -59,8 +59,8 @@ module MEM_STAGE(
  
 
    // **TODO: Complete the rest of the pipeline 
-
-    
+   assign memaddr_MEM = aluout_MEM;
+   assign regval_MEM = rd_val_MEM;
    assign MEM_latch_out = MEM_latch; 
 
    assign {
@@ -75,8 +75,6 @@ module MEM_STAGE(
                                     // more signals might need
                                  bus_canary_MEM
                                  } = from_AGEX_latch;  
- 
-    assign wr_reg_MEM = aluout_MEM; // so that WB stage can write value to DE stage if needed for reg write
    
    assign MEM_latch_contents = {
                                 inst_MEM,

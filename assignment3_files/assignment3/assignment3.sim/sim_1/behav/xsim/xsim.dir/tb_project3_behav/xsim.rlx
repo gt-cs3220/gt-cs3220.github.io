@@ -1,11 +1,11 @@
 
 { 
-    crc :  16174045953546403557  , 
+    crc :  920785485071970523  , 
     ccp_crc :  0  , 
-    cmdline : " -wto d1c8f75c64624f14852b094271b671d2 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_project3_behav xil_defaultlib.tb_project3 xil_defaultlib.glbl" , 
+    cmdline : " -wto d1c8f75c64624f14852b094271b671d2 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_project3_behav xil_defaultlib.tb_project3 xil_defaultlib.glbl" , 
     buildDate : "Nov 18 2020" , 
-    buildTime : "09:20:35" , 
-    linkCmd : "/usr/bin/gcc -Wa,-W  -O -fPIC  -m64  -Wl,--no-as-needed  -Wl,--unresolved-symbols=ignore-all  -o \"xsim.dir/tb_project3_behav/xsimk\"   \"xsim.dir/tb_project3_behav/obj/xsim_0.lnx64.o\" \"xsim.dir/tb_project3_behav/obj/xsim_1.lnx64.o\" -L\"/tools/reconfig/xilinx/Vivado/2020.2/lib/lnx64.o\" -lrdi_simulator_kernel   -lrdi_simbridge_kernel" , 
+    buildTime : "09:47:47" , 
+    linkCmd : "E:\\Xilinx\\Vivado\\2020.2\\data\\..\\tps\\mingw\\6.2.0\\win64.o\\nt\\bin\\gcc.exe -Wa,-W  -O -Wl,--stack,104857600 -o \"xsim.dir/tb_project3_behav/xsimk.exe\"   \"xsim.dir/tb_project3_behav/obj/xsim_0.win64.obj\" \"xsim.dir/tb_project3_behav/obj/xsim_1.win64.obj\" -L\"E:\\Xilinx\\Vivado\\2020.2\\lib\\win64.o\" -lrdi_simulator_kernel   -lrdi_simbridge_kernel" , 
     aggregate_nets : 
     [ 
     ] 
