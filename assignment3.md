@@ -116,7 +116,7 @@ After the bubble sort is done, display 0F in HEX0. And then read the contents of
 
 FAQ) 
 Q1. How to generate mem file ? 
-A1. Use assembler.py to conver your assembly code into mif file format. And then use miftmem.py to generate bubblesort.mem 
+A1. Use assembler.py to conver your assembly code into mif file format. And then use [miftomem.py](https://github.com/gt-cs3220-spr21/gt-cs3220-spr21.github.io/blob/master/assignment3_files/assignment3_frame/test/miftomem.py)  to generate bubblesort.mem 
 Note: 
 testall.mem do not cover all corner cases. You might need to debug your hardware as well 
 
