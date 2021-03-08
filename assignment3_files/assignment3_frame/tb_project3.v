@@ -25,12 +25,12 @@ integer i;
 initial begin	
 	CLOCK_50 = 0;
 	RESET_N = 0;
-	KEY = 4'h0;
+	KEY = 4'b1111;
 	//SW = 10'h0;
 	#2 RESET_N = 1;
 	i = 0;
-	#10000 KEY = 1; 
-	#300 KEY = 0 ; 
+	#10000 KEY = 0; 
+	#300 KEY = 4'b1111; 
 end
 
 always #10  CLOCK_50 = ~CLOCK_50;
