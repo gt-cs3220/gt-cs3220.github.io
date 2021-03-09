@@ -2,13 +2,13 @@
 
 **Due dates**: 
 
-**Part 1**  : 3/5/201 (F) 6 pm  ( 10  points)
+**Part 1**  : 3/5/201 (F) 6 pm  ( 13.333  points)
 
-**Part 2** : 3/19/2021 (F) 6 pm  (10 points)
+**Part 2** : 3/19/2021 (F) 6 pm  (13.333 points)
 
-**Part 3** : 4/2/2021 (F) 6 pm  (10 points)
+**Part 3** : 4/2/2021 (F) 6 pm  (13.333 points)
 
-Total:  30 points of out of the total grade. 
+Total:  40 points of out of the total grade. 
 
 
 This is a two-member group project. Please discuss this with the instructor if you do not have a partner. 
