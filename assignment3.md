@@ -109,23 +109,46 @@ please note that the part-3 description is subject to change
 
 **Description:** 
 
-In this design, you will write a bubble sort that you did in assignment #2 in the assembly code. 
+In this design, you will write a bubble sort that similar to what you did in assignment #2 in the assembly code. 
 Data should be stored in address 0x040.  The filename needs to be bubblesort.asm 
+mem[0x040] = 0x0010 
+mem[0x044] = 0x0050 
+mem[0x048] = 0x0012
+mem[0x04c] = 0x0003
+mem[0x050] = 0x0002
+mem[0x054] = 0x0001
+mem[0x058] = 0x0030 
+mem[0x05c] = 0x0050
+mem[0x060] = 0x0085   
 
-After the bubble sort is done, display 0F in HEX0. And then read the contents of the value from 0x040 at one at a time, and display the value in the HEX1. Once the display is the over, turn on LEDR 4b'1010.  HEX0, HEX1, and LEDR outcomes will be used for grading. 
+After the bubble sort is done, iterate the sorted array once and display the memory value in HEX0,HEX1 and the loop count in LEDR. 
+once that's finished, please put the following statement. 
+```
+DONE: 
+   br DONE; 
+``` 
 
-FAQ) 
-Q1. How to generate mem file ? 
-A1. Use [assembler.py](https://github.com/gt-cs3220-spr21/gt-cs3220-spr21.github.io/blob/master/assignment3_files/assignment3_frame/test/assembler.py) to conver your assembly code into mif file format. And then use [miftomem.py](https://github.com/gt-cs3220-spr21/gt-cs3220-spr21.github.io/blob/master/assignment3_files/assignment3_frame/test/miftomem.py)  to generate bubblesort.mem 
-Note: 
-testall.mem do not cover all corner cases. You might need to debug your hardware as well 
+**what to submit**
+[1] Report.pdf: 
+Show the screenshots of your simulation to show that memory sort is completed.
+[2] bubblesort.asm
+[3] assginment3.zip that includes bubblesort.mem 
+[4] xilinix project folder  
 
-**What to submit ** 
-[1] bubblesort.asm 
-[2]  project3.zip (bubblesort.mem should be on the part of that) 
-[3] Report: 
-  a screenshot of showing sorted outcome from hex. 
-  Discuss any issues 
+FAQ)
+Q1. How to generate mem file ?
+A1. Use [assembler.py](https://github.com/gt-cs3220-spr21/gt-cs3220-spr21.github.io/blob/master/assignment3_files/assignment3_frame/test/assembler.py) to convert your assembly code into mif file format. And then use [miftomem.py](https://github.com/gt-cs3220-spr21/gt-cs3220-spr21.github.io/blob/master/assignment3_files/assignment3_frame/test/miftomem.py)  to generate bubblesort.mem
+Note:
+testall.mem do not cover all corner cases. You might need to debug your hardware as well.
+
+**Few tips**
+1) ADDI,ANDI, ORI, XORI,  the destination register argument is in the second, unlike the rest of ALU operations.
+e.g.) ADDI S2, A0, 4 ;  A0 = S2+4
+On the other hand ADD, S2, A0, A1 ; S2 = A0 + A1
+2) Please do not use R10 for registers since JMP uses R10.
+3) When you access the data, please increment the memory addresses by 4 since the data is word-aligned.
+4) Assembler is the minimum job of generating an assembly code. Please review the code to check for any syntax errors.
+
 
 ## Optional task: Adding a branch predictor 
 
