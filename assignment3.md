@@ -104,9 +104,7 @@ Your report might be 1 page excluding diagrams.
 
 
 ## Part 3:  write bubble sort assembly code. 
-
-please note that the part-3 description is subject to change
-
+
 **Description:** 
 
 In this design, you will write a bubble sort that similar to what you did in assignment #2 in the assembly code. 
@@ -121,12 +119,19 @@ mem[0x058] = 0x0030
 mem[0x05c] = 0x0050
 mem[0x060] = 0x0085   
 
-After the bubble sort is done, iterate the sorted array once and display the memory value in HEX0,HEX1 and the loop count in LEDR. 
-once that's finished, please put the following statement. 
+After the bubble sort is done, iterate the sorted array once and display the sorted value in the memory in HEX0,HEX1 and the loop count (backward loop count) in LEDR. Once the final loop iteration to read the value 
+is over, put 1F on LEDR.  
+once that's finished, please put the following statement in the assembly code so that the code is in an infinite loop. 
 ```
-DONE: 
+DONE: 
    br DONE; 
 ``` 
+
+please also modify *tb_project3.v* to print out HEX0, HEX1, LEDR more frequently so that the TclConsole shows the all the loop iterations. 
+
+Here is an example of the output. 
+
+<img src="bubblesort_outcomes.png" width="200">
 
 **what to submit**
 [1] Report.pdf: 
