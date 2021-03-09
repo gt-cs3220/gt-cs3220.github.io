@@ -197,11 +197,11 @@ As members of the Georgia Tech community, we are committed to creating a learnin
 | 5    | 2/15/21  | [lab day #3](labday3.html)                             |                                 |
 |      | 2/17/21  | lab dya #3 (same  contents as 2/15/21) | in-class assignment  submission |
 | 6    | 2/22/21  | office hours                           |                                 |
-|      | 2/24/21* | high-speed arithmetic  (I)             |                                 |
+|      | 2/24/21* | timing analysis                        |                                 |
 | 7    | 3/1/21   | office hours                           |                                 |
-|      | 3/3/21*  | high-speed arithmetic  (II)            | [Assignment #3 part-1  (F)](assignment3.html)       |
+|      | 3/3/21*  | high-speed arithmetic                  | [Assignment #3 part-1  (F)](assignment3.html)       |
 | 8    | 3/8/21   | office hours                           |                                 |
-|      | 3/10/21* | IEEE  Floatingpoint                    |                                 |
+|      | 3/10/21* | IEEE  Floatingpoint/gpu                |                                 |
 | 9    | 3/15/21  | office hours                           |                                 |
 |      | 3/17/21* | GPU architecture                       | Assignment #3 part-2  (F)       |
 | 10   | 3/22/21  | Break                                  |                                 |
