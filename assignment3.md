@@ -84,7 +84,7 @@ Late submission: If you can submit the successful design  by the due of part-3, 
 
 **What to submit**:
 
-SUBMISSION REQUIREMENTS ARE ON THE CLASS PIAZZA @130
+**SUBMISSION REQUIREMENTS ARE ON THE CLASS PIAZZA @130**
 
 
 ## Part 3:  write bubble sort assembly code. 
