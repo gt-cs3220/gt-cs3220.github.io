@@ -84,23 +84,7 @@ Late submission: If you can submit the successful design  by the due of part-3, 
 
 **What to submit**:
 
-[1] project3.zip (including testall.mem and all other files).
-
-You and your partner should submit the same version of the zip file.
-
-
-[2] Report: You must submit your **own version** of your report. (**Report.pdf**) Please submit a pdf file. Do not include the pdf file in a zip file. You should write a report independently (your partner will write his/her own report) and submit it. The report should include
-
-​     \- Design options and approaches that you have taken
-
-​     \- Problems/issues and how you solved
-
-​     \- Pipeline design diagram. These diagrams can be shared with your partner. (any modifications from assignment #1?, part #1. you can use the same diagram if you haven't changed. ) 
-
-​     \- Contribution to the project.: What you have done and what percentage your contribution is.
-
-Your report might be 1 page excluding diagrams.
-
+SUBMISSION REQUIREMENTS ARE ON THE CLASS PIAZZA @130
 
 
 ## Part 3:  write bubble sort assembly code. 
