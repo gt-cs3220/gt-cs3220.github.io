@@ -204,9 +204,9 @@ As members of the Georgia Tech community, we are committed to creating a learnin
 |      | 3/10/21* | IEEE  Floatingpoint/gpu                |                                 |
 | 9    | 3/15/21  | office hours                           |                                 |
 |      | 3/17/21* | GPU architecture                       | Assignment #3 part-2  (F)       |
-| 10   | 3/22/21  | Break                                  |                                 |
-|      | 3/24/21  | lab day #4                             |                                 |
-| 11   | 3/29/21  | lab day #4   (same contents as 3/24)   | in-class assignment  submssion  |
+| 10   | 3/22/21  | lab day #4                             |                                 |
+|      | 3/24/21  | Break                                  |                                 |
+| 11   | 3/29/21  | lab day #4   (same contents as 3/22)   | in-class assignment  submssion  |
 |      | 3/31/21  | lab day #5                             | Assignment #3 part-3  (F)       |
 | 12   | 4/5/21   | lab day #5 (same contents as 3/31)     | in-class assignment  submssion  |
 |      | 4/7/21*  | ML accelerators                        | asisgnment #4 (F)               |
