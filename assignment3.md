@@ -76,11 +76,9 @@ It should pass testall.mem file in behavior simulation and the design should pas
 If the design pass the behavioral simulation test but it cannot be synthesized, you will get only 50% of the scores. 
 
 If it does not pass testall.mem file, then there is no partial grading. Only for this assignment, we will accept a late submission with a penalty. 
-Late submission: If you can submit the successful design  by the due of part-3, you will receive 50% of the part-2 score. 
+**Late submission**: If you can submit the successful design  by the due of part-3, you will receive 50% of the part-2 score. 
 
-
-
- 
+**Incorrect/Incomplete/Missing File(s) Submissions : 5% deducted**
 
 **What to submit**:
 
