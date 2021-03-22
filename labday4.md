@@ -14,7 +14,8 @@ Download/clone https://github.com/Xilinx/HLS-Tiny-Tutorials
 
 [**Step 2**]
 The example that we will use is  2D convolution line buffer. 
-cd algorithm_2D_convolution_linebuffer
+
+```cd algorithm_2D_convolution_linebuffer```
 
 You can use GUI interface to start the project which is described in the below. 
 Or you can simply execute TCL script in the command window. 
@@ -22,10 +23,11 @@ Or you can simply execute TCL script in the command window.
 ```vitis_hls -f run_hls.tcl```
 
 To enable the simulation you need to change the variable in ```x_hls.tcl``` file. 
+
 To set up for a Pynq boards change ```set_part {xcvu9p-flga2104-2-i}
 create_clock -period 6.66``` to 
 
-```set_part {xc7z020-clg400-1} create_clock -period 10```
+```set_part {xc7z020-clg400-1} create_clock -period 10```. This is in run_hls.tcl file.
 
 Known issues:
 * If you see an error like "command 'ap_source' returned error code", you need to install the following libraries using:  ```sudo apt-get install gcc-multilib g++-multilib```
