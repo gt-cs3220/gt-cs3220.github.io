@@ -29,6 +29,8 @@ create_clock -period 6.66``` to
 
 ```set_part {xc7z020-clg400-1} create_clock -period 10```. This is in run_hls.tcl file.
 
+Please open  both tcl files and read it. Understanding the tcl files will be very helpful to understand the steps in this assignment. 
+
 Known issues:
 * If you see an error like "command 'ap_source' returned error code", you need to install the following libraries using:  ```sudo apt-get install gcc-multilib g++-multilib```
 * For the above command you will need to ask TAs since students do not have sudo privilege on VMs.
@@ -36,7 +38,7 @@ Known issues:
 
 [**Step 3**]
 Do RTL simulation 
-set ```hls_exec 0``` to set ```hls_exec 2```
+set ```hls_exec 0``` to set ```hls_exec 2``` in ```x_hls.tcl``` file 
 
 Open ```"proj_2D_convolution_with_linebuffer/solution1/sim/report/filter11x11_strm_cosim.rpt"```
 
@@ -44,7 +46,7 @@ See the report value  : **latency (max)**
 
 [**Step 4**] Change HLS directives. 
 
-Comment out the following HLS directives and see the latency value changes 
+Comment out the following HLS directives and see the latency value changes in .cpp file. 
 
 case 1: default 
 
@@ -67,7 +69,7 @@ Start Vitis HLS program
 2. Specify the “Project name” and “location” of the project
 3. Click on “Add Files…” to add “<file_name>.cpp” and “<file_name>.h” 
 4. In the same window, click on Browse, to choose the top function (you can add it later)
-5. In the next window, click on “Add Files…” to add “<file_name>_tb.cpp”, which is our testbench. 
+5. In the next window, click on “Add Files…” to add “<file_name>_test.cpp”, which is our testbench. 
 6. In the next window, you can leave Solution Name and Period as it is, and just click on “…” to choose **pynq** boards. Then click “Finish”.
 7. Then, you project is opened. You can see the files in the left. 
 8. To test the project, you can first “Run C Simulation” (you can find it under Project tab, or in the shortcuts). Once you click on that, a window appears, in which you may choose “Launch Debugger”, if you want to debug your code. Otherwise, you can just click on “OK” to run. 
@@ -78,7 +80,8 @@ Start Vitis HLS program
 
 **What to submit**:  
 
-Report max latency for the cases in step 4 and compare it with the default case.  
+Report max latency for the cases in step 4 and compare it with the default case.   
+Some of the pragmas will not change the performance at all. Please identify the one that affects the performance. 
 
 **Grading**:  Submission of **at least one of the latency value** will be sufficient to get the **full credit** for labday 
 
