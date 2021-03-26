@@ -23,7 +23,7 @@ each team can have 1.5 hour slot.
 2) Open internet browser (eg: Firefox) 
 3) Type "pynq-z2-1.cc.gatech.edu:8888/" 
 replace z1-1 to z1-[1-10], z2-[1-5] depending on the boards that you are accessing. 
-4) Password is "cs3220_spr_2021" 
+4) Password is on Piazza
 
 *Task * 
 In this assignment, you will create a bitstream from vivado and generate overlay so that it can run them in the jupyter notebook. 
