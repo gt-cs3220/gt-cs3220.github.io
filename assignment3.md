@@ -115,15 +115,15 @@ Here is an example of the output.
 
 <img src="bubblesort_outcomes.png" width="200">
 
-**what to submit**
-[1] Report.pdf: 
-Show the screenshots of your simulation to show that memory sort is completed.
-[2] bubblesort.asm
-[3] assginment3.zip that includes bubblesort.mem 
-[4] xilinix project folder  
 
-FAQ)
+**What to submit**:
+
+**SUBMISSION REQUIREMENTS ARE ON THE CLASS PIAZZA @164**
+
+**FAQ)**
+
 Q1. How to generate mem file ?
+
 A1. Use [assembler.py](https://github.com/gt-cs3220-spr21/gt-cs3220-spr21.github.io/blob/master/assignment3_files/assignment3_frame/test/assembler.py) to convert your assembly code into mif file format. And then use [miftomem.py](https://github.com/gt-cs3220-spr21/gt-cs3220-spr21.github.io/blob/master/assignment3_files/assignment3_frame/test/miftomem.py)  to generate bubblesort.mem
 Note:
 testall.mem do not cover all corner cases. You might need to debug your hardware as well.
