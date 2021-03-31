@@ -20,6 +20,7 @@ each team can have 1.5 hour slot.
 *Instruction How to open jupyter Notebook" "
 1) Please login into the VM 
 2) Open internet browser (eg: Firefox) 
+
 3) Type "pynq-z2-1.cc.gatech.edu:8888/" 
 replace z1-1 to z1-[1-10], z2-[1-5] depending on the boards that you are accessing. 
 4) Password is on Piazza
@@ -33,7 +34,7 @@ This instruction is based on [this tutorial](https://pynq.readthedocs.io/en/v2.0
 The tutorial file is copied from this repo: https://github.com/PeterOgden/overlay_tutorial.git 
 
 ### Steps 
-[step 1] check out lab5files from the class git
+[step 1] check out labday5_files from the class git
 
 [step 2] start jupyternotebook
 
@@ -96,9 +97,12 @@ Start Vivado application
 ```<project_name>/solution1/impl/ip```
 
 <img src="ipsetting.png">
-<img src="add_diagram.png">
 
 4. on the block design windiw, add  our HLS IP module (e.g., add in lab #5) , add Zynq Processing system 
+
+<img src="add_diagram.png">
+
+<img src="ipadd.png">
 
 <img src="add_ps.png"> 
 
@@ -116,25 +120,27 @@ Start Vivado application
 
 <img src="menu_bit.png">
 
-8. Click on File->Export-> Export block design, select the option of including bitstream 
+#8. Click on File->Export-> Export block design, select the option of including bitstream 
 
 <img src="export_bit.png"> 
 the default location is 
 
-9. <project_name>.gen/sources_1/bd/design_1/hw_handoff
-you can find mwh file.  
+ 
 
-bit stream file  .bit 
-<project_name>.runs/impl_1/design_wrapper.bit 
-10. 
+copy bit stream file  .bit 
+<project_name>.runs/impl_1/design_1_wrapper.bit 
 tcl script 
-<project_name>.runs/impl_1/design_wrapper.tcl 
+<project_name>.runs/impl_1/design_1_wrapper.tcl 
 
-11.  make all files in the same names (e.g. add.bit, add.tcl. add.hwh) 
+9. copy hwh file 
+. <project_name>.gen/sources_1/bd/design_1/hw_handoff
+you can find hwh file. 
 
-12. upload the three files into pynq boards 
+10.  make all files in the same names (e.g. add.bit, add.tcl. add.hwh) and place where they are easy to find  
 
-13. repeaset  part-1 using jupyternotebook. replace tutorial_1.bit with add.bit  
+12. upload the three files (add.hwh, add.tcl, add.bit)  into pynq boards 
+
+13. repeaset  part-1 using jupyternotebook with myadd.ipynb file   
 
 
 
