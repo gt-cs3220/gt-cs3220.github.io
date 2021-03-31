@@ -6,7 +6,7 @@
 
 In this assignments, you will learn using pynq (Python productivity for Zynq (PYNQ)).  
 
-Please watch the video(labday5.mp4) and read the tutorial and assignment documentations before your sign up for pynq board usuage time. 
+Please read the tutorial and assignment documentations before your sign up for pynq board usuage time. 
 
 please read the [PYNQ Getting Started docs](https://pynq.readthedocs.io/en/v2.5.1/index.html)
 
