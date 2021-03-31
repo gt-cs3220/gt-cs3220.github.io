@@ -48,7 +48,7 @@ The tutorial file is copied from this repo: https://github.com/PeterOgden/overla
 
 ```
 #Copy the tutorial bitstream and HWH file to the main directory
-oot@pynq-z2-3:/home/xilinx# cp jupyter_notebooks/tutorial_1.* /home/xilinx/. 
+root@pynq-z2-3:/home/xilinx# cp jupyter_notebooks/tutorial_1.* /home/xilinx/. 
 ```
 
 [step 5]
@@ -98,11 +98,13 @@ Start Vivado application
 
 <img src="ipsetting.png">
 
+<img src="ipadd.png">
+
 4. on the block design windiw, add  our HLS IP module (e.g., add in lab #5) , add Zynq Processing system 
 
 <img src="add_diagram.png">
 
-<img src="ipadd.png">
+
 
 <img src="add_ps.png"> 
 
