@@ -1,4 +1,4 @@
-Lab day #5 Assignments 
+## Lab day #5 Assignments 
 
 (Due : 4/5/21)
 
@@ -6,9 +6,9 @@ Lab day #5 Assignments
 
 In this assignments, you will learn using pynq (Python productivity for Zynq (PYNQ)).  
 
-please watch video(labday5.mp4) and read the tutorial and assignment documentations before your sign up for pynq board usuage time. 
+Please watch the video(labday5.mp4) and read the tutorial and assignment documentations before your sign up for pynq board usuage time. 
 
-please read the https://pynq.readthedocs.io/en/v2.5.1/index.html
+please read the [PYNQ Getting Started docs](https://pynq.readthedocs.io/en/v2.5.1/index.html)
 
 We already set up the pynq boards to communicate with your VMs. 
 
@@ -29,10 +29,10 @@ In this assignment, you will create a bitstream from vivado and generate overlay
 
 * Part 1 * Follow the overlay tutorial with providied bistream  
 
-This instruction is based on this tutorial. 
-https://pynq.readthedocs.io/en/v2.0/overlay_design_methodology/overlay_tutorial.html
-tutorial file is copied from  https://github.com/PeterOgden/overlay_tutorial.git 
+This instruction is based on [this tutorial](https://pynq.readthedocs.io/en/v2.0/overlay_design_methodology/overlay_tutorial.html). 
+The tutorial file is copied from this repo: https://github.com/PeterOgden/overlay_tutorial.git 
 
+### Steps 
 [step 1] check out lab5files from the class git
 
 [step 2] start jupyternotebook
@@ -42,20 +42,22 @@ tutorial file is copied from  https://github.com/PeterOgden/overlay_tutorial.git
 <img src="jupyter0.png">
   (scalaradd.ipynb, tutorial_1.bit) 
 
-[step 4] start a terminal on jupyternotebook : this terminal is running on ARM processor  
+[step 4] start a terminal on jupyternotebook : this terminal is running on the board's ARM processor  
 <img src="terminal.png">
 
- cp jupyoter_notebooks/tutorial_1.bit to /home/Xilnix/. 
+```
+#Copy the tutorial bitstream and HWH file to the main directory
+oot@pynq-z2-3:/home/xilinx# cp jupyter_notebooks/tutorial_1.* /home/xilinx/. 
+```
 
 [step 5]
- open scalaradd.ipynb in jupyternotebook 
+Open scalaradd.ipynb in jupyternotebook 
  
- press run button for each cell and see whether it works or not. 
- <img src="output_jupyter.png">
+Press the run button for each cell and see whether it works or not. 
+<img src="output_jupyter.png">
 
-* Part 2* Extend the tutorial to load your own design of bitstreams 
-
-
+## Part 2 
+Extend the tutorial to load your own bitstream design. 
 
 *Step-Vitis: Open Vitis HLS and generate ip *
 
