@@ -4,7 +4,7 @@ Lab day #5 Assignments
 
 
 
-In this assignments, you will learn using pynq (Pyton productivity for Zynq (PYNQ)).  
+In this assignments, you will learn using pynq (Python productivity for Zynq (PYNQ)).  
 
 please watch video(labday5.mp4) and read the tutorial and assignment documentations before your sign up for pynq board usuage time. 
 
