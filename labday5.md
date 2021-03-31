@@ -34,19 +34,24 @@ https://pynq.readthedocs.io/en/v2.0/overlay_design_methodology/overlay_tutorial.
 tutorial file is copied from  https://github.com/PeterOgden/overlay_tutorial.git 
 
 [step 1] check out lab5files from the class git
+
 [step 2] start jupyternotebook
+
 [step 3] upload files from your VM's files to pynq board's ARM processor  
-<img src=" jupyter0.png">
+
+<img src="jupyter0.png">
   (scalaradd.ipynb, tutorial_1.bit) 
+
 [step 4] start a terminal on jupyternotebook : this terminal is running on ARM processor  
-<img src=" terminal.png">
+<img src="terminal.png">
 
  cp jupyoter_notebooks/tutorial_1.bit to /home/Xilnix/. 
+
 [step 5]
  open scalaradd.ipynb in jupyternotebook 
  
  press run button for each cell and see whether it works or not. 
- <img src=" output_jupyter.png">
+ <img src="output_jupyter.png">
 
 * Part 2* Extend the tutorial to load your own design of bitstreams 
 
@@ -55,7 +60,7 @@ tutorial file is copied from  https://github.com/PeterOgden/overlay_tutorial.git
 *Step-Vitis: Open Vitis HLS and generate ip *
 
 
-Start Vitis HLS program
+Start Vitis HLS program (similar to lab#4) 
 1. Click on “Create New Project” in the very first page.
 2. Specify the “Project name” and “location” of the project
 3. Click on “Add Files…” to add “<file_name>.cpp” and “<file_name>.h”
@@ -104,6 +109,8 @@ you can find mwh file.
 
 bit stream file  .bit 
 <project_name>.runs/impl_1/design_wrapper.bit 
+tcl script 
+<project_name>.runs/impl_1/design_wrapper.tcl 
 
 10.  make all files in the same names (e.g. add.bit, add.tcl. add.hwh) 
 
