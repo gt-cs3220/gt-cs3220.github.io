@@ -30,7 +30,7 @@ In this assignment, you will create a bitstream from vivado and generate overlay
 
 * Part 1 * Follow the overlay tutorial with providied bistream  
 
-This instruction is based on [this tutorial](https://pynq.readthedocs.io/en/v2.0/overlay_design_methodology/overlay_tutorial.html). 
+This instruction is based on [this tutorial](https://pynq.readthedocs.io/en/v2.0/overlay_design_methodology/overlay_tutorial.html). /
 The tutorial file is copied from this repo: https://github.com/PeterOgden/overlay_tutorial.git 
 
 ### Steps 
