@@ -147,7 +147,7 @@ you can find hwh file.
 
 
 
-## Part 3 Convert the add example to take 3 inputs and change the name of module to add3
+## (Optional task) Part 3 Convert the add example to take 3 inputs and change the name of module to add3
 
 **IMP Note: Please create new Vitis HLS project and new Vivado project for part 3**
 
