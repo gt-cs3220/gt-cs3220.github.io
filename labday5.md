@@ -86,38 +86,55 @@ copy the data range somehwere to match with pynq boards.
 *Step-Vivado:Open Vivado and import IP and generate Bitstream * 
 Start Vivado application 
 1. Create new project, select RTL project and then select pynq-z2 or pynq-z1 for your board.  (you don't need to add any new files and just select default options) 
+
 2. Click on the "IP Integrator/Create Block design," use default name "design_1", do "OK"
+
 <img src="setting.png">
+
 3. Project setting -> IP -> IP Repository ->Add the directory from the step-Vitis. 
 
 ```<project_name>/solution1/impl/ip```
+
 <img src="ipsetting.png">
 <img src="add_diagram.png">
+
 4. on the block design windiw, add  our HLS IP module (e.g., add in lab #5) , add Zynq Processing system 
+
 <img src="add_ps.png"> 
+
 5. clock on the "Run block automation" and "Run connection automation"
+
 <img src="connection.png">
+
 6. go to "sources" and right click on your block design name, click on "Create HLD wrapper".  Click on "Let Vivado do" option and press "OK". 
+
 <img src="addhwwrapp.png">
+
 <img src="addhwwrapp-2.png">
+
 7. Click on Project->Generate Bitstream (it will ask to synthesize etc. and click yes) 
+
 <img src="menu_bit.png">
 
 8. Click on File->Export-> Export block design, select the option of including bitstream 
+
 <img src="export_bit.png"> 
 the default location is 
+
 9. <project_name>.gen/sources_1/bd/design_1/hw_handoff
 you can find mwh file.  
 
 bit stream file  .bit 
 <project_name>.runs/impl_1/design_wrapper.bit 
+10. 
 tcl script 
 <project_name>.runs/impl_1/design_wrapper.tcl 
 
-10.  make all files in the same names (e.g. add.bit, add.tcl. add.hwh) 
+11.  make all files in the same names (e.g. add.bit, add.tcl. add.hwh) 
 
-11. upload the three files into pynq boards 
-12. repeaset  part-1 using jupyternotebook. replace tutorial_1.bit with add.bit  
+12. upload the three files into pynq boards 
+
+13. repeaset  part-1 using jupyternotebook. replace tutorial_1.bit with add.bit  
 
 
 
