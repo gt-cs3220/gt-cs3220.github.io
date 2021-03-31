@@ -1,4 +1,18 @@
+part 1: Repeat the tutorial 
+ 
+checkout the code from https://github.com/PeterOgden/overlay_tutorial.git
+Place the code into 
+
+
+
+
+
+
+
+
+
 *Open Vitis HLS and generate ip *
+
 
 Start Vitis HLS program
 1. Click on “Create New Project” in the very first page.
@@ -11,7 +25,11 @@ Start Vitis HLS program
 8. To test the project, you can first “Run C Simulation” (you can find it under Project tab, or in the shortcuts). Once you click on that, a window appears, in which you may choose “Launch Debugger”, if you want to debug your code. Otherwise, you can just click on “OK” to run
 9. "Run C Synthesis" 
 10. "Export RTL"   
+11. copy AXI data register ids for inteface on the later step 
 
+open <project_name>/solution1/impl/ip/drivers/<module_name*>/src/<module_name>_hw.h 
+copy 
+#define  _ADDR_*_DATA addresses 
 
 *Open Vivado and import IP and generate Bitstream * 
 Start Vivado application 
@@ -29,6 +47,17 @@ Start Vivado application
 8. Click on File->Export-> Export block design, select the option of including bitstream 
 
 9. <project_name>.gen/sources_1/bd/design_1/hw_handoff
+you can find mwh file.  
+
+bit stream file  .bit 
+<project_name>.runs/impl_1/design_wrapper.bit 
+
+change the name into <
+
+
+register address: 
+look at address editor 
+
 
 
 All the files need to have the same file name with different file extensions. 
