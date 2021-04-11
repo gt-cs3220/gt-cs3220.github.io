@@ -27,11 +27,23 @@ Your code should pass both testall.mem and your bubblesort.mem.
 
 **What to submit**:
 
-***Submission Requirements will be updated and this document will be updated with the Piazza link  next week of April 5***
+Only 1 team member needs to submit the files. So please pay attention to naming conventions. Not following convention may result in grading scripts failing and points deducted for your team.
 
-1. [PENDING]
+1. A zip file of your team's source code. The zip file must contain the following:
+* agex_stage.v
+* de_stage.v
+* fe_stage.v
+* mem_stage.v
+* wb_stage.v
+* project3_frame.v
+* VX_define.vh
+* bubblesort.mem
 
-2. [PENDING]
+**Your zip filename must be of the format <firstName1>_<firstName2>_src.zip. So for example, Hanning and Sam are team members, then Hanning could submit the file as "Hanning_Sam_src.zip"**
+
+2. A zip file of your team's Vivado project directory. See Piazza for sample image
+
+**Your zip filename must be of the format <firstName1>_<firstName2>_root.zip. So for example, Hanning and Sam are team members, then Hanning could submit the file as "Hanning_Sam_root.zip"**
 
 3. **Report**: 
     * Screenshots to show that your design passes **testall.mem** after adding BTB implementation   + full-bypass.
@@ -46,3 +58,6 @@ Your code should pass both testall.mem and your bubblesort.mem.
  
 **Report Length**: 1-2 pages excluding any screenshots and tables.
 
+**Your report filename must be of the format <firstName1>_<firstName2>_report.pdf. So for example, Hanning and Sam are team members, then Hanning could submit the file as "Hanning_Sam_report.pdf"**
+
+**Incorrect/Incomplete/Missing File(s) Submissions : 5% deducted**
