@@ -27,37 +27,6 @@ Your code should pass both testall.mem and your bubblesort.mem.
 
 **What to submit**:
 
-Only 1 team member needs to submit the files. So please pay attention to naming conventions. Not following convention may result in grading scripts failing and points deducted for your team.
-
-1. A zip file of your team's source code. The zip file must contain the following:
-* agex_stage.v
-* de_stage.v
-* fe_stage.v
-* mem_stage.v
-* wb_stage.v
-* project3_frame.v
-* VX_define.vh
-* bubblesort.mem
-
-**Your zip filename must be of the format <firstName1>_<firstName2>_src.zip. So for example, Hanning and Sam are team members, then Hanning could submit the file as "Hanning_Sam_src.zip"**
-
-2. A zip file of your team's Vivado project directory. See Piazza for sample image
-
-**Your zip filename must be of the format <firstName1>_<firstName2>_root.zip. So for example, Hanning and Sam are team members, then Hanning could submit the file as "Hanning_Sam_root.zip"**
-
-3. **Report**: 
-    * Screenshots to show that your design passes **testall.mem** after adding BTB implementation   + full-bypass.
-    * Screenshots to show that your design executes **bubblesort.mem** with BTB implementation  + full-bypass 
-
-    * A table to show the execution time of two benchmarks (testall and bubblesort)  for three cases: 
-        1. Regular assignment#3 with no modification
-        2. Assignment3 with full-bypss
-        3. Assignment3 with both full-bypass and BTB
-
-    Discuss the performance improvements on these optimizations 
- 
-**Report Length**: 1-2 pages excluding any screenshots and tables.
-
-**Your report filename must be of the format <firstName1>_<firstName2>_report.pdf. So for example, Hanning and Sam are team members, then Hanning could submit the file as "Hanning_Sam_report.pdf"**
+**See Piazza @187** 
 
 **Incorrect/Incomplete/Missing File(s) Submissions : 5% deducted**
