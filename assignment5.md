@@ -7,20 +7,25 @@ This is a two-member group project. Please discuss this with the instructor if y
 
 **Description**:
 
-In this assignment, you will use PYNQ programming platforms with
-Vitis HLS, vivado, Jupyter Notebook as we did in lab #5. Please see
-lab #5 instruction. All steps in part#2 in Lab #5 have to be repeated for the code. 
-Pleae check the file names, top modules etc. 
+In this assignment, you will use PYNQ programming platforms with Vitis HLS, Vivado, Jupyter Notebook as we did in lab #5.
+
+Please see lab #5 instruction. All steps in part#2 in Lab #5 have to be repeated for the code. 
+
+Please check the file names, top modules etc. 
 
 In this assignment, you will implement a BF16 format multiplier.
 
 
-Part-1:  complete the multipler driver. We provide a frame for you to
-start (mulbf16.ipynb). You need to repeat the lab #5 steps to generate
-files. You have to change the JN file to upload the correct files.
+## Part-1
+Complete the multiplier driver. We provide a frame for you to
+start (mulbf16.ipynb).
 
-Part-2:
-comple mulBF16 which multiplies two BF16 variables.
+You need to repeat the lab #5 steps to generate
+files.
+You have to change the JupyterNotebook (.ipynb) file to upload the correct files.
+
+## Part-2
+Complete  mulBF16 which multiplies two BF16 variables.
 Please see 7.lec_fp.pptx file to study the multiplier and BF16
 format.
 You need to support (1) normalized numeric values (exp are not 0 or
@@ -47,7 +52,7 @@ M1, M2 =>Mantissa bits of Number X1 & X2.
 4) The exponents of the Multiplier (E1) and the multiplicand (E2) bits are added and the bias value is subtracted from the added result. The subtracted result is put in the exponential field of the result block.
 =E1+E2-bias
 5) Normalize the sum, either shifting right and incrementing the exponent or shifting left and decrementing the exponent.
-e..g.)  if M1*M2 has carry out bit, sifht right and increment the exponent. 
+e.g.)  if M1*M2 has carry out bit, shift right and increment the exponent. 
 
 6) Check for underflow/overflow. If Overflow set the output to
 infinity & for underflow set to zero. --> for this assignment, you can
@@ -57,18 +62,16 @@ infinity. --> you can skip this stage
 8) If E1 + E2 - bias) is lesser than/equal to Emin then set product to
 zero. --> you can skip this stage 
 
-<src = 
-https://www.rfwireless-world.com/Tutorials/floating-point-tutorial.html
-> 
+[https://www.rfwireless-world.com/Tutorials/floating-point-tutorial.html](https://www.rfwireless-world.com/Tutorials/floating-point-tutorial.html)
  
  ** Tips **
-Pleae debug your code in C-mode. If you comment out pragmas, you can
-even compile the source code with c++ w/o using vitis. Please
+Please debug your code in C-mode. If you comment out pragmas, you can
+even compile the source code with c++ w/o using Vitis. Please
 complete your algorithm in C-mode and test it before porting the code in Vivado. 
 
 **What to submit. **:
 Submit your HLS code and Python code. 
-A screenshot of JN output. 
+A screenshot of JupyterNotebook output. 
 
 
 **Grading**:
