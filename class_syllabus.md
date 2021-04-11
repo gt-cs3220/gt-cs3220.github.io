@@ -203,15 +203,15 @@ As members of the Georgia Tech community, we are committed to creating a learnin
 | 8    | 3/8/21   | office hours                           |                                 |
 |      | 3/10/21* | IEEE  Floatingpoint/gpu                |                                 |
 | 9    | 3/15/21  | office hours                           |                                 |
-|      | 3/17/21* | GPU architecture                       | Assignment #3 part-2  (F: extension Sun)       |
+|      | 3/17/21* |  HLS                        | Assignment #3 part-2  (F: extension Sun)       |
 | 10   | 3/22/21  | [lab day #4](labday4.html)                             |                                 |
 |      | 3/24/21  | Break                                  |                                 |
 | 11   | 3/29/21  | lab day #4   (same contents as 3/22)   | in-class assignment  submssion  |
 |      | 3/31/21  | [lab day #5](labday5.html)             | Assignment #3 part-3  (F)       |
 | 12   | 4/5/21   | lab day #5 (same contents as 3/31)     | in-class assignment  submssion, 1st milestone (M)  |
-|      | 4/7/21*  | ML accelerators                        |               |
+|      | 4/7/21*  |  GPU architecture                        |               |
 | 13   | 4/12/21  | office hours                           |                                 |
-|      | 4/14/21* | HLS                                    |  [Assignment #4 (W)](assignment4.html)                               |
+|      | 4/14/21* |  ML accelerators                                    |  [Assignment #4 (W)](assignment4.html)                               |
 | 14   | 4/19/21  | office hours                           | assignment #5 (F), 2nd milestone (M)               |
 |      | 4/21/21* | security                               |                                 |
 | 15   | 4/26/21* | review day                             |                                 |
