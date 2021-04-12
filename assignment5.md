@@ -80,7 +80,8 @@ A screenshot of JupyterNotebook output.
 **Grading**:
 We will test 5 cases similar to the example in the provided JupyterNotebook file. 2 points for each case. 
 
- ## Tips
+## Tips
+
 * Please debug your code in C-mode. If you comment out pragmas, you can even compile the source code with c++ without using Vitis.
 * Please complete your algorithm in C-mode and test it before porting the code in Vivado.
 * Please start early and ask questions in Piazza. Usually with Assignment 5 we get a lot of questions and the TAs are not able to respond to each question rapidly.
