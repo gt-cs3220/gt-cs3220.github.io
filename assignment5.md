@@ -53,18 +53,22 @@ M1, M2 =>Mantissa bits of Number X1 & X2.
 1. Check if one/both operands = 0 or infinity. Set the result to 0 or inf. i.e. exponents = all "0" or all "1".
 
 2. S1, the signed bit of the multiplicand is XOR'd with the multiplier signed bit of S2. The result is put into the resultant sign bit.
+
 3. The mantissa of the Multiplier (M1) and multiplicand (M2) are multiplied and the result is placed in the resultant field of the mantissa.  Please be aware that M1 and M2 have hidden 1. 
 =M1 * M2 
+
 4. The exponents of the Multiplier (E1) and the multiplicand (E2) bits are added and the bias value is subtracted from the added result. The subtracted result is put in the exponential field of the result block.
 =E1+E2-bias
-5. Normalize the sum, either shifting right and incrementing the exponent or shifting left and decrementing the exponent.
-e.g.)  if M1*M2 has carry out bit, shift right and increment the exponent. 
+
+5. Normalize the sum, either shifting right and incrementing the exponent or shifting left and decrementing the exponent. e.g.)  if M1*M2 has carry out bit, shift right and increment the exponent. 
 
 6. Check for underflow/overflow. If Overflow set the output to
 infinity & for underflow set to zero. --> for this assignment, you can
-skip this stage. 
+skip this stage.
+
 7. If (E1 + E2 - bias) >= to Emax then set the product to
-infinity. --> you can skip this stage 
+infinity. --> you can skip this stage
+
 8. If E1 + E2 - bias) is lesser than/equal to Emin then set product to
 zero. --> you can skip this stage 
 
