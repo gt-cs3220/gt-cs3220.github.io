@@ -212,7 +212,7 @@ As members of the Georgia Tech community, we are committed to creating a learnin
 |      | 4/7/21*  |  GPU architecture                        |               |
 | 13   | 4/12/21  | office hours                           |                                 |
 |      | 4/14/21* |  ML accelerators                                    |  [Assignment #4 (W)](assignment4.html)                               |
-| 14   | 4/19/21  | office hours                           | assignment #5 (F), 2nd milestone (M)               |
+| 14   | 4/19/21  | office hours                           | [assignment #5 (F)](assignment5.html), 2nd milestone (M)               |
 |      | 4/21/21* | security                               |                                 |
 | 15   | 4/26/21* | review day                             |                                 |
 |      | 4/30/21* | Final exam                             |                                 |
