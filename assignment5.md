@@ -51,6 +51,7 @@ E1, E2: =>Exponent bits of number X1 & X2.
 M1, M2 =>Mantissa bits of Number X1 & X2.
 
 1. Check if one/both operands = 0 or infinity. Set the result to 0 or inf. i.e. exponents = all "0" or all "1".
+ (please note that in this assignment, you don't need to handle INF cases.) 
 
 2. S1, the signed bit of the multiplicand is XOR'd with the multiplier signed bit of S2. The result is put into the resultant sign bit.
 
@@ -60,7 +61,7 @@ M1, M2 =>Mantissa bits of Number X1 & X2.
 4. The exponents of the Multiplier (E1) and the multiplicand (E2) bits are added and the bias value is subtracted from the added result. The subtracted result is put in the exponential field of the result block.
 =E1+E2-bias
 
-5. Normalize the sum, either shifting right and incrementing the exponent or shifting left and decrementing the exponent. e.g.)  if M1*M2 has carry out bit, shift right and increment the exponent. 
+5. Normalize the sum, either shifting right and incrementing the exponent or shifting left and decrementing the exponent. e.g.)  if M1*M2 has carry out bit, shift right and increment the exponent. (Please note that since we don't support underflow cases in this assignment, you have only shift right case exists.) 
 
 6. Check for underflow/overflow. If Overflow set the output to
 infinity & for underflow set to zero. --> for this assignment, you can
