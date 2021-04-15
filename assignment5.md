@@ -61,7 +61,7 @@ M1, M2 =>Mantissa bits of Number X1 & X2.
 4. The exponents of the Multiplier (E1) and the multiplicand (E2) bits are added and the bias value is subtracted from the added result. The subtracted result is put in the exponential field of the result block.
 =E1+E2-bias
 
-5. Normalize the sum, either shifting right and incrementing the exponent or shifting left and decrementing the exponent. e.g.)  if M1*M2 has carry out bit, shift right and increment the exponent. (Please note that since we don't support underflow cases in this assignment, you have only shift right case exists.) 
+5. Normalize the sum, either shifting right and incrementing the exponent or shifting left and decrementing the exponent. e.g.)  if M1*M2 has carry out bit, shift right and increment the exponent. (Please note that since we don't support underflow cases in this assignment, you have only the shift right case. ) 
 
 6. Check for underflow/overflow. If Overflow set the output to
 infinity & for underflow set to zero. --> for this assignment, you can
