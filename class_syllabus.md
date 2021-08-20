@@ -141,6 +141,7 @@ I plan to use non-curved grade assignment unless there are too few As.
 
 **FPGA boards & Programming Platforms**: We will use Xilinix Pynq boards for the class. Students are required to purchase their own boards. 
 
+**Computing Resource**: Since FPGA board need to be physically connected with the Xilinix software, you need to have Xilinix tools in your local computer. It's your repsonsibility to install the necessary software (https://www.xilinx.com/products/design-tools/ise-design-suite/ise-webpack.html). We provide VMs as for your back-up option at your own risk. 
 
 **Projects** Most of the projects are 2-student projects. Discussions with other students are encouraged. Submitting any work other than you and your partner's own is a violating of the Academic Honor Code. If you are not sure what you can discuss or not, please contact the instructor. 
 
