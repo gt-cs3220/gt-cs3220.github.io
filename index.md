@@ -38,7 +38,7 @@ In this course, we will study hardware implementation of architecture design. Th
 
 #### [Click to view the syllabus](class_syllabus.html)
 
-#### [Click to view instructions on installing Vivado](Vivado_Installation_Steps\vivado_install_steps.html)
+#### [Click to view instructions on installing Vivado](https://github.com/gt-cs3220/gt-cs3220.github.io/blob/master/Vivado_Installation_Steps/vivado_install_steps.md)
 
 #### [Click to view VM instructions](access_vm_steps\access_vm_doc.html)
 
