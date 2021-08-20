@@ -22,14 +22,16 @@ In this course, we will study hardware implementation of architecture design. Th
 
 -  Processor architecture 
 
-- High-speed arithmetic
-
 - Modern processors
 
 - FPGA programming with High-level synthesis
 
+- Compiler backgrounds 
+
 - Accelerators for emerging workloads
-- Pynq Boards 
+
+- Pynq Boards
+
 - Xilinix tool chains 
 
  

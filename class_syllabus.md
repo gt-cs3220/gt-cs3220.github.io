@@ -2,7 +2,7 @@
 title: CS 3220 : Processor Design
 ---
 
-# CS 3220 Spring 2021 Syllabus
+# CS 3220 Fall 2021 Syllabus
 
 
 
@@ -10,36 +10,36 @@ title: CS 3220 : Processor Design
 
 **Instructor: Prof. Hyesoon Kim**
 
-**Class location: Bluejeans**
+**Class location: Instruction center 215**
 
 **Class time: M/W 2:00 PM - 3:15 PM EST** 
 
-**Instructor's Office hours:** **W 3:15 - 3:30 pm or by appointment  at MS Team** 
+**Instructor's Office hours:** Monday 3:30-4:00 (https://bluejeans.com/250576773/2463)  or by appointment.  **
 
-**TAs**: Sam Jijina  (mailto:sam.jijina@gatech.edu) and Hanning Chen (mailto:hanningchen97@gatech.edu)
 
-**Note about TA office hours**: We cannot hold "a regular Bluejeans office hour" as student teams will not be able to share their screen (containing their code) with the TA if multiple teams are in a single video call. Hence, each TA will be using a sign up sheet for their office hours. **The sign up sheet will be shared in the class Piazza**.
+**TAs**: Sam Jijina  (mailto:sam.jijina@gatech.edu) and Yonghae Kim (mailto:)
+
+**Note about TA office hours**: At this moment, we are holding virtual only office hours. We will revisit this policy as we progress in the semester. We cannot hold "a regular Bluejeans office hour" as student teams will not be able to share their screen (containing their code) with the TA if multiple teams are in a single video call. Hence, each TA will be using a sign up sheet for their office hours. **The sign up sheet will be shared in the class Piazza**.
 
 Please use the aforementioned sheet and put your team's bluejeans call link into the sheet. The TA will then join your Bluejeans meeting. **Since we are using this approach each slot in the sign up sheet will be 10 minutes so that we can maximixe the number of teams we can help in one office hour session**.
 
 **TA's office hours (please also read the note above):**
 
-* Sam Jijina : ***Every Wednesday 11am to 12pm EST***
+* Sam Jijina : TBD 
 
-* Hanning Chen : ***Every Thursday 3pm to 4pm EST***
+* Yonghae Kim : TBD 
 
 **TA's office location:** Bluejeans + sign up sheet (instructions above)
 
-**Class homepage**: https://gt-cs3220-spr21.github.io/
+**Class homepage**: https://gt-cs3220.github.io/
 
 **Online platforms for resource**: We will use **Canvas** for assignment submissions and lecture note distributions. We will also use **Piazza** for discussions. 
-
 
 In this course, we will study hardware implementation of architecture design. This is an intermediate-level course that follows CS2200. This course is a project-based course in which you will learn pipelined architectures by actually implementing simple instructions using an FPGA (Field-Programmable Gate Array) board. 
 
 **Course Description**
 
- The course will strengthen the background knowledge of processor design by understanding timing issues, critical path, and other underlying hardware structures. It will also provide an understanding of architecture, system, assembly programming and increase programming and debugging skills. 
+ The course will strengthen the background knowledge of processor design by understanding timing issues, critical path, and other underlying hardware structures. It will also provide an understanding of architecture, hardware design  andincrease programming and debugging skills. 
 
  
 
@@ -53,7 +53,7 @@ In this course, we will study hardware implementation of architecture design. Th
 
 - Pipeline design 
 
--  Processor architecture 
+- Processor architecture 
 
 - High-speed arithmetic
 
@@ -67,7 +67,7 @@ In this course, we will study hardware implementation of architecture design. Th
 
 - Xilinix tool chains 
 
-  
+- Background knowledge of compiler 
 
  
 
@@ -77,9 +77,15 @@ CS2200 and ECE 2031
 
  
 
-Textbooks: There is no required textbook for the course
+Textbooks: All online books are available in the library . (http://library.gatech.edu/) 
+- Principles and structures of FPGA (FPGA) 
+- Quick start guide to verilog (verilog)
+- Parallel programming for FPGAs (HLS) (https://arxiv.org/pdf/1805.03648.pdf) 
 
-FPGA boards: In this semester we don't ask students to purchase boards and students will remotely conntect FPGA boards 
+
+
+FPGA boards: You will purchase Pynq boards from the Barnes& Nobel. The details will be provided in the class.
+
 
  
 
@@ -87,31 +93,32 @@ FPGA boards: In this semester we don't ask students to purchase boards and stude
 
 **(Option #1)**
 
-   Project assignment 1: 5 
+   Project assignment 1: 10 
 
-   Project assignment 2: 10  
+   Project assignment 2: 15
 
-   Project assignment 3: 40
+   Project assignment 3: 10
 
-   Project assignment 4: 10 
+   Project assignment 4: 15 
 
-   Project assignment 5: 10
+   Project assignment 5: 10 
 
-   Lab day assignments : 5 
+  Project assignment 6: 15
 
-   Final exam: 15
+  Home works: 10
 
-   Class participation:  5 
+  Final exam: 15
 
- 
 
 **Option #2: Research track** 
 
-Projects #1-#3, part-2  are the same as option #1. 
+Projects #1-#3, project #5, homework  are the same as option #1. 
 
-Project #3 part-3, Project #4, Project #5 and Final exam can be substituted with a research project. 
+Project #4,  Project #6,  and Final exam can be substituted with a research project. 
 
-The research project topics will be announced in the later semester. 
+The research project topics will be announced in the later semester.
+
+Research project options are limited to the students who have shown good standing in the course.
 
  
 
@@ -132,17 +139,17 @@ I plan to use non-curved grade assignment unless there are too few As.
 
  
 
-**FPGA boards & Programming Platforms**: We will use Xilinix Pynq boards for the class. Students will use VM  system to log in remotely. For some assignments, the students will access the boards remotely. 
+**FPGA boards & Programming Platforms**: We will use Xilinix Pynq boards for the class. Students are required to purchase their own boards. 
+
+
+**Projects** Most of the projects are 2-student projects. Discussions with other students are encouraged. Submitting any work other than you and your partner's own is a violating of the Academic Honor Code. If you are not sure what you can discuss or not, please contact the instructor. 
+
+**1-member team policy**: Most of the projects are 2-team member projects. A 1-member team can be approved by the instructor for some specific cases.  Please discuss with the instructor for the details. If you don't submit your project partner preference, we will randomly assign your partner.  
 
 
 
-**Assignments:** Most of the assignments are 2-student projects.  However, each student should submit his/her own report written by individuals. The report collaboration with other students other than the project partner is prohibited but discussions with other students are encouraged. Submitting any work other than you and your partner's own is a violating of the Academic Honor Code. If you are not sure what you can discuss or not, please contact the instructor. 
+**Assignment late policy:** All assignments are due on the day specified by the assignment description and posted online. No late submissions are allowed except for the approval from the dean of students except for some assignments, there might be an option of late submission with penalty. The late submission information will be announced separately and by default no late submission. 
 
-**1-member team policy**: Most of the projects are 2-team member projects. A 1-member team can be approved by the instructor for some specific cases.  Please discuss with the instructor for the details. 
-
-
-
-**Assignment late policy:** All assignments are due on the day specified by the assignment description and posted online. No late submissions are allowed except for the approval from the dean of students. 
 
 Assignment submission rules: You must follow the submission guidelines specified in the assignment description. We will use Canvas. Wrong file names, broken file formats, missing files will lose 5% of the grade. 
 
@@ -152,17 +159,10 @@ Assignment submission rules: You must follow the submission guidelines specified
 
 **Final exam**: A form of digital proctoring might be used in the final exam. 
 
-**Class participation points:**   Attending live lectures and office hours are strongly encouraged.  Hence, we are taking attendance for live lectures. Missing more than 1 lecture w/o dean of student's approval will cause losing partial participation points. However, if a student can actively participate in the piazza discussions, the students can also earn participation points. 
-
-**Labday:** On lab days, you will complete a small task in the class. We will have two lab days with the same contents to provide better hands-on helping and also the limtied VM resource. There are small tasks that you have to submit after the lay days in addition to assignments. 
 
 **Academic Integrity**
 
-The course will follow all relevant and appropriate Georgia Institute of Technology academic regulations (http://www.honor.gatech.edu) including those about academic integrity. All students are expected to maintain traditional standards of academic integrity by giving proper credit for all work. Webster’s defines plagiarizing as “to steal and pass off (the ideas or words of another) as one's own: use (another's production) without crediting the source.” A student shall be guilty of a violation of academic integrity if he or she represents the work of others as his or her own or aids another's misrepresentation. All suspected cases of academic dishonesty will be aggressively pursued according to the Georgia Tech Academic Honor Code (https://policylibrary.gatech.edu/student-affairs/academic-honor-code). Any violation associated with a homework, assignment, project, examination or quiz will result in a zero for the assignment, and the student will be subject to failure for the course. Such violations will be reported to the Office of Student Integrity (OSI), which may impose penalties beyond those by the instructor(s).
-
-In this course, each student is expected to work independently on the first writing assignment; not working independently on the first two assignment will be considered a violation of the GT Academic Honor Code. Submitting any work other than your own, including a sentence without proper quotation marks with citation to the original source, is also a violation of the student honor code.
-
-For any questions involving these or any other Academic Honor Code issues, please consult the professor(s) or www.honor.gatech.edu.” Students are also encouraged to read the ACM Code of Ethics (https://www.acm.org/about-acm/acm-code-of-ethics-and-professional-conduct), particularly sections 1.3, 1.5, 1.6, 2.2 and 2.4.
+The course will follow all relevant and appropriate Georgia Institute of Technology academic regulations (http://www.honor.gatech.edu). 
 
 **Accommodations for Students with Disabilities**
 
@@ -184,37 +184,37 @@ As members of the Georgia Tech community, we are committed to creating a learnin
 
 
 
-| week | date     | topic                                  |                                 |
-| ---- | -------- | -------------------------------------- | ------------------------------- |
-| 1    | 1/18/21  | MLK                                    |                                 |
-|      | 1/20/21* | introduction and  ISA                  | [Assignment #1 due  (1/24 Sun)](assignment1.html)   |
-| 2    | 1/25/21  | [lab day #1](labday1.html)                             |                                 |
-|      | 1/27/21  | lab day #1 (same  contents as 1/25/21) | in-class assignment  submission |
-| 3    | 2/1/21   | [lab day #2](labday2.html)                             |                                 |
-|      | 2/3/21   | lab day #2  (same contents as 2/1/21)  | in-class assignment  submission |
-| 4    | 2/8/21   | office hours                           |                                 |
-|      | 2/10/21* | FPGA  architecture/FPGA synthesis      | [assignment #2 due (f)](assignment2.html)           |
-| 5    | 2/15/21  | [lab day #3](labday3.html)                             |                                 |
-|      | 2/17/21  | lab dya #3 (same  contents as 2/15/21) | in-class assignment  submission |
-| 6    | 2/22/21  | office hours                           |                                 |
-|      | 2/24/21* | timing analysis                        |                                 |
-| 7    | 3/1/21   | office hours                           |                                 |
-|      | 3/3/21*  | high-speed arithmetic                  | [Assignment #3 part-1  (F)](assignment3.html)       |
-| 8    | 3/8/21   | office hours                           |                                 |
-|      | 3/10/21* | IEEE  Floatingpoint/gpu                |                                 |
-| 9    | 3/15/21  | office hours                           |                                 |
-|      | 3/17/21* |  HLS                        | Assignment #3 part-2  (F: extension Sun)       |
-| 10   | 3/22/21  | [lab day #4](labday4.html)                             |                                 |
-|      | 3/24/21  | Break                                  |                                 |
-| 11   | 3/29/21  | lab day #4   (same contents as 3/22)   | in-class assignment  submssion  |
-|      | 3/31/21  | [lab day #5](labday5.html)             | Assignment #3 part-3  (F)       |
-| 12   | 4/5/21   | lab day #5 (same contents as 3/31)     | in-class assignment  submssion, 1st milestone (M)  |
-|      | 4/7/21*  |  GPU architecture                        |               |
-| 13   | 4/12/21  | office hours                           |                                 |
-|      | 4/14/21* |  ML accelerators                                    |  [Assignment #4 (W)](assignment4.html)                               |
-| 14   | 4/19/21  | office hours                           | [assignment #5 (F)](assignment5.html), 2nd milestone (M)               |
-|      | 4/21/21* | security                               |                                 |
-| 15   | 4/26/21* | review day                             |                                 |
-|      | 4/30/21* | Final exam                             |                                 |
-
-(*) live lectures
+| week | date     | Topic category | topic                                         | HW deadline         | Project deadline      | Reading books               |
+| ---- | -------- | -------------- | --------------------------------------------- | ------------------- | --------------------- | --------------------------- |
+| 1    | 8/23/21  |                | introduction & review                         |                     |                       | verilog ch 1 & FPGA ch 1    |
+|      | 8/25/21  | Verilog        | introduction to verilog                       | HW#1 due (Sunday)   |                       | verilog ch 2 & ch 3         |
+| 2    | 8/30/21  |                | verilog-II (sequential)                       |                     |                       | verilog ch 4 & ch 5  & ch 7 |
+|      | 9/1/21   |                | verilog-III & xilinix tool                    | HW#2 (lab-1) (W)    |                       | verilog ch 8 & ch 9         |
+| 3    | 9/6/21   |                | no lecture- Labor day                         |                     |                       |                             |
+|      | 9/8/21   |                | verilog-IV: memory/test bench                 | HW#3 (lab-2) (W)    | project #1 due  (F)   | verilog ch 10 & ch 6        |
+| 4    | 9/13/21  |                | design processor & ISA  & review pipeline     |                     |                       | verilog ch 11               |
+|      | 9/15/21  | FPGA           | FPGA introduction                             | HW#4 (lab-3)  (W)   |                       | FPGA ch 2                   |
+| 5    | 9/20/21  |                | FPGA structure                                |                     |                       | FPGA ch 3                   |
+|      | 9/22/21  |                | Design tools                                  | HW#5  (W)           | Project #2-part 1 (F) | FPGA ch 4                   |
+| 6    | 9/27/21  |                | Design methodology                            |                     |                       | FPGA ch 5                   |
+|      | 9/29/21  |                | Hardware designs                              | HW#6 (W)            |                       | FPGA ch 6                   |
+| 7    | 10/4/21  |                | FPGA design examples                          |                     |                       | FPGA ch 7 & 8               |
+|      | 10/6/21  | Architecture   | branch predictor                              |                     | Project #2-part 2 (W) |                             |
+| 8    | 10/11/21 |                | fall break                                    |                     |                       |                             |
+|      | 10/13/21 |                | out of order processor                        | HW #7 (W)           |                       |                             |
+| 9    | 10/18/21 |                | memory systems                                |                     |                       |                             |
+|      | 10/20/21 |                | IO support                                    | HW #8 (W)           | Project #3 due (F)    |                             |
+| 10   | 10/25/21 |                | GPU architecture                              |                     |                       | CO Appendix A               |
+|      | 10/27/21 |                | GPU architecture                              | HW #9 (W)           |                       |                             |
+| 11   | 11/1/21  |                | IEEE floating point                           |                     |                       |                             |
+|      | 11/3/21  | HLS            | vivado HLS tutorial                           | HW#10 (lab-4) (W)   | Project #4 (F)        | Xilinix & chap -1          |
+| 12   | 11/8/21  |                | HLS optimization (I)                          |                     |                       | HLS ch 2 & ch 3             |
+|      | 11/10/21 |                | HLS - loop optimizations                      | HW #11 (lab-5)  (w) |                       | HLS ch 4                    |
+| 13   | 11/15/21 |                | ML accelerator                                |                     |                       |                             |
+|      | 11/17/21 |                | HLS  -MatrixMul                               | HW #12  (W)         | Project #5 (F)        | HLS ch 6 & 7                |
+| 14   | 11/22/21 |                | TBD                                           |                     |                       |                             |
+|      | 11/24/21 |                | Thanksgiving                                  |                     |                       |                             |
+| 15   | 11/29/21 | Architecture   | Vortex architecture                           |                     |                       |                             |
+|      | 12/1/21  |                | security                                      | HW #13  (W)         | Project #6 (F)        |                             |
+|      | 12/6/21  |                | research introduction & research presentation |                     |                       |                             |
+|      | 12/10/21 |                | Final exam  2:40 pm - 5:30 pm (online exam)   |                     |                      |                             |
