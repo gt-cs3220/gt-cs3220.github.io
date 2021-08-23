@@ -36,6 +36,7 @@ Please use the aforementioned sheet and put your team's bluejeans call link into
 **Online platforms for resource**: We will use **Canvas** for assignment submissions and lecture note distributions. We will also use **Piazza** for discussions. 
 
 In this course, we will study hardware implementation of architecture design. This is an intermediate-level course that follows CS2200. This course is a project-based course in which you will learn pipelined architectures by actually implementing simple instructions using an FPGA (Field-Programmable Gate Array) board. 
+192.168.1.5 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAAAgmDgS4t6rveY3uclyT7WebPXUfYVIjqvYEReOtWUjusfXwlYWaS0RyBpAAcmmRJsbNLHokRr3G8WIYdUmrzZ60/hYS1bZwFiN5A05DT6bl01dBq/lKFdCUtltFRYFlHY0YORuFgxv3o73Qn0/oMGhuyOpK6XrBTQ6rc9rpYaywcHlxc=
 
 **Course Description**
 
@@ -109,6 +110,7 @@ FPGA boards: You will purchase Pynq boards from the Barnes& Nobel. The details w
 
   Final exam: 15
 
+  participation: extra 3 points
 
 **Option #2: Research track** 
 
@@ -179,12 +181,12 @@ No form of harassment or discrimination is allowed in this class. In keeping wit
 
 As members of the Georgia Tech community, we are committed to creating a learning environment in which all of our students feel safe and included. Because we are individuals with varying needs, we are reliant on your feedback to achieve this goal. To that end, we invite you to enter into dialogue with us about the things we can stop, start, and continue doing to make our classroom an environment in which every student feels valued and can engage actively in our learning community.
 
-** Class Mode **
+**Class Mode**
 The course will be also broadcasted by bluejean which the links are in the canvas for your convienence. Attendance will not be required except for the final exam. 
-If you choose to attend the class in person, please wear a mask inside the classroom. 
+If you choose to attend the class in person, **please wear a mask inside the classroom**. 
 
 
-** Homework **
+**Homework**
 Except for the first week, almost every wed has homework assignments. Homework assignments will be a mixture of a preparation for projects and simple questions to answer the lecture contents.
 Homework assignments are individual but you can get help from others. If you get help from others, please include the names. 
 
