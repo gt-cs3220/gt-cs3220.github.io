@@ -179,7 +179,14 @@ No form of harassment or discrimination is allowed in this class. In keeping wit
 
 As members of the Georgia Tech community, we are committed to creating a learning environment in which all of our students feel safe and included. Because we are individuals with varying needs, we are reliant on your feedback to achieve this goal. To that end, we invite you to enter into dialogue with us about the things we can stop, start, and continue doing to make our classroom an environment in which every student feels valued and can engage actively in our learning community.
 
+** Class Mode **
+The course will be also broadcasted by bluejean which the links are in the canvas for your convienence. Attendance will not be required except for the final exam. 
+If you choose to attend the class in person, please wear a mask inside the classroom. 
 
+
+** Homework **
+Except for the first week, almost every wed has homework assignments. Homework assignments will be a mixture of a preparation for projects and simple questions to answer the lecture contents.
+Homework assignments are individual but you can get help from others. If you get help from others, please include the names. 
 
 **Tentative Schedule**
 
@@ -190,11 +197,11 @@ As members of the Georgia Tech community, we are committed to creating a learnin
 | 1    | 8/23/21  |                | introduction & review                         |                     |                       | verilog ch 1 & FPGA ch 1    |
 |      | 8/25/21  | Verilog        | introduction to verilog                       | HW#1 due (Sunday)   |                       | verilog ch 2 & ch 3         |
 | 2    | 8/30/21  |                | verilog-II (sequential)                       |                     |                       | verilog ch 4 & ch 5  & ch 7 |
-|      | 9/1/21   |                | verilog-III & xilinix tool                    | HW#2 (lab-1) (W)    |                       | verilog ch 8 & ch 9         |
+|      | 9/1/21   |                | verilog-III & xilinix tool                    | HW#2  (W)    |                       | verilog ch 8 & ch 9         |
 | 3    | 9/6/21   |                | no lecture- Labor day                         |                     |                       |                             |
-|      | 9/8/21   |                | verilog-IV: memory/test bench                 | HW#3 (lab-2) (W)    | project #1 due  (F)   | verilog ch 10 & ch 6        |
+|      | 9/8/21   |                | verilog-IV: memory/test bench                 | HW#3  (W)    | project #1 due  (F)   | verilog ch 10 & ch 6        |
 | 4    | 9/13/21  |                | design processor & ISA  & review pipeline     |                     |                       | verilog ch 11               |
-|      | 9/15/21  | FPGA           | FPGA introduction                             | HW#4 (lab-3)  (W)   |                       | FPGA ch 2                   |
+|      | 9/15/21  | FPGA           | FPGA introduction                             | HW#4  (W)   |                       | FPGA ch 2                   |
 | 5    | 9/20/21  |                | FPGA structure                                |                     |                       | FPGA ch 3                   |
 |      | 9/22/21  |                | Design tools                                  | HW#5  (W)           | Project #2-part 1 (F) | FPGA ch 4                   |
 | 6    | 9/27/21  |                | Design methodology                            |                     |                       | FPGA ch 5                   |
@@ -208,9 +215,9 @@ As members of the Georgia Tech community, we are committed to creating a learnin
 | 10   | 10/25/21 |                | GPU architecture                              |                     |                       | CO Appendix A               |
 |      | 10/27/21 |                | GPU architecture                              | HW #9 (W)           |                       |                             |
 | 11   | 11/1/21  |                | IEEE floating point                           |                     |                       |                             |
-|      | 11/3/21  | HLS            | vivado HLS tutorial                           | HW#10 (lab-4) (W)   | Project #4 (F)        | Xilinix & chap -1          |
+|      | 11/3/21  | HLS            | vivado HLS tutorial                           | HW#10  (W)   | Project #4 (F)        | Xilinix & chap -1          |
 | 12   | 11/8/21  |                | HLS optimization (I)                          |                     |                       | HLS ch 2 & ch 3             |
-|      | 11/10/21 |                | HLS - loop optimizations                      | HW #11 (lab-5)  (w) |                       | HLS ch 4                    |
+|      | 11/10/21 |                | HLS - loop optimizations                      | HW #11  (w) |                       | HLS ch 4                    |
 | 13   | 11/15/21 |                | ML accelerator                                |                     |                       |                             |
 |      | 11/17/21 |                | HLS  -MatrixMul                               | HW #12  (W)         | Project #5 (F)        | HLS ch 6 & 7                |
 | 14   | 11/22/21 |                | TBD                                           |                     |                       |                             |
@@ -218,4 +225,4 @@ As members of the Georgia Tech community, we are committed to creating a learnin
 | 15   | 11/29/21 | Architecture   | Vortex architecture                           |                     |                       |                             |
 |      | 12/1/21  |                | security                                      | HW #13  (W)         | Project #6 (F)        |                             |
 |      | 12/6/21  |                | research introduction & research presentation |                     |                       |                             |
-|      | 12/10/21 |                | Final exam  2:40 pm - 5:30 pm (online exam)   |                     |                      |                             |
+|      | 12/10/21 |                | Final exam  2:40 pm - 5:30 pm (offline + online exam)   |                     |                      |                             |
