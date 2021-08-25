@@ -6,7 +6,7 @@ HW #1 Assignments
 
 In this assignments, you will get familiar with Xilinix tool chain and Verilog. 
 
-Please checkout hw1 folder from the github (ghttps://github.com/gt-cs3220/gt-cs3220.github.io/tree/master/hw1_files) 
+Please checkout hw1 folder from the github (https://github.com/gt-cs3220/gt-cs3220.github.io/tree/master/hw1_files) 
 
 **What to submit**: a screenshot of final simulation. 
 
