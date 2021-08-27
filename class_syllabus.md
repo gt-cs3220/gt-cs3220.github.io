@@ -36,7 +36,6 @@ Please use the aforementioned sheet and put your team's bluejeans call link into
 **Online platforms for resource**: We will use **Canvas** for assignment submissions and lecture note distributions. We will also use **Piazza** for discussions. 
 
 In this course, we will study hardware implementation of architecture design. This is an intermediate-level course that follows CS2200. This course is a project-based course in which you will learn pipelined architectures by actually implementing simple instructions using an FPGA (Field-Programmable Gate Array) board. 
-192.168.1.5 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAAAgmDgS4t6rveY3uclyT7WebPXUfYVIjqvYEReOtWUjusfXwlYWaS0RyBpAAcmmRJsbNLHokRr3G8WIYdUmrzZ60/hYS1bZwFiN5A05DT6bl01dBq/lKFdCUtltFRYFlHY0YORuFgxv3o73Qn0/oMGhuyOpK6XrBTQ6rc9rpYaywcHlxc=
 
 **Course Description**
 
