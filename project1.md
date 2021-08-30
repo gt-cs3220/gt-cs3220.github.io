@@ -76,6 +76,7 @@ submit all the files in your project directory, you should be sufficient.
  
 
 **FAQ ** 
+
 (1) Q: How to increase the duration of simulation?  The default Vivado setting is 1,000ns 
 [A](vivado_simulation_time.png) 
 
@@ -120,6 +121,9 @@ A: Please show us the entire process.
 (7) Q: What's the behavior of reset? 
 A: It should just initialize your states and clear data for i and j. 
 
+(8) Q: I submmited bublesort.v and then I realized that I made a mistake, so I submitted a new file. The name is automatically changed to bubblesort-1.v.
+Is that OK? 
+A: Yes. 
 
 
 
