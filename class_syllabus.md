@@ -196,9 +196,9 @@ Homework assignments are individual but you can get help from others. If you get
 | week | date     | Topic category | topic                                         | HW deadline         | Project deadline      | Reading books               |
 | ---- | -------- | -------------- | --------------------------------------------- | ------------------- | --------------------- | --------------------------- |
 | 1    | 8/23/21  |                | introduction & review                         |                     |                       | verilog ch 1 & FPGA ch 1    |
-|      | 8/25/21  | Verilog        | introduction to verilog                       | HW#0 due (Sunday)   |                       | verilog ch 2 & ch 3         |
-| 2    | 8/30/21  |                | verilog-II (sequential)                       | HW#1 due (M)        |                       | verilog ch 4 & ch 5  & ch 7 |
-|      | 9/1/21   |                | verilog-III & xilinix tool                    | HW#2  (W)    |                       | verilog ch 8 & ch 9         |
+|      | 8/25/21  | Verilog        | introduction to verilog                       | HW#0 (Sunday)   |                       | verilog ch 2 & ch 3         |
+| 2    | 8/30/21  |                | verilog-II (sequential)                       | [HW#1](hw1.html) (M)        |                       | verilog ch 4 & ch 5  & ch 7 |
+|      | 9/1/21   |                | verilog-III & xilinix tool                    | [HW#2](hw2.html)  (W)    |                       | verilog ch 8 & ch 9         |
 | 3    | 9/6/21   |                | no lecture- Labor day                         |                     |                       |                             |
 |      | 9/8/21   |                | verilog-IV: memory/test bench                 | HW#3  (W)    | project #1 due  (F)   | verilog ch 10 & ch 6        |
 | 4    | 9/13/21  |                | design processor & ISA  & review pipeline     |                     |                       | verilog ch 11               |
