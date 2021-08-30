@@ -1,6 +1,6 @@
 HW #2 Assignments 
 
-(Due : 9/3/21 (F))
+(Due : 9/3/21 (F) **6:00 pm EST**)
 
 [1 point]
 
