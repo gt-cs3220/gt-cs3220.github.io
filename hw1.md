@@ -4,7 +4,7 @@ HW #1 Assignments
 
 
 
-In this assignments, you will get familiar with Xilinix tool chain and Verilog. 
+In this assignments, you will get familiar with Xilinx tool chain and Verilog. 
 
 To install vivado, please see vivado install instruction in the class
 homepage (vivado_install_steps.html). 
@@ -20,7 +20,7 @@ you can also look at (https://github.com/gt-cs3220/gt-cs3220.github.io/tree/mast
   
 The folder has two subfolders(example_v,simpleio_v) and simple two tasks. 
 
-Task #1: create a new vivado project with  files only in the example_v folder). You start a new project and follow the instructions to set vivado projet including simulation configurations.  Try behavior simulation.  hw1 video shows how to create a project. Please check the "copy sources into project" option. 
+Task #1: create a new vivado project with  files only in the example_v folder). You start a new project and follow the instructions to set vivado project including simulation configurations.  Try behavior simulation.  hw1 video shows how to create a project. Please check the "copy sources into project" option. 
 
 
 Task #2: Modify the code (example_bus.v)  to have the following design in the module (use simple io folder) the simple in and out module based on the following definition.  simpleio_solution.v shows the correct answer that you can use it as a reference. 
