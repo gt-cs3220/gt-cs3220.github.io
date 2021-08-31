@@ -17,11 +17,16 @@ title: CS 3220 : Processor Design
 **Instructor's Office hours:** Monday 3:30-4:00 (https://bluejeans.com/250576773/2463)  or by appointment.  **
 
 
-**TAs**: Sam Jijina  (mailto:sam.jijina@gatech.edu) and Yonghae Kim (mailto:)
+**TAs**: Sam Jijina  and Yonghae Kim
 
-**Note about TA office hours**: At this moment, we are holding virtual only office hours. We will revisit this policy as we progress in the semester. We cannot hold "a regular Bluejeans office hour" as student teams will not be able to share their screen (containing their code) with the TA if multiple teams are in a single video call. Hence, each TA will be using a sign up sheet for their office hours. **The sign up sheet will be shared in the class Piazza**.
+**Note about TA office hours**: At this moment, we are holding virtual only office hours. We will revisit this policy as we progress in the semester. Each TA will be using a sign up sheet for their office hours. **The sign up sheet will be shared in the class Piazza**. Since we are using this approach each slot in the sign up sheet will be 10 minutes so that we can maximixe the number of teams we can help in one office hour session**.
 
-Please use the aforementioned sheet and put your team's bluejeans call link into the sheet. The TA will then join your Bluejeans meeting. **Since we are using this approach each slot in the sign up sheet will be 10 minutes so that we can maximixe the number of teams we can help in one office hour session**.
+**Communication method** 
+Please use piazza private posting to communicate the instructor and the TAs. For general questions, please use piazza public posting so that other students can reply as well. 
+ 
+**Participation points**
+Students who provide helpful postings will receive extra participation points. (up to 3 points in total) 
+
 
 **TA's office hours (please also read the note above):**
 
