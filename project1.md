@@ -10,7 +10,7 @@ This is an **<u> individual project</u>**.
 
 In this assignment, you will implement a simplified serial version of  bubble sort in Verilog. 
 
-Pleae use files in  
+Pleae use files in  https://github.com/gt-cs3220/gt-cs3220.github.io/tree/master/project1_files
 
 To reduce the complexity of the problem, your solution needs to only work with **10 number of items**. 
 
