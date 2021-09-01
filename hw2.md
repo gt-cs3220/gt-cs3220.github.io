@@ -8,10 +8,10 @@ In this assignments, you will advance your verilog knowledge.
 
 Please checkout hw2_files folder from the github. 
 
-**What to submit**: a screenshot of task 2 and task 4.  (please use pdf or png file formats)
+**What to submit**: a screenshot of simulations of task 2 and task 4. (please use pdf or png file formats)
 
 **Grading**: Submit a screenshot of the last tasks that you have completed. 
-You will get a full credit, if you have submitted your efforts for doing the assignment. These tasks are designed to help project #1. 
+You will get a full credit, if you have submitted your efforts for doing the assignment. These tasks are designed to help project #1.
 
 
  
@@ -33,7 +33,7 @@ The solution diagram is in the folder.
 
 
 
-**Task #2**: Extend D-flop with enable and clear signal dflop.v  (dflop example folder)
+**Task #2**: Extend D-flop with enable and clear signal dflop.v  (dflop example folder)
 
 <img src="flop.jpg" width="200">
 
