@@ -78,7 +78,8 @@ submit all the files in your project directory, you should be sufficient.
 **FAQ ** 
 
 (1) Q: How to increase the duration of simulation?  The default Vivado setting is 1,000ns 
-[A](vivado_simulation_time.png) 
+<img src = "vivado_simulation_time.png" width="400"> 
+
 
 (2) Q: I passed the provided testing code. Do I need to test other inputs to see whether it works on other cases ? 
 A: No, we will test your code only with the provided test code. 
