@@ -12,6 +12,7 @@ Please checkout hw1 folder from the github
 (https://github.com/gt-cs3220/gt-cs3220.github.io/tree/master/hw1_files)
 You can also watch hw1.mp4 in the canvas (CS-3220-A>Files>lecture_slides)
 you can also look at (https://github.com/gt-cs3220/gt-cs3220.github.io/tree/master/Vivado_Tutorial) 
+
 **What to submit**: a screenshot of final simulation. 
 
 **Grading**: submit a screenshot of the last task simulation (0.5 points) 
