@@ -32,16 +32,16 @@ If you finish part-2 on time w/o correctly finishing part-1, you will get 2 pts.
 ## Part 2: Complete the pipeline  
 
 **Description**: 
-In this part, you will complete the entire ISA. Your program should run with testall.mem case we provide. You don't need to implement data forwarding in this part. 
+In this part, you will complete the entire ISA. Your program should run with testall2.mem case we provide. You don't need to implement data forwarding in this part. 
 
 
 
 
 **Grading**:
 
-It should pass testall.mem file in behavior simulation. In this design, we will only ask you to check the behavior behavior correctness. In the next project, you will generate bitstreams and test your code on FPGA. Hence, it is good to check whether your code is being synthesized or not. 
+It should pass testall2.mem file in behavior simulation. In this design, we will only ask you to check the behavior behavior correctness. In the next project, you will generate bitstreams and test your code on FPGA. Hence, it is good to check whether your code is being synthesized or not. 
 
-If it does not pass testall.mem file, there is no partial grading. Only for this assignment, we will accept a late submission with a penalty. 
+If it does not pass testall2.mem file, there is no partial grading. Only for this assignment, we will accept a late submission with a penalty. 
 
 **Late submission**: If you can submit the successful design of pipeline by project #3 deadline, you will receive 8 pts out of 15 pts in total including part-1, regardless of part-1's score. 
 
@@ -82,7 +82,7 @@ Q) How to generate mem file ?
 A) Use [assembler.py] to convert your assembly code into mif file format. And then use [miftomem.py].
 
 Note:
-testall.mem do not cover all corner cases.
+testall2.mem do not cover all corner cases.
 
 
 Q)Do we need to create a stack for nested JAL instructions? 
@@ -161,8 +161,8 @@ e. you could change the top module and forward the signals to the testbench and 
 
 
 
-Q) We finished testall.mem but we don't get "Congratulations" Message
-for testall. Is that normal?
+Q) We finished testall2.mem but we don't get "Congratulations" Message
+for testall2. Is that normal?
 
 A) Yes, the congratulation message is only for test[1-5].asm.
 
