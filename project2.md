@@ -55,7 +55,7 @@ test your pipeline in the pynq board soon.
 * VX_define.vh
 
 **[2] A zip file of your Vivado project directory. **
-<img src=prj_dir.png>
+<img src="prj_dir.png" width="100" >
 
 **FAQ)**
 
