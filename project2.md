@@ -10,7 +10,10 @@ This is a two-member group project.
 
 
 **Description**:
-In this assignment, you will design a pipelined processor using verilog. We will still evaluate your assignments with only behavioral simulation. Please note that you will synthesize the code in project #3, so please avoid using any high-level c-style code like for loops. 
+In this assignment, you will design a pipelined processor using
+verilog. In part-1, we will evaluate your assignments with only
+behavioral simulation. In part-2, we plan to ask you to synthesize the
+code and run on Pynq boardsm so please avoid using any high-level c-style code like for loops. 
 
 ## Part 1 : pass 5 test cases 
 For part #1, you will implement a subset of pipeline. You  only need to pass 5 tests we create. Please see the test cases for the part-1 requirements. You can locate those test files under tests directory. You can refer to the README file under tests for more information about each test case. 
@@ -26,26 +29,19 @@ else if you pass test[1-4]: 3 pts
 else if you pass any of test[1-4]: 2 pts 
 
 **Late submission**: 
-If you finish part-2 on time w/o correctly finishing part-1, you will get 2 pts. 
+If you finish part-2 on time w/o correctly finishing part-1, you will
+still get 2 pts for part-1. 
 
 
 ## Part 2: Complete the pipeline  
 
 **Description**: 
-In this part, you will complete the entire ISA. Your program should run with testall2.mem case we provide. You don't need to implement data forwarding in this part. 
+In this part, you will complete the entire ISA. Your program should
+run with testall2.mem case we provide. You don't need to implement
+data forwarding in this part.  We will provide the instruction how to
+test your pipeline in the pynq board soon. 
 
 
-
-
-**Grading**:
-
-It should pass testall2.mem file in behavior simulation. In this design, we will only ask you to check the behavior behavior correctness. In the next project, you will generate bitstreams and test your code on FPGA. Hence, it is good to check whether your code is being synthesized or not. 
-
-If it does not pass testall2.mem file, there is no partial grading. Only for this assignment, we will accept a late submission with a penalty. 
-
-**Late submission**: If you can submit the successful design of pipeline by project #3 deadline, you will receive 8 pts out of 15 pts in total including part-1, regardless of part-1's score. 
-
-**Incorrect/Incomplete/Missing File(s) Submissions : 5% deducted**
 
 **What to submit**:
 **[1] A zip file of your source code. The zip file must contain the following:**
@@ -59,7 +55,7 @@ If it does not pass testall2.mem file, there is no partial grading. Only for thi
 * VX_define.vh
 
 **[2] A zip file of your Vivado project directory. **
-<img src=pr_dir.png>
+<img src=prj_dir.png>
 
 **FAQ)**
 
