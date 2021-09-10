@@ -11,7 +11,7 @@ This is a two-member group project.
 
 **Description**:
 In this assignment, you will design a pipelined processor using
-verilog. The ISA is here. <a href="projectisa.pdf">  In part-1, we will evaluate your assignments with only
+verilog. The ISA is <a href="projectisa.pdf"> here. </a>  In part-1, we will evaluate your assignments with only
 behavioral simulation. In part-2, we plan to ask you to synthesize the
 code and run on Pynq boardsm so please avoid using any high-level c-style code like for loops. 
 
