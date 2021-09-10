@@ -33,6 +33,8 @@ If you finish part-2 on time w/o correctly finishing part-1, you will
 still get 2 pts for part-1. 
 
 
+***Please do not procrastinate.*** 
+
 ## Part 2: Complete the pipeline  
 
 **Description**: 
@@ -178,11 +180,4 @@ On the other hand ADD, S2, A0, A1 ; S2 = A0 + A1
 
 
 
-
-**What to submit.*:
-
-
-
-
-***Please do not procrastinate.*** 
 
