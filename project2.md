@@ -39,7 +39,7 @@ still get 2 pts for part-1.
 
 **Description**: 
 In this part, you will complete the entire ISA. Your program should
-run with testall2.mem case we provide. You don't need to implement
+run with testall3.mem case we provide. You don't need to implement
 data forwarding in this part.  We will provide the instruction how to
 test your pipeline in the pynq board soon. 
 
@@ -77,10 +77,10 @@ You need to change "test1.mem" into "test2.mem" etc.
 
 Q) How to generate mem file ?
 
-A) Use [assembler.py] to convert your assembly code into mif file format. And then use [miftomem.py].
+A) Use [assembler.py] to convert your assembly code into mif file format. And then use [miftomem.py]. 
 
 Note:
-testall2.mem do not cover all corner cases.
+testall3.mem do not cover all corner cases.
 
 
 Q)Do we need to create a stack for nested JAL instructions? 
@@ -159,13 +159,21 @@ e. you could change the top module and forward the signals to the testbench and 
 
 
 
-Q) We finished testall2.mem but we don't get "Congratulations" Message
-for testall2. Is that normal?
+Q) We finished testall3.mem but we don't get "Congratulations" Message
+for testall3. Is that normal?
 
 A) Yes, the congratulation message is only for test[1-5].asm.
 
 Q)  Is the immediate field inside assembly code decimal?
 A) If the number starts with 0x, it's hexadecimal .
+
+Q)When we access the memory, why we drop out LSB 2 bits? 
+
+A) When we declare the memory ```reg [`DBITS-1:0] imem [`IMEMWORDS-1:0]; ```, we declare it the data width is 4B since we don't do any unaligned accesses. 
+However, our ISA is byte address, we are not using the lower 2 bits in the addresses.  Please note that, you don't need to do anything to support that 
+The frame already includes the code to ignore the lower 2 bits. 
+  ```assign inst_FE = imem[PC_FE_latch[`IMEMADDRBITS-1:`IMEMWORDBITS]]; ```
+```dmem[memaddr_MEM[`DMEMADDRBITS-1:`DMEMWORDBITS]]; ``` 
 
 
 
