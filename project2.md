@@ -40,10 +40,13 @@ still get 2 pts for part-1.
 **Description**: 
 In this part, you will complete the entire ISA. Your program should
 run with testall3.mem case we provide. You don't need to implement
-data forwarding in this part.  We will provide the instruction how to
-test your pipeline in the pynq board soon. 
+data forwarding in this part.  ~~We will provide the instruction how to
+test your pipeline in the pynq board soon.i~~ Testing the pipeline on a pynq  board requires IO interfaces and others. Hence, we postpond the pynq board testing to the later assignment. 
+For project-2, we will evaluate your design with only behavioral simulation.  
 
-
+**Grading:** If you pass testall3.mem (please note that there is no congratulations message. All HEX and LEDR values need to be matched.), you will get 10 pts. 
+If you only able to finish part-1 until part-2 deadline, you will get total 2 pts (including part-1 & part-2). 
+No other partial grading. 
 
 **What to submit**:
 **[1] A zip file of your source code. The zip file must contain the following:**
@@ -53,7 +56,7 @@ test your pipeline in the pynq board soon.
 * fe_stage.v
 * mem_stage.v
 * wb_stage.v
-* project3_frame.v
+* project2_frame.v
 * VX_define.vh
 
 **[2] A zip file of your Vivado project directory. **
@@ -115,6 +118,7 @@ stage and carry over the value until the WB stage. You don't have to use all the
 You are free to add new ones as you need.
 
 Q) Do the LW and SW instructions have any dependencies in test1.asm?
+
 ``` lw s1, DATA(zero)
 sw s1, HEX(zero)
 ``` 
@@ -170,7 +174,7 @@ A) If the number starts with 0x, it's hexadecimal .
 Q)When we access the memory, why we drop out LSB 2 bits? 
 
 A) When we declare the memory ```reg [`DBITS-1:0] imem [`IMEMWORDS-1:0]; ```, we declare it the data width is 4B since we don't do any unaligned accesses. 
-However, our ISA is byte address, we are not using the lower 2 bits in the addresses.  Please note that, you don't need to do anything to support that 
+However, our ISA is byte addressibility, so we are not using the lower 2 bits in the addresses.  Please note that, you don't need to do anything to support that 
 The frame already includes the code to ignore the lower 2 bits. 
   ```assign inst_FE = imem[PC_FE_latch[`IMEMADDRBITS-1:`IMEMWORDBITS]]; ```
 ```dmem[memaddr_MEM[`DMEMADDRBITS-1:`DMEMWORDBITS]]; ``` 
