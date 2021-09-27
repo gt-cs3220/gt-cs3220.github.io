@@ -208,10 +208,10 @@ Homework assignments are individual but you can get help from others. If you get
 |      | 9/8/21   |                | verilog-IV: memory/test bench                 | HW#3  (W)    | [project #1 due](project1.html)  (F)   | verilog ch 10 & ch 6        |
 | 4    | 9/13/21  |                | design processor & ISA  & review pipeline     |                     |                       | verilog ch 11               |
 |      | 9/15/21  | FPGA           | FPGA introduction                             | HW#4  (W)   |                       | FPGA ch 2                   |
-| 5    | 9/20/21  |                | FPGA structure                                |                     |                       | FPGA ch 3   & 4                 |
+| 5    | 9/20/21  |                | FPGA structure                                |                    |                       | FPGA ch 3   & 4                 |
 |      | 9/22/21  |                |  Project-2 FAQ                             | HW#5  (W)           | [Project #2-part 1 (F)](project2.html) |              |
 | 6    | 9/27/21  | Architecture    | out of order processor                           |                     |                       |                 |
-|      | 9/29/21  |                |  out of order processor                      | HW#6 (W)  (hw6.html)          |                       |                 |
+|      | 9/29/21  |                |  out of order processor                      | [HW#6 (W)](hw6.html)          |                       |                 |
 | 7    | 10/4/21  |                | branch predictor                         |                     |                       |             |
 |      | 10/6/21  |                 | branch predictor  & PS+PL                            |                     | Project #2-part 2 (W) |                             |
 | 8    | 10/11/21 |                | fall break                                    |                     |                       |                             |
