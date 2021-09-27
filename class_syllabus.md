@@ -191,7 +191,7 @@ If you choose to attend the class in person, **please wear a mask inside the cla
 
 
 **Homework**
-Except for the first week, almost every wed has homework assignments. Homework assignments will be a mixture of a preparation for projects and simple questions to answer the lecture contents.
+Except for the first week, almost every wed has homework assignments. Homework assignments will be a mixture of a preparation for projects and simple questions to answer the lecture contents.
 Homework assignments are individual but you can get help from others. If you get help from others, please include the names. 
 
 **Tentative Schedule**
@@ -208,27 +208,27 @@ Homework assignments are individual but you can get help from others. If you get
 |      | 9/8/21   |                | verilog-IV: memory/test bench                 | HW#3  (W)    | [project #1 due](project1.html)  (F)   | verilog ch 10 & ch 6        |
 | 4    | 9/13/21  |                | design processor & ISA  & review pipeline     |                     |                       | verilog ch 11               |
 |      | 9/15/21  | FPGA           | FPGA introduction                             | HW#4  (W)   |                       | FPGA ch 2                   |
-| 5    | 9/20/21  |                | FPGA structure                                |                     |                       | FPGA ch 3                   |
-|      | 9/22/21  |                | Design tools                                  | HW#5  (W)           | Project #2-part 1 (F) | FPGA ch 4                   |
-| 6    | 9/27/21  |                | Design methodology                            |                     |                       | FPGA ch 5                   |
-|      | 9/29/21  |                | Hardware designs                              | HW#6 (W)            |                       | FPGA ch 6                   |
-| 7    | 10/4/21  |                | FPGA design examples                          |                     |                       | FPGA ch 7 & 8               |
-|      | 10/6/21  | Architecture   | branch predictor                              |                     | Project #2-part 2 (W) |                             |
-| 8    | 10/11/21 |                | fall break                                    |                     |                       |                             |
-|      | 10/13/21 |                | out of order processor                        | HW #7 (W)           |                       |                             |
-| 9    | 10/18/21 |                | memory systems                                |                     |                       |                             |
-|      | 10/20/21 |                | IO support                                    | HW #8 (W)           | Project #3 due (F)    |                             |
+| 5    | 9/20/21  |                | FPGA structure                                |                     |                       | FPGA ch 3   & 4                 |
+|      | 9/22/21  |                |  Project-2 FAQ                             | HW#5  (W)           | [Project #2-part 1 (F)](project2.html) |              |
+| 6    | 9/27/21  | Architecture    | out of order processor                           |                     |                       |                 |
+|      | 9/29/21  |                |  out of order processor                      | HW#6 (W)  (hw6.html)          |                       |                 |
+| 7    | 10/4/21  |                | branch predictor                         |                     |                       |             |
+|      | 10/6/21  |                 | branch predictor  & PS+PL                            |                     | Project #2-part 2 (W) |                             |
+| 8    | 10/11/21 |                | fall break                                    |                     |                       |                             |
+|      | 10/13/21 |                |  Power                      | HW #7 (W)           |                       |                             |
+| 9    | 10/18/21 |                | IO support (Project #4)                               |                     |                       |                             |
+|      | 10/20/21 |                |  Guest lecture                                   | HW #8 (W)           | Project #3 due (F)    |                             |
 | 10   | 10/25/21 |                | GPU architecture                              |                     |                       | CO Appendix A               |
 |      | 10/27/21 |                | GPU architecture                              | HW #9 (W)           |                       |                             |
 | 11   | 11/1/21  |                | IEEE floating point                           |                     |                       |                             |
-|      | 11/3/21  | HLS            | vivado HLS tutorial                           | HW#10  (W)   | Project #4 (F)        | Xilinix & chap -1          |
-| 12   | 11/8/21  |                | HLS optimization (I)                          |                     |                       | HLS ch 2 & ch 3             |
-|      | 11/10/21 |                | HLS - loop optimizations                      | HW #11  (w) |                       | HLS ch 4                    |
-| 13   | 11/15/21 |                | ML accelerator                                |                     |                       |                             |
-|      | 11/17/21 |                | HLS  -MatrixMul                               | HW #12  (W)         | Project #5 (F)        | HLS ch 6 & 7                |
-| 14   | 11/22/21 |                | TBD                                           |                     |                       |                             |
+|      | 11/3/21  | HLS/FPGA       | vivado HLS tutorial                           | HW#10  (W)   | Project #4 (F)        | Xilinix & chap -1          |
+| 12   | 11/8/21  |                |  FPGA desing methodology                         |                     |                       | FPGA 5&6&7          |
+|      | 11/10/21 |                | HLS - loop optimizations                       | HW #11  (w) |                       | HLS ch 2&3&4                     |
+| 13   | 11/15/21 | Architecture   | ML accelerator                                |                     |                       |                             |
+|      | 11/17/21 |                | Modern architectures                          | HW #12  (W)         | Project #5 (F)        |              |
+| 14   | 11/22/21 |                | Modern architectures                                       |                     |                       |                             |
 |      | 11/24/21 |                | Thanksgiving                                  |                     |                       |                             |
-| 15   | 11/29/21 | Architecture   | Vortex architecture                           |                     |                       |                             |
+| 15   | 11/29/21 |                | Vortex architecture                           |                     |                       |                             |
 |      | 12/1/21  |                | security                                      | HW #13  (W)         | Project #6 (F)        |                             |
 |      | 12/6/21  |                | research introduction & research presentation |                     |                       |                             |
 |      | 12/10/21 |                | Final exam  2:40 pm - 5:30 pm (offline + online exam)   |                     |                      |                             |
