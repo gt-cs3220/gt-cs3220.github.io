@@ -217,7 +217,7 @@ Homework assignments are individual but you can get help from others. If you get
 | 8    | 10/11/21 |                | fall break                                    |                     |                       |                             |
 |      | 10/13/21 |                |  Power                      | HW #7 (W)           |                       |                             |
 | 9    | 10/18/21 |                | IO support (Project #4)                               |                     |                       |                             |
-|      | 10/20/21 |                |  Guest lecture                                   | HW #8 (W)           | Project #3 due (F)    |                             |
+|      | 10/20/21 |                |  Guest lecture                                   | HW #8 (W)           | [Project #3 due (F)](project3.html)    |                             |
 | 10   | 10/25/21 |                | GPU architecture                              |                     |                       | CO Appendix A               |
 |      | 10/27/21 |                | GPU architecture                              | HW #9 (W)           |                       |                             |
 | 11   | 11/1/21  |                | IEEE floating point                           |                     |                       |                             |
