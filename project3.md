@@ -7,7 +7,7 @@ In this project, you will implement a branch predictor and the BTB.
 ##Part-1 (Branch Predictor/BTB) (5 points): 
 In this design, you will add a baseline branch predictor and the BTB on your pipeline. 
 The baseline branch predictor uses a g-share branch predictor. BHR length is 8 bits. 
-Suggested design options are : use XOR of  PC[9:2] bits and BHR to index the PHT (Pattern History Table). Each of the 2bit counter in the PHT is initialized with 01. 
+Suggested design options are : use XOR of  PC[9:2] bits and BHR to index the PHT (Pattern History Table). Each of the 2bit counter in the PHT is initialized with 00. 
 
 The BTB has 16 entries. You use PC[5:2] to index the BTB and PC[31:6] becomes the tag.  Each of the entries contains the target address. 
 
