@@ -102,17 +102,16 @@ FPGA boards: You will purchase Pynq boards from the Barnes& Nobel. The details w
 
    Project assignment 2: 15
 
-   Project assignment 3: 10
+   Project assignment 3: 15
 
-   Project assignment 4: 15 
+   Project assignment 4: 12 
 
-   Project assignment 5: 10 
+   Project assignment 5: 20 
 
-  Project assignment 6: 15
 
-  Home works: 10
+  Home works: 13
 
-  Final exam: 15
+  Final exam: 15 
 
   participation: extra 3 points
 
@@ -213,22 +212,22 @@ Homework assignments are individual but you can get help from others. If you get
 | 6    | 9/27/21  | Architecture    | out of order processor                           |                     |                       |                 |
 |      | 9/29/21  |                |  out of order processor                      | [HW#6 (W)](hw6.html)          |                       |                 |
 | 7    | 10/4/21  |                | branch predictor                         |                     |                       |             |
-|      | 10/6/21  |                 | branch predictor  & PS+PL                            |                     | Project #2-part 2 (W) |                             |
-| 8    | 10/11/21 |                | fall break                                    |                     |                       |                             |
+|      | 10/6/21  |                 | guest lecture + branch predictor                           |                     | Project #2-part 2 (W) |                             |
+| 8    | 10/11/21 |                | fall break                                    |                     |                       |                             |
 |      | 10/13/21 |                |  Power                      | HW #7 (W)           |                       |                             |
-| 9    | 10/18/21 |                | IO support (Project #4)                               |                     |                       |                             |
-|      | 10/20/21 |                |  Guest lecture                                   | HW #8 (W)           | [Project #3 due (F)](project3.html)    |                             |
-| 10   | 10/25/21 |                | GPU architecture                              |                     |                       | CO Appendix A               |
-|      | 10/27/21 |                | GPU architecture                              | HW #9 (W)           |                       |                             |
-| 11   | 11/1/21  |                | IEEE floating point                           |                     |                       |                             |
-|      | 11/3/21  | HLS/FPGA       | vivado HLS tutorial                           | HW#10  (W)   | Project #4 (F)        | Xilinix & chap -1          |
+| 9    | 10/18/21 |                | HLS introduction                             |                     |                       |                             |
+|      | 10/20/21 |                |  Guest lecture                                   | HW #8 (W)           | [Project #3-part 1 due (F)](project3.html)    |                             |
+| 10   | 10/25/21 |                | IEEE floating points                               |                     |                       | CO Appendix A               |
+|      | 10/27/21 |                | GPU architecture                              | HW #9 (W)           |  Project #3-part  2 due (F)                    |                             |
+| 11   | 11/1/21  |                |  GPU architecture                         |                     |                       |                             |
+|      | 11/3/21  | HLS/FPGA       | more on HLS                            | HW#10  (W)   |      | Xilinix & chap -1          |
 | 12   | 11/8/21  |                |  FPGA desing methodology                         |                     |                       | FPGA 5&6&7          |
-|      | 11/10/21 |                | HLS - loop optimizations                       | HW #11  (w) |                       | HLS ch 2&3&4                     |
+|      | 11/10/21 |                | HLS - loop optimizations                       | HW #11  (w) | Project #4 (F)                      | HLS ch 2&3&4                     |
 | 13   | 11/15/21 | Architecture   | ML accelerator                                |                     |                       |                             |
-|      | 11/17/21 |                | Modern architectures                          | HW #12  (W)         | Project #5 (F)        |              |
+|      | 11/17/21 |                | Modern architectures                          | HW #12  (W)         | Project #5 -part 1 due (F)        |              |
 | 14   | 11/22/21 |                | Modern architectures                                       |                     |                       |                             |
 |      | 11/24/21 |                | Thanksgiving                                  |                     |                       |                             |
 | 15   | 11/29/21 |                | Vortex architecture                           |                     |                       |                             |
-|      | 12/1/21  |                | security                                      | HW #13  (W)         | Project #6 (F)        |                             |
+|      | 12/1/21  |                | security                                      | HW #13  (W)         | Project #5 - part 2 due (F)        |                             |
 |      | 12/6/21  |                | research introduction & research presentation |                     |                       |                             |
 |      | 12/10/21 |                | Final exam  2:40 pm - 5:30 pm (offline + online exam)   |                     |                      |                             |
