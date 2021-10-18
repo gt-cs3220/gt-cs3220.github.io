@@ -29,7 +29,7 @@ set_top filter11x11_strm
 open_solution -reset solution1
 # Define technology and clock rate
 set_part {xc7z020-clg400-1}
-create_clock -period 6.66
+create_clock -period 10
 
 # Source x_hls.tcl to determine which steps to execute
 source x_hls.tcl
@@ -68,7 +68,7 @@ add_files -tb convolution_tb.cpp
 
 open_solution "solution1"
 set_part {xc7z020-clg400-1}
-create_clock -period 6.66 -name default
+create_clock -period 10 -name default
 
 csim_design -clean
 csynth_design
