@@ -1,11 +1,11 @@
-# Lab day #4 Assignment 
+# HW 9 # 
 
-**(Due : 3/29/2021) Monday 6pm**
+**(Due :10/27/2021) Wednesday 6pm**
 
 
 In this assignments, you will learn Vivado HLS.   
 
-**please review 9.lec_hls.pptx for background.** 
+**please review 12.lec_hls.pptx for background.** 
 
 In this assignment, you will create a simple Vivado HLS project. 
 
@@ -83,13 +83,10 @@ Start Vitis HLS program
 
 
 **What to submit**:  
-
-Report max latency for the cases in step 4 and compare it with the default case.   
+You do not need to submit any codes/reports. 
+Please answer quiz_hw9 at canvas. 
 Some of the pragmas will not change the performance at all. Please identify the one that affects the performance. 
 
-**Grading**:  Submission of **at least one of the latency value** will be sufficient to get the **full credit** for labday 
-
-**We won't grade the correctness of tasks**. However, we strongly encourage you to complete tasks and ask TAs/instructors during the lab day lecture hours if you face any problems.  
 
 ## Useful links section: 
 * Vivado HLS tutorial: https://www.xilinx.com/support/documentation/sw_manuals/xilinx2020_1/ug902-vivado-high-level-synthesis.pdf
