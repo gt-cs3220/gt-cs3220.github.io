@@ -11,11 +11,15 @@ In this assignment, you will create a simple Vivado HLS project.
 
 [**Step 1**]
 The example that we wil use is 2D convolution line buffer.
+
 You can find the example in here (https://github.com/gt-cs3220/gt-cs3220.github.io/tree/master/hw9_files).
+
 Or, you can directly download including other examples using this command:
+
 ```git clone --branch 2021.1 https://github.com/Xilinx/Vitis-HLS-Introductory-Examples.git```
 
-[**Step 2**]
+[**Step 2**] Go to the example directory.
+
 ```cd algorithm_2D_convolution_linebuffer```
 
 You can use GUI interface to start the project which is described in the below. 
@@ -34,7 +38,7 @@ Please open  both tcl files and read it. Understanding the tcl files will be ver
 
 Known issues:
 * If you see an error like "command 'ap_source' returned error code", you need to install the following libraries using:  ```sudo apt-get install gcc-multilib g++-multilib```
-* For the above command you will need to ask TAs in the case when students do not have sudo privilege on some VMs.
+* For the above command you will need to ask TAs in the case when students do not have sudo privilege on VMs.
 
 
 [**Step 3**]
