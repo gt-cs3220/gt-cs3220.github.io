@@ -1,4 +1,6 @@
-**(Due : 10/27/20201) Monday 6pm**
+# HW 9 # 
+
+**(Due :10/27/2021) Wednesday 6pm**
 
 
 In this assignments, you will learn Vivado HLS.   
@@ -6,6 +8,7 @@ In this assignments, you will learn Vivado HLS.
 **please review 12.lec_hls.pptx for background.** 
 
 In this assignment, you will create a simple Vivado HLS project. 
+Please install [vitis tool chain in Xilinix] (https://www.xilinx.com/support/download/index.html/content/xilinx/en/downloadNav/vitis.html). 
 
 [**Step 1**]
 The example that we wil use is 2D convolution line buffer.
@@ -22,6 +25,9 @@ Or, you can directly download including other examples using this command:
 
 You can use GUI interface to start the project which is described in the below. 
 Or you can simply execute TCL script in the command window. 
+On windows, you can use "Vitis HLS 2020.2 Command Prompt" 
+
+ <img src="vitis_commands.png" width="100"> 
 
 ```vitis_hls -f run_hls.tcl```
 
@@ -35,8 +41,7 @@ create_clock -period 6.66``` to
 Please open  both tcl files and read it. Understanding the tcl files will be very helpful to understand the steps in this assignment. 
 
 Known issues:
-* If you see an error like "command 'ap_source' returned error code", you need to install the following libraries using:  ```sudo apt-get install gcc-multilib g++-multilib```
-* For the above command you will need to ask TAs in the case when students do not have sudo privilege on VMs.
+* If you see an error like "command 'ap_source' returned error code" in your linux, you need to install the following libraries using:  ```sudo apt-get install gcc-multilib g++-multilib```
 
 
 [**Step 3**]
@@ -82,10 +87,7 @@ Start Vitis HLS program
 
 **What to submit**:  
 please answer the question in Canvas Quiz_HW9
-Some of the pragmas will not change the performance at all. Please identify the one that affects the performance. 
 
-
-**We won't grade the correctness of tasks**. However, we strongly encourage you to complete tasks and ask TAs/instructors during the lab day lecture hours if you face any problems.  
 
 ## Useful links section: 
 * Vivado HLS tutorial: https://www.xilinx.com/support/documentation/sw_manuals/xilinx2020_1/ug902-vivado-high-level-synthesis.pdf
