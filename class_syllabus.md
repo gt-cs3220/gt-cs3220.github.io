@@ -218,7 +218,7 @@ Homework assignments are individual but you can get help from others. If you get
 | 9    | 10/18/21 |                | HLS introduction                             |                     |                       |                             |
 |      | 10/20/21 |                |  Guest lecture                                   | HW #8 (W)           | [Project #3-part 1 due (F)](project3.html)    |                             |
 | 10   | 10/25/21 |                | IEEE floating points                               |                     |                       |            |
-|      | 10/27/21 |                | GPU architecture                              | HW #9 (W)           |  Project #3-part  2 due (F)                    |               CO Appendix A                 |
+|      | 10/27/21 |                | GPU architecture                              | [HW #9 (W)](hw9.html)          |  Project #3-part  2 due (F)                    |               CO Appendix A                 |
 | 11   | 11/1/21  |                |  GPU architecture                         |                     |                       |                             |
 |      | 11/3/21  | HLS/FPGA       | more on HLS                            | HW#10  (W)   |      | Xilinix & chap -1          |
 | 12   | 11/8/21  |                |  FPGA desing methodology                         |                     |                       | FPGA 5&6&7          |
