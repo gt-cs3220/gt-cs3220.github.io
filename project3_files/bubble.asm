@@ -7,10 +7,10 @@
 .NAME	StkTop=65536
 ; Number of data elements and sorting 
 
-.NAME   ItNum=50
-.NAME   ItNum1=59
-.NAME   ItMNUM=200  
-.NAME   ItMNum1=180 
+.NAME   ItNum=20
+.NAME   ItNum1=19
+.NAME   ItMNUM=80  
+.NAME   ItMNum1=72 
 ; The array starts at data address 0x040 ahd has 10 elements  
 .NAME   Array=0x1100 
 
@@ -51,26 +51,26 @@ NOSWAP:
     ; ANDI R11, T0, 255;  0x140  
     ; SW S0, LEDR(zero);  0x144 
     ;; SW T0, HEX(Zero)   ;0x148 ;; should be T0 
-    ADDI  Zero, S1, ItNum  ; loop count   ;0x144
-    ADDI  Zero, S2,  0 ;   ; 0x148 
+    ADDI  Zero, S1, ItNum  ; loop count   ;0x13c
+    ADDI  Zero, S2,  0 ;   ; 0x140 
 READVAL: 
-    SW S1, LEDR(zero); 0x150
-    LW T1, Array(S2) ;0x154
-    ANDI T1, T0, 255;  0x158  
-    SW T0, HEX(Zero) ; 0x15c 
-    ADDI S2, S2, 4   ; 0x160 
-    ADDI  S1, S1, -1     ; 0x164
-    BNE  S1, Zero, READVAL  ; 0x168 
+    SW S1, LEDR(zero); 0x144
+    LW T1, Array(S2) ;0x148
+    ANDI T1, T0, 255;  0x14c  
+    SW T0, HEX(Zero) ; 0x150 
+    ADDI S2, S2, 4   ; 0x154
+    ADDI  S1, S1, -1     ; 0x158
+    BNE  S1, Zero, READVAL  ; 0x15c 
 DONE: 
-    SW S0, LEDR(zero); 0x16c 
-    br DONE; ; 0x170 
+    SW S1, LEDR(zero); 0x160 
+    br DONE; ; 0x164 
 
 
 
 SWAP:
-    SW T1, Array(S2) ; 0x174
-    SW T0, Array(A0)  ; 0x178 
-    JMP NOSWAP(Zero) ; 0x17c
+    SW T1, Array(S2) ; 0x168
+    SW T0, Array(A0)  ; 0x16c
+    JMP NOSWAP(Zero) ; 0x170
 
 
 	
