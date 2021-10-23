@@ -220,9 +220,9 @@ Homework assignments are individual but you can get help from others. If you get
 | 10   | 10/25/21 |                | IEEE floating points                               |                     |                       |            |
 |      | 10/27/21 |                | GPU architecture                              | [HW #9 (W)](hw9.html)          |  Project #3-part  2 due (F)                    |               CO Appendix A                 |
 | 11   | 11/1/21  |                |  GPU architecture                         |                     |                       |                             |
-|      | 11/3/21  | HLS/FPGA       | more on HLS                            | HW#10  (W)   |      | Xilinix & chap -1          |
+|      | 11/3/21  | HLS/FPGA       | more on HLS                            | [HW#10  (W)](hw10.html)   |      | Xilinix & chap -1          |
 | 12   | 11/8/21  |                |  FPGA desing methodology                         |                     |                       | FPGA 5&6&7          |
-|      | 11/10/21 |                | HLS - loop optimizations                       | HW #11  (w) | Project #4 (F)                      | HLS ch 2&3&4                     |
+|      | 11/10/21 |                | HLS - loop optimizations                       | HW #11  (w) | [Project #4 (F)](project4.html)                     | HLS ch 2&3&4                     |
 | 13   | 11/15/21 | Architecture   | ML accelerator                                |                     |                       |                             |
 |      | 11/17/21 |                | Modern architectures                          | HW #12  (W)         | Project #5 -part 1 due (F)        |              |
 | 14   | 11/22/21 |                | Modern architectures                                       |                     |                       |                             |
