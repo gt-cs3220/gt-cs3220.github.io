@@ -33,6 +33,8 @@ You need to support:
 exp are not all 1) 
 2. integer 0. (i.e., only when both exp and frc
 are 0).
+3. for this assignment, only positive numbers are the scope of the assignment. 
+4. sub-normal, infinite are the outside of the scope. 
 
 Please be aware of that exp field has a bias and fraction has a hidden value 1.
 
