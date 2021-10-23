@@ -1,4 +1,4 @@
-# CS3220 Assignment #4:  Overlay project  
+# CS3220 Assignment #4:  BF16 Multiplier   
 
 **Due date**: **11/12/2021 (F) : 6 pm**
 
@@ -107,7 +107,7 @@ We will test 5 cases similar to the example in the provided JupyterNotebook file
 * [Q] I see TODO in mulbf16.ipnyb file. What do I need to do? 
 * [A]HW#10 part-1 step 10 shows where you can find the addresses for AXI data communication. You need to change 0x100 to something else such as 0x10, 0x18, 0x20. 
 * [Q] Are we testing the exactly same case in the provided mulbf16 for grading or other test cases will be used? 
-* [A] Other test cases can be used. You can look at mul
+* [A] Other test cases can be used. You can look at mul_test.cpp for more test cases. 
 * [A] Yes, you need to create mul16 directory on your ARM machine. Feel free to modify directory names or file locations. 
 * [Q] Can we get some more instructions about edge cases in floating point multiplication? How do we define the behavior when ±0 × ±NaN, ±0 × ±INFINITE? Are they all equal to 0?
 * [A] We only test 0 x value = 0 case. NAN, INFINITE are outside scope of this assignment.
