@@ -75,20 +75,17 @@ zero. --> you can skip this stage
 
 [https://www.rfwireless-world.com/Tutorials/floating-point-tutorial.html](https://www.rfwireless-world.com/Tutorials/floating-point-tutorial.html)
 
-
 **What to submit**:
 
 Submit your HLS code and Python code as a zip file. The zip file includes 
 
 1) mulBF16.cpp
-
 2) mul.h
-
-3) mulbf16.ipynb
-
-
-A screenshot of JupyterNotebook output.
-(Note submission guidelines will likely be updated, when that happens a Piazza announcement will be made)
+3) mul16.tcl (which is generated in vivado step)
+4) mul16.hwh (which is generated in vivado step)
+5) mul16.bit (which is generated in vivado step)
+6) mulbf16.ipynb
+   
 
 
 **Grading**:
@@ -96,22 +93,25 @@ We will test 5 cases similar to the example in the provided JupyterNotebook file
 
 ## Tips
 
-* Please debug your code in C-mode. If you comment out pragmas, you can even compile the source code with c++ without using Vitis.
+* Please debug your code in C-mode . If you comment out pragmas, you can even compile the source code with c++ without using Vitis. We also provide Makefile just to compile c code in a terminal even without using vitis. If you follow the steps in HW#10 for project #4, running your code on pynq is straightforward. The issue is understanding IEEE FP formats. 
 * Please complete your algorithm in C-mode and test it before porting the code in Vivado.
-* Please start early and ask questions in Piazza. Usually with Assignment 5 we get a lot of questions and the TAs are not able to respond to each question rapidly.
+* Please start early and ask questions in Piazza. The TAs are also getting very busy so the responses won't be fast. 
 
 ## FAQ 
 
 * [Q] For part-1, in the jupyter notebook how do we load in mul16.bit. I can't find that fine anywhere? Are we supposed to create it?
-
 * [A]: Yes you need to create it. 
-
+* [Q]mulbf16.ipynp says that '''overlay = Overlay('/home/xilinx/jupyter_notebooks/mul16/mul16.bit'''' but I don't see mul16 directory on my pynq board. Do I need to create it? 
+* [Q] Can I modify the contents of mulbf16.ipynb file? 
+* [A] Yes, you can look at mul_test.cpp for more test cases. 
+* [Q] I see TODO in mulbf16.ipnyb file. What do I need to do? 
+* [A]HW#10 part-1 step 10 shows where you can find the addresses for AXI data communication. You need to change 0x100 to something else such as 0x10, 0x18, 0x20. 
+* [Q] Are we testing the exactly same case in the provided mulbf16 for grading or other test cases will be used? 
+* [A] Other test cases can be used. You can look at mul
+* [A] Yes, you need to create mul16 directory on your ARM machine. Feel free to modify directory names or file locations. 
 * [Q] Can we get some more instructions about edge cases in floating point multiplication? How do we define the behavior when ±0 × ±NaN, ±0 × ±INFINITE? Are they all equal to 0?
-
 * [A] We only test 0 x value = 0 case. NAN, INFINITE are outside scope of this assignment.
-
 * [Q] how do we define ±NaN ×±INIFNITE? 
-
 * [A] You don't expect to support NAN and INFINITE in this assignment. only multiplying with 0 case needs to be supported.
 
 
@@ -127,7 +127,6 @@ We will test 5 cases similar to the example in the provided JupyterNotebook file
 I've been debugging my BF multiplication and have been running into a lot of confusion with the mantissa multiplication. In the example where you multiply 16460 by 16892, where these numbers are BF16 format, I believe that the mantissa_a should be 76 and mantissa_b should be 124.   ```1.76 * 1.124 = 1.97824```  However, the notebook says the solution is 17096 which in binary is 0100001011001000. The mantissa here is b1001000 which in decimal is 72. Now maybe I'm just misunderstanding how to use the product of mantissa_a * mantissa_b, but I thought I'm supposed to take the digits after the decimal if the product is less than 2. In that case the result should be 97, not 72. I'm running into issues like this for every example except for the first 2 which deal with special cases.
 
 * [A] Please shift the fraction value until the first 1 becomes the MSB bit.  And then the first 1 is implicit so drop it out and then rest of the values are stored in the mantissa.   Even if a value is less than 2, the fractions are not directly stored in the mantissa. 
-
 
 
 
