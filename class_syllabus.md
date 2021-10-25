@@ -117,9 +117,9 @@ FPGA boards: You will purchase Pynq boards from the Barnes& Nobel. The details w
 
 **Option #2: Research track** 
 
-Projects #1-#3, project #5, homework  are the same as option #1. 
+Projects #1-#3,homework  are the same as option #1. 
 
-Project #4,  Project #6,  and Final exam can be substituted with a research project. 
+Project #4,  Project #5,  and Final exam can be substituted with a research project. 
 
 The research project topics will be announced in the later semester.
 
