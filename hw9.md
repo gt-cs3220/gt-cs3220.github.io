@@ -42,6 +42,7 @@ Please open  both tcl files and read it. Understanding the tcl files will be ver
 
 Known issues:
 * If you see an error like "command 'ap_source' returned error code" in your linux, you need to install the following libraries using:  ```sudo apt-get install gcc-multilib g++-multilib```
+*  If you see an error like "command 'ap_source' returned error code" in your windows, check to see if there are any spaces in the path you are running the project from. If there are, remove them.
 
 
 [**Step 3**]
