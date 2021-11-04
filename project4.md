@@ -100,7 +100,7 @@ We will test 5 cases similar to the example in the provided JupyterNotebook file
 
 ## FAQ 
 
-* [Q] For part-1, in the jupyter notebook how do we load in mul16.bit. I can't find that fine anywhere? Are we supposed to create it?
+* [Q] For part-1, in the jupyter notebook how do we load in mul16.bit. I can't find that file anywhere? Are we supposed to create it?
 * [A]: Yes you need to create it. 
 * [Q]mulbf16.ipynp says that '''overlay = Overlay('/home/xilinx/jupyter_notebooks/mul16/mul16.bit'''' but I don't see mul16 directory on my pynq board. Do I need to create it? 
 * [Q] Can I modify the contents of mulbf16.ipynb file? 
