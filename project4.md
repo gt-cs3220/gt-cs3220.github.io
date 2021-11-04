@@ -19,7 +19,7 @@ In this assignment, you will implement a BF16 format multiplier.
 Complete the multiplier driver. We provide a frame for you to
 start (mulbf16.ipynb). The steps to create driver are similar to HW #10.
 
-You need to repeat the HE #10 steps to generate files.
+You need to repeat the HW #10 steps to generate files.
 
 You will have to modify the JupyterNotebook (.ipynb) file to ensure that the correct Overlay is selected.
 
