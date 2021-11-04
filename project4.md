@@ -26,7 +26,7 @@ You will have to modify the JupyterNotebook (.ipynb) file to ensure that the cor
 ## Part-2
 Complete  mulBF16 which multiplies two BF16 variables.
 
-**Please see 13.lec_fp.pptx file** to study the multiplier and BF16
+**Please see 13.ieee_fp.pptx file** to study the multiplier and BF16
 format.
 You need to support:
 1. normalized numeric values (exp are not 0 or
