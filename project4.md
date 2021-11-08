@@ -19,14 +19,14 @@ In this assignment, you will implement a BF16 format multiplier.
 Complete the multiplier driver. We provide a frame for you to
 start (mulbf16.ipynb). The steps to create driver are similar to HW #10.
 
-You need to repeat the HE #10 steps to generate files.
+You need to repeat the HW #10 steps to generate files.
 
 You will have to modify the JupyterNotebook (.ipynb) file to ensure that the correct Overlay is selected.
 
 ## Part-2
 Complete  mulBF16 which multiplies two BF16 variables.
 
-**Please see 13.lec_fp.pptx file** to study the multiplier and BF16
+**Please see 13.ieee_fp.pptx file** to study the multiplier and BF16
 format.
 You need to support:
 1. normalized numeric values (exp are not 0 or
@@ -100,16 +100,16 @@ We will test 5 cases similar to the example in the provided JupyterNotebook file
 
 ## FAQ 
 
-* [Q] For part-1, in the jupyter notebook how do we load in mul16.bit. I can't find that fine anywhere? Are we supposed to create it?
+* [Q] For part-1, in the jupyter notebook how do we load in mul16.bit. I can't find that file anywhere? Are we supposed to create it?
 * [A]: Yes you need to create it. 
 * [Q]mulbf16.ipynp says that '''overlay = Overlay('/home/xilinx/jupyter_notebooks/mul16/mul16.bit'''' but I don't see mul16 directory on my pynq board. Do I need to create it? 
+* [A] Yes, you need to create mul16 directory on your ARM machine. Feel free to modify directory names or file locations. 
 * [Q] Can I modify the contents of mulbf16.ipynb file? 
 * [A] Yes, you can look at mul_test.cpp for more test cases. 
 * [Q] I see TODO in mulbf16.ipnyb file. What do I need to do? 
 * [A]HW#10 part-1 step 10 shows where you can find the addresses for AXI data communication. You need to change 0x100 to something else such as 0x10, 0x18, 0x20. 
 * [Q] Are we testing the exactly same case in the provided mulbf16 for grading or other test cases will be used? 
 * [A] Other test cases can be used. You can look at mul_test.cpp for more test cases. 
-* [A] Yes, you need to create mul16 directory on your ARM machine. Feel free to modify directory names or file locations. 
 * [Q] Can we get some more instructions about edge cases in floating point multiplication? How do we define the behavior when ±0 × ±NaN, ±0 × ±INFINITE? Are they all equal to 0?
 * [A] We only test 0 x value = 0 case. NAN, INFINITE are outside scope of this assignment.
 * [Q] how do we define ±NaN ×±INIFNITE? 
