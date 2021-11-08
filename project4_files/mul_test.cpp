@@ -6,7 +6,7 @@
 
 using namespace std; 
 
-// #define DEBUG 
+//#define DEBUG 
 
 #define NTH_BIT(b, n) ((b) & (0x1 << n) ? 1 : 0)
 
@@ -91,7 +91,7 @@ int convertfloattoINTBF16(float a)
 
 // debugging print 
 #ifdef DEBUG 
-	float ff = pow_m1(BF16.raw.s) * pow2(BF16.raw.e-127)) * (mtofrac(BF16.raw.m));
+    float ff = pow_m1(BF16.raw.s) * pow2(BF16.raw.e-127) * (mtofrac(BF16.raw.m));
 
     printf("FP32: %f BF16: %f \n",a ,  ff);
 
@@ -154,6 +154,43 @@ int convertfloattoINTBF16(float a)
         NTH_BIT(Bf16_int, 0));
 #endif 
         return Bf16_int; 
+}
+int pow_m1(int a)  { return ((a)? -1: 1); } 
+
+int pow2 (int a) { 
+    switch(a){
+        case 0: 
+            return 1; 
+        break;
+        case 1: 
+            return 2;
+        break; 
+        case 2: 
+            return 4;
+        break; 
+        case 3: 
+            return 8;
+        break; 
+        case 4: 
+            return 16;
+        break; 
+        case 5: 
+            return 32;
+        break; 
+        case 6: 
+            return 64;
+        break; 
+        case 7: 
+            return 128;
+        break; 
+        case 8: 
+            return 256;
+        break; 
+        default: 
+           return 1; 
+        break; 
+    }
+        return 1; 
 }
 
 

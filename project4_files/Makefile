@@ -1,5 +1,5 @@
 CC=g++
-CFLOGAS=-I.
+CFLAGAS=-I.
 
 %.o: %.c $(DEPS)
 	$(CC) -c -o $@  $< $(CFLAGS)
