@@ -2,10 +2,7 @@
 
 **Due date**: **12/3/2021 (F) : 6 pm**
 
-This is a two-member group project.
-(10 pts) 
-
-Note: If you are running out of the time for doing this project #5, you can skip running the code in the pynq board and perform only vitis simulation. Vitis simulation only will give you 8 poits out of 10 points. 
+This is a two-member group project (10 pts)
 
 **Description**:
 
