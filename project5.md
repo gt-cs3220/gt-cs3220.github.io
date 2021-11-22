@@ -95,5 +95,6 @@ project5_report.pdf: (max 2 pages).
 * [A]: It's shown on console window or go to your vitis directory and under solution1, you will see solution1.log 
 
 
-
+* [Q]: what should I discuss in the report? 
+* [A]: you can provide background materials of each optimization and how the provided code is applied the optimization techniques. 
 
