@@ -228,6 +228,6 @@ Homework assignments are individual but you can get help from others. If you get
 | 14   | 11/22/21 |                | Modern architectures                                       |                     |                       |                             |
 |      | 11/24/21 |                | Thanksgiving                                  |                     |                       |                             |
 | 15   | 11/29/21 |                | Vortex architecture                           |                     |                       |                             |
-|      | 12/1/21  |                | security                                      | [HW #12  (W)](hw12.html)         | Project #5  (F)        |                             |
+|      | 12/1/21  |                | security                                      | [HW #12  (W)](hw12.html)         | [Project #5  (F)](project5.html)        |                             |
 |      | 12/6/21  |                | research introduction & research presentation |                     |                       |                             |
 |      | 12/10/21 |                | Final exam  2:40 pm - 5:30 pm (offline + online exam)   |                     |                      |                             |
