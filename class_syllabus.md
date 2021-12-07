@@ -228,7 +228,7 @@ Homework assignments are individual but you can get help from others. If you get
 |      | 11/17/21 |                | HLS optimizations                           |          |         |HLS ch 2&3&4              |
 | 14   | 11/22/21 |                | Modern architectures                                       |                     |                       |                             |
 |      | 11/24/21 |                | Thanksgiving                                  |                     |                       |                             |
-| 15   | 11/29/21 |                | Vortex architecture                           |                     |                       |                             |
-|      | 12/1/21  |                | security                                      | [HW #12  (W)](hw12.html)         | [Project #5  (F)](project5.html)        |                             |
-|      | 12/6/21  |                | research introduction & research presentation |                     |                       |                             |
-|      | 12/10/21 |                | Final exam  2:40 pm - 5:30 pm (offline + online exam)   |                     |                      |                             |
+| 15   | 11/29/21 |                | research introduction & security                           |                     |                       |                             |
+|      | 12/1/21  |                | review                                      | [HW #12  (W)](hw12.html)         | [Project #5  (F)](project5.html)        |                             |
+|      | 12/6/21  |                |  research presentation |                     |                       |                             |
+|      | 12/10/21 |                | Final exam  2:40 pm - 5:30 pm (offline + online exam)   |                     |                      |   [frame](final_frame.html)                          |
