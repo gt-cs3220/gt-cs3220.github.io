@@ -231,4 +231,4 @@ Homework assignments are individual but you can get help from others. If you get
 | 15   | 11/29/21 |                | research introduction & security                           |                     |                       |                             |
 |      | 12/1/21  |                | review                                      | [HW #12  (W)](hw12.html)         | [Project #5  (F)](project5.html)        |                             |
 |      | 12/6/21  |                |  research presentation |                     |                       |                             |
-|      | 12/10/21 |                | Final exam  2:40 pm - 5:30 pm (offline + online exam)   |                     |                      |   [frame](final_frame.html)                          |
+|      | 12/10/21 |                | Final exam  2:40 pm - 5:30 pm (offline + online exam)   |                     |                      |   [frame](final_exam_frame.html)                          |
