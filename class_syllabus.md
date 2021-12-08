@@ -131,11 +131,11 @@ Research project options are limited to the students who have shown good standin
 
 **Final grade algorithm** 
 
-80 <=  score <= 100 : A 
-70 <=   score < 80:  B 
-60 <=   score < 70:  C 
-50 <=   score < 60:  D 
-  score < 50:  F 
+90% <=  score <= 100% : A 
+80% <=   score < 90%:  B 
+70% <=   score < 80%:  C 
+60% <=   score < 70%:  D 
+  score < 60%:  F 
 
 (with the total 90 w/o extra points) 
 
