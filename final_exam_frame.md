@@ -32,7 +32,7 @@ This vitis code doesn't have any contents other than having ports (inputs and ou
 
 <img src="figs/final_final_diagram.png">
 
-[8]Create HDL wrapper go to “sources” and right click on your block design name, click on “Create HLD wrapper”. Click on “Let Vivado do” option and press “OK”. Make the design_wrapper as a *top module* by right clock in the source code "Set as Top". 
+[8]Create HDL wrapper go to “sources” and right click on your block design name, click on “Create HLD wrapper”. Click on “Let Vivado manage wrapper and auto-update” option and press “OK”. Make the design_wrapper as a *top module* by right clock in the source code "Set as Top". 
 
 [9] Synthesize/implementation/generate bitstreams
 
