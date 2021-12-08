@@ -11,15 +11,15 @@ This vitis code doesn't have any contents other than having ports (inputs and ou
 
 [1] Create a vivado  new project with adding blinkmodule.v and PYNQ-Z2 xdc file. (Please note that xdc file is modified to work with this frame so please use this one. 
 
-[2] create a block design, IP repo setting to import RTO from step-1, and add comm IP a block diagram. 
+[2] Create a block design, IP repo setting to import RTO from step-1, and add comm IP a block diagram. 
 
-[3] add blinkmodule to block diagram. 
+[3] Add blinkmodule to block diagram. 
 
 <img src="figs/dma_selection.png">
 
 <img src="figs/module_top.png"> 
 
-[4] connect blinkmodule and comm module (in1 <-> out1, in2 <->out2, etc.) manually. 
+[4] Connect blinkmodule and comm module (in1 <-> out1, in2 <->out2, etc.) manually. 
 
 [5] Make LED as an external component 
 
@@ -28,7 +28,7 @@ This vitis code doesn't have any contents other than having ports (inputs and ou
 [6] The diagram should look like following. 
 <img src="figs/add_outcome.png"> 
 
-[7] add Zynq PS module from IP repo and then use auto-connect features to complete all the connections.  If clock or reset connections are missing, you can connect them manually. 
+[7] Add Zynq PS module from IP repo and then use auto-connect features to complete all the connections.  If clock or reset connections are missing, you can connect them manually. 
 
 <img src="figs/final_final_diagram.png">
 
@@ -41,7 +41,7 @@ This vitis code doesn't have any contents other than having ports (inputs and ou
 
 [11] Click on File->Export-> Export block design, select the option of including bitstream
 
-[12] copy files to prepare for upload them to pynq boards 
+[12] Copy files to prepare for upload them to pynq boards 
 
 copy bit stream file .bit
 .runs/impl_1/design_1_wrapper.bit 
@@ -52,10 +52,10 @@ make sure name all the same file name (e.g. blink.*)
 
 [16] Go to pynq boards and upload the files that are generated in the above step and also ipynb files.  start final_test_ipyb 
 
-[17] you can vary write (0x10, 0x18) addresses which are two input addresses and read 0x30 and 0x20 output. LED should be blinking if bitstream is correctly running 
+[17] You can vary write (0x10, 0x18) addresses which are two input addresses and read 0x30 and 0x20 output. LED should be blinking if bitstream is correctly running 
 
 [18] Try to vary blink patterns. 
-If you modify verilog code, you will see "Refresh changed Modules". Please click, then the verilog code update will be propagated.  you need to repeat from step 9 to test the new bitstream. 
+If you modify verilog code, you will see "Refresh changed Modules". Please click, then the verilog code update will be propagated. You need to repeat from step 9 to test the new bitstream. 
 
 <img src="figs/update_module.png"> 
 
