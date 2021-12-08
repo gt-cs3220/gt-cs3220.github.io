@@ -2,7 +2,7 @@
 
 <a href="https://github.com/gt-cs3220/gt-cs3220.github.io/tree/master/final_exam_frame"> This frame </a> is to connect verilog modules with pynq overlay frame so that verilog modules can interact with ARM Processor. We are using memory-mapped interface between PL and PS using AXI-lite protocol. 
 
-*[Step-1-vitis]*
+*[Step-1-Vitis]*
 Create a comm IP from vitis. All steps are the same as HW #9. 
 This vitis code doesn't have any contents other than having ports (inputs and output arguments)  to verilog modules with memory-mapped connection using AXI lite protocol.  So you can consider this vitis code as an AXI-Lite adopter, and luckily vitis generates all the necessary code for us. 
 
