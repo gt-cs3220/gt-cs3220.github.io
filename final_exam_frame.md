@@ -11,7 +11,7 @@ This vitis code doesn't have any contents other than having ports (inputs and ou
 
 [1] Create a new vivado project with adding blinkmodule.v and PYNQ-Z2 xdc file. (Please note that xdc file is modified to work with this frame so please use this one. 
 
-[2] Create a block design, IP repo setting to import RTO from step-1, and add comm IP a block diagram. 
+[2] Create a block design, IP repo setting to import RTO from step-1, and add comm IP to the block diagram. 
 
 [3] Add blinkmodule to block diagram. 
 
