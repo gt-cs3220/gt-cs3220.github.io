@@ -9,7 +9,7 @@ This vitis code doesn't have any contents other than having ports (inputs and ou
 
 *[Step-2-Vivado]* 
 
-[1] Create a vivado  new project with adding blinkmodule.v and PYNQ-Z2 xdc file. (Please note that xdc file is modified to work with this frame so please use this one. 
+[1] Create a new vivado project with adding blinkmodule.v and PYNQ-Z2 xdc file. (Please note that xdc file is modified to work with this frame so please use this one. 
 
 [2] Create a block design, IP repo setting to import RTO from step-1, and add comm IP a block diagram. 
 
@@ -28,18 +28,18 @@ This vitis code doesn't have any contents other than having ports (inputs and ou
 [6] The diagram should look like following. 
 <img src="figs/add_outcome.png"> 
 
-[7] Add Zynq PS module from IP repo and then use auto-connect features to complete all the connections.  If clock or reset connections are missing, you can connect them manually. 
+[7] Add Zynq PS module from IP repo and then use auto-connect features to complete all the connections. If clock or reset connections are missing, you can connect them manually. 
 
 <img src="figs/final_final_diagram.png">
 
-[8]Create HDL wrapper go to “sources” and right click on your block design name, click on “Create HLD wrapper”. Click on “Let Vivado do” option and press “OK”.  Make the design_wrapper as a *top module* by right clock in the source code "Set as Top". 
+[8]Create HDL wrapper go to “sources” and right click on your block design name, click on “Create HLD wrapper”. Click on “Let Vivado do” option and press “OK”. Make the design_wrapper as a *top module* by right clock in the source code "Set as Top". 
 
 [9] Synthesize/implementation/generate bitstreams
 
-[10] Click on Project->Generate Bitstream (it will ask to synthesize etc. and click yes)
+[10] Click on Project -> Generate Bitstream (it will ask to synthesize etc. and click yes)
 
 
-[11] Click on File->Export-> Export block design, select the option of including bitstream
+[11] Click on File -> Export -> Export block design, select the option of including bitstream
 
 [12] Copy files to prepare for upload them to pynq boards 
 
