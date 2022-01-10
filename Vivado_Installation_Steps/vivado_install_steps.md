@@ -1,10 +1,14 @@
-# Vivado Installation Steps
+# Vivado Installation Steps (Old but mostly valid. We will use 2021.2 in Spring 2022) 
 ### Warning
 ```diff
 - 1. This tutorial works for Win10 and Linux. If you use MacOS, you could use VirtualBox or VMWare as virtual machine to isntall Linux.
 - 2. Please make sure you disk has at least 60G free space. You could install Vivado in portable storage device.
 ```
-### Supported operating systems for Vivado 2020.2 
+### Supported operating systems for Vivado *2021.2*
+Please note that this instruction is an old version and in Spring 2022, we will use 2021.2. 
+We will provide an updated information but you can still probably use the same information with minor modifications. 
+You need to install Vitis and vivado for the course. 
+
 <img src="https://github.com/gt-cs3220/gt-cs3220.github.io/blob/master/Vivado_Installation_Steps/step_images/supportOS_new.png">
 
 ## Step 1
