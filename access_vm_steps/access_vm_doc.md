@@ -120,3 +120,10 @@ Below is a short video of all the steps showing how to open the VNC desktop:
 ![Video Demonstration](https://user-images.githubusercontent.com/57438552/148883921-ba853f05-27d0-4e11-a761-de9f7e2b917f.mov |width =100)
 
 
+## FAQs
+
+<details>
+<summary>I don't have permission to the environment setup script. What do I do?</summary>
+<br>
+Please contact the instructor and TAs via Piazza on a private post so one of us can get you the necessary permissions ASAP. Please use a private post on Piazza instead of emailing an individual TA since a single person may be busy and may not see your email and you increase your chances of someone responding to your request by posting on Piazza.
+</details>
