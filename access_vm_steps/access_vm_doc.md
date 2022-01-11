@@ -80,3 +80,33 @@ Keep this process running i.e. don't Ctrl+C out of it.
 
 P.S. Even if you do forget, you can quickly change the password by using `vncpasswd` command on the COC ICE terminal.
 
+![Screen Shot 2022-01-10 at 10 40 39 PM](https://user-images.githubusercontent.com/57438552/148877498-efa0b4a4-402d-42ce-9dd1-578f863f293f.png)
+
+![Screen Shot 2022-01-10 at 10 41 23 PM](https://user-images.githubusercontent.com/57438552/148877545-d677722a-eeda-4467-aaa7-62983daa2707.png)
+
+
+6. Once you've entered the password, the GUI screen should start up. Note this may take a minute on your first connection. This is normal!
+![Screen Shot 2022-01-10 at 10 45 45 PM](https://user-images.githubusercontent.com/57438552/148877897-10237578-88aa-4959-abb9-a031a4b979ee.png)
+
+
+7. You might need to change the resolution for your VNC session to be higher or lower depending on how fast your connection is. You can do this by going to the middle tab at the top and click on properties. Then go to the "Options" tab and change the Picture Quality to **High** (better picture, slower) or **Low** (worse picture, faster)
+
+![Screen Shot 2022-01-10 at 10 46 20 PM](https://user-images.githubusercontent.com/57438552/148877950-fcf90bb7-0800-4df5-bff6-7d420ce5d83c.png)
+![Screen Shot 2022-01-10 at 10 47 00 PM](https://user-images.githubusercontent.com/57438552/148877990-88a318c6-b155-42ca-8a6b-9bdd4c6a9ef7.png)
+
+
+8. Once you have gotten to the desktop, you can then clock on the icon to open the Vivado or Vitis tool. 
+![Screen Shot 2022-01-10 at 10 47 34 PM](https://user-images.githubusercontent.com/57438552/148878051-e3cd9b7a-a9de-4769-8709-f58475bee33d.png)
+
+
+9. When you are finished with your session, you can close the VNC window. As long as your  job is running the VNC session will stay running in the background. Once you are done, go back to your terminal and close the SSH port forwarding using `Ctrl+C`
+
+```
+[gburdell@login-coc-ice-1 ~]$
+ssh> -L 5901:atl1-1-02-003-19-l:5901
+Forwarding port.
+#Use CTRL+C to exit the port forwarding
+^C
+```
+
+
