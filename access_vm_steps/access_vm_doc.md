@@ -128,6 +128,7 @@ Below is a short video of all the steps showing how to open the VNC desktop:
 Please contact the instructor and TAs via Piazza on a private post so one of us can get you the necessary permissions ASAP. Please use a private post on Piazza instead of emailing an individual TA since a single person may be busy and may not see your email and you increase your chances of someone responding to your request by posting on Piazza.
 </details>
 
+
 <details>
 <summary>While running the environment setup script, it can't find the Desktop directory.</summary>
 <br>
