@@ -117,6 +117,6 @@ Below is a short video of all the steps showing how to open the VNC desktop:
 
 
 
-![Video Demonstration](https://user-images.githubusercontent.com/57438552/148883921-ba853f05-27d0-4e11-a761-de9f7e2b917f.mov)
+![Video Demonstration](https://user-images.githubusercontent.com/57438552/148883921-ba853f05-27d0-4e11-a761-de9f7e2b917f.mov |width =100)
 
 
