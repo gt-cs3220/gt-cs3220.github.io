@@ -110,3 +110,8 @@ Before attempting the following steps, please ensure you are connected to campus
       ```
 
 
+Below is a short video of all the steps showing how to open the VNC desktop:
+
+https://user-images.githubusercontent.com/57438552/148881114-1c8f5bb1-7c0a-4963-ae05-547530e70a01.mp4
+
+
