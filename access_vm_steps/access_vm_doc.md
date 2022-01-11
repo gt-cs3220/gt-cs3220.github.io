@@ -11,7 +11,7 @@ Please follow instructions given at [https://gatech.service-now.com/home?id=kb_a
 
 1. [Windows](https://gatech.service-now.com/home?id=kb_article_view&sysparm_article=KB0026742)
 2. [MacOS](https://gatech.service-now.com/home?id=kb_article_view&sysparm_article=KB0026743)
-3. [MacOS](https://gatech.service-now.com/home?id=kb_article_view&sysparm_article=KB0028027)
+3. [Ubuntu](https://gatech.service-now.com/home?id=kb_article_view&sysparm_article=KB0028027)
 
 ## Set up VNC and Environment on ICE Cluster
 
