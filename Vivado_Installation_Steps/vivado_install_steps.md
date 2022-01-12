@@ -2,7 +2,7 @@
 ### Warning
 ```diff
 - 1. This tutorial works for Win10 and Linux. If you use MacOS, you could use VirtualBox or VMWare as virtual machine to isntall Linux.
-- 2. Please make sure you disk has at least 60G free space. You could install Vivado in portable storage device.
+- 2. Please make sure you disk has at least 140G free space. You could install Vivado in portable storage device.
 ```
 ### Supported operating systems for Vivado *2021.2*
 Please note that this instruction is an old version and in Spring 2022, we will use 2021.2. 
@@ -54,15 +54,13 @@ Agree all the conditions. \
 <img src="https://github.com/gt-cs3220/gt-cs3220.github.io/blob/master/Vivado_Installation_Steps/step_images/step5c.png" width="70%">
  
 ## Step 5
-Choose **Vivado** \
+Choose **Vitis** \
 <img src="https://github.com/gt-cs3220/gt-cs3220.github.io/blob/master/Vivado_Installation_Steps/step_images/step6.png" width="70%">
 
-**Important !!!!!! Please choose the Vivado HL WebPACK.** \
-**Although for most of the large project or research project we will prefer Design Edition, in this course please use WebPACK.** 
 \
 <img src="https://github.com/gt-cs3220/gt-cs3220.github.io/blob/master/Vivado_Installation_Steps/step_images/step6a.png" width="70%">
 \
-Again, please make sure your have at least 60G space on your disk. You could install it on portable storage device. \
+Again, please make sure your have at least 140G space on your disk. You could install it on portable storage device. \
 Here, **UltraScale** devices are optional but I still recommend installing them just in case.
 \
 <img src="https://github.com/gt-cs3220/gt-cs3220.github.io/blob/master/Vivado_Installation_Steps/step_images/step3b_new.png" width="70%">
@@ -81,3 +79,12 @@ Please make sure you PC is connected to internet. \
 Wait for the installation to be completed. This may take several hours. \
 **Note** \
 **If there is any problems for installation please post it on Piazza or contact with Sam or Hanning. Just in case, you can also use Vivado on CRNCH server.** 
+
+
+## Step 7 
+Install board file: please download boad file from the manufacture website (https://www.tulembedded.com/FPGA/ProductsPYNQ-Z2.html)  
+Installing these files in Vivado, allows the board to be selected when creating a new project. This will configure the Zynq PS settings.
+
+To install the board files, extract, and copy the board files folder to:
+
+<Xilinx installation directory>\Vivado\<version>\data\boards
