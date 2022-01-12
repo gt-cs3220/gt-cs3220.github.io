@@ -12,12 +12,12 @@ You need to install Vitis and vivado for the course.
 <img src="https://github.com/gt-cs3220/gt-cs3220.github.io/blob/master/Vivado_Installation_Steps/step_images/supportOS_new.png">
 
 ## Step 1
-Go to https://www.xilinx.com/products/design-tools/vivado/vivado-webpack.html and click "**Download**".
+Go to  https://www.xilinx.com/support/download.html "**Download**".
 
 <img src="https://github.com/gt-cs3220/gt-cs3220.github.io/blob/master/Vivado_Installation_Steps/step_images/step1.png" width="70%">
 
 ## Step 2
-Scroll down to "**Vivado Design Suite - HLx Editions - 2020.2  Full Product Installation**", and click 
+Scroll down to "**Vivado Design Suite - HLx Editions - 2021.2  Full Product Installation**", and click 
 "**Xilinx Unified Installer 2020.2: Windows Self Extracting Web Installer**"
 
 <img src="https://github.com/gt-cs3220/gt-cs3220.github.io/blob/master/Vivado_Installation_Steps/step_images/step.png" width="70%">
@@ -55,10 +55,10 @@ Agree all the conditions. \
  
 ## Step 5
 Choose **Vitis** \
-<img src="https://github.com/gt-cs3220/gt-cs3220.github.io/blob/master/Vivado_Installation_Steps/step_images/step6.png" width="70%">
+<img src="https://github.com/gt-cs3220/gt-cs3220.github.io/blob/master/Vivado_Installation_Steps/step6.png" width="70%">
 
 \
-<img src="https://github.com/gt-cs3220/gt-cs3220.github.io/blob/master/Vivado_Installation_Steps/step_images/step6a.png" width="70%">
+<img src="https://github.com/gt-cs3220/gt-cs3220.github.io/blob/master/Vivado_Installation_Steps/step7.png" width="70%">
 \
 Again, please make sure your have at least 140G space on your disk. You could install it on portable storage device. \
 Here, **UltraScale** devices are optional but I still recommend installing them just in case.
