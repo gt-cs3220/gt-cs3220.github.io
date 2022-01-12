@@ -1,13 +1,14 @@
-# Vivado Installation Steps (Old but mostly valid. We will use 2021.2 in Spring 2022) 
+# Vitis/Vivado Installation Steps (Most steps are updated at 2020. We will use 2021.2 in Spring 2022) 
 ### Warning
 ```diff
 - 1. This tutorial works for Win10 and Linux. If you use MacOS, you could use VirtualBox or VMWare as virtual machine to isntall Linux.
-- 2. Please make sure you disk has at least 140G free space. You could install Vivado in portable storage device.
+- 2. Please make sure you disk has at least 150G free space. You could install Vivado in portable storage device.
 ```
 ### Supported operating systems for Vivado *2021.2*
 Please note that this instruction is an old version and in Spring 2022, we will use 2021.2. 
 We will provide an updated information but you can still probably use the same information with minor modifications. 
 You need to install Vitis and vivado for the course. 
+(the original doc was made in 2020 and only new important information's figures are updated. So you might see some discrepancy of the screen shots. ) 
 
 <img src="https://github.com/gt-cs3220/gt-cs3220.github.io/blob/master/Vivado_Installation_Steps/step_images/supportOS_new.png">
 
@@ -57,11 +58,14 @@ Agree all the conditions. \
 Choose **Vitis** \
 <img src="https://github.com/gt-cs3220/gt-cs3220.github.io/blob/master/Vivado_Installation_Steps/step6.png" width="70%">
 
+## Step 6 
+Choose only **Soc Zynq-7000 devices**. Otherwise the size will be even much bigger than 150 GB. 
+
 \
 <img src="https://github.com/gt-cs3220/gt-cs3220.github.io/blob/master/Vivado_Installation_Steps/step7.png" width="70%">
 \
-Again, please make sure your have at least 140G space on your disk. You could install it on portable storage device. \
-Here, **UltraScale** devices are optional but I still recommend installing them just in case.
+Again, please make sure your have at least 150G space on your disk. You could install it on portable storage device. \
+
 \
 <img src="https://github.com/gt-cs3220/gt-cs3220.github.io/blob/master/Vivado_Installation_Steps/step_images/step3b_new.png" width="70%">
 \
@@ -78,7 +82,7 @@ Please make sure you PC is connected to internet. \
 ## Step6
 Wait for the installation to be completed. This may take several hours. \
 **Note** \
-**If there is any problems for installation please post it on Piazza or contact with Sam or Hanning. Just in case, you can also use Vivado on CRNCH server.** 
+**If there is any problems for installation please post it on Piazza or contact with TAs. You can also ICE cluster.** 
 
 
 ## Step 7 
