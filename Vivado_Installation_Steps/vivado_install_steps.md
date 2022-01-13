@@ -86,9 +86,12 @@ Wait for the installation to be completed. This may take several hours. \
 
 
 ## Step 7 
-Install board file: please download boad file from the manufacture website (https://www.tulembedded.com/FPGA/ProductsPYNQ-Z2.html)  
-Installing these files in Vivado, allows the board to be selected when creating a new project. This will configure the Zynq PS settings.
+Install board file (PYNQ-Z2) : please download boad file from the manufacture website (https://www.tulembedded.com/FPGA/ProductsPYNQ-Z2.html)  
+Extracting the zip file in Vivado, allows the board to be selected when creating a new project. This will configure the Zynq PS settings.
 
-To install the board files, extract, and copy the board files folder to:
+To install the board files, extract the zip file under the following directory: 
 
-<Xilinx installation directory>\Vivado\<version>\data\boards
+<Xilinx installation directory>\Vivado\<version>\data\xhub\boards\XilinixBoardStore\boards\Xilinx
+
+e.g.) Xilinix\Vivado\2021.2\data\xhub\boards\XilinxBoardStore\boards\Xilinx\pynq-z2 
+
