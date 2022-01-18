@@ -197,9 +197,9 @@ Homework assignments are individual, but you can get help from others. If you ge
 | 1    | 1/10/22 |                | introduction & review                     |             |                       | verilog ch 1 & FPGA ch 1          |
 |      | 1/12/22 | Verilog        | introduction to verilog                   | HW0 (Sun)   |                       | verilog ch 2 & ch 3               |
 | 2    | 1/17/22 |                | MLK                                       |             |                       | verilog ch 4 & ch 5  & ch 7       |
-|      | 1/19/22 |                | verilog-II (sequential)                   | HW# 1(https://gt-cs3220.github.io/hw1.html) (F)   |                       | verilog ch 8 & ch 9 & ch10 & ch 6 |
+|      | 1/19/22 |                | verilog-II (sequential)                   | [HW# 1](https://gt-cs3220.github.io/hw1.html) (F)   |                       | verilog ch 8 & ch 9 & ch10 & ch 6 |
 | 3    | 1/24/22 |                | verilog-III & xilinix tool                |             |                       |                                   |
-|      | 1/26/22 |                | design processor & ISA  & review pipeline | HW#2 (W)    | project #1 due  (F)   | verilog ch 10 & ch 6              |
+|      | 1/26/22 |                | design processor & ISA  & review pipeline | [HW#2 (W)](https://gt-cs3220.github.io/hw2.html)    | [project #1 due](https://gt-cs3220.github.io/project1.html)  (Sun)   | verilog ch 10 & ch 6              |
 | 4    | 1/31/22 |                | Project #2 review                         |             |                       | verilog ch 11                     |
 |      | 2/2/22  | FPGA           | FPGA introduction                         | HW#3 (W)    |                       | FPGA ch 2  & ch 3 & ch 4          |
 | 5    | 2/7/22  |                | FPGA structure                            |             |                       | FPGA ch 5 &ch 6 & ch 7 & ch 8     |
