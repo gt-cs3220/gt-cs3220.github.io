@@ -1,6 +1,6 @@
 # CS 3220 Project#1: Bubble Sort
 
-**Due:** **1/28/2022 (F) 6 pm EST**
+**Due:** **1/30/2022 (Sun) 6 pm EST**
 
 **Points**: 8 points ouf the total grade 
 
@@ -10,7 +10,7 @@ This is an **<u> individual project</u>**.
 
 In this assignment, you will implement a simplified serial version of  bubble sort in Verilog. 
 
-Pleae use files in  https://github.com/gt-cs3220/gt-cs3220.github.io/tree/master/project1_files
+Pleae use files in  https://github.com/gt-cs3220/gt-cs3220.github.io/tree/master/spr22/project1_files
 
 To reduce the complexity of the problem, your solution needs to only work with **10 number of items**. 
 
@@ -43,6 +43,7 @@ An example algorithm of serial bubble sort is as following.
 
 
 **Please use the memory that has only 1 read port and 1 write port.** 
+When the memory is used for read, please set "rd_en=1". 
 
 
 Test code will read the memory locations to check whether the sort is correctly performed. 
@@ -53,8 +54,7 @@ Hint: draw a state diagram including i and j value increment, understanding 6 st
 
 **What to submit:**
 1. **bubblesort.v**
-2. **A screenshot of final simulation as a <u>pdf file</u> format.** (Please make it sure it shows the "Congratulations it works" message.) 
-3. **A zip file for your Xilinix project directory including project filei (xpr)**
+2. **A zip file for your Xilinix project directory including project filei (xpr)**
 Please make it sure you check "source files are copied" when you create a project so that your project directories contain source codes. 
 
 **How to test the correctness**: Please check the display values. It should print out sorted memory values. 
@@ -78,11 +78,11 @@ submit all the files in your project directory, you should be sufficient.
 **FAQ ** 
 
 (1) Q: How to increase the duration of simulation?  The default Vivado setting is 1,000ns 
-<img src = "vivado_simulation_time.png" width="400"> 
+<img src = "figs/vivado_simulation_time.png" width="400"> 
 
 
 (2) Q: I passed the provided testing code. Do I need to test other inputs to see whether it works on other cases ? 
-A: No, we will test your code only with the provided test code. 
+A: No, we will test your code only with the provided test code. Please make it sure the values are sorted even if you see the message of "Congradulation it works !!!!". The congratulation message is might have false positive message, so you should check whether the datas are indeed sorted or not. 
 
 (3) Q: What does mean that the memory has only 1 read and 1 write port? 
 A: This means, you are not supposed to read mem(i) and mem(i+1) at the same cycle. 
@@ -107,7 +107,7 @@ A: You can create other  structures  to keep the value just like temp
 
 
 (4) Q: OK, I passed the test code. Do I need to worry about anything else? 
-A: Please make it sure whether you have used only one memory read and one write port requirement. 
+A: Please make it sure whether you have used only one memory read and one write port requirement.  Please make it sure whether values are correctly sorted. 
 
 (5) Q: How do we create a zip file for a Xilinx project directory?
 A: You can create zip file using the command (Linux) below. If on Windows, right click and select "Send To" and then "Compressed folder"
@@ -116,16 +116,39 @@ zip -r archive_name.zip directory_to_compress
 
 Zip your entire project directory. It is the directory that would contain the .xpr file 
 
-(6)Q: for the screenshot of simulation, do we need to capture only the final sorted values, or do we need to show the entire sorting process? 
-A: Please show us the entire process. 
 
-(7) Q: What's the behavior of reset? 
+(6) Q: What's the behavior of reset? 
 A: It should just initialize your states and clear data for i and j. 
 
-(8) Q: I submmited bublesort.v and then I realized that I made a mistake, so I submitted a new file. The name is automatically changed to bubblesort-1.v.
+(7) Q: I submmited bublesort.v and then I realized that I made a mistake, so I submitted a new file. The name is automatically changed to bubblesort-1.v.
 Is that OK? 
 A: Yes. 
 
+
+(8) The memory has only one read/write port. But in the code, 
+'''    assign dat_out0 = dmem[0];
+    assign dat_out1 = dmem[1];
+    assign dat_out2 = dmem[2];
+    assign dat_out3 = dmem[3];
+    assign dat_out4 = dmem[4];
+    assign dat_out5 = dmem[5];
+    assign dat_out6 = dmem[6];
+    assign dat_out7 = dmem[7];
+    assign dat_out8 = dmem[8];
+    assign dat_out9 = dmem[9];''' 
+    Does it mean that it has 10 read ports? 
+    A: This code is just for debugging/testing purpose, we added that. The actual bubble sort code. you should folllow the design requirements of using only 1 read and 1 write port. 
+    
+    
+(9) Project setup: I'm creating the new project with the bubblesort.v file and ex1.mem as the source files, time.xdc as the constraint file, and then test.v as a simulation source? Is this how our project should be initialized?
+A: Yes 
+
+(10) What's the purpose of 'rd_en' signal? 
+A: It indicates that read is enable. It's a protocol that we define. 
+
+
+
+    
 
 
  
