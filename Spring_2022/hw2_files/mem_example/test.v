@@ -48,10 +48,10 @@ module test(
      always @(posedge sim_clk) 
         begin 
         i = i + 1; 
-        rd_adr = i[3:0];
+        rd_adr = i[1:0];
         if ((i>16) && (i<32) ) 
              wr_en = 1; 
-         wr_adr = i[3:0];
+         wr_adr = i[1:0];
          dat_in = i[15:0];
          
          

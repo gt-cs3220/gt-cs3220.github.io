@@ -19,7 +19,7 @@ module dmemread(
     input [9:0] rd_adr; 
  
 
-    reg[15:0] dmem[6:0];   
+    reg[15:0] dmem[9:0];   
   initial begin
 
 	 $readmemh("ex1.mem", dmem);
