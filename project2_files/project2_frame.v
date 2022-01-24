@@ -1,30 +1,15 @@
  `include "VX_define.vh" 
 
 module project2_frame(
-  input        CLOCK_50,
-  input        RESET_N,
+  input        clk,
+  input        reset,
   input  [3:0] KEY,
-  output [6:0] HEX0,
-  output [6:0] HEX1,
+  output [3:0] HEX0,
+  output [3:0] HEX1,
   output [9:0] LEDR
 );
 
   
- wire clk;
- wire reset; 
- wire locked; 
- 
-  
-  //*** PLL IP module is called here. ***//
-clk_wiz_0 my_clock
- (
-  .clk_out1(clk),
-  .reset(!RESET_N),
-  .locked(locked),
-  .clk_in1(CLOCK_50)
- );
-
-  assign reset = !locked;
   
   /* wires to connect between pipeline stages */ 
   
