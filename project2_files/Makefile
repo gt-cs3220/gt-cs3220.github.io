@@ -36,14 +36,13 @@ endif
 default:
 	@echo "-- Verilator hello-world simple example"
 	@echo "-- VERILATE ----------------"
-	$(VERILATOR) -cc --exe project2_frame.v fe_stage.v de_stage.v mem_stage.v wb_stage.v agex_stage.v sim_main.cpp
+	$(VERILATOR) -cc --exe tb_project2.v project2_frame.v fe_stage.v de_stage.v mem_stage.v wb_stage.v agex_stage.v sim_main.cpp
 	@echo "-- COMPILE -----------------"
-	$(MAKE) -j 4 -C obj_dir -f Vproject2_frame.mk
+	$(MAKE) -j 4 -C obj_dir -f Vtb_project2.mk 
 	@echo "-- RUN ---------------------"
-	obj_dir/Vproject2_frame
+	obj_dir/Vtb_project2
 	@echo "-- DONE --------------------"
-	@echo "Note: Once this example is understood, see examples/tracing_c."
-	@echo "Note: Also see the EXAMPLE section in the verilator manpage/document."
+
 
 ######################################################################
 

@@ -8,7 +8,7 @@
 #include <verilated.h>
 
 // Include model header, generated from Verilating "tb_project2.v"
-#include "Vproject2_frame.h"
+#include "Vtb_project2.h"
 
 // Current simulation time (64-bit unsigned)
 vluint64_t main_time = 0;
@@ -24,25 +24,28 @@ int main(int argc, char** argv, char** env) {
     if (0 && argc && argv && env) {}
 
     // Construct the Verilated model, from Vtop.h generated from Verilating "top.v"
-    Vproject2_frame* prj = new Vproject2_frame ;
+    Vtb_project2* prj = new Vtb_project2 ;
 
     // set some inputs 
-    prj->clk = 0; 
-    prj->reset = 0; 
-    prj->KEY = 15;
+   // prj->clk = 0; 
+   // prj->reset = 0; 
+   // prj->KEY = 15;
 
 
 
     // Simulate until $finish
-    while (!Verilated::gotFinish()) {
+    // while (!Verilated::gotFinish()) {
+        while (main_time<1000) {
         main_time++; 
+      
         if ((main_time%10)) prj->clk = !prj->clk; 
 
-        if (main_time > 1 && main_time < 10) {
+        if (main_time > 1 && main_time < 100) {
             prj->reset = !1;  // Assert reset
         } else {
             prj->reset = !0;  // Deassert reset
         }
+        
         // Evaluate model
         prj->eval();
     }
