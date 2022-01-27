@@ -19,11 +19,8 @@
 
   // [NOTICE] please note that both imem and dmem use the SAME "IDMEMINITFILE".
   // you need to change this line to change which test file to read 
-  `define IDMEMINITFILE  "test/test1.mem"
+  `define IDMEMINITFILE  "test/tinyrv1/testall.hex"
  
-
- 
-  
   `define IMEMADDRBITS  16
   `define IMEMWORDBITS  2
   `define IMEMWORDS	  (1 << (`IMEMADDRBITS - `IMEMWORDBITS))

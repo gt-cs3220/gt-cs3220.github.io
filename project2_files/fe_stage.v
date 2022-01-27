@@ -16,11 +16,11 @@ module FE_STAGE(
   (* ram_init_file = `IDMEMINITFILE *)
   reg [`DBITS-1:0] imem [`IMEMWORDS-1:0];
  
-   initial begin
-        $readmemh(`IDMEMINITFILE , imem);
+  initial begin
+      $readmemh(`IDMEMINITFILE , imem);
   end
 
-/* pipeline latch */ 
+  /* pipeline latch */ 
   reg [`FE_latch_WIDTH-1:0] FE_latch;  // FE latch 
 
   reg [`DBITS-1:0] PC_FE_latch; // PC latch in the FE stage   // you could use a part of FE_latch as a PC latch as well 
@@ -74,7 +74,5 @@ module FE_STAGE(
             FE_latch <= FE_latch_contents; 
         end  
   end
- 
- 
- 
+
 endmodule

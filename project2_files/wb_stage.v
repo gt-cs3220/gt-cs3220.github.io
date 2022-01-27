@@ -30,18 +30,19 @@ module WB_STAGE(
   reg [23:0] HEX_out; 
   reg [9:0] LEDR_out; 
 
-/* HEX0, HEX1 are completed for you.  */ 
+
+  /* HEX0, HEX1 are completed for you.  */ 
  always @ (posedge clk or posedge reset) begin
     if(reset)
 	   HEX_out <= 24'hFEDEAD;
-	 else if(wr_mem_WB && (memaddr_WB == `ADDRHEX))
+	  else if(wr_mem_WB && (memaddr_WB == `ADDRHEX))
       HEX_out <= regval2_WB[`HEXBITS-1:0];
   end
 
   assign HEX0 = HEX_out[3:0]; // if we are using a board, we should converte hex values with seven segments. 
   assign HEX1 = HEX_out[7:4];
 
- // **TODO: Complete the rest of the pipeline 
+  // **TODO: Complete the rest of the pipeline 
  
     
    assign {
@@ -63,6 +64,13 @@ module WB_STAGE(
   // **TODO: Write the code for LEDR here
 
   assign LEDR = LEDR_out;
+
+  // special workaround to get TinyRV1 tests Pass/Fail status
+  reg [`DBITS-1:0] last_wb_value [`REGWORDS-1:0] /* verilator public */;
+  always @(posedge clk) begin
+    last_wb_value[wregno_WB] <= regval_WB;
+  end
+
   
 
 

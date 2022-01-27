@@ -12,14 +12,13 @@ module DE_STAGE(
   output[`DE_latch_WIDTH-1:0] DE_latch_out
 );
 
-/* pipeline latch*/ 
- reg [`DE_latch_WIDTH-1:0] DE_latch; 
+  /* pipeline latch*/ 
+  reg [`DE_latch_WIDTH-1:0] DE_latch; 
 
   /* register file */ 
   reg [`DBITS-1:0] regs [`REGWORDS-1:0];
   
- /* decode signals */
-  
+  /* decode signals */
   wire [`INSTBITS-1:0] inst_DE; 
   wire [`DBITS-1:0] PC_DE;
   wire [`DBITS-1:0] pcplus_DE; 
