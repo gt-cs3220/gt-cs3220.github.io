@@ -1,0 +1,3 @@
+[submodule "project2_files/test/tinyrv1/freedom-elf2hex"]
+	path = project2_files/test/tinyrv1/freedom-elf2hex
+	url = https://github.com/sifive/freedom-elf2hex.git

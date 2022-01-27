@@ -2,8 +2,6 @@
 // gt-cs3220: test cases for the TinyRV1 ISA
 //-----------------------------------------
 
-.section data
-
 .section .text
 .globl _start
 

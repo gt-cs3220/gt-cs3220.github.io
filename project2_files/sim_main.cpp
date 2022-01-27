@@ -57,14 +57,13 @@ int main(int argc, char** argv, char** env) {
         }
         // Evaluate model
         prj->eval();
+        exitcode = (int)prj->project2_frame->my_WB_stage->last_wb_value[3];
     }
 
     tfp->close();
 
     // Final model cleanup
     prj->final();
-
-    exitcode = (int)prj->project2_frame->my_WB_stage->last_wb_value[3];
 
     // Destroy model
     delete prj;

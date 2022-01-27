@@ -2,7 +2,8 @@
 # gt-cs3220: Makefile for building TinyRV1 test cases
 #-----------------------------------------
 
-RISCV_PREFIX ?= riscv32-unknown-elf-
+RISCV_TOOLCHAIN_PATH ?= /opt/riscv-gnu-toolchain
+RISCV_PREFIX ?= $(RISCV_TOOLCHAIN_PATH)/bin/riscv32-unknown-elf-
 RISCV_GCC ?= $(RISCV_PREFIX)gcc
 RISCV_GCC_OPTS ?= -static -mcmodel=medlow -fvisibility=hidden -nostdlib -nostartfiles -T ./link.ld
 RISCV_OBJDUMP ?= $(RISCV_PREFIX)objdump --disassemble-all --disassemble-zeroes --section=.text --section=.text.startup --section=.text.init --section=.data
