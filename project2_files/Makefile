@@ -34,7 +34,6 @@ VERILATOR = $(VERILATOR_ROOT)/bin/verilator
 endif
 
 default:
-	@echo "-- Verilator hello-world simple example"
 	@echo "-- VERILATE ----------------"
 	$(VERILATOR) -cc --exe tb_project2.v project2_frame.v fe_stage.v de_stage.v mem_stage.v wb_stage.v agex_stage.v sim_main.cpp
 	@echo "-- COMPILE -----------------"

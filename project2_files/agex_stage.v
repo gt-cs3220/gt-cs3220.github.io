@@ -22,8 +22,9 @@ module AGEX_STAGE(
   wire [`INSTBITS-1:0]inst_AGEX; 
   wire [`DBITS-1:0]PC_AGEX;
   wire [`DBITS-1:0]pcplus_AGEX; 
-  wire [`OP1BITS-1:0] op1_AGEX;
-  wire [`OP2BITS-1:0] op2_AGEX;
+  wire [`OPBITS-1:0] op_AGEX;
+  wire [`F3BITS-1:0] F3_AGEX;
+  wire [`F7BITS-1:0] F7_AGEX; 
   wire [`IMMBITS-1:0] imm_AGEX;
 
   
@@ -46,7 +47,7 @@ module AGEX_STAGE(
     wire[`BUS_CANARY_WIDTH-1:0] bus_canary_AGEX; 
  // **TODO: Complete the rest of the pipeline 
  
-  
+  /*
   always @ (op1_AGEX or regval1_AGEX or regval2_AGEX) begin
     case (op1_AGEX)
       `OP1_BEQ : br_cond_AGEX = (regval1_AGEX == regval2_AGEX);
@@ -56,7 +57,8 @@ module AGEX_STAGE(
       default : br_cond_AGEX = 1'b0;
     endcase
   end
-
+*/
+/*
   always @ (op1_AGEX or op2_AGEX or regval1_AGEX or regval2_AGEX or sxt_imm_AGEX) begin
     if(op1_AGEX == `OP1_ALUR)
       case (op2_AGEX)
@@ -78,7 +80,7 @@ module AGEX_STAGE(
 	 else
 		aluout_AGEX = {`DBITS{1'b0}};
 	 end
-
+*/
 // branch target needs to be computed here 
 // computed branch target needs to send to other pipeline stages
 
@@ -86,9 +88,9 @@ module AGEX_STAGE(
                                   inst_AGEX,
                                   PC_AGEX,
                                   pcplus_AGEX,
-                                  op1_AGEX,
-                                  op2_AGEX,
-
+                                  op_AGEX,
+                                  F3_AGEX,
+                                  F7_AGEX, 
                                   regval1_AGEX,
                                   regval2_AGEX,
                                   sxt_imm_AGEX,                                

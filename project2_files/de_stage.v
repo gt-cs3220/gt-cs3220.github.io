@@ -22,8 +22,9 @@ module DE_STAGE(
   wire [`INSTBITS-1:0] inst_DE; 
   wire [`DBITS-1:0] PC_DE;
   wire [`DBITS-1:0] pcplus_DE; 
-  wire [`OP1BITS-1:0] op1_DE;
-  wire [`OP2BITS-1:0] op2_DE;
+  wire [`OPBITS-1:0] op_DE;
+  wire [`F3BITS-1:0] F3_DE;
+  wire [`F7BITS-1:0] F7_DE; 
   wire [`IMMBITS-1:0] imm_DE;
   wire [`REGNOBITS-1:0] rd_DE;
   wire [`REGNOBITS-1:0] rs_DE;
@@ -46,7 +47,9 @@ module DE_STAGE(
  // **TODO: Complete the rest of the pipeline 
 
 // extracting a part of opcode 
-  assign op1_DE = inst_DE[31:26];  // example code 
+  assign op_DE = inst_DE[6:0];  // example code
+  assign F3_DE = inst_DE[14:12];
+  assign F7_DE = inst_DE[31:25];  
 
  // complete the rest of instruction decoding 
 
@@ -72,8 +75,9 @@ module DE_STAGE(
                                   inst_DE,
                                   PC_DE,
                                   pcplus_DE,
-                                  op1_DE,
-                                  op2_DE,
+                                  op_DE,
+                                  F3_DE, 
+                                  F7_DE, 
                                   regval1_DE,
                                   regval2_DE,
                                   sxt_imm_DE,

@@ -32,6 +32,7 @@ module WB_STAGE(
 
 
   /* HEX0, HEX1 are completed for you.  */ 
+/*
  always @ (posedge clk or posedge reset) begin
     if(reset)
 	   HEX_out <= 24'hFEDEAD;
@@ -41,7 +42,7 @@ module WB_STAGE(
 
   assign HEX0 = HEX_out[3:0]; // if we are using a board, we should converte hex values with seven segments. 
   assign HEX1 = HEX_out[7:4];
-
+*/
   // **TODO: Complete the rest of the pipeline 
  
     

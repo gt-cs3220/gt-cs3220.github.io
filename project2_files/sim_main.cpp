@@ -35,12 +35,13 @@ int main(int argc, char** argv, char** env) {
    // prj->reset = 0; 
    // prj->KEY = 15;
 
-    // VCD output
+    // VCD output 
+    /*
     Verilated::traceEverOn(true);
     VerilatedVcdC* tfp = new VerilatedVcdC;
     prj->trace(tfp, 99);  // Trace 99 levels of hierarchy
     tfp->open("obj_dir/prj.vcd");
-
+    */ 
     int exitcode = 0;
 
     // Simulate until $finish
@@ -59,18 +60,18 @@ int main(int argc, char** argv, char** env) {
         prj->eval();
     }
 
-    tfp->close();
+  //  tfp->close();
 
     // Final model cleanup
     prj->final();
 
-    exitcode = (int)prj->project2_frame->my_WB_stage->last_wb_value[3];
+   //  exitcode = (int)prj->myprj->my_WB_stage->last_wb_value[3];
 
     // Destroy model
     delete prj;
 
     // Destroy trace
-    delete tfp;
+   //  delete tfp;
 
     // TinyRV1 test Pass/Fail status
     if(1 == exitcode)
