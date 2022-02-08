@@ -2,7 +2,7 @@
 
 **Due dates**: 
 
-**Part 1**: 2/18/2022 (F) 6 pm  (5 pts)
+**Part 1**: 2/16/2022 (W) 6 pm  (5 pts)
 
 **Part 2**: 2/25/2021 (F) 6 pm  (10 points)
 
