@@ -50,7 +50,7 @@ If you cannot pass testall3.mem, we will grade based on coverage of test cases i
 **What to submit**:
 ** A zip file of your source code. The zip file must contain the following:**
 type ```make submmit``` will generate a submission.zip. 
-Please submit the submission.zip file. 
+Please submit the submission.zip file. Each submission for each group. 
 
 
 **Usefule Information**
