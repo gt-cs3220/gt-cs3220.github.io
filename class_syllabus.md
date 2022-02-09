@@ -91,15 +91,15 @@ Textbooks: All online books are available in the library . (http://library.gatec
 
    Project assignment 1: 8 
 
-   Project assignment 2: 15
+   Project assignment 2: 25
 
    Project assignment 3: 10
 
    Project assignment 4: 10 
 
-   Project assignment 5: 10 
+   Project assignment 5: 15 
    
-   Project assignment 6: 15 
+
 
 
   Homeworks: 12 (1 pts x 12 HWs) 
@@ -200,30 +200,30 @@ Homework assignments are individual, but you can get help from others. If you ge
 |      | 1/19/22 |                | verilog-II (sequential)                   | [HW# 1](https://gt-cs3220.github.io/hw1.html) (F)   |                       | verilog ch 8 & ch 9 & ch10 & ch 6 |
 | 3    | 1/24/22 |                | verilog-III & xilinix tool(online-only)                |             |                       |                                   |
 |      | 1/26/22 |                | ISA & review pipeline  (online-only)| [HW#2 (W)](https://gt-cs3220.github.io/hw2.html)    | [project #1 due](https://gt-cs3220.github.io/project1.html)  (Sun)   | verilog ch 10 & ch 6              |
-| 4    | 1/31/22 |                | Project #2 review (online-only)                        |             |                       | verilog ch 11                     |
-|      | 2/2/22  | FPGA           | FPGA introduction (online-only)                        | HW#3 (W)    |                       | FPGA ch 2  & ch 3 & ch 4          |
-| 5    | 2/7/22  |                | FPGA structure                            |             |                       | FPGA ch 5 &ch 6 & ch 7 & ch 8     |
-|      | 2/9/22  |                | Pynq & Jupyter notebook                   | HW#4 (W)    | Project #2-part 1 (F) |                                   |
+| 4    | 1/31/22 |                | FPGA introduction  (online-only)                        |             |                       | verilog ch 11                     |
+|      | 2/2/22  | FPGA           | FPGA structure  (online-only)                        | HW#3 (W)    |                       | FPGA ch 2  & ch 3 & ch 4          |
+| 5    | 2/7/22  |                |  No lecture (offline video)                            |             |                       | FPGA ch 5 &ch 6 & ch 7 & ch 8     |
+|      | 2/9/22  |                |  project-2 FAQ (online-only)                    | HW#4 (W)    |  |                                   |
 | 6    | 2/14/22 | Architecture   | out of order processor                    |             |                       |                                   |
-|      | 2/16/22 |                | out of order processor                    | HW#5 (W)    | Project #2-part 2 (F) |                                   |
+|      | 2/16/22 |                | out of order processor                    | HW#5 (W)    | Project #2-part 1 (F) |                                   |
 | 7    | 2/21/22 |                | branch predictor                          |             |                       |                                   |
-|      | 2/23/22 |                | Power                                     | HW #6 (W)   | Project #3 (F)        |                                   |
+|      | 2/23/22 |                | Power                                     | HW #6 (W)   | Project #2-part 2 (F)        |                                   |
 | 8    | 2/28/22 |                | IEEE floating point                       |             |                       |                                   |
-|      | 3/2/22  |                | GPU architecture                          | HW #7 (W)   |                       |                                   |
+|      | 3/2/22  |                | GPU architecture                          | HW #7 (W)   |  Project #2-part 3 (F)                    |                                   |
 | 9    | 3/7/22  |                | GPU architecture                          |             |                       |                                   |
-|      | 3/9/22  |                | Vortex architecture                       | HW #8 (W)   | Project #4 (F)        |                                   |
-| 10   | 3/14/22 |                | review day                                |             |                       |                                   |
+|      | 3/9/22  |                | Vortex architecture                       | HW #8 (W)   |       |                                   |
+| 10   | 3/14/22 |                | review day                                |             |  Project #3  (M)                       |                                   |
 |      | 3/16/22 |                | mid-term                                  |             |                       |                                   |
 | 11   | 3/21/22 |                | Spring break                              |             |                       |                                   |
 |      | 3/23/22 |                | Spring break                              |             |                       |                                   |
 | 12   | 3/28/22 |                | ML accelerator                            |             |                       |                                   |
 |      | 3/30/22 |                | systolic Arrays                           | HW#9 (W)    |                       |                                   |
 | 13   | 4/4/22  | HLS            | HLS optimization (I)                      |             |                       | HLS ch 2 & ch 3                   |
-|      | 4/6/22  |                | Project #6                                | HW #10 (W)  | Project #5 (F)        |                                   |
+|      | 4/6/22  |                | Project #5                                | HW #10 (W)  | Project #4 (F)        |                                   |
 | 14   | 4/11/22 |                | HLS - loop optimizations                  |             |                       |                                   |
 |      | 4/13/22 |                | HLS  -MatrixMul                           | HW #11 (W)  |                       |                                   |
 | 15   | 4/18/22 | Architecture   | security                                  |             |                       |                                   |
-|      | 4/20/22 |                | research presentation                     | HW #12 (W)  | Project #6 (F)        |                                   |
+|      | 4/20/22 |                | research presentation                     | HW #12 (W)  | Project #5 (F)        |                                   |
 | 16   | 4/25/22 |                | research presentation & review            |             |                       |                                   |
 |  17    | 5/4/22  |                | Final exam  2:40 pm - 5:30 pm             |             |                       |                                   |
 
