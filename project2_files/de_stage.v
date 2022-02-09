@@ -194,11 +194,13 @@ always @(*) begin
   case (type_immediate_DE )  
   `I_immediate: 
     sxt_imm_DE = {{21{inst_DE[31]}}, inst_DE[30:25], inst_DE[24:21], inst_DE[20]}; 
-    /*
+  
   `S_immediate: 
-     sxt_imm_DE =  ... 
+     sxt_imm_DE =  { {21{inst_DE[31]}} , inst_DE[30:25], inst_DE[11:8] , inst_DE[7]}; 
+    
    `B_immediate: 
-     sxt_imm_DE = ... 
+     sxt_imm_DE = { {20{inst_DE[31]}}, inst_DE[7], inst_DE[30:25], inst_DE[11:8] , 1'b0};  
+     /*
    `U_immediate: 
      sxt_imm_DE = ... 
    `J_immediate: 
@@ -212,8 +214,40 @@ end
  
 
 
+  wire [`REGNOBITS-1:0] rs1_DE;  // rs1 ID 
+  wire [`REGNOBITS-1:0] rs2_DE;  // rs2 ID 
+  wire [`REGNOBITS-1:0] rd_DE;   // rd ID 
 
- 
+  assign rs1_DE = inst_DE[19:15]; 
+  assign rs2_DE = inst_DE[24:20]; 
+  assign rd_DE = inst_DE[11:7]; 
+
+  wire [`DBITS-1:0] regval1_DE; 
+  wire [`DBITS-1:0] regval2_DE; 
+
+  wire wr_reg_DE; 
+
+reg rs1_read_DE; 
+reg rs2_read_DE; 
+
+
+always @(*) begin 
+  case (type_I_DE)
+    `I_Type:
+      begin 
+        rs1_read_DE = 1; 
+        rs2_read_DE = 0; 
+      end 
+    endcase 
+
+end 
+
+assign regval1_DE = regs[rs1_DE]; 
+assign regval2_DE = regs[rs2_DE]; 
+
+ assign wr_reg_DE = ((op_I_DE == `ADDI_I) || (
+                    op_I_DE == `ADD_I)) ?  1: 0 ; 
+
  /* this signal is passed from WB stage */ 
   wire wr_reg_WB; // is this instruction writing into a register file? 
   wire [`REGNOBITS-1:0] wregno_WB; // destination register ID 
@@ -225,7 +259,8 @@ end
   assign { wr_reg_WB, wregno_WB, regval_WB, wcsrno_WB, wr_csr_WB} = from_WB_to_DE;  
 
 
-  wire pipeline_stall_DE; 
+  wire pipeline_stall_DE;
+  assign pipeline_stall_DE = 0;  
   assign from_DE_to_FE = {pipeline_stall_DE}; // pass the DE stage stall signal to FE stage 
 
 
@@ -248,6 +283,11 @@ end
                                   pcplus_DE,
                                   op_I_DE,
                                   inst_count_DE, 
+                                  regval1_DE, 
+                                  regval2_DE, 
+                                  sxt_imm_DE, 
+                                  rd_DE,   
+                                  wr_reg_DE, 
                                   // more signals might need
                                    bus_canary_DE 
                                   }; 

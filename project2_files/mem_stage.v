@@ -52,7 +52,9 @@ module MEM_STAGE(
       dmem[memaddr_MEM[`DMEMADDRBITS-1:`DMEMWORDBITS]] <= wr_val_MEM; 
   end
  
-
+  wire [`DBITS-1:0] aluout_MEM; 
+  wire [`REGNOBITS-1:0] rd_MEM; 
+  wire wr_reg_MEM; 
    
 
     
@@ -63,6 +65,9 @@ module MEM_STAGE(
                                 PC_MEM,
                                 op_I_MEM,
                                 inst_count_MEM, 
+                                 aluout_MEM, 
+                                 rd_MEM, 
+                                wr_reg_MEM, 
                                  // more signals might need
                                  bus_canary_MEM
                                  } = from_AGEX_latch;  
@@ -74,6 +79,9 @@ module MEM_STAGE(
                                 PC_MEM,
                                 op_I_MEM,
                                 inst_count_MEM, 
+                                aluout_MEM, 
+                                rd_MEM, 
+                                wr_reg_MEM, 
                                         // more signals might need    
                               bus_canary_MEM                   
    };

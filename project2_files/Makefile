@@ -41,7 +41,8 @@ endif
 VX_DEFINE = $(PWD)/VX_define.vh
 SED_STRING = 's|define IDMEMINITFILE.*|define IDMEMINITFILE "$(IDMEMINITFILE)"|g' 
 VL_FLAGS += --exe -cc project2_frame.v --top-module project2_frame --trace --trace-structs
-CXXFLAGS += -DVCD_OUTPUT -DDPRINTF
+#CXXFLAGS += -DVCD_OUTPUT -DDPRINTF
+CXXFLAGS += -DVCD_OUTPUT 
 LDFLAGS += 
 
 default:
