@@ -88,7 +88,7 @@ Hence, to encourage to complete project #2, we allow late submissions.
 In summary, for project #2, if you fail to complete them on due dates, but if you finish all successfully by project #3's deadline along with project #3, you will get 50% of the entire project #2.  
 
 
-## Usefule Information
+## Useful Information
 
 **References **
 <a href="https://riscvasm.lucasteske.dev/#"> RISC-V Assembly code  </a> 
@@ -159,7 +159,8 @@ The frame already includes the code to ignore the lower 2 bits.
   ```assign inst_FE = imem[PC_FE_latch[`IMEMADDRBITS-1:`IMEMWORDBITS]]; ```
 ```dmem[memaddr_MEM[`DMEMADDRBITS-1:`DMEMWORDBITS]]; ``` 
 
-
+Q) What does ``` ```assign inst_FE = imem[PC_FE_latch[`IMEMADDRBITS-1:`IMEMWORDBITS]];''' mean?
+A) PC_FE_latch contains PC value. again imem and dmem are worda addressible. so we don't need LSB 2 bits. Since imem and dmem has only 2^14 size, we just use addrr [15:2] bits to index imem/dmem.  
 
 Q) I want to generate more test cases. Do we have an assembler? 
 
