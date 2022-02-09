@@ -1,1 +1,1 @@
- addi x1 , x0,   1 
+ addi gp , x0,   1 
