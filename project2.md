@@ -1,18 +1,22 @@
-# CS3220 Assignment #2: Pipeline Design 
+# CS3220 Assignment #2 : Pipeline Design 
 
 **Due dates**: 
 
-**Part 1**: 2/16/2022 (W) 6 pm  (5 pts)
+**Part 1**: 2/18/2022 (F) 6 pm  (5 pts)
 
 **Part 2**: 2/25/2021 (F) 6 pm  (10 points)
+
+**Part 3**: 3/2/2021 (F) 6 pm (10 points) 
 
 This is a two-member group project. 
 
 
 **Description**:
-In this assignment, you will design a RISC-V pipelined processor using
-verilog. The ISA is a subset of RISC-V ISA. We will use <a href="https://github.com/gt-cs3220/gt-cs3220.github.io/blob/master/project2_files/ece5745-tinyrv-isa.txt"> Tiny RISC-V version from Cornell </a>  In part-1, you only need to implement *addi, add, beq* instruction to pass all 5 test cases in test/part1/test[1-5].mem file. (a subset of TinyRV1). In part-2, you will complete TinyRV2 except CSR related instructions. You might add CSR instructions (CSRR, CSRW) in the later projects. 
-In project #2, you can use a <a href="https://www.veripool.org/verilator/">  verilator </a>  which is a faster way to debug your code. Verilator is a tool to simulate verilog code w/o synthesization or w/o xilinix vivado tool. However, it follows the verilog behavior and it provides more useful warning/error messages. Most importantly, verilator is much faster to simulate than Xilinix vivado behavior simulation. In order to use verilator, you can install verilator in your machine or you can use the ICE cluster. (verilator will be installed by Wed. 2/9)  We will go back to Vivado in project #3 to load the design into FPGA. 
+In this assignment, you will design a RISC-V 5-stage pipelined processor using
+verilog. The ISA is a subset of RISC-V ISA. We will use <a href="https://github.com/gt-cs3220/gt-cs3220.github.io/blob/master/project2_files/ece5745-tinyrv-isa.txt"> Tiny RISC-V version from Cornell </a>  In part-1, you only need to implement *addi, add, beq* instruction to pass all 5 test cases in test/part1/test[1-5].mem file. (a subset of TinyRV1). In part-2, you will add more instructions to test a subset of test suites. 
+In part-3: you will complete TinyRV2 except CSR related instructions. You might add CSR instructions (CSRR, CSRW) in the later projects. 
+In project #2, you can use a <a href="https://www.veripool.org/verilator/">  verilator </a>  which is a faster way to debug your code. Verilator is a tool to simulate verilog code w/o synthesization or w/o xilinix vivado tool. However, it follows the verilog behavior and it provides more useful warning/error messages. Most importantly, verilator is much faster to simulate than Xilinix vivado behavior simulation. In order to use verilator, you can install verilator in your machine or you can use the ICE cluster. We will go back to Vivado in project #3 to load the design into FPGA. 
+In this design, you don't need to implement data forwarding in this part.
 
 Summary of instruction requirements: 
 
@@ -23,39 +27,71 @@ For part #1, you will implement a subset of pipeline. You  only need to pass 5 t
 You do not need to implement forwarding in this assignment. Your program should run with test[1-5].mem file.  
 
 
-**Grading**: 
-Grading scheme: 
-
-if you pass both test4 & test 5, you will get 5. 
-No other partial grading. 
-
-**Late submission**: 
-If you finish part-2 on time w/o correctly completing part-1, you will
-still, get 3 pts for part-1. 
-
-
-***Please do not procrastinate.*** 
-
-## Part 2: Complete the pipeline  and pass RISC-V test suites
-
-**Description**: 
-In this part, you will complete the entire tinly RISC-V ISA (except CSR instructions). 
-Your program should run with testall3.mem case we provide. You don't need to implement
-data forwarding in this part.  We will provide RISC-V test suite modified for our ISA to test your design. Testing all the test suits is for your debugging purpose. For project-2, we will evaluate your design with only behavioral simulation.  
-
-**Grading:** If you pass testall3.mem (you need to see "Pass" ) you will get 10 pts. 
-If you only able to finish part-1 until part-2 deadline, you will get total 3 pts (including part-1 & part-2). 
-If you cannot pass testall3.mem, we will grade based on coverage of test cases in part2. 
-
 **What to submit**:
 ** A zip file of your source code. The zip file must contain the following:**
 type ```make submmit``` will generate a submission.zip. 
 Please submit the submission.zip file. Each submission for each group. 
 
 
-**Usefule Information**
-RISC-V Assembly code 
-Verilator manual 
+**Grading**: 
+Grading scheme: 
+if you pass both test4 & test 5, you will get 5. 
+No other partial grading. 
+
+**Late submission**: 
+If you fail part-1 but if you submit part-2, we will use part-2 for part-1 regrading. 
+In that case, you will get 50% of part-1. 
+
+
+***Please do not procrastinate.*** 
+
+## Part 2: Pass a subset of RISC-V test suites 
+In this part, you will add more instructions in your pipeline to test RISC-V ISA. 
+You need to pass the test cases in part-2 test suites. T We will provide RISC-V test suite modified for our ISA to test your design. Testing all the test suits is for your debugging purpose. he test suite will be released soon. 
+
+**What to submit**:
+** A zip file of your source code. The zip file must contain the following:**
+type ```make submmit``` will generate a submission.zip. 
+Please submit the submission.zip file. Each submission for each group. 
+
+**Grading:** 
+Based on the coverage of part-2 test suites, you will get partial scores. 
+If you cover all part-2 test suites, you will get 10. 
+
+**Late submission**: 
+If you fail part-2 but if you submit part-3, we will use part-3 for part-2 regrading. 
+In that case, you will get 50% of part-2.  
+
+
+## Part 3: Complete the pipeline 
+**Description**: 
+In this part, you will complete the pipeline to test RISC-V ISA (except CSR instructions).  Your program should run with testall3.mem case we provide. For project-2, we will evaluate your design with only behavioral simulation.  
+
+**Grading:** If you pass testall3.mem (you need to see "Pass" ) you will get 10 pts.
+If you don't pass testall3.mem, you will get a partial grading based on the coverage of part 3 test suites. 
+ 
+
+**What to submit**:
+** A zip file of your source code. The zip file must contain the following:**
+type ```make submmit``` will generate a submission.zip. 
+Please submit the submission.zip file. Each submission for each group. 
+
+**Late submission**: 
+If you fail to complete part-3 but if you succesfully submit project #3, we will  give 50% of project #2. 
+
+**Note: Project 2, 3, and 4**
+
+Project #3 and Project #4 are based on project #2 part-3 (aka a complete tiny RISC-V pipeline). w/o completing project #2 part-3, you cannot proceed project # 3 and project #4. 
+Hence, to encourage to complete project #2, we allow late submissions. 
+In summary, for project #2, if you fail to complete them on due dates, but if you finish all successfully by project #3's deadline along with project #3, you will get 50% of the entire project #2.  
+
+
+## Usefule Information
+
+**References **
+<a href="https://riscvasm.lucasteske.dev/#"> RISC-V Assembly code  </a> 
+<a href="https://www.cs.cornell.edu/courses/cs3410/2019sp/riscv/interpreter/"> RISC-V emulator </a> 
+<a href="https://verilator.org/guide/latest/"> Verilator manual  </a> 
 <a href="http://gtkwave.sourceforge.net/gtkwave.pdf"> GTKWave manual</a> 
 
 **FAQ)**
