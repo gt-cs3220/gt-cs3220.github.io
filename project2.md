@@ -16,9 +16,8 @@ In this assignment, you will design a RISC-V 5-stage pipelined processor using
 verilog. The ISA is a subset of RISC-V ISA. We will use <a href="https://github.com/gt-cs3220/gt-cs3220.github.io/blob/master/project2_files/ece5745-tinyrv-isa.txt"> Tiny RISC-V version from Cornell </a>  In part-1, you only need to implement *addi, add, beq* instruction to pass all 5 test cases in test/part1/test[1-5].mem file. (a subset of TinyRV1). In part-2, you will add more instructions to test a subset of test suites. 
 In part-3: you will complete TinyRV2 except CSR related instructions. You might add CSR instructions (CSRR, CSRW) in the later projects. 
 In project #2, you can use a <a href="https://www.veripool.org/verilator/">  verilator </a>  which is a faster way to debug your code. Verilator is a tool to simulate verilog code w/o synthesization or w/o xilinix vivado tool. However, it follows the verilog behavior and it provides more useful warning/error messages. Most importantly, verilator is much faster to simulate than Xilinix vivado behavior simulation. In order to use verilator, you can install verilator in your machine or you can use the ICE cluster. We will go back to Vivado in project #3 to load the design into FPGA. 
-In this design, you don't need to implement data forwarding in this part.
-
-Summary of instruction requirements: 
+In this design, you don't need to implement data forwarding in this part. 
+The starting PC address is 0x200. 
 
 
 ## Part 1 : pass 5 test cases 
@@ -31,6 +30,7 @@ You do not need to implement forwarding in this assignment. Your program should 
 ** A zip file of your source code. The zip file must contain the following:**
 type ```make submmit``` will generate a submission.zip. 
 Please submit the submission.zip file. Each submission for each group. 
+If you don't use Makefile, please execute the following command.  ```zip submission.zip ./*.v ./*.h ./*.vh ./sim_main.cpp ./Makefile ```  and submit submission.zip file. We strongly encourage for you to use Make submmit command to generate the submission file so that it won't break our autograding script.  
 
 
 **Grading**: 
@@ -53,6 +53,7 @@ You need to pass the test cases in part-2 test suites. T We will provide RISC-V 
 ** A zip file of your source code. The zip file must contain the following:**
 type ```make submmit``` will generate a submission.zip. 
 Please submit the submission.zip file. Each submission for each group. 
+Please do not manually generate a zip file since that will likely break the autograding script.  Instead use make submmit command to generate the submission.zip file. Breaking autograding script due to wrong directory structures/missing files might deduct 5% of your score. 
 
 **Grading:** 
 Based on the coverage of part-2 test suites, you will get partial scores. 
@@ -75,6 +76,7 @@ If you don't pass testall3.mem, you will get a partial grading based on the cove
 ** A zip file of your source code. The zip file must contain the following:**
 type ```make submmit``` will generate a submission.zip. 
 Please submit the submission.zip file. Each submission for each group. 
+Please do not manually generate a zip file since that will likely break the autograding script.  Instead use make submmit command to generate the submission.zip file. Breaking autograding script due to wrong directory structures/missing files might deduct 5% of your score. 
 
 **Late submission**: 
 If you fail to complete part-3 but if you succesfully submit project #3, we will  give 50% of project #2. 
@@ -181,4 +183,11 @@ A)
 you can probably use  RISC-V interpreter or other RISC-V machien to execute the code. One example is <a href ="https://www.cs.cornell.edu/courses/cs3410/2019sp/riscv/interpreter/" >  here </a> 
 
 Q) How do I know whether I pass the code or not? 
-A) For part-1, we provide test code. Your code should print out "Pass" message if you are using verilator. If you are using only vivado, the last_WB_vale[3] should be 1.  
+A) For part-1, we provide test code. Your code should print out "Pass" message if you are using verilator. If you are using only vivado, the last_WB_vale[3] should be 1. Please see project2_vivado_check.mp4 at canvas for a demo vidoe. 
+
+Q) My frame does not load any instruction. Do I need to change anything? 
+A) The provided frame should load the first instruction correctly. If you don't see any instruction, please check whether the contents of imem. For vivado, you can see the contents of imem (please see hw4_fileload.mp4). If you are using verilator, FE_stage.v has the code to print out the imem contents. (https://github.com/gt-cs3220/gt-cs3220.github.io/blob/403908bbb61c6892f030ecd9a915ee8634c6f0ca/project2_files/fe_stage.v#L24) 
+
+
+
+  
