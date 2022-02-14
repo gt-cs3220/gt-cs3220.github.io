@@ -90,11 +90,30 @@ In summary, for project #2, if you fail to complete them on due dates, but if yo
 
 ## Useful Information
 
-**References **
+**References**
+
 <a href="https://riscvasm.lucasteske.dev/#"> RISC-V Assembly code  </a> 
 <a href="https://www.cs.cornell.edu/courses/cs3410/2019sp/riscv/interpreter/"> RISC-V emulator </a> 
 <a href="https://verilator.org/guide/latest/"> Verilator manual  </a> 
 <a href="http://gtkwave.sourceforge.net/gtkwave.pdf"> GTKWave manual</a> 
+
+
+**Installing Verilator**
+
+*MAC*
+1) Install <a href="https://brew.sh/"> HomeBrew </a> if you do not have it  
+`/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
+
+2) Run `brew update`
+
+3) Run `brew upgrade`
+
+4) Run `brew install verilator` 
+
+*Linux/WSL*
+1) Run `apt-get install verilator` 
+
+2) If any issues arise, install <a href="https://verilator.org/guide/latest/install.html#install-prerequisites"> prerequisites </a> that are missing
 
 **FAQ)**
 
@@ -189,6 +208,5 @@ A) For part-1, we provide test code. Your code should print out "Pass" message i
 Q) My frame does not load any instruction. Do I need to change anything? 
 A) The provided frame should load the first instruction correctly. If you don't see any instruction, please check whether the contents of imem. For vivado, you can see the contents of imem (please see hw4_fileload.mp4). If you are using verilator, FE_stage.v has the code to print out the imem contents. (https://github.com/gt-cs3220/gt-cs3220.github.io/blob/403908bbb61c6892f030ecd9a915ee8634c6f0ca/project2_files/fe_stage.v#L24) 
 
-
-
-  
+Q) I get the error "%Warning-LATCH: de_stage.v:120:1: Latch inferred for signal 'my_DE_stage.type_I_DE' (not all control paths of combinational always assign a value)" when running `make` with Verilator.\
+A) You can disable the Verilator linter by adding the comment `/* verilator lint_off LATCH */` on the line before the warning. 
