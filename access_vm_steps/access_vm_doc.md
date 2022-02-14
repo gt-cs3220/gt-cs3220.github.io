@@ -119,6 +119,10 @@ Below is a short video of all the steps showing how to open the VNC desktop:
 
 ![Video Demonstration](https://user-images.githubusercontent.com/57438552/148883921-ba853f05-27d0-4e11-a761-de9f7e2b917f.mov)
 
+## Using Verilator on ICE-cluster 
+Once you get VNC environment get a terminal and type ```module load cs3220'''. 
+You don't need to call vivado. 
+![screenshot](images/loadmodule.png)
 
 ## FAQs
 
