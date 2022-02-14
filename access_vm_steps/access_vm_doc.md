@@ -47,8 +47,8 @@ Before attempting the following steps, please ensure you are connected to campus
 3. Request a VNC job - this will launch a compute job on a node in the COC-ICE cluster and will give you a few cores and memory to run Vivado and other tools in a GUI session. Again, youmay want to refer to the ICE documents to understand how the scheduler is requesting and allocating resources for your job.
 
       ```
-      #This command requests a VNC job using the "long-running" queue and asks for onenode, 4 CPU cores, 30 GB of memory, and a runtime of 4 hours.
-      [gburdell@login-coc-ice-1 ~]$ pace-vnc-job -q coc-ice-long -lnodes=1:ppn=4,mem=30GB:walltime=4:00:00
+      #This command requests a VNC job using the "long-running" queue and asks for onenode, 4 CPU cores, 30 GB of memory, and a runtime of 4 hours. (you can increase up to 8 hours)
+      [gburdell@login-coc-ice-1 ~]$ pace-vnc-job -q coc-ice-long -lnodes=1:ppn=4,mem=30GB,walltime=4:00:00
 
       Submitting job via qsub pace-vnc-job.pbs...
       242776.sched-coc-ice.pace.gatech.edu
