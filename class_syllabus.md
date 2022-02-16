@@ -207,7 +207,7 @@ Homework assignments are individual, but you can get help from others. If you ge
 | 6    | 2/14/22 | Architecture   | out of order processor                    |             |                       |                                   |
 |      | 2/16/22 |                | out of order processor                    | HW#5 (W)    | [Project #2-part 1](https://gt-cs3220.github.io/project2.html)  (F) |                                   |
 | 7    | 2/21/22 |                | branch predictor                        |             |                       |                                   |
-|      | 2/23/22 |                | Power                                     | HW #6 (W)   | Project #2-part 2 (F)        |                                   |
+|      | 2/23/22 |                | Power                                     | HW #6 (W)   | [Project #2-part 2](https://gt-cs3220.github.io/project2.html) (F)        |                                   |
 | 8    | 2/28/22 |                | IEEE floating point                       |             |                       |                                   |
 |      | 3/2/22  |                | GPU architecture                          | HW #7 (W)   |  Project #2-part 3 (F)                    |                                   |
 | 9    | 3/7/22  |                | GPU architecture                          |             |                       |                                   |
