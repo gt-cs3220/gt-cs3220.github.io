@@ -57,7 +57,7 @@ and it will produce part[1-3]_results.log and part[1-3]_tests.log.
 test[7-9] are hand written assembly code which is easier to debug. please use those test cases first. 
 In part-2, we start to use modified RISC-V test suites. 
 ```*.S``` is assembly code that takes RISC-V macro. Macro files are defined at include d/test_macros.h or include/riscv_test.h
-It also uses ABI names and Pseudo Instructions. You can find a summary of information < a href="https://web.eecs.utk.edu/~smarz1/courses/ece356/notes/assembly/"> here  </a> 
+It also uses ABI names and Pseudo Instructions. You can find a summary of information <a href="https://web.eecs.utk.edu/~smarz1/courses/ece356/notes/assembly/"> [here]  </a> 
 ```*.dump``` is an dump file output from gcc riscv compiler. 
 ```*.mem```  file has the format for verilog code. 
 ```*.dec``` file is useful to use <a href="http://tice.sea.eseo.fr/riscv/">[RISC-V emulator] </a>
@@ -221,7 +221,6 @@ A) For part-1, we provide test code. Your code should print out "Pass" message i
 Q) My frame does not load any instruction. Do I need to change anything? 
 A) The provided frame should load the first instruction correctly. If you don't see any instruction, please check whether the contents of imem. For vivado, you can see the contents of imem (please see hw4_fileload.mp4). If you are using verilator, FE_stage.v has the code to print out the imem contents. (https://github.com/gt-cs3220/gt-cs3220.github.io/blob/403908bbb61c6892f030ecd9a915ee8634c6f0ca/project2_files/fe_stage.v#L24) 
 
-<<<<<<< HEAD
 
 # FAQ after part-2 
 Q) what is li instructions in add.dump? 
@@ -234,7 +233,5 @@ Q)I'd like to use RISC-V emulator for testing the test code. but it won't take d
 A) Unfortunately RISC-V emulator does take only assembly instructions. Hence, we recommend to use another <a href="http://tice.sea.eseo.fr/riscv/"> emulator </a> . you can use *.dec file to copy and paste the contents. 
 
   
-=======
 Q) I get the error "%Warning-LATCH: de_stage.v:120:1: Latch inferred for signal 'my_DE_stage.type_I_DE' (not all control paths of combinational always assign a value)" when running `make` with Verilator.\
 A) You can disable the Verilator linter by adding the comment `/* verilator lint_off LATCH */` on the line before the warning. 
->>>>>>> 3bf6f37dd2251e36a8f509bf3386c9018d01d9a1
