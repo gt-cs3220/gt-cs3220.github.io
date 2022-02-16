@@ -93,8 +93,8 @@ module DE_STAGE(
       op_I_DE = `SW_I; 
     else if ((op_DE == `JAL_OPCODE))
       op_I_DE = `JAL_I; 
-    else if ((op_DE == `JR_OPCODE) && (F3_DE == `JR_FUNCT3))
-      op_I_DE = `JR_I; 
+    // else if ((op_DE == `JR_OPCODE) && (F3_DE == `JR_FUNCT3))
+     //  op_I_DE = `JR_I; 
     else if ((op_DE == `JALR_OPCODE) && (F3_DE == `JALR_FUNCT3))
       op_I_DE = `JALR_I; 
     else if ((op_DE == `BEQ_OPCODE) && (F3_DE == `BEQ_FUNCT3))
