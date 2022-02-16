@@ -28,9 +28,9 @@ You do not need to implement forwarding in this assignment. Your program should 
 
 **What to submit**:
 ** A zip file of your source code. The zip file must contain the following:**
-type ```make submmit``` will generate a submission.zip. 
+type ```make submit``` will generate a submission.zip. 
 Please submit the submission.zip file. Each submission for each group. 
-If you don't use Makefile, please execute the following command.  ```zip submission.zip ./*.v ./*.h ./*.vh ./sim_main.cpp ./Makefile ```  and submit submission.zip file. We strongly encourage for you to use Make submmit command to generate the submission file so that it won't break our autograding script.  
+If you don't use Makefile, please execute the following command.  ```zip submission.zip ./*.v ./*.h ./*.vh ./sim_main.cpp ./Makefile ```  and submit submission.zip file. We strongly encourage for you to use Make submit command to generate the submission file so that it won't break our autograding script.  
 
 
 **Grading**: 
@@ -49,15 +49,28 @@ In that case, you will get 50% of part-1.
 In this part, you will add more instructions in your pipeline to test RISC-V ISA. 
 You need to pass the test cases in part-2 test suites. T We will provide RISC-V test suite modified for our ISA to test your design. Testing all the test suits is for your debugging purpose. he test suite will be released soon. 
 
+**Test cases**: 
+In part-2, add, addi, auipc, beq, bge, jal, jalr instructions will be tested. 
+you need to pass all test cases in test/part2 directory. 
+To test all test cases together, you can use ```run_tests.sh part2``` 
+and it will produce part[1-3]_results.log and part[1-3]_tests.log. 
+test[7-9] are hand written assembly code which is easier to debug. please use those test cases first. 
+In part-2, we start to use modified RISC-V test suites. 
+```*.S``` is assembly code that takes RISC-V macro. Macro files are defined at include d/test_macros.h or include/riscv_test.h
+It also uses ABI names and Pseudo Instructions. You can find a summary of information < a href="https://web.eecs.utk.edu/~smarz1/courses/ece356/notes/assembly/"> here  </a> 
+```*.dump``` is an dump file output from gcc riscv compiler. 
+```*.mem```  file has the format for verilog code. 
+```*.dec``` file is useful to use <a href="http://tice.sea.eseo.fr/riscv/">[RISC-V emulator] </a>
+
 **What to submit**:
 ** A zip file of your source code. The zip file must contain the following:**
-type ```make submmit``` will generate a submission.zip. 
+type ```make submit``` will generate a submission.zip. 
 Please submit the submission.zip file. Each submission for each group. 
-Please do not manually generate a zip file since that will likely break the autograding script.  Instead use make submmit command to generate the submission.zip file. Breaking autograding script due to wrong directory structures/missing files might deduct 5% of your score. 
+Please do not manually generate a zip file since that will likely break the autograding script.  Instead use make submit command to generate the submission.zip file. Breaking autograding script due to wrong directory structures/missing files might deduct 5% of your score. 
 
 **Grading:** 
 Based on the coverage of part-2 test suites, you will get partial scores. 
-If you cover all part-2 test suites, you will get 10. 
+If you cover all part-2 test suites, you will get 10. machine
 
 **Late submission**: 
 If you fail part-2 but if you submit part-3, we will use part-3 for part-2 regrading. 
@@ -73,13 +86,13 @@ If you don't pass testall3.mem, you will get a partial grading based on the cove
  
 
 **What to submit**:
-** A zip file of your source code. The zip file must contain the following:**
-type ```make submmit``` will generate a submission.zip. 
+** A zip file for your source code. The zip file must contain the following:**
+type ```make submit``` will generate a submission.zip. 
 Please submit the submission.zip file. Each submission for each group. 
-Please do not manually generate a zip file since that will likely break the autograding script.  Instead use make submmit command to generate the submission.zip file. Breaking autograding script due to wrong directory structures/missing files might deduct 5% of your score. 
+Please do not manually generate a zip file since that will likely break the autograding script.  Instead use make submit command to generate the submission.zip file. Breaking autograding script due to wrong directory structures/missing files might deduct 5% of your score. 
 
 **Late submission**: 
-If you fail to complete part-3 but if you succesfully submit project #3, we will  give 50% of project #2. 
+If you fail to complete part-3 but if you successfully submit project #3, we will  give 50% of project #2. 
 
 **Note: Project 2, 3, and 4**
 
@@ -172,19 +185,19 @@ A) If the number starts with 0x, it's hexadecimal .
 
 Q)When we access the memory, why we drop out LSB 2 bits? 
 
-A) ISA is byteaddressability but the verilog imem/dmem is declared as if it is word addressability since we don't do any unaligned accesses. Hence, we simply drop out lower two bits. 
+A) ISA is byte addressability but the verilog imem/dmem is declared as if it is word addressability since we don't do any unaligned accesses. Hence, we simply drop out lower two bits. 
  Please note that, you don't need to do anything to support that 
 The frame already includes the code to ignore the lower 2 bits. 
   ```assign inst_FE = imem[PC_FE_latch[`IMEMADDRBITS-1:`IMEMWORDBITS]]; ```
 ```dmem[memaddr_MEM[`DMEMADDRBITS-1:`DMEMWORDBITS]]; ``` 
 
 Q) What does ``` ```assign inst_FE = imem[PC_FE_latch[`IMEMADDRBITS-1:`IMEMWORDBITS]];''' mean?
-A) PC_FE_latch contains PC value. again imem and dmem are worda addressible. so we don't need LSB 2 bits. Since imem and dmem has only 2^14 size, we just use addrr [15:2] bits to index imem/dmem.  
+A) PC_FE_latch contains PC value. again imem and dmem are word addressable. so we don't need LSB 2 bits. Since imem and dmem has only 2^14 size, we just use addr [15:2] bits to index imem/dmem.  
 
 Q) I want to generate more test cases. Do we have an assembler? 
 
 A) If you want to generate more test cases, you can write sample assembly code using the following online <a href="https://riscvasm.lucasteske.dev/#"> assembler </a>. 
-Once you get the hexdump value, copy paste the contents into one of the test files starting from line 129. The reason is that the starting PC address is 0x200 (512). Each line in the  mem (or hex) file contains 4B. readmemh function will read one line at a time and put 4B to four consective memory addresses. RISC-V is byte addressable but the readmemh (or imem in the vivado tool chain)' interface is for word-address. So each line is 4B. So we have to insert 128 (512/2) line number of 0s. Please make it sure there is a "carriage-return" at the end of the file. The last line won't get read. 
+Once you get the hexdump value, copy paste the contents into one of the test files starting from line 129. The reason is that the starting PC address is 0x200 (512). Each line in the  mem (or hex) file contains 4B. readmemh function will read one line at a time and put 4B to four consecutive memory addresses. RISC-V is byte addressable but the readmemh (or imem in the vivado tool chain)' interface is for word-address. So each line is 4B. So we have to insert 128 (512/2) line number of 0s. Please make it sure there is a "carriage-return" at the end of the file. The last line won't get read. 
 An easy debug option is put dummy instructions just like the current examples  file contain them 
 (00000004
 00000008 
@@ -200,7 +213,7 @@ A) The test in part-2 is modified code from RISC-V test suite. It uses macro fun
 
 Q) How do I know what is the correct instruction/code behavior? 
 A) 
-you can probably use  RISC-V interpreter or other RISC-V machien to execute the code. One example is <a href ="https://www.cs.cornell.edu/courses/cs3410/2019sp/riscv/interpreter/" >  here </a> 
+you can probably use  RISC-V interpreter or other RISC-V machine to execute the code. One example is <a href ="https://www.cs.cornell.edu/courses/cs3410/2019sp/riscv/interpreter/" >  here </a> 
 
 Q) How do I know whether I pass the code or not? 
 A) For part-1, we provide test code. Your code should print out "Pass" message if you are using verilator. If you are using only vivado, the last_WB_vale[3] should be 1. Please see project2_vivado_check.mp4 at canvas for a demo vidoe. 
@@ -208,5 +221,20 @@ A) For part-1, we provide test code. Your code should print out "Pass" message i
 Q) My frame does not load any instruction. Do I need to change anything? 
 A) The provided frame should load the first instruction correctly. If you don't see any instruction, please check whether the contents of imem. For vivado, you can see the contents of imem (please see hw4_fileload.mp4). If you are using verilator, FE_stage.v has the code to print out the imem contents. (https://github.com/gt-cs3220/gt-cs3220.github.io/blob/403908bbb61c6892f030ecd9a915ee8634c6f0ca/project2_files/fe_stage.v#L24) 
 
+<<<<<<< HEAD
+
+# FAQ after part-2 
+Q) what is li instructions in add.dump? 
+A) li instruction is one of the pseudo instructions. It is the same as addi reg# x0, imm
+
+Q) I passed test[1-5].mem. why do I fail addi.mem ? 
+A) RISC-V test suites test code all contain bne, auipc, jal instructions. So in order to pass RISC-V test suites, you need to complete those instructions? 
+
+Q)I'd like to use RISC-V emulator for testing the test code. but it won't take dump file. what should I do? 
+A) Unfortunately RISC-V emulator does take only assembly instructions. Hence, we recommend to use another <a href="http://tice.sea.eseo.fr/riscv/"> emulator </a> . you can use *.dec file to copy and paste the contents. 
+
+  
+=======
 Q) I get the error "%Warning-LATCH: de_stage.v:120:1: Latch inferred for signal 'my_DE_stage.type_I_DE' (not all control paths of combinational always assign a value)" when running `make` with Verilator.\
 A) You can disable the Verilator linter by adding the comment `/* verilator lint_off LATCH */` on the line before the warning. 
+>>>>>>> 3bf6f37dd2251e36a8f509bf3386c9018d01d9a1
