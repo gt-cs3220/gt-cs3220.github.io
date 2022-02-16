@@ -1,5 +1,5 @@
 
-part1/jal.elf:     file format elf32-littleriscv
+part2/jal.elf:     file format elf32-littleriscv
 
 
 Disassembly of section .text:
