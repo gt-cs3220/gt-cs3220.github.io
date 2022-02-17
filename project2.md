@@ -229,8 +229,7 @@ A) For part-1, we provide test code. Your code should print out "Pass" message i
 Q) My frame does not load any instruction. Do I need to change anything? 
 A) The provided frame should load the first instruction correctly. If you don't see any instruction, please check whether the contents of imem. For vivado, you can see the contents of imem (please see hw4_fileload.mp4). If you are using verilator, FE_stage.v has the code to print out the imem contents. (https://github.com/gt-cs3220/gt-cs3220.github.io/blob/403908bbb61c6892f030ecd9a915ee8634c6f0ca/project2_files/fe_stage.v#L24) 
 
-# FAQ after part-2 is loaded 
-
+# FAQ after part-2 is updated 
 
 Q) can I change the print messages of sim_main.cpp? 
 
@@ -291,3 +290,37 @@ sed -i '.bak' $(SED_STRING) $(VX_DEFINE)
 If this continues to be an issue, please check out this post as it discusses different solutions for different MacOS versions. 
 
 https://stackoverflow.com/questions/4247068/sed-command-with-i-option-failing-on-mac-but-works-on-linux
+
+
+Q) Behavior of ```lui``` .  The documentation says that ``` - Semantics : R[rd] = imm << 12```
+But U-immediate already shifted the immediate by 12 bits. Do I need to shift the sxt_imm_DE. Do I need to shift immediate value again? 
+
+A) No. if you have already shift immediage bits in instruction into sxt_imm_DE, you don't have to shift sxt_imm_DE again. 
+
+Q) ```bge``` is signed comparison and ```bgeu``` is unsigned comparison. What does it mean and what should I do? 
+
+A)  by default, in verilog all operations are unsigned. However, you can use signed comparisons in verilog by defining wires as signed variables. 
+Here is an example for signed comparisons and unsigned comparisons 
+
+```
+wire signed [`DBITS-1:0] s_regval1_AGEX;  // note *signed* 
+wire signed [`DBITS-1:0] s_regval2_AGEX;  //note *signed* 
+
+assign s_regval1_AGEX = regval1_AGEX;
+assign s_regval2_AGEX = regval2_AGEX;
+
+// signed comparison
+wire s_less;
+assign s_less = (s_regval1_AGEX < s_regval2_AGEX); 
+
+// unsigned comparison
+wire less;
+assign less = (regval1_AGEX < regval2_AGEX); 
+
+``` 
+
+Other methods are discussed <a href="https://www.excamera.com/sphinx/fpga-verilog-sign.html"> here as well </a> 
+
+Q) ```bgeu``` and ```bltu``` use unsigned comparisons. Does it mean I shouldn't sign extend immediage values at the decode stage and keep both unsiged and signed extension versions? 
+
+A) No, in RISC-V, all immediate values are sign-extended. ```begu``` and ```bltu``` are unsigned comparisons with sing-extended values (e.g. ```sxt_imm_DE```) 
