@@ -106,9 +106,17 @@ In summary, for project #2, if you fail to complete them on due dates, but if yo
 **References**
 
 <a href="https://riscvasm.lucasteske.dev/#"> RISC-V Assembly code  </a> 
-<a href="https://www.cs.cornell.edu/courses/cs3410/2019sp/riscv/interpreter/"> RISC-V emulator </a> 
+
+ <a href="https://web.eecs.utk.edu/~smarz1/courses/ece356/notes/assembly/"> summary of RISC-V Assembly coding </a>  
+ 
+<a href="https://www.cs.cornell.edu/courses/cs3410/2019sp/riscv/interpreter/"> RISC-V emulator  (tiny RV2) </a> 
+
+ <a href="http://tice.sea.eseo.fr/riscv/"> RISC-V emulator (full ISA support) </a> 
+ 
 <a href="https://verilator.org/guide/latest/"> Verilator manual  </a> 
+
 <a href="http://gtkwave.sourceforge.net/gtkwave.pdf"> GTKWave manual</a> 
+
 
 
 **Installing Verilator**
@@ -128,7 +136,7 @@ In summary, for project #2, if you fail to complete them on due dates, but if yo
 
 2) If any issues arise, install <a href="https://verilator.org/guide/latest/install.html#install-prerequisites"> prerequisites </a> that are missing
 
-**FAQ)**
+# FAQ
 
 
 
@@ -221,17 +229,65 @@ A) For part-1, we provide test code. Your code should print out "Pass" message i
 Q) My frame does not load any instruction. Do I need to change anything? 
 A) The provided frame should load the first instruction correctly. If you don't see any instruction, please check whether the contents of imem. For vivado, you can see the contents of imem (please see hw4_fileload.mp4). If you are using verilator, FE_stage.v has the code to print out the imem contents. (https://github.com/gt-cs3220/gt-cs3220.github.io/blob/403908bbb61c6892f030ecd9a915ee8634c6f0ca/project2_files/fe_stage.v#L24) 
 
+# FAQ after part-2 is loaded 
 
-# FAQ after part-2 
+
+Q) can I change the print messages of sim_main.cpp? 
+
+A) yes you can add/change debug messages. 
+but please do not change 
+``` if(1 == exitcode)
+
+        std::cout<<"Passed!"<<std::endl;
+        
+    else
+    
+        std::cout<<"Failed. exitcode: "<<exitcode<<std::endl;
+        
+        
+   
+         
+
 Q) what is li instructions in add.dump? 
+
 A) li instruction is one of the pseudo instructions. It is the same as addi reg# x0, imm
 
 Q) I passed test[1-5].mem. why do I fail addi.mem ? 
+
 A) RISC-V test suites test code all contain bne, auipc, jal instructions. So in order to pass RISC-V test suites, you need to complete those instructions? 
 
 Q)I'd like to use RISC-V emulator for testing the test code. but it won't take dump file. what should I do? 
+
 A) Unfortunately RISC-V emulator does take only assembly instructions. Hence, we recommend to use another <a href="http://tice.sea.eseo.fr/riscv/"> emulator </a> . you can use *.dec file to copy and paste the contents. 
 
   
 Q) I get the error "%Warning-LATCH: de_stage.v:120:1: Latch inferred for signal 'my_DE_stage.type_I_DE' (not all control paths of combinational always assign a value)" when running `make` with Verilator.\
 A) You can disable the Verilator linter by adding the comment `/* verilator lint_off LATCH */` on the line before the warning. 
+
+
+Q) Shouldn't ```       if ((timestamp % CLOCK_PERIOD)) " be  "       if (!(timestamp % CLOCK_PERIOD)) " ``` in sim_main.cpp? 
+
+A) Yes, but we are not chaingining it now since it doesn't change the functionality but it changes the timescale of simulation. so we decided not to post the update of the code.  clk shows long and narrow duration is because of this issue. 
+
+Q) Some tests code are long so we need to increase the simulation time. What should I do? 
+A) in sim_main.cpp you can change ```#define RUN_CYCLES 15000```  etc. as you need. 
+
+Q)trace.vcd does not show the entire program execution. what should I do? 
+A) please increase the number in 	``` prj->trace(trace, 2999);``` in sim_main.cpp 
+We don't want to put a high number since longer period means a longer file to work on.  But if this cycle is not sufficient enough, you should increase it. 
+
+
+  Q) SED error in  ./run_tests.sh 
+  
+  A)  Some Mac users have run into issues with the run_tests script. The error caused by sed
+
+        sed: 1: " ...": undefined label
+
+can be fixed by adding '.bak' to the command in the makefile. 
+
+Line 59 of the makefile should then look like this 
+
+sed -i '.bak' $(SED_STRING) $(VX_DEFINE)
+If this continues to be an issue, please check out this post as it discusses different solutions for different MacOS versions. 
+
+https://stackoverflow.com/questions/4247068/sed-command-with-i-option-failing-on-mac-but-works-on-linux
