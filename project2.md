@@ -50,7 +50,7 @@ In this part, you will add more instructions in your pipeline to test RISC-V ISA
 You need to pass the test cases in part-2 test suites. T We will provide RISC-V test suite modified for our ISA to test your design. Testing all the test suits is for your debugging purpose. he test suite will be released soon. 
 
 **Test cases**: 
-In part-2, add, addi, auipc, beq, bge, jal, jalr instructions will be tested. 
+In part-2, all instructions in the test cases in part2 such as  add, addi, auipc, beq, bge, (all branch instructions) jal, jalr instructions will be tested. 
 you need to pass all test cases in test/part2 directory. 
 To test all test cases together, you can use ```run_tests.sh part2``` 
 and it will produce part[1-3]_results.log and part[1-3]_tests.log. 
