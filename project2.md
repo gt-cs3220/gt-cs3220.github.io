@@ -45,7 +45,7 @@ In that case, you will get 50% of part-1.
 
 ***Please do not procrastinate.*** 
 
-## Part 2: Pass a subset of RISC-V test suites 
+## Part 2: Pass a subset of RISC-V test suite 
 In this part, you will add more instructions in your pipeline to test RISC-V ISA. 
 You need to pass the test cases in part-2 test suites. T We will provide RISC-V test suite modified for our ISA to test your design. Testing all the test suits is for your debugging purpose. he test suite will be released soon. 
 
@@ -77,7 +77,7 @@ If you fail part-2 but if you submit part-3, we will use part-3 for part-2 regra
 In that case, you will get 50% of part-2.  
 
 
-## Part 3: Complete the pipeline 
+## Part 3: Complete the pipeline (Finish all instructions)
 **Description**: 
 In this part, you will complete the pipeline to test RISC-V ISA (except CSR instructions).  Your program should run with testall3.mem case we provide. For project-2, we will evaluate your design with only behavioral simulation.  
 
@@ -117,7 +117,7 @@ In summary, for project #2, if you fail to complete them on due dates, but if yo
 
 <a href="http://gtkwave.sourceforge.net/gtkwave.pdf"> GTKWave manual</a> 
 
-
+<a href="https://inst.eecs.berkeley.edu/~cs250/fa10/handouts/tut3-riscv.pdf"> Tutorial about RISC-V TEST SUITE </a> 
 
 **Installing Verilator**
 
@@ -324,3 +324,28 @@ Other methods are discussed <a href="https://www.excamera.com/sphinx/fpga-verilo
 Q) ```bgeu``` and ```bltu``` use unsigned comparisons. Does it mean I shouldn't sign extend immediage values at the decode stage and keep both unsiged and signed extension versions? 
 
 A) No, in RISC-V, all immediate values are sign-extended. ```begu``` and ```bltu``` are unsigned comparisons with sing-extended values (e.g. ```sxt_imm_DE```) 
+
+
+
+Q) I'm still confused with ```signed``` keyword in verilog. Does it perform any sign conversion when I put ```signed``` keyword in the above example? 
+
+A) In Verilog, values are just binary.  s_regval1_AGEX and regval1_AGEX have the same value. Signed unsigned are just a matter of interpretation. When arithmetic operations are used such as comparator, signed/unsigned decide how to interpret the value. 
+e.g.)  In the above example, let's assume that reval1_AGEX  is  0x0000 and regval2_AGEX is  0xFFFF. In that case, s_regval1_AGEX is  0x0000 and s_regval2_AGEX is still 0xFFFF. However, s_regval2_AGEX is interpreted as -1 whereas regval2_AGEX is interpreted as 65535. Hence, 
+
+if (regval1_AGEX < regval2_AGEX) returns false 
+but if (s_regval1_AGEX < s_regval2_AGEX) returns true. 
+
+
+Q) Do I need to put ```signed``` keyword for immediate values? 
+
+A) Yes, even though immediate values are sign-extended, if we want to treat the immediate value as 2's complement value such as in ``` SLTI_I```  instruction case, you need to put ```signed``` keyword. 
+
+# FAQ - part #3 
+
+Q) Can you explain the behavior of ```slti``` and ```sltiu```. Does it store the outcome of shift value? 
+
+A) The outcome of both instructions should be either 0 or 1. It checks whether (R[rs1] < sext(imm)) (signed comparisons for SLTI and unsigned comparisons for SLTIU) and if the condition is true, it sets 1 for the destination. 
+
+Q)  In tiny isa  description, ```srai``` , ```srli``` and  ```slli```  do not have immediate type. What should I do ? 
+
+A) Those instructions follow I-immediate type. However, only LSB 5-bits are used for immediate value. (INST[24:20])  Please note that SRAI, SRL, SLL also use LSB 5-bits are source operand values. 
