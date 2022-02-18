@@ -1,0 +1,100 @@
+
+part2/bne.elf:     file format elf32-littleriscv
+
+
+Disassembly of section .text:
+
+00000200 <_start>:
+ 200:	00000093          	li	ra,0
+ 204:	00000113          	li	sp,0
+ 208:	00000193          	li	gp,0
+ 20c:	00000213          	li	tp,0
+ 210:	00000293          	li	t0,0
+ 214:	00000313          	li	t1,0
+ 218:	00000393          	li	t2,0
+ 21c:	00000413          	li	s0,0
+ 220:	00000493          	li	s1,0
+ 224:	00000513          	li	a0,0
+ 228:	00000593          	li	a1,0
+ 22c:	00000613          	li	a2,0
+ 230:	00000693          	li	a3,0
+ 234:	00000713          	li	a4,0
+ 238:	00000793          	li	a5,0
+ 23c:	00000813          	li	a6,0
+ 240:	00000893          	li	a7,0
+ 244:	00000913          	li	s2,0
+ 248:	00000993          	li	s3,0
+ 24c:	00000a13          	li	s4,0
+ 250:	00000a93          	li	s5,0
+ 254:	00000b13          	li	s6,0
+ 258:	00000b93          	li	s7,0
+ 25c:	00000c13          	li	s8,0
+ 260:	00000c93          	li	s9,0
+ 264:	00000d13          	li	s10,0
+ 268:	00000d93          	li	s11,0
+ 26c:	00000e13          	li	t3,0
+ 270:	00000e93          	li	t4,0
+ 274:	00000f13          	li	t5,0
+ 278:	00000f93          	li	t6,0
+
+0000027c <test_2>:
+ 27c:	00200193          	li	gp,2
+ 280:	fff00093          	li	ra,-1
+ 284:	00100113          	li	sp,1
+ 288:	00209663          	bne	ra,sp,294 <test_2+0x18>
+ 28c:	06301e63          	bne	zero,gp,308 <fail>
+ 290:	00301663          	bne	zero,gp,29c <test_3>
+ 294:	fe209ee3          	bne	ra,sp,290 <test_2+0x14>
+ 298:	06301863          	bne	zero,gp,308 <fail>
+
+0000029c <test_3>:
+ 29c:	00300193          	li	gp,3
+ 2a0:	00100093          	li	ra,1
+ 2a4:	00100113          	li	sp,1
+ 2a8:	00209463          	bne	ra,sp,2b0 <test_3+0x14>
+ 2ac:	00301463          	bne	zero,gp,2b4 <test_3+0x18>
+ 2b0:	04301c63          	bne	zero,gp,308 <fail>
+ 2b4:	fe209ee3          	bne	ra,sp,2b0 <test_3+0x14>
+
+000002b8 <test_4>:
+ 2b8:	00400193          	li	gp,4
+ 2bc:	00000213          	li	tp,0
+ 2c0:	00000093          	li	ra,0
+ 2c4:	00000113          	li	sp,0
+ 2c8:	04209063          	bne	ra,sp,308 <fail>
+ 2cc:	00120213          	addi	tp,tp,1 # 1 <_start-0x1ff>
+ 2d0:	00200293          	li	t0,2
+ 2d4:	fe5216e3          	bne	tp,t0,2c0 <test_4+0x8>
+
+000002d8 <test_5>:
+ 2d8:	00100093          	li	ra,1
+ 2dc:	00009a63          	bnez	ra,2f0 <test_5+0x18>
+ 2e0:	00108093          	addi	ra,ra,1
+ 2e4:	00108093          	addi	ra,ra,1
+ 2e8:	00108093          	addi	ra,ra,1
+ 2ec:	00108093          	addi	ra,ra,1
+ 2f0:	00108093          	addi	ra,ra,1
+ 2f4:	00108093          	addi	ra,ra,1
+ 2f8:	00300393          	li	t2,3
+ 2fc:	00500193          	li	gp,5
+ 300:	00709463          	bne	ra,t2,308 <fail>
+ 304:	00301e63          	bne	zero,gp,320 <pass>
+
+00000308 <fail>:
+ 308:	00000193          	li	gp,0
+ 30c:	00000013          	nop
+ 310:	00000013          	nop
+ 314:	00000013          	nop
+ 318:	00000013          	nop
+ 31c:	0180006f          	j	334 <end>
+
+00000320 <pass>:
+ 320:	00100193          	li	gp,1
+ 324:	00000013          	nop
+ 328:	00000013          	nop
+ 32c:	00000013          	nop
+ 330:	00000013          	nop
+
+00000334 <end>:
+ 334:	00000013          	nop
+ 338:	00000013          	nop
