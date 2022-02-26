@@ -24,8 +24,8 @@ The instruction carries the BHR, index  (e.g. BHR xor PC) information that was u
 * Execution stage: If a branch is mispredicted, flush the pipeline. 
 
 If an instruction is a branch, insert the target address into the BTB. 
-Index the BP with the index value that was propgagted with the instruction to update the BP (2-bit saturating coutner is updated). 
-Update the BHR (use the old BHR that was propogated with the instruction to update the BHR). 
+Index the BP with the index value that was propagated with the instruction to update the BP (2-bit saturating counter is updated). 
+Update the BHR (use the old BHR that was propagated with the instruction to update the BHR). 
 
 **Grading**: 
 We will check whether testall.mem is correctly executed or not. There won’t be any performance improvement in testall.mem because the final execution time is mostly controlled by the key release routine.  With the branch predictor/BTB, your code should finish testall.mem correctly. 
@@ -48,7 +48,7 @@ Evaluate your design with the provided benchmark and report the performance numb
 Please print out cycle count, BP accuracy (# of corrected predicted branch/# branch insts), # taken branches, # not-taken branches. # branches.  The cases are no branch predictor, baseline branch predictor (part-1), and your improved versions. Please show the results those are hurting the performance.  Please show at least 3 different design changes that you have made in addition to the baseline branch predictor. Total 4 branch predictor's results + no branch predictor's result (project #2). 
 
 **Grading**
-The contents of the report will be used for the grading part-2.  Please discuss what design paramters have you changed and discuss why it changes (good or bad or the same) performance.  
+The contents of the report will be used for the grading part-2.  Please discuss what design parameters have you changed and discuss why it changes (good or bad or the same) performance.  
 
 
 **What to submit** 
@@ -57,7 +57,7 @@ Report (max 2 pages)
 ##FAQ 
 * [Q]  I’m debugging my code. I see that there is an X in the BTB. How would it be possible? 
 * [A]FE stage can have pipeline bubbles. BTB/BP might be indexed with uninitialized values. 
-Please also make it sure when you update BTB/BP, only valid branch instructions update the BP/BTB. 
+Please also make it sure when you update BTB/BP, only explicitly branch instructions update the BP/BTB. 
 
 
 * [Q] I don’t see performance improvement in testall.mem. Why ? 
@@ -75,7 +75,7 @@ Please also make it sure when you update BTB/BP, only valid branch instructions 
 * [A] Just like a branch misprediction, we flush the pipeline and also update the BTB with the correct information. 
 
 * [Q] With a branch predictor, will still the pipeline have pipeline bubbles? 
-* [A] The pipeline will have pipelien bubble for dependency stalls but not for branch instructions. 
+* [A] The pipeline will have pipeline bubble for dependency stalls but not for branch instructions. 
 
 
 
@@ -108,4 +108,6 @@ And Front-end uses the previous cycle's BHR value (i.e., reading is done only in
 
 In this assignment, since our pipeline is shallow, I doubt that this would affect any performance though. 
 
+[Q] How to initialize PHT as zero? 
+[A] You explicitly put 0 when it resets. 
 
