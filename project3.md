@@ -27,6 +27,14 @@ If an instruction is a branch, insert the target address into the BTB.
 Index the BP with the index value that was propagated with the instruction to update the BP (2-bit saturating counter is updated). 
 Update the BHR (use the old BHR that was propagated with the instruction to update the BHR). 
 
+Pleae print out cycle count in the sim_main.cpp 
+**Change in sim_main.cpp ** 
+```if(1 == exitcode)
+        std::cout<<"Passed!  cycle_count:" << last_print_inst_count_WB << std::endl;
+    else
+        std::cout<<"Failed. exitcode: "<<exitcode<<std::endl;
+        ```
+
 **Grading**: 
 We will check whether <https://github.com/gt-cs3220/gt-cs3220.github.io/blob/master/project2_files/test/part4/testall.mem> testall.mem</a> is correctly executed or not. There won’t be any performance improvement in testall.mem because the final execution time is mostly controlled by the key release routine.  With the branch predictor/BTB, your code should finish testall.mem correctly. 
 
@@ -35,8 +43,8 @@ We will check whether <https://github.com/gt-cs3220/gt-cs3220.github.io/blob/mas
 type ```make submit``` will generate a submission.zip. 
 Please submit the submission.zip file. Each submission for each group.
 
-*Late Submission Policy
-If you submit project #3 by 3/28(M) 6:00 pm (right after the spring break), you will get 80% of your grade. 
+**Late Submission Policy**
+If you submit project #3 by 3/28(M) 6:00 pm (right after the spring break ends), the late submission penalty will be 20%. 
  
 
 ##Optional Part-2 (Optimization) (2 points) 
@@ -52,7 +60,7 @@ The contents of the report will be used for the grading part-2.  Please discuss 
 
 
 **What to submit** 
-Report (max 2 pages) 
+Report (max 2 pages) (No need to submit the code again) 
 
 ##FAQ 
 * [Q]  I’m debugging my code. I see that there is an X in the BTB. How would it be possible? 
@@ -95,10 +103,10 @@ Please also make it sure when you update BTB/BP, only explicitly branch instruct
 * [Q] Can I submit only part-2 late? 
 * [A] Yes, you can choose to submit only the optional task with 20% penalty. so instead of 2 extra points, you will get 1.6 extra point. 
 
-[Q] Let’s say my instruction stream is as follows: BR(2), ADD, BR(1)
+* [Q] Let’s say my instruction stream is as follows: BR(2), ADD, BR(1)
 When BR(1) is in EX, it will update the BHR. But BR(2) will be in FETCH at that time.
 Which value of BHR should FETCH use? The old value or the updated value from EX?
-[A] This is one of the optimization opportunities. So how you design is up to you for this assignment. Please remember that the branch predictor is just a predictor and it won't affect the correctness of the program. 
+* [A] This is one of the optimization opportunities. So how you design is up to you for this assignment. Please remember that the branch predictor is just a predictor and it won't affect the correctness of the program. 
 
 A best option is that you speculatively update BHR with the predicted outcome of the branch predictor and use it for the next branch predictor prediction. In the execution stage, if BP is wrong, we flush the pipeline, update BHR correctly. 
 
@@ -108,6 +116,11 @@ And Front-end uses the previous cycle's BHR value (i.e., reading is done only in
 
 In this assignment, since our pipeline is shallow, I doubt that this would affect any performance though. 
 
-[Q] How to initialize PHT as zero? 
-[A] You explicitly put 0 when it resets. 
+* [Q] How to initialize PHT as zero? 
+* [A] You explicitly put 0 when it resets. 
+
+
+* [Q] How do I print out the number of corrected branches and the number of mispredicted branches? Do I have to check VCD outputs? 
+
+* [A] You could use VCD outputs. Or you coud add the counter values into ```WB_counters[8], WB_counters[9] etc." and printout them in the sim_main.cpp. 
 
