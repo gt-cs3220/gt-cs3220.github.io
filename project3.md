@@ -28,19 +28,19 @@ Index the BP with the index value that was propagated with the instruction to up
 Update the BHR (use the old BHR that was propagated with the instruction to update the BHR). 
 
 **Grading**: 
-We will check whether testall.mem is correctly executed or not. There won’t be any performance improvement in testall.mem because the final execution time is mostly controlled by the key release routine.  With the branch predictor/BTB, your code should finish testall.mem correctly. 
+We will check whether <https://github.com/gt-cs3220/gt-cs3220.github.io/blob/master/project2_files/test/part4/testall.mem> testall.mem</a> is correctly executed or not. There won’t be any performance improvement in testall.mem because the final execution time is mostly controlled by the key release routine.  With the branch predictor/BTB, your code should finish testall.mem correctly. 
 
 **What to submit**
 ** A zip file of your source code. The zip file must contain the following:**
 type ```make submit``` will generate a submission.zip. 
 Please submit the submission.zip file. Each submission for each group.
 
-##Late Submission Policy
+*Late Submission Policy
 If you submit project #3 by 3/28(M) 6:00 pm (right after the spring break), you will get 80% of your grade. 
  
 
 ##Optional Part-2 (Optimization) (2 points) 
-In this design, you can change your BTB and BR designs to improve  performance for tower.mem You probably want to add counters to measure branch predictor accuracy (correctly predicted branches vs. mispredicted branches.)  You can explore other options such as using different hash functions, different bits (e.g. instead of PC[9:2]. PC[17:10] xor PC[9:2] etc.), or change the branch predictor size (increase or decrease the BP size or BTB size etc.) You could implement other branch predictors such as perceptron branch predictor. Instead of 2-bit saturating counter, you can just use the last time predictor (i.e., just 1 bit) 
+In this design, you can change your BTB and BR designs to improve  performance for tower.mem You probably want to add counters to measure branch predictor accuracy (correctly predicted branches vs. mispredicted branches.)  You can explore other options such as using different hash functions, different bits (e.g. instead of PC[9:2]. PC[17:10] xor PC[9:2] etc.), or change the branch predictpro	or size (increase or decrease the BP size or BTB size etc.) You could implement other branch predictors such as perceptron branch predictor. Instead of 2-bit saturating counter, you can just use the last time predictor (i.e., just 1 bit) 
 
 And discuss your design space explorations and write a report about your evaluations. 
 
