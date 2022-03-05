@@ -208,22 +208,22 @@ Homework assignments are individual, but you can get help from others. If you ge
 |      | 2/16/22 |                | out of order processor                    | HW#5 (W)    | [Project #2-part 1](https://gt-cs3220.github.io/project2.html)  (F) |                                   |
 | 7    | 2/21/22 |                | branch predictor                        |             |                       |                                   |
 |      | 2/23/22 |                | branch predictor                                    | HW #6 (W)   | [Project #2-part 2](https://gt-cs3220.github.io/project2.html) (F)        |                                   |
-| 8    | 2/28/22 |                | power                        |             |                       |                                   |
-|      | 3/2/22  |                | GPU architecture                          | HW #7 (W)   |  Project #2-part 3 (F)                    |                                   |
-| 9    | 3/7/22  |                | GPU architecture                          |             |                       |                                   |
-|      | 3/9/22  |                | Vortex architecture                       | HW #8 (W)   |       |                                   |
+| 8    | 2/28/22 |                | branch predictor                       |             |                       |                                   |
+|      | 3/2/22  |                | power                          | HW #7 (W)   |  Project #2-part 3 (F)                    |                                   |
+| 9    | 3/7/22  |                | FPGA-HLS                          |             |                       |                                   |
+|      | 3/9/22  |                | Floating Points                        | HW #8 (W)   |       |                                   |
 | 10   | 3/14/22 |                | review day                                |             |  [Project #3](https://gt-cs3220.github.io/project3.html)  (M)                       |                                   |
 |      | 3/16/22 |                | mid-term                                  |             |                       |                                   |
 | 11   | 3/21/22 |                | Spring break                              |             |                       |                                   |
 |      | 3/23/22 |                | Spring break                              |             |                       |                                   |
-| 12   | 3/28/22 |                | ML accelerator                            |             |                       |                                   |
-|      | 3/30/22 |                | systolic Arrays                           | HW#9 (W)    |                       |                                   |
-| 13   | 4/4/22  | HLS            | HLS optimization (I)                      |             |                       | HLS ch 2 & ch 3                   |
-|      | 4/6/22  |                | Project #5                                | HW #10 (W)  | Project #4 (F)        |                                   |
-| 14   | 4/11/22 |                | HLS - loop optimizations                  |             |                       |                                   |
-|      | 4/13/22 |                | HLS  -MatrixMul                           | HW #11 (W)  |                       |                                   |
-| 15   | 4/18/22 | Architecture   | security                                  |             |                       |                                   |
-|      | 4/20/22 |                | research presentation                     | HW #12 (W)  | Project #5 (F)        |                                   |
+| 12   | 3/28/22 |                |          GPU                |             |                       |                                   |
+|      | 3/30/22 |                |           GPU/ Vortex architecture               | HW#9 (W)    |                       |                                   |
+| 13   | 4/4/22  | HLS            |         Vortex            |             |                       | HLS ch 2 & ch 3                   |
+|      | 4/6/22  |                |      ML accelerator                           | HW #10 (W)  | Project #4 (F)        |                                   |
+| 14   | 4/11/22 |                |    ML accelerator                |             |                       |                                   |
+|      | 4/13/22 |                |   HLS                       | HW #11 (W)  |                       |                                   |
+| 15   | 4/18/22 | Architecture   |   HLS                                 |             |                       |                                   |
+|      | 4/20/22 |                |     security                 | HW #12 (W)  | Project #5 (F)        |                                   |
 | 16   | 4/25/22 |                | research presentation & review            |             |                       |                                   |
 |  17    | 5/4/22  |                | Final exam  2:40 pm - 5:30 pm             |             |                       |                                   |
 
