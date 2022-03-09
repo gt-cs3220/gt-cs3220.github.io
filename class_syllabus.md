@@ -11,7 +11,7 @@
 
 **Class time: M/W 2:00 PM - 3:15 PM EST** 
 
-**Instructor's Office hours:** Monday 3:30-4:00 (https://bluejeans.com/664602235/8139)  or by appointment.
+**Instructor's Office hours:** Monday 3:30-4:00 (KACB2344)  or by appointment.
 
 
 **TAs**: Bhanu Garg, Anurag Kar, Xueyang Liu
