@@ -1,10 +1,10 @@
-#Project #3 
+# Project 3 
 **Due: 3/14/22 Monday (6:00 pm)**
 
 This is a group project continuing on your project #2. 
 In this project, you will implement a branch predictor and the BTB. 
 
-##Part-1 (Branch Predictor/BTB) (10 points): 
+## Part-1 (Branch Predictor/BTB) (10 points): 
 In this design, you will add a baseline branch predictor and the BTB on your pipeline. 
 The baseline branch predictor uses a g-share branch predictor. BHR length is 8 bits. 
 Suggested design options are : use XOR of  PC[9:2] bits and BHR to index the PHT (Pattern History Table). Each of the 2bit counter in the PHT is initialized with 00. 
@@ -40,8 +40,8 @@ else
 **Grading**: 
 We will check whether <https://github.com/gt-cs3220/gt-cs3220.github.io/blob/master/project2_files/test/part4/testall.mem> testall.mem</a> is correctly executed or not. There won’t be any performance improvement in testall.mem because the final execution time is mostly controlled by the key release routine.  With the branch predictor/BTB, your code should finish testall.mem correctly. 
 
-**What to submit**
-** A zip file of your source code. The zip file must contain the following:**
+**What to submit:**
+**A zip file of your source code. The zip file must contain the following:**
 type ```make submit``` will generate a submission.zip. 
 Please submit the submission.zip file. Each submission for each group.
 
@@ -49,7 +49,7 @@ Please submit the submission.zip file. Each submission for each group.
 If you submit project #3 by 3/28(M) 6:00 pm (right after the spring break ends), the late submission penalty will be 20%. 
  
 
-##Optional Part-2 (Optimization) (2 points) 
+## Optional Part-2 (Optimization) (2 points) 
 In this design, you can change your BTB and BR designs to improve  performance for tower.mem You probably want to add counters to measure branch predictor accuracy (correctly predicted branches vs. mispredicted branches.)  You can explore other options such as using different hash functions, different bits (e.g. instead of PC[9:2]. PC[17:10] xor PC[9:2] etc.), or change the branch predictpro	or size (increase or decrease the BP size or BTB size etc.) You could implement other branch predictors such as perceptron branch predictor. Instead of 2-bit saturating counter, you can just use the last time predictor (i.e., just 1 bit) 
 
 And discuss your design space explorations and write a report about your evaluations. 
@@ -64,7 +64,7 @@ The contents of the report will be used for the grading part-2.  Please discuss 
 **What to submit** 
 Report (max 2 pages) (No need to submit the code again) 
 
-##FAQ 
+## FAQ 
 * [Q]  I’m debugging my code. I see that there is an X in the BTB. How would it be possible? 
 * [A]FE stage can have pipeline bubbles. BTB/BP might be indexed with uninitialized values. 
 Please also make it sure when you update BTB/BP, only explicitly branch instructions update the BP/BTB. 
@@ -124,5 +124,5 @@ In this assignment, since our pipeline is shallow, I doubt that this would affec
 
 * [Q] How do I print out the number of corrected branches and the number of mispredicted branches? Do I have to check VCD outputs? 
 
-* [A] You could use VCD outputs. Or you coud add the counter values into ```WB_counters[8], WB_counters[9] etc." and printout them in the sim_main.cpp. 
+* [A] You could use VCD outputs. Or you coud add the counter values into ```WB_counters[8], WB_counters[9]``` etc. and printout them in the sim_main.cpp. 
 
