@@ -27,13 +27,15 @@ If an instruction is a branch, insert the target address into the BTB.
 Index the BP with the index value that was propagated with the instruction to update the BP (2-bit saturating counter is updated). 
 Update the BHR (use the old BHR that was propagated with the instruction to update the BHR). 
 
-Pleae print out cycle count in the sim_main.cpp 
-**Change in sim_main.cpp ** 
-```if(1 == exitcode)
-        std::cout<<"Passed!  cycle_count:" << last_print_inst_count_WB << std::endl;
-    else
-        std::cout<<"Failed. exitcode: "<<exitcode<<std::endl;
-        ```
+Pleae print out cycle count in the sim_main.cpp
+**Change in sim_main.cpp** 
+
+```
+if(1 == exitcode)
+    std::cout<<"Passed!  cycle_count:" << last_print_inst_count_WB << std::endl;
+else
+    std::cout<<"Failed. exitcode: "<<exitcode<<std::endl;
+```
 
 **Grading**: 
 We will check whether <https://github.com/gt-cs3220/gt-cs3220.github.io/blob/master/project2_files/test/part4/testall.mem> testall.mem</a> is correctly executed or not. There won’t be any performance improvement in testall.mem because the final execution time is mostly controlled by the key release routine.  With the branch predictor/BTB, your code should finish testall.mem correctly. 
