@@ -18,6 +18,9 @@ case $part in
   part4)
     rm part4_tests.log
 	;;
+  exam)
+    rm exam_tests.log
+	;;
   all)
 	rm all_tests.log
 	;;
@@ -79,6 +82,20 @@ case $part in
 		grep -i passed part4_tests.log |wc -l
 		echo "Number of failed tests:"
 		grep -i failed part4_tests.log |wc -l
+	;;
+	exam)
+		echo RUNNING EXAM$'\n'
+		for filename in $PWD/test/exam/*.mem;do
+			echo $'\n'TESTING: $filename >> exam_tests.log
+			IDMEMINITFILE=$filename make tests>> exam_tests.log
+		done
+		grep -E 'TESTING|Failed|Passed' exam_tests.log>exam_results.log
+		echo "Total number of tests:"
+		grep -i testing exam_tests.log |wc -l
+		echo "Number of passed tests:"
+		grep -i passed exam_tests.log |wc -l
+		echo "Number of failed tests:"
+		grep -i failed exam_tests.log |wc -l
 	;;
 	all)
 		echo RUNNING ALL$'\n'
