@@ -217,7 +217,7 @@ Homework assignments are individual, but you can get help from others. If you ge
 | 11   | 3/21/22 |                | Spring break                              |             |                       |                                   |
 |      | 3/23/22 |                | Spring break                              |             |                       |                                   |
 | 12   | 3/28/22 |                |          GPU                |             |                       |                                   |
-|      | 3/30/22 |                |           GPU/ Vortex architecture               | HW#9 (W)    |                       |                                   |
+|      | 3/30/22 |                |           GPU/ Vortex architecture               | [HW#9 (W)](https://gt-cs3220.github.io/hw9.html)    |                       |                                   |
 | 13   | 4/4/22  | HLS            |         Vortex            |             |                       | HLS ch 2 & ch 3                   |
 |      | 4/6/22  |                |      ML accelerator                           | HW #10 (W)  | Project #4 (F)        |                                   |
 | 14   | 4/11/22 |                |    ML accelerator                |             |                       |                                   |
