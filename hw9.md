@@ -5,7 +5,7 @@
 
 In this assignments, you will learn Vivado HLS.   
 
-**please review lec_hls.pptx for background.** 
+**please review 12.lec_hls.pptx for background.** 
 
 In this assignment, you will create a simple Vivado HLS project. 
 Please install [vitis tool chain in Xilinix] (https://www.xilinx.com/support/download/index.html/content/xilinx/en/downloadNav/vitis.html). 
@@ -27,7 +27,7 @@ You can use GUI interface to start the project which is described in the below.
 Or you can simply execute TCL script in the command window. 
 On windows, you can use "Vitis HLS 2020.2 Command Prompt" 
 
- <img src="vitis_commands.png" width="100"> 
+ <img src="figs/vitis_commands.png" width="100"> 
 
 ```vitis_hls -f run_hls.tcl```
 
