@@ -219,7 +219,7 @@ Homework assignments are individual, but you can get help from others. If you ge
 | 12   | 3/28/22 |                |          GPU                |             |                       |                                   |
 |      | 3/30/22 |                |           GPU/ Vortex architecture               | [HW#9 (W)](https://gt-cs3220.github.io/hw9.html)    |                       |                                   |
 | 13   | 4/4/22  | HLS            |         Vortex            |             |                       | HLS ch 2 & ch 3                   |
-|      | 4/6/22  |                |      ML accelerator                           | HW #10 (W)  | Project #4 (F)        |                                   |
+|      | 4/6/22  |                |      ML accelerator                           | [HW #10 (W)](https://gt-cs3220.github.io/hw10.html)  | Project #4 (F)        |                                   |
 | 14   | 4/11/22 |                |    ML accelerator                |             |                       |                                   |
 |      | 4/13/22 |                |   HLS                       | HW #11 (W)  |                       |                                   |
 | 15   | 4/18/22 | Architecture   |   HLS                                 |             |                       |                                   |
