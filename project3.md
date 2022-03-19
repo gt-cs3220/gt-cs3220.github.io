@@ -1,5 +1,5 @@
 # Project 3 
-**Due: 3/14/22 Monday (6:00 pm)**
+**Due: 3/14/22 Monday (6:00 pm): Part-1**
 
 This is a group project continuing on your project #2. 
 In this project, you will implement a branch predictor and the BTB. 
@@ -49,7 +49,7 @@ Please submit the submission.zip file. Each submission for each group.
 If you submit project #3 by 3/28(M) 6:00 pm (right after the spring break ends), the late submission penalty will be 20%. 
  
 
-## Optional Part-2 (Optimization) (2 points) 
+## Optional Part-2 (Optimization) (2 points) : Accept until April 6th 
 In this design, you can change your BTB and BR designs to improve  performance for tower.mem You probably want to add counters to measure branch predictor accuracy (correctly predicted branches vs. mispredicted branches.)  You can explore other options such as using different hash functions, different bits (e.g. instead of PC[9:2]. PC[17:10] xor PC[9:2] etc.), or change the branch predictpro	or size (increase or decrease the BP size or BTB size etc.) You could implement other branch predictors such as perceptron branch predictor. Instead of 2-bit saturating counter, you can just use the last time predictor (i.e., just 1 bit) 
 
 And discuss your design space explorations and write a report about your evaluations. 
