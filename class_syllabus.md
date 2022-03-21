@@ -114,7 +114,7 @@ Textbooks: All online books are available in the library . (http://library.gatec
 
 Projects #1-#4,homework, mid-term are the same as option #1. 
 
-Project #5, Project #6, and the Final exam can be substituted with a research project. 
+Project #5,  and the Final exam can be substituted with a research project. 
 
 The research project topics will be announced in the later semester.
 
