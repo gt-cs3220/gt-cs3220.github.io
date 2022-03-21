@@ -126,3 +126,6 @@ In this assignment, since our pipeline is shallow, I doubt that this would affec
 
 * [A] You could use VCD outputs. Or you coud add the counter values into ```WB_counters[8], WB_counters[9]``` etc. and printout them in the sim_main.cpp. 
 
+* [Q] I ran tower.mem and my test case is failed unlike other test cases. Is that expected? 
+ *[A] Yes. the default tower.mem returns "255". The tower.c returs numMoves (https://github.com/gt-cs3220/gt-cs3220.github.io/blob/ea4547bb68f674466093f05bc347d16dfc14cc3e/project2_files/test/towers/towers.c#L258). The mem file's correct output is 255.  You can change https://github.com/gt-cs3220/gt-cs3220.github.io/blob/ea4547bb68f674466093f05bc347d16dfc14cc3e/project2_files/test/towers/towers.c#L22 to change the num of disk to move to change the length of the code.  
+ 
