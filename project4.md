@@ -1,5 +1,6 @@
 # Project 4 
-**Due: 4/8/22 Friday (6:00 pm): Part-1**
+**Due: 4/8/22 Friday (6:00 pm): Part-1 & part-2**
+Both part-1 and part-2 dues are the same. 
 
 This is a group project continuing on your project #3. 
 In this project, you will test your RISC-V design on pynq board. 
