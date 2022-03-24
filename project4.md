@@ -5,9 +5,9 @@ This is a group project continuing on your project #3.
 In this project, you will test your RISC-V design on pynq board. 
 
 ## Part-1: Vivado Simulation (5 points) 
-Before you run your design on FPGA, in this step you will simulate your design on Vivado's simulation. Vivado simulation models the hardware behavior more accurately than verilator. If your verilog code followed general HDL rules, you code would just run fine with vivado simulation. But if your code has uninitialized code or sequential code, it might not work with vivado simulation. In that case, you have to debug your code.  Those who were sensitive to the verilator versions might encounter this problem. 
+Before you run your design on FPGA (towers.mem), in this step you will simulate your design on Vivado's simulation. Vivado simulation models the hardware behavior more accurately than verilator. If your verilog code followed general HDL rules, you code would just run fine with vivado simulation. But if your code has uninitialized code or sequential code, it might not work with vivado simulation. In that case, you have to debug your code.  Those who were sensitive to the verilator versions might encounter this problem. 
 
-Please make it sure your add test code and set the path correctly. Please review the "project2_vivado_check.mp4" in canvas/Files/videos. 
+Please make it sure your add test code and set the path correctly. Please use towers.mem file that is released for project #3 part-2. Please review the "project2_vivado_check.mp4" in canvas/Files/videos. 
 
 You can check last_WB_value[10] show 255. The example screenshot is as follows. 
 <img src="figs/prj4.png">
@@ -29,5 +29,10 @@ In this step, you will connect your pipeline with ARM processor similar to HW#10
 More instructions will be posted soon. 
 
 
+**FAQ**
+
+*Q: My design showed that r10 value is 255 but then it changes to another value. 
+
+*A: Currently, we have not implemented the exit feature of the processor. Hence, the PC register value will start to fetch instructions after it overflows. For part-1, please adjust the simulation time. 
 
 
