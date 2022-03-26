@@ -8,7 +8,7 @@ In this project, you will test your RISC-V design on pynq board.
 ## Part-1: Vivado Simulation (5 points) 
 Before you run your design on FPGA (towers.mem), in this step you will simulate your design on Vivado's simulation. Vivado simulation models the hardware behavior more accurately than verilator. If your verilog code followed general HDL rules, you code would just run fine with vivado simulation. But if your code has uninitialized code or sequential code, it might not work with vivado simulation. In that case, you have to debug your code.  Those who were sensitive to the verilator versions might encounter this problem. 
 
-Please make it sure your add test code and set the path correctly. Please use towers.mem file that is released for project #3 part-2. Please review the "project2_vivado_check.mp4" in canvas/Files/videos. 
+Please make sure your add test code and set the path correctly. Please use towers.mem file that is released for project #3 part-2. Please review the "project2_vivado_check.mp4" in canvas/Files/videos. 
 
 You can check last_WB_value[10] show 255. The example screenshot is as follows. 
 <img src="figs/prj4.png">
@@ -37,7 +37,7 @@ This vitis code doesn't have any contents other than having ports (inputs and ou
 
 *[Step-2-Vivado]* 
 
-[1] Create a new vivado project with adding project#2 frame (or you can use the same vivado which is used in part-1 of project #4) 
+[1] Create a new vivado project by adding project#2 frame (or you can use the same vivado which is used in part-1 of project #4) 
 Please see wb_stage.v tb_project2.v project2_frame.v for your references. 
 
 [1.a]  Now you modify project #2 frame to have two additional ports. 
@@ -63,16 +63,26 @@ add reg10 value ports in wb_stage.v
 example code 
 
 ```
+assign reg10_val = 32'd33;  
+ // assign reg10_val = 32'd33; // to check out2 works correctly
 
-assign reg10_val = 32'd33; 
+ //assign reg10_val = reg10_val_latch;  // to check reg10 value
+```
+```
+ always @(posedge clk) begin
+
+    //if ((last_WB_value[10] == 32'hff) && (reg10_val_latch == 0)) // reg10 should be 0xff
+    if ((last_WB_value[10] == 32'hf0) && (reg10_val_latch == 0))  // intentionally check reg10 value is other than 0xff to really prove that this logic works as expected
+        reg10_val_latch <= 32'hff;
+  end
+
 ```
 
 [1.b] Change the reset signal to be negative edge triggered 
 
 '''assign reset = reset_bar;''' 
 
-[1.c] change tb_project2.v as active low. 
-
+[1.c] change tb_project2.v as active low and add additional ports in project2_frame 
 
 
 [2] Create a block design, IP repo setting to import IP from step-1, and add comm IP to the block diagram. 
@@ -93,9 +103,9 @@ assign reg10_val = 32'd33;
 
 [6]Create HDL wrapper go to “sources” and right click on your block design name, click on “Create HLD wrapper”. Click on “Let Vivado manage wrapper and auto-update” option and press “OK”. Make the design_wrapper as a *top module* by right clock in the source code "Set as Top". 
 
-[7] Synthesize/implementation/generate bitstreams
+[7] Synthesize/implementation/ generate bitstreams
 
-[8] Click on Project -> Generate Bitstream (it will ask to synthesize etc. and click yes)
+[9] Click on Project -> Generate Bitstream (it will ask to synthesize etc. and click yes)
 
 
 [9] Click on File -> Export -> Export block design, select the option of including bitstream
@@ -117,35 +127,49 @@ out1 value will keep changing since it's a cycle count and out2 value will be th
 [13] modify the wb_stage.v to check reg10 value. 
 change reg10_val to store reg10_val_latch. 
 
+
 [14] open Block Diagram and refresh the design 
 
-<img src="figs/prj4/update_module.png"> 
+<img src="figs/prj4/updatemodule.png"> 
+
+[15] Run Synthesis/Implementation 
+
+[16] Run simulation with three options (behavior simulation, post-synthesis/ post implementation functional simulations etc.)  and check reg10_val gets the expected value. 
+*include the screenshots of simulations in your report* 
 
 
-
-[15] Generate bistream and repeat the steps 8 -12 . Check whether out2 value is 255. 
+[17] Generate bistream and repeat the steps 8 -12 . Check whether out2 value is 255. 
 *include the screenshot of ipynb on your report* 
 
-[16] modify the wb_stage.v to check reg10 value to something else to prove that xff is only when it works fine. 
-[17] Repeat the step to generate bitstreams run ipynb. 
+[18] modify the wb_stage.v to check reg10 value to something else to prove that xff is only when it works fine. 
+[19] Repeat the step to generate bitstreams run ipynb. 
 *include the screenshot of ipynb on your report* 
 
 **What to submit** 
-[1] Report to include screenshots of (part-1, part-2 step 12, part-2 step 15, part-2 step 16) 
-[2] a zip file that includes  (riscv.zip) that shows xff. 
 
+
+[1] A report to include screenshots of 3 different simulations for towers.mem 
+ (part-1, post synthesis/post implementation  functional/timing simulation) 
+ 
+[2] A report to include screenshots of 3 different cases: 
+  constant value as output, correct reg10 value check in WB_stage, incorrect reg10 value check  in WB_stage 
+step-12, step-17, step-19. 
+
+Please add explanations(add annotations in your screenshots) to explain that your design works as expected. 
+
+[3] a zip file that includes  (riscv.zip) that includes. 
 riscv.bit, riscv.hwh. riscv.tcl 
 
-[3] a vivado xpr file prj4.zip 
-(please make it sure all the  source code is included in the xpr file) 
+[4] a vivado xpr file prj4.zip 
+(please make  sure all the  source code is included in the xpr file) 
 
-[4] source code (make submit) 
+
 
 **Grading policy** 
 
-If you include your screenshot and show ipynb results, you will get at least 3 points. 
+If you include your screenshot and show ipynb results, you will get at least 3 points regardless of whether your design works or not as longs as you complete all the steps. 
 you should be able to generate riscv.bit file.
-If your design works on board. (aka, you see out1 or out2 value shows 255), you will get a full credit. 
+If your design works on board. (aka, you see out1 or out2 value shows 255), you will get a full credit (5 pts). 
 
 
 
@@ -154,5 +178,6 @@ If your design works on board. (aka, you see out1 or out2 value shows 255), you 
 *Q: My design showed that r10 value is 255 but then it changes to another value. 
 
 *A: Currently, we have not implemented the exit feature of the processor. Hence, the PC register value will start to fetch instructions after it overflows. For part-1, please adjust the simulation time. 
+
 
 
