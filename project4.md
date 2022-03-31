@@ -129,7 +129,7 @@ out1 value will keep changing since it's a cycle count and out2 value will be th
 change reg10_val to store reg10_val_latch. 
 </s>
 
-[14] open Block Diagram and refresh the design 
+hw[14] open Block Diagram and refresh the design 
 
 <img src="figs/prj4/updatemodule.png"> 
 
