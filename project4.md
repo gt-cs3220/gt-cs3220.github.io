@@ -1,4 +1,4 @@
-# Project 4 
+# Project 4 (8 pts) 
 **Due: 4/8/22 Friday (6:00 pm): Part-1 & part-2**
 Both part-1 and part-2 dues are the same. 
 
@@ -25,9 +25,8 @@ Please note that screenshot submission will be used for grading only when your p
 
 
 
-##  Part-2: Run your pipeline on Pynq board (5 points) 
-In this step, you will connect your pipeline with ARM processor similar to HW#10. 
-More instructions will be posted soon. 
+##  Part-2: Generate bistreams for your pipeline design (5 pts). 
+<s>In this step, you will connect your pipeline with ARM processor similar to HW#10.</s> Since Pynq board + Slurm setup is not workign yet, we will do all the steps except for running it on pynq boards. In this part, you will generate bistreams. 
 
 
 *[Step-1-Vitis]*
@@ -119,14 +118,16 @@ copy hwh file . .gen/sources_1/bd/design_1/hw_handoff   hwh file.
 
 make sure name all the same file name (e.g. riscv.*) 
 
+<s>
 [11] Go to pynq boards and upload the files that are generated in the above step and also ipynb files.  start riscv_test.ipyb 
 
 [12] read the contents and check out1 and out2 value. 
 out1 value will keep changing since it's a cycle count and out2 value will be the constant that you put in step 1. 
 *include the screenshot of ipynb on your report* 
+
 [13] modify the wb_stage.v to check reg10 value. 
 change reg10_val to store reg10_val_latch. 
-
+</s>
 
 [14] open Block Diagram and refresh the design 
 
@@ -134,16 +135,16 @@ change reg10_val to store reg10_val_latch.
 
 [15] Run Synthesis/Implementation 
 
-[16] Run simulation with three options (behavior simulation, post-synthesis/ post implementation functional simulations etc.)  and check reg10_val gets the expected value. 
+[16] Run simulation with three options (behavior simulation, post-synthesis/ post implementation functional simulations etc.) and check reg10_val gets the expected value in your simulation. 
 *include the screenshots of simulations in your report* 
 
 
-[17] Generate bistream and repeat the steps 8 -12 . Check whether out2 value is 255. 
-*include the screenshot of ipynb on your report* 
+[17] Generate bistream and repeat the steps 8 -12 . <s> Check whether out2 value is 255. *include the screenshot of ipynb on your report*  </s>
 
+<s>
 [18] modify the wb_stage.v to check reg10 value to something else to prove that xff is only when it works fine. 
 [19] Repeat the step to generate bitstreams run ipynb. 
-*include the screenshot of ipynb on your report* 
+*include the screenshot of ipynb on your report* </s>
 
 **What to submit** 
 
@@ -151,14 +152,14 @@ change reg10_val to store reg10_val_latch.
 [1] A report to include screenshots of 3 different simulations for towers.mem 
  (part-1, post synthesis/post implementation  functional/timing simulation) 
  
-[2] A report to include screenshots of 3 different cases: 
-  constant value as output, correct reg10 value check in WB_stage, incorrect reg10 value check  in WB_stage 
-step-12, step-17, step-19. 
+[2] A report to include screenshots of blockdiagram <s>3</s> 2 different cases: 
+  constant value as output, correct reg10 value check in WB_stage, <s>incorrect reg10 value check </s> in WB_stage  
+<s> step-12, step-17, step-19.  </s>
 
-Please add explanations(add annotations in your screenshots) to explain that your design works as expected. 
+<s>Please add explanations(add annotations in your screenshots) to explain that your design works as expected.  </s>
 
 [3] a zip file that includes  (riscv.zip) that includes. 
-riscv.bit, riscv.hwh. riscv.tcl 
+riscv.bit, riscv.hwh. riscv.tcl for the version that produces 0xff in reg10. 
 
 [4] a vivado xpr file prj4.zip 
 (please make  sure all the  source code is included in the xpr file) 
@@ -167,9 +168,11 @@ riscv.bit, riscv.hwh. riscv.tcl
 
 **Grading policy** 
 
-If you include your screenshot and show ipynb results, you will get at least 3 points regardless of whether your design works or not as longs as you complete all the steps. 
+<s> If you include your screenshot and show ipynb results, you will get at least 3 points regardless of whether your design works or not as longs as you complete all the steps. 
 you should be able to generate riscv.bit file.
-If your design works on board. (aka, you see out1 or out2 value shows 255), you will get a full credit (5 pts). 
+If your design works on board. (aka, you see out1 or out2 value shows 255), you will get a full credit (5 pts).  </s> 
+
+Grades are based on reports and the ability of generating bitstreams. If your design cannot be synthesized, you won't get any credits. 
 
 
 
