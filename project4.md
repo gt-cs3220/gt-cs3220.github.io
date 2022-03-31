@@ -2,7 +2,7 @@
 **Due: 4/8/22 Friday (6:00 pm): Part-1 & part-2**
 Both part-1 and part-2 dues are the same. 
 
-This is a group project continuing on your project #3. 
+This is a group project continuing on your *project #3*. 
 In this project, you will test your RISC-V design on pynq board. 
 
 ## Part-1: Vivado Simulation (5 points) 
@@ -26,7 +26,7 @@ Please note that screenshot submission will be used for grading only when your p
 
 
 ##  Part-2: Generate bistreams for your pipeline design (5 pts). 
-<s>In this step, you will connect your pipeline with ARM processor similar to HW#10.</s> Since Pynq board + Slurm setup is not workign yet, we will do all the steps except for running it on pynq boards. In this part, you will generate bistreams. 
+<s>In this step, you will connect your pipeline with ARM processor similar to HW#10.</s> Since Pynq board + Slurm setup is still in the development stage, we will do all the steps except for running it on pynq boards. In this part, you will generate bistreams. 
 
 
 *[Step-1-Vitis]*
