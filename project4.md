@@ -1,4 +1,4 @@
-# Project 4 (8 pts) 
+# Project 4 (10 pts) 
 **Due: 4/8/22 Friday (6:00 pm): Part-1 & part-2**
 Both part-1 and part-2 dues are the same. 
 
