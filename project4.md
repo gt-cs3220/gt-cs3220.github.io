@@ -150,7 +150,7 @@ hw[14] open Block Diagram and refresh the design
 
 
 [1] A report to include screenshots of 3 different simulations for towers.mem 
- (part-1, post synthesis/post implementation  functional/timing simulation) 
+ (part-1, post synthesis/post implementation  functional simulation) 
  
 [2] A report to include screenshots of blockdiagram <s>3</s> 2 different cases: 
   constant value as output, correct reg10 value check in WB_stage, <s>incorrect reg10 value check </s> in WB_stage  
@@ -182,5 +182,21 @@ Grades are based on reports and the ability of generating bitstreams. If your de
 
 *A: Currently, we have not implemented the exit feature of the processor. Hence, the PC register value will start to fetch instructions after it overflows. For part-1, please adjust the simulation time. 
 
+*Q: I don't see any differences on blockdiagram screenshot for three different cases. what should I turn in? 
 
+*A: You still submit the blockdiagrams to show your efforts. You will use the bistreams later. (we encourage for you to test them now) 
+
+*Q: I passed all test cases but still failed towers.mem. what should I do? 
+
+*A: some debugging tips 
+1) make  sure, you are not looking at wrong message (it should be reg10's value, not "Failed/Passed" message)
+
+(2) you gave enough time to run 
+
+(too short/too long will show a wrong value.) Too long, the PC will be overflow and restart the program.  few Piazza posting shows tips how to do that. 
+
+(3) check w/o branch predictor and see whether a pipeline flush is causing a problem.
+
+(4) if you check all these then compare your instruction PC  with twoers.run (only PC , not the rest of printf statement) 
+The file is now at Canvas/Files/Misc. Please note that towers.run wans't originally produced for class distribution so the print statements themselves do not match with yours. But you can still compare PC addresses.
 
