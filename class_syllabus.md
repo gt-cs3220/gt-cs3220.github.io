@@ -223,7 +223,7 @@ Homework assignments are individual, but you can get help from others. If you ge
 | 14   | 4/11/22 |                |    ML accelerator                |             |                       |                                   |
 |      | 4/13/22 |                |   HLS                       | HW #11 (W)  |                       |                                   |
 | 15   | 4/18/22 | Architecture   |   HLS                                 |             |                       |                                   |
-|      | 4/20/22 |                |     security                 | HW #12 (W)  | Project #5 (F)        |                                   |
-| 16   | 4/25/22 |                | research presentation & review            |             |                       |                                   |
+|      | 4/20/22 |                |     security                 | HW #12 (W)  |       |                                   |
+| 16   | 4/25/22 |                | research presentation & review            |      [Project #5 (M)]( https://gt-cs3220.github.io/project5.html)        |                       |                                   |
 |  17    | 5/4/22  |                | Final exam  2:40 pm - 5:30 pm             |             |                       |                                   |
 

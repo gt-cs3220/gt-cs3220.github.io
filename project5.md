@@ -72,10 +72,12 @@ Explain what designs that you have tried.
 *FAQ* 
 
 
-* [Q]: Where can I find the compiler's optimization results? 
-* [A]: It's shown on console window or go to your vitis directory and under solution1, you will see solution1.log 
+*[Q]: Where can I find the compiler's optimization results? 
+
+*[A]: It's shown on console window or go to your vitis directory and under solution1, you will see solution1.log 
 
 
-* [Q]: what should I discuss in the report? 
-* [A]: Discuss what optimizations you did and how the latency has been changed. 
+*[Q]: what should I discuss in the report? 
+
+*[A]: Discuss what optimizations you did and how the latency has been changed. 
 
