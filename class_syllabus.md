@@ -219,11 +219,11 @@ Homework assignments are individual, but you can get help from others. If you ge
 | 12   | 3/28/22 |                |          GPU                |             |                       |                                   |
 |      | 3/30/22 |                |           GPU/ Vortex architecture               | [HW#9 (F)](https://gt-cs3220.github.io/hw9.html)    |                       |                                   |
 | 13   | 4/4/22  | HLS            |         Vortex            |             |                       | HLS ch 2 & ch 3                   |
-|      | 4/6/22  |                |      ML accelerator                           | [HW #10 (W)](https://gt-cs3220.github.io/hw10.html)  | Project #4 (F) https://gt-cs3220.github.io/project4.html)        |                                   |
+|      | 4/6/22  |                |      ML accelerator                           | [HW #10 (W)](https://gt-cs3220.github.io/hw10.html)  | [Project #4 (F)] (https://gt-cs3220.github.io/project4.html)        |                                   |
 | 14   | 4/11/22 |                |    ML accelerator                |             |                       |                                   |
 |      | 4/13/22 |                |   HLS                       | HW #11 (W)  |                       |                                   |
-| 15   | 4/18/22 | Architecture   |   HLS                                 |             |                       |                                   |
-|      | 4/20/22 |                |     security                 | HW #12 (W)  |       |                                   |
+| 15   | 4/18/22 | Architecture   |   DMA/Prj5                                |             |                       |                                   |
+|      | 4/20/22 |                |    security                 | [HW #12 (W) ](https://gt-cs3220.github.io/hw12.html)  |  |       |                                   |
 | 16   | 4/25/22 |                | research presentation & review            |      [Project #5 (M)]( https://gt-cs3220.github.io/project5.html)        |                       |                                   |
 |  17    | 5/4/22  |                | Final exam  2:40 pm - 5:30 pm             |             |                       |                                   |
 
