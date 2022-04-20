@@ -22,7 +22,7 @@ To optimize the code, understanding the HLS compiler's outcome reports are criti
 
 Please look at solution/Open Report (Synthesis) and Solution/Open Schedule Viewer to analyze the results. Please use the vitis <a href="https://www.xilinx.com/support/documentation/sw_manuals/xilinx2019_2/ug1393-vitis-application-acceleration.pdf"> HLS manual </a> and/or <a href="https://www.xilinx.com/html_docs/xilinx2021_1/vitis_doc/vitis_hls_optimization_techniques.html?hl=2d%2Cfilter"> vitis documentation </a> for the reference of your explanations.
 
-In this design, you will optimize your code to optimize so that it can handle bigger image sizes. 
+In this design, you will optimize your code to optimize so that it can handle bigger image sizes or faster. 
 You should have at least 4 designs to compare. At least two of them should be refactoring the code but the rest can be just trying out different pragmas. 
 
 Possible options of code are 
@@ -40,8 +40,17 @@ You should also show BRAM and DSP unit usage for your designs. <img src="figs/re
 
 Draw three charts (y-axis: total latency, BRAM usage, DSP usage), x-axis different designs. 
 
+
+
+* Grading Policy * 
+A+ (13 pts) : Great design which improves performance and supports scalalbe image  
+A (11 pts) : Good design improves performance and support scalable image sizes but the provided solutions 
+(top 5% designs will receive A+ design) 
+B (9 pts): show 4 different design options but not much performance improvements or scalability 
+
+
 * *Part-2 Produce Bit-stream and running it on Pynq boards* (2 pts) 
-* (Please skip this part until further notification) 
+
 
 Now with the provided vitis code, you repeat the steps in HW#12. Instead "add+5"in HW#12, you substitue the example module with part-1' example IP. The steps to produce the vivado IR is the same as HW#12. Alternateivly, you can just upgrade the example IP module from HW#12's design. 
  <img src="figs/upgrade_ip.png">
@@ -53,7 +62,11 @@ cv_edge_arm.ipynb and cv_edge_fpga.ipynb.
 cv_edge_arm performs sobel edge detection using ARM processors. Every operations are performed using python code. 
 In cv_edge_fpga, convolution operations are offloaded to FPGA. 
 
-We will set class hours to provide 
+* Grading Policy* 
+A+ (5 pts): complete the design and demonstrate the edge detection (bonus 3 pts)  
+(filter value need to be sent to the vitis) 
+A (2 pts): see gray/solid box 
+B ( 1 pt): Be able to synthesize and produce bit streams (no running on jupyter notebook) 
 
  
 
