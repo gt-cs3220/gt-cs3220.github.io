@@ -8,11 +8,11 @@ In this course, we will study hardware implementation of architecture design. Th
 
  The course will strengthen the background knowledge of processor design by understanding timing issues, critical path, and other underlying hardware structures. It will also provide an understanding of architecture, system, assembly programming and increase programming and debugging skills. 
 
- 
-
-**Topics:**
+ **Topics:**
 
 - FPGA programming, hardware description language (verilog)
+
+- Hardware construction languages (HCLs)
 
 - FPGA testing 
 
@@ -20,7 +20,7 @@ In this course, we will study hardware implementation of architecture design. Th
 
 - Pipeline design 
 
--  Processor architecture 
+- Processor architecture 
 
 - Modern processors
 
@@ -32,11 +32,11 @@ In this course, we will study hardware implementation of architecture design. Th
 
 - Pynq Boards
 
-- Xilinix tool chains 
+- Xilinx & Altera FPGA development tools
 
 - High-Level Synthesis 
 
- 
+- Advanced Topics: Elastic pipelines, scalable design patterns
 
 #### [Click to view the syllabus](class_syllabus.html)
 
