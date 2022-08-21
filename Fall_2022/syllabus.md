@@ -2,7 +2,7 @@
 
 **Course Title: CS3220**
 
-**Instructor: Blaise Tine
+**Instructor: Blaise Tine**
 
 **Class location: Instructional Center 115**
 
