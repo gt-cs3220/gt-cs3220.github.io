@@ -20,7 +20,7 @@ Please use piazza private posting to communicate with the instructor and the TAs
 **Participation points**
 Students who provide helpful postings will receive extra participation points. (up to 3 points in total) 
 
-**TA's office hours: The office hour information will be posted in piazza. 
+**TA's office hours:** The office hour information will be posted in piazza. 
 
 **TA's office location:** Bluejeans
 
