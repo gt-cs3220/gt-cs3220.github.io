@@ -10,7 +10,7 @@
 
 **Instructor's Office hours:** Tuesday 3:00-4:00 - by appointment.
 
-**TAs**: Ruobing Han, Sam Jijina
+**TAs**: Ruobing Han, Sam Jijina**
 
 **Note about TA office hours**: We are holding virtual-only office hours.
 
