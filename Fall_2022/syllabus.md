@@ -1,18 +1,14 @@
-
-# CS 3220 Processor Design Spring 2022 Syllabus
-
-
+# CS 3220 Processor Design Fall 2022 Syllabus
 
 **Course Title: CS3220**
 
-**Instructor: Prof. Hyesoon Kim**
+**Instructor: Blaise Tine
 
 **Class location: KACB 1456**
 
-**Class time: M/W 2:00 PM - 3:15 PM EST** 
+**Class time: M/W 5:00 PM - 6:15 PM EST** 
 
 **Instructor's Office hours:** Monday 3:30-4:00 (KACB2344)  or by appointment.
-
 
 **TAs**: Bhanu Garg, Anurag Kar, Xueyang Liu
 
