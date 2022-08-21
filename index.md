@@ -8,11 +8,11 @@ In this course, we will study hardware implementation of architecture design. Th
 
  The course will strengthen the background knowledge of processor design by understanding timing issues, critical path, and other underlying hardware structures. It will also provide an understanding of architecture, system, assembly programming and increase programming and debugging skills. 
 
- 
+ **Topics:**
 
-**Topics:**
+- Hardware description language (Verilog)
 
-- FPGA programming, hardware description language (verilog)
+- FPGA programming
 
 - FPGA testing 
 
@@ -20,7 +20,7 @@ In this course, we will study hardware implementation of architecture design. Th
 
 - Pipeline design 
 
--  Processor architecture 
+- Processor architecture 
 
 - Modern processors
 
@@ -32,18 +32,14 @@ In this course, we will study hardware implementation of architecture design. Th
 
 - Pynq Boards
 
-- Xilinix tool chains 
+- Xilinx tool chains 
 
 - High-Level Synthesis 
 
- 
+#### [Class Syllabus](Fall_2022/syllabus.md)
 
-#### [Click to view the syllabus](class_syllabus.html)
+#### [ICE Access](access_vm_steps/access_vm_doc.md)
 
-### [ICE access](access_vm_steps/access_vm_doc.md)
+#### [Xilinx Vivado Install Instructions](Vivado_Installation_Steps/vivado_install_steps.md)
 
-
-#### [Click to view instructions on installing Vivado](https://github.com/gt-cs3220/gt-cs3220.github.io/blob/master/Vivado_Installation_Steps/vivado_install_steps.md)
-
-
-#### [Click to view Pynq FPGA instructions](access_pynq_boards\access_pynq_doc.html)
+#### [Xilinx Pynq FPGA instructions](access_pynq_boards\access_pynq_doc.html)
