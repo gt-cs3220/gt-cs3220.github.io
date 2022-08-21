@@ -9,9 +9,13 @@ In this assignments, you will get familiar with Xilinx tool chain and Verilog.
 To install vivado, please see vivado install instruction in the class
 homepage (vivado_install_steps.html). 
 Please checkout hw1 folder from the github
+```bash
 git clone https://github.com/gt-cs3220/gt-cs3220.github.io.git
+```
 and then go to https://github.com/gt-cs3220/gt-cs3220.github.io/tree/master/Spring_2022/hw1_files 
+
 You can also watch hw1.mp4 in the canvas (CS-3220-A>Files>lecture_slides)
+
 you can also look at (https://github.com/gt-cs3220/gt-cs3220.github.io/tree/master/Vivado_Tutorial) 
 
 **Note**: HW #1 is intentionally designed for short tasks.  
