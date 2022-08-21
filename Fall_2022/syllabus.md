@@ -4,15 +4,15 @@
 
 **Instructor: Blaise Tine
 
-**Class location: KACB 1456**
+**Class location: Instructional Center 115**
 
-**Class time: M/W 5:00 PM - 6:15 PM EST** 
+**Class time: M/W 05:00 PM - 06:15 PM EST** 
 
-**Instructor's Office hours:** Monday 3:30-4:00 (KACB2344)  or by appointment.
+**Instructor's Office hours:** Tuesday 3:00-4:00 - by appointment.
 
-**TAs**: Bhanu Garg, Anurag Kar, Xueyang Liu
+**TAs**: Ruobing Han, Sam Jijina
 
-**Note about TA office hours**: At this moment, we are holding virtual-only office hours. We will revisit this policy as we progress in the semester. 
+**Note about TA office hours**: We are holding virtual-only office hours.
 
 **Communication method** 
 Please use piazza private posting to communicate with the instructor and the TAs. For general questions, please use piazza public posting so that other students can reply as well. 
@@ -20,9 +20,7 @@ Please use piazza private posting to communicate with the instructor and the TAs
 **Participation points**
 Students who provide helpful postings will receive extra participation points. (up to 3 points in total) 
 
-
 **TA's office hours: The office hour information will be posted in piazza. 
-
 
 **TA's office location:** Bluejeans
 
@@ -36,11 +34,12 @@ In this course, we will study hardware implementation of architecture design. Th
 
  The course will strengthen the background knowledge of processor design by understanding timing issues, critical path, and other underlying hardware structures. It will also provide an understanding of architecture, hardware design, programming and debugging skills. 
 
- 
 
 **Topics:**
 
-- FPGA programming, hardware description language (verilog)
+- Hardware description language (Verilog)
+ 
+- FPGA programming
 
 - FPGA testing 
 
