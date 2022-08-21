@@ -34,7 +34,6 @@ In this course, we will study hardware implementation of architecture design. Th
 
  The course will strengthen the background knowledge of processor design by understanding timing issues, critical path, and other underlying hardware structures. It will also provide an understanding of architecture, hardware design, programming and debugging skills. 
 
-
 **Topics:**
 
 - Hardware description language (Verilog)
@@ -61,13 +60,9 @@ In this course, we will study hardware implementation of architecture design. Th
 
 - Background knowledge of compiler 
 
- 
-
-**Pre-requisite**: 
+ **Pre-requisite**: 
 
 CS2200 and ECE 2031
-
- 
 
 Textbooks: All online books are available in the library . (http://library.gatech.edu/) 
 
@@ -77,26 +72,20 @@ Textbooks: All online books are available in the library . (http://library.gatec
 
 - Parallel programming for FPGAs (HLS) (https://arxiv.org/pdf/1805.03648.pdf) 
 
-
- 
-
 **Grading Scheme** 
 
-**(Option #1)**
+**Option #1: Regular Track**
 
-   Project assignment 1: 8 
+  Project assignment 1: 8 
 
-   Project assignment 2: 25
+  Project assignment 2: 25
 
-   Project assignment 3: 10
+  Project assignment 3: 10
 
-   Project assignment 4: 10 
+  Project assignment 4: 10 
 
-   Project assignment 5: 15 
+  Project assignment 5: 15 
    
-
-
-
   Homeworks: 12 (1 pts x 12 HWs) 
 
   Mid-term exam: 10 
@@ -115,10 +104,6 @@ The research project topics will be announced in the later semester.
 
 Research project options are limited to the students who have shown good standing in the course.
 
- 
-
- 
-
 **Final grade algorithm** 
 
 90% <=  score <= 100% : A 
@@ -131,10 +116,7 @@ Research project options are limited to the students who have shown good standin
 
 score < 60%:  F 
 
-
 A few notes: I plan to use non-curved grade assignments unless there are too few As. 
-
- 
 
 **FPGA board  & Programming Platforms**: We use Xilinix Pynq boards for the class. We will announce the method to purchase of pynq boards. 
 
@@ -144,10 +126,7 @@ A few notes: I plan to use non-curved grade assignments unless there are too few
 
 **1-member team policy**: Most projects are 2-team member projects. A 1-member team can be approved by the instructor for some specific cases. Please discuss with the instructor the details. If you don't submit your project partner preference, we will randomly assign your partner.  
 
-
-
 **Assignment late policy:** All assignments are due on the day specified by the assignment description and posted online. No late submissions are allowed except for approval from the dean of students. The late submission information will be announced separately, and by default, no late submission. 
-
 
 Assignment submission rules: You must follow the submission guidelines specified in the assignment description. We will use Canvas. **Wrong file names, broken file formats, missing files might lose 5% of the grade.** 
 
@@ -155,8 +134,7 @@ Assignment submission rules: You must follow the submission guidelines specified
 
 **Office Hours:** Please respect the office hours of the instructor by planning ahead. Other times are possible by appointment. 
 
-**Exam**: A form of digital proctoring might be used in exam. 
-
+**Exam**: A form of digital proctoring might be used in exam.
 
 **Academic Integrity**
 
@@ -178,8 +156,6 @@ As members of the Georgia Tech community, we are committed to creating a learnin
 
 **Class Mode**
 The course will also be broadcast by bluejean which the links are in the canvas for your convenience. **Recording of the video is not guaranteed to be provided** 
-If you choose to attend the class in person, **please wear a mask inside the classroom**. 
-
 
 **Homework**
 Except for the first week, almost every Wednesday has homework assignments. Homework assignments will be a mixture of preparation for projects and simple questions to answer the lecture contents.
