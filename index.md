@@ -1,5 +1,3 @@
-
-
 ## CS 3220: Processor Design 
 
 In this course, we will study hardware implementation of architecture design. This is an intermediate-level course that follows CS2200. This course is a project-based course in which you will learn pipelined architectures by actually implementing simple instructions using an FPGA (Field-Programmable Gate Array) board. 
@@ -8,11 +6,11 @@ In this course, we will study hardware implementation of architecture design. Th
 
  The course will strengthen the background knowledge of processor design by understanding timing issues, critical path, and other underlying hardware structures. It will also provide an understanding of architecture, system, assembly programming and increase programming and debugging skills. 
 
- 
+ **Topics:**
 
-**Topics:**
+- Hardware description language (Verilog)
 
-- FPGA programming, hardware description language (verilog)
+- FPGA programming 
 
 - FPGA testing 
 
