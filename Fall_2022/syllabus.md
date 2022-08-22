@@ -12,7 +12,7 @@
 
 **TAs**: Ruobing Han, Sam Jijina
 
-**Note about TA office hours**: We are holding virtual-only office hours.
+**Note about TA office hours**: TBD
 
 **Communication method** 
 Please use piazza private posting to communicate with the instructor and the TAs. For general questions, please use piazza public posting so that other students can reply as well. 
