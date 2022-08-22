@@ -8,7 +8,7 @@
 
 **Class time: M/W 05:00 PM - 06:15 PM EST** 
 
-**Instructor's Office hours:** Tuesday 3:00-4:00 KAor by appointment.
+**Instructor's Office hours:** Tuesday 3:00-4:00 or by appointment.
 
 **TAs**: Ruobing Han, Sam Jijina
 
