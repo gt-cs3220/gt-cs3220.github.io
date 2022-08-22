@@ -178,8 +178,8 @@ Homework assignments are individual, but you can get help from others. If you ge
 | 6    | 09/26/22 |                | Out of order processor                    |             |                       |                                   |
 |      | 09/28/22 |                | Branch predictor                          | HW #5       |                       |                                   |
 | 7    | 10/03/22 |                | No lecture (offline video)                |             |                       |                                   |
-|      | 10/05/22 |                | Branch predictor                          | HW #6       | Project #2            |                                   |
-| 8    | 10/10/22 |                | Review Day                                |             |                       |                                   |
+|      | 10/05/22 |                | Branch predictor                          | HW #6       |                       |                                   |
+| 8    | 10/10/22 |                | Review Day                                |             | Project #2            |                                   |
 |      | 10/12/22 |                | Mid-term                                  | HW #7       |                       |                                   |
 | 9    | 10/17/22 |                | Fall Break                                |             |                       |                                   |
 |      | 10/19/22 |                | Power                                     | HW #8       |                       |                                   |
