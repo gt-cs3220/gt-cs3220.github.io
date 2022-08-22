@@ -163,7 +163,7 @@ Homework assignments are individual, but you can get help from others. If you ge
 
 **Tentative Schedule**
 
-| week | date     | Topic category | topic                                     | HW deadline | Project deadline      | Reading books                     |
+| week | Date     | Topic Category | Topic                                     | HW Deadline | Project Deadline      | Reading Books                     |
 | ---- | -------- | -------------- | ----------------------------------------- | ----------- | --------------------- | --------------------------------- |
 | 1    | 08/22/22 |                | Introduction & review                     |             |                       | Verilog ch 1 & FPGA ch 1          |
 |      | 08/24/22 | Verilog        | Verilog-I (introduction)                  | HW #0       |                       | Verilog ch 2 & ch 3               |
