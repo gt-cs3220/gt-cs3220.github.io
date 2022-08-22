@@ -8,7 +8,7 @@
 
 **Class time: M/W 05:00 PM - 06:15 PM EST** 
 
-**Instructor's Office hours:** Tuesday 3:00-4:00 - by appointment.
+**Instructor's Office hours:** Tuesday 3:00-4:00 KAor by appointment.
 
 **TAs**: Ruobing Han, Sam Jijina
 
@@ -76,23 +76,23 @@ Textbooks: All online books are available in the library . (http://library.gatec
 
 **Option #1: Regular Track**
 
-  Project assignment 1: 8 
+  Project assignment 1: 10 
 
-  Project assignment 2: 25
+  Project assignment 2: 15
 
   Project assignment 3: 10
 
-  Project assignment 4: 10 
+  Project assignment 4: 10
 
   Project assignment 5: 15 
    
-  Homeworks: 12 (1 pts x 12 HWs) 
+  Homeworks: 20 (2 pts x 10 HWs) 
 
   Mid-term exam: 10 
   
   Final exam: 10 
 
-  participation: extra 3 points
+  Participation: extra 3 points
 
 **Option #2: Research track** 
 
