@@ -163,38 +163,39 @@ Homework assignments are individual, but you can get help from others. If you ge
 
 **Tentative Schedule**
 
-| week | date    | Topic category | topic                                     | HW deadline | Project deadline      | Reading books                     |
-| ---- | ------- | -------------- | ----------------------------------------- | ----------- | --------------------- | --------------------------------- |
-| 1    | 1/10/22 |                | introduction & review                     |             |                       | verilog ch 1 & FPGA ch 1          |
-|      | 1/12/22 | Verilog        | introduction to verilog                   | HW0 (Sun)   |                       | verilog ch 2 & ch 3               |
-| 2    | 1/17/22 |                | MLK                                       |             |                       | verilog ch 4 & ch 5  & ch 7       |
-|      | 1/19/22 |                | verilog-II (sequential)                   | [HW# 1](https://gt-cs3220.github.io/hw1.html) (F)   |                       | verilog ch 8 & ch 9 & ch10 & ch 6 |
-| 3    | 1/24/22 |                | verilog-III & xilinix tool(online-only)                |             |                       |                                   |
-|      | 1/26/22 |                | ISA & review pipeline  (online-only)| [HW#2 (W)](https://gt-cs3220.github.io/hw2.html)    | [project #1 due](https://gt-cs3220.github.io/project1.html)  (Sun)   | verilog ch 10 & ch 6              |
-| 4    | 1/31/22 |                | FPGA introduction  (online-only)                        |             |                       | verilog ch 11                     |
-|      | 2/2/22  | FPGA           | FPGA structure  (online-only)                        | HW#3 (W)    |                       | FPGA ch 2  & ch 3 & ch 4          |
-| 5    | 2/7/22  |                |  No lecture (offline video)                            |             |                       | FPGA ch 5 &ch 6 & ch 7 & ch 8     |
-|      | 2/9/22  |                |  project-2 FAQ (online-only)                    | HW#4 (W)    |  |                                   |
-| 6    | 2/14/22 | Architecture   | out of order processor                    |             |                       |                                   |
-|      | 2/16/22 |                | out of order processor                    | HW#5 (W)    | [Project #2-part 1](https://gt-cs3220.github.io/project2.html)  (F) |                                   |
-| 7    | 2/21/22 |                | branch predictor                        |             |                       |                                   |
-|      | 2/23/22 |                | branch predictor                                    | HW #6 (W)   | [Project #2-part 2](https://gt-cs3220.github.io/project2.html) (F)        |                                   |
-| 8    | 2/28/22 |                | branch predictor                       |             |                       |                                   |
-|      | 3/2/22  |                | power                          | HW #7 (W)   |  Project #2-part 3 (F)                    |                                   |
-| 9    | 3/7/22  |                | FPGA-HLS                          |             |                       |                                   |
-|      | 3/9/22  |                | Floating Points                        | HW #8 (W)   |       |                                   |
-| 10   | 3/14/22 |                | review day                                |             |  [Project #3](https://gt-cs3220.github.io/project3.html)  (M)                       |                                   |
-|      | 3/16/22 |                | mid-term                                  |             |                       |                                   |
-| 11   | 3/21/22 |                | Spring break                              |             |                       |                                   |
-|      | 3/23/22 |                | Spring break                              |             |                       |                                   |
-| 12   | 3/28/22 |                |          GPU                |             |                       |                                   |
-|      | 3/30/22 |                |           GPU/ Vortex architecture               | [HW#9 (F)](https://gt-cs3220.github.io/hw9.html)    |                       |                                   |
-| 13   | 4/4/22  | HLS            |         Vortex            |             |                       | HLS ch 2 & ch 3                   |
-|      | 4/6/22  |                |      ML accelerator                           | [HW #10 (W)](https://gt-cs3220.github.io/hw10.html)  | [Project #4 (F)] (https://gt-cs3220.github.io/project4.html)        |                                   |
-| 14   | 4/11/22 |                |    ML accelerator                |             |                       |                                   |
-|      | 4/13/22 |                |   HLS                       | HW #11 (W)  |                       |                                   |
-| 15   | 4/18/22 | Architecture   |   DMA/Prj5                                |             |                       |                                   |
-|      | 4/20/22 |                |    security                 | [HW #12 (W) ](https://gt-cs3220.github.io/hw12.html)  |  |       |                                   |
-| 16   | 4/25/22 |                | research presentation & review            |      [Project #5 (M)]( https://gt-cs3220.github.io/project5.html)        |                       |                                   |
-|  17    | 5/4/22  |                | Final exam  2:40 pm - 5:30 pm             |             |                       |                                   |
-
+| week | date     | Topic category | topic                                     | HW deadline | Project deadline      | Reading books                     |
+| ---- | -------- | -------------- | ----------------------------------------- | ----------- | --------------------- | --------------------------------- |
+| 1    | 08/22/22 |                | introduction & review                     |             |                       | verilog ch 1 & FPGA ch 1          |
+|      | 08/24/22 | Verilog        | introduction to verilog                   | HW #0       |                       | verilog ch 2 & ch 3               |
+| 2    | 08/29/22 |                | MLK                                       |             |                       | verilog ch 4 & ch 5  & ch 7       |
+|      | 08/31/22 |                | verilog-II (sequential)                   | HW #1       |                       | verilog ch 8 & ch 9 & ch10 & ch 6 |
+| 3    | 09/05/22 |                | verilog-III & xilinix tool(online-only)   |             |                       |                                   |
+|      | 09/07/22 |                | ISA & review pipeline  (online-only)      | HW #2       | project #1            | verilog ch 10 & ch 6              |
+| 4    | 09/12/22 |                | FPGA introduction  (online-only)          |             |                       | verilog ch 11                     |
+|      | 09/14/22 | FPGA           | FPGA structure  (online-only)             | HW #3       |                       | FPGA ch 2  & ch 3 & ch 4          |
+| 5    | 09/19/22 |                |  No lecture (offline video)               |             |                       | FPGA ch 5 &ch 6 & ch 7 & ch 8     |
+|      | 09/21/22 |                |  project-2 FAQ (online-only)              | HW #4       |                       |                                   |
+| 6    | 09/26/22 | Architecture   | out of order processor                    |             |                       |                                   |
+|      | 09/28/22 |                | out of order processor                    | HW #5       |                       |                                   |
+| 7    | 10/03/22 |                | branch predictor                          |             |                       |                                   |
+|      | 10/05/22 |                | branch predictor                          | HW #6       |                       |                                   |
+| 8    | 10/10/22 |                | branch predictor                          |             |                       |                                   |
+|      | 10/12/22 |                | power                                     | HW #7       |  Project #2           |                                   |
+| 9    | 10/17/22 |                | FPGA-HLS                                  |             |                       |                                   |
+|      | 10/19/22 |                | Floating Points                           | HW #8       |                       |                                   |
+| 10   | 10/24/22 |                | review day                                |             |  Project #3           |                                   |
+|      | 10/26/22 |                | mid-term                                  |             |                       |                                   |
+| 11   | 10/31/22 |                | Spring break                              |             |                       |                                   |
+|      | 11/02/22 |                | Spring break                              |             |                       |                                   |
+| 12   | 11/07/22 |                | GPU                                       |             |                       |                                   |
+|      | 11/09/22 |                | GPU / Vortex architecture                 | HW #9       |                       |                                   |
+| 13   | 11/14/22 | HLS            | Vortex                                    |             |                       | HLS ch 2 & ch 3                   |
+|      | 11/16/22 |                | ML accelerator                            | HW#10       | Project #4            |                                   |
+| 14   | 11/21/22 |                | ML accelerator                            |             |                       |                                   |
+|      | 11/23/22 |                | HLS                                       |             |                       |                                   |
+| 15   | 11/28/22 | Architecture   | DMA/Prj5                                  |             |                       |                                   |
+|      | 11/30/22 |                | Security                                  |             |                       |                                   |
+| 16   | 12/05/22 |                | Research presentation & review            |             | Project #5            |                                   |             
+|      | 12/07/22 |                |                                           |             |                       |                                   |    
+| 17   | 12/12/22 |                | Final exam                                |             |                       |                                   |
+| 17   | 12/14/22 |                |                                           |             |                       |                                   |
