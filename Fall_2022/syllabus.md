@@ -169,15 +169,15 @@ Homework assignments are individual, but you can get help from others. If you ge
 |      | 08/24/22 | Verilog        | Verilog-I (introduction)                  | HW #0       |                       | Verilog ch 2 & ch 3               |
 | 2    | 08/29/22 |                | Verilog-II (sequential)                   |             |                       | Verilog ch 4 & ch 5  & ch 7       |
 |      | 08/31/22 |                | Verilog-III & xilinx tool                 | HW #1       |                       | Verilog ch 8 & ch 9 & ch10 & ch 6 |
-| 3    | 09/05/22 |                | Labor Day                                 |             |                       |                                   |
-|      | 09/07/22 |                | ISA & review pipeline                     | HW #2       |                       | Verilog ch 10 & ch 6              |
-| 4    | 09/12/22 |                | FPGA introduction                         |             |                       | Verilog ch 11                     |
-|      | 09/14/22 | FPGA           | FPGA structure                            | HW #3       | project #1            | FPGA ch 2  & ch 3 & ch 4          |
+| 3    | 09/05/22 | FPGAs          | Labor Day                                 |             |                       |                                   |
+|      | 09/07/22 |                | FPGA introduction                         | HW #2       |                       | Verilog ch 10 & ch 6              |
+| 4    | 09/12/22 |                | FPGA structure                            |             | Project #1            | Verilog ch 11                     |
+|      | 09/14/22 | Architecture   | ISA & review pipeline                     | HW #3       |                       | FPGA ch 2  & ch 3 & ch 4          |
 | 5    | 09/19/22 |                | project #2 description                    |             |                       | FPGA ch 5 &ch 6 & ch 7 & ch 8     |
-|      | 09/21/22 | Architecture   | Out of order processor                    | HW #4       |                       |                                   |
+|      | 09/21/22 |                | Out of order processor                    | HW #4       |                       |                                   |
 | 6    | 09/26/22 |                | Out of order processor                    |             |                       |                                   |
 |      | 09/28/22 |                | Branch predictor                          | HW #5       |                       |                                   |
-| 7    | 10/03/22 |                | No lecture                                |             |                       |                                   |
+| 7    | 10/03/22 |                | No lecture (offline video)                |             |                       |                                   |
 |      | 10/05/22 |                | Branch predictor                          | HW #6       | Project #2            |                                   |
 | 8    | 10/10/22 |                | Review Day                                |             |                       |                                   |
 |      | 10/12/22 |                | Mid-term                                  | HW #7       |                       |                                   |
@@ -186,16 +186,16 @@ Homework assignments are individual, but you can get help from others. If you ge
 | 10   | 10/24/22 | HLS            | High-level synthesis                      |             | Project #3            | HLS ch 2 & ch 3                   |
 |      | 10/26/22 |                | Floating Points                           |             |                       |                                   |
 | 11   | 10/31/22 |                | Hardware Design Pattens                   |             |                       |                                   |
-|      | 11/02/22 |                | Spring break                              |             |                       |                                   |
+|      | 11/02/22 |                | Special Topic (Guest lecture)             |             |                       |                                   |
 | 12   | 11/07/22 |                | GPU Introduction                          |             |                       |                                   |
 |      | 11/09/22 |                | GPU Microarchitecture                     | HW #9       |                       |                                   |
-| 13   | 11/14/22 | Architecture   | Vortex accelerator                        |             |                       |                                   |
-|      | 11/16/22 |                | ML accelerator                            | HW#10       | Project #4            |                                   |
-| 14   | 11/21/22 |                | ML accelerator                            |             |                       |                                   |
-|      | 11/23/22 |                | HLS                                       |             |                       |                                   |
+| 13   | 11/14/22 | Accelerators   | Vortex accelerator                        |             | Project #4            |                                   |
+|      | 11/16/22 |                | ML accelerators                           | HW#10       |                       |                                   |
+| 14   | 11/21/22 |                | Graph accelerators                        |             |                       |                                   |
+|      | 11/23/22 |                | Graphics accelerators                     |             |                       |                                   |
 | 15   | 11/28/22 |                | DMA                                       |             |                       |                                   |
 |      | 11/30/22 |                | Security                                  |             |                       |                                   |
 | 16   | 12/05/22 |                | Research presentation & review            |             | Project #5            |                                   |             
-|      | 12/07/22 |                |                                           |             |                       |                                   |    
+|      | 12/07/22 |                | Review Day                                |             |                       |                                   |    
 | 17   | 12/12/22 |                | Final exam                                |             |                       |                                   |
-| 17   | 12/14/22 |                |                                           |             |                       |                                   |
+|      | 12/14/22 |                |                                           |             |                       |                                   |
