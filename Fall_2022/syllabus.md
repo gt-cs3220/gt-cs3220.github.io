@@ -56,7 +56,7 @@ In this course, we will study hardware implementation of architecture design. Th
 
 - Pynq Boards 
 
-- Xilinix tool chains 
+- Xilinx tool chains 
 
 - Background knowledge of compiler 
 
@@ -96,13 +96,13 @@ Textbooks: All online books are available in the library . (http://library.gatec
 
 **Option #2: Research track** 
 
-Projects #1-#4,homework, mid-term are the same as option #1. 
+Projects #1-4, homeworks, mid-term are the same as option #1. 
 
-Project #5,  and the Final exam can be substituted with a research project. 
+Project #5, and the final exam can be substituted with a research project. 
 
 The research project topics will be announced in the later semester.
 
-Research project options are limited to the students who have shown good standing in the course.
+The research track is limited to the students who have shown good standing in the course.
 
 **Final grade algorithm** 
 
@@ -118,7 +118,7 @@ score < 60%:  F
 
 A few notes: I plan to use non-curved grade assignments unless there are too few As. 
 
-**FPGA board  & Programming Platforms**: We use Xilinix Pynq boards for the class. We will announce the method to purchase of pynq boards. 
+**FPGA board  & Programming Platforms**: We use Xilinx Pynq boards for the class. We will announce the method to purchase of pynq boards. 
 
 **Computing Resource**: We provide VMs in the CoC-ice. 
 
@@ -169,7 +169,7 @@ Homework assignments are individual, but you can get help from others. If you ge
 |      | 08/24/22 | Verilog        | introduction to verilog                   | HW #0       |                       | verilog ch 2 & ch 3               |
 | 2    | 08/29/22 |                | MLK                                       |             |                       | verilog ch 4 & ch 5  & ch 7       |
 |      | 08/31/22 |                | verilog-II (sequential)                   | HW #1       |                       | verilog ch 8 & ch 9 & ch10 & ch 6 |
-| 3    | 09/05/22 |                | verilog-III & xilinix tool(online-only)   |             |                       |                                   |
+| 3    | 09/05/22 |                | verilog-III & xilinx tool(online-only)   |             |                       |                                   |
 |      | 09/07/22 |                | ISA & review pipeline  (online-only)      | HW #2       | project #1            | verilog ch 10 & ch 6              |
 | 4    | 09/12/22 |                | FPGA introduction  (online-only)          |             |                       | verilog ch 11                     |
 |      | 09/14/22 | FPGA           | FPGA structure  (online-only)             | HW #3       |                       | FPGA ch 2  & ch 3 & ch 4          |
