@@ -8,7 +8,7 @@
 
 **Class time: M/W 05:00 PM - 06:15 PM EST** 
 
-**Instructor's Office hours:** Tuesday 3:00-4:00 or by appointment.
+**Instructor's Office hours:** Tuesday 3:00-4:00 KACB 2335 or by appointment.
 
 **TAs**: Ruobing Han, Sam Jijina
 
@@ -158,8 +158,8 @@ As members of the Georgia Tech community, we are committed to creating a learnin
 The course will also be broadcast by bluejean which the links are in the canvas for your convenience. **Recording of the video is not guaranteed to be provided** 
 
 **Homework**
-Except for the first week, almost every Wednesday has homework assignments. Homework assignments will be a mixture of preparation for projects and simple questions to answer the lecture contents.
-Homework assignments are individual, but you can get help from others. If you get help from others, please include the names. 
+Except for the first week, homework assignments are released on Wednesday. Homework assignments will be a mixture of preparation for projects and simple questions to answer the lecture contents.
+Homework assignments are individual, but you can get help from others. If you get help from others students, please include their names. 
 
 **Tentative Schedule**
 
