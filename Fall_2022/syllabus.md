@@ -106,15 +106,11 @@ The research track is limited to the students who have shown good standing in th
 
 **Final grade algorithm** 
 
-90% <=  score <= 100% : A 
-
-80% <=   score < 90%:  B 
-
-70% <=   score < 80%:  C 
-
-60% <=   score < 70%:  D 
-
-score < 60%:  F 
+90% <= score:       A
+80% <= score < 90%: B 
+70% <= score < 80%: C 
+60% <= score < 70%: D 
+       score < 60%: F 
 
 A few notes: I plan to use non-curved grade assignments unless there are too few As. 
 
