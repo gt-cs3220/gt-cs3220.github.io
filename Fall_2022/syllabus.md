@@ -165,15 +165,15 @@ Homework assignments are individual, but you can get help from others. If you ge
 
 | week | Date     | Topic Category | Topic                                     | HW Deadline | Project Deadline      | Reading Books                     |
 | ---- | -------- | -------------- | ----------------------------------------- | ----------- | --------------------- | --------------------------------- |
-| 1    | 08/22/22 |                | Introduction & review                     |             |                       | Verilog ch 1 & FPGA ch 1          |
-|      | 08/24/22 | Verilog        | Verilog-I (introduction)                  | HW #0       |                       | Verilog ch 2 & ch 3               |
-| 2    | 08/29/22 |                | Verilog-II (sequential)                   |             |                       | Verilog ch 4 & ch 5  & ch 7       |
-|      | 08/31/22 |                | Verilog-III & xilinx tool                 | HW #1       |                       | Verilog ch 8 & ch 9 & ch10 & ch 6 |
+| 1    | 08/22/22 |                | Introduction & review                     |             |                       | Verilog ch1 & FPGA ch1            |
+|      | 08/24/22 | Verilog        | Verilog-I (introduction)                  | HW #0       |                       | Verilog ch2,3                     |
+| 2    | 08/29/22 |                | Verilog-II (sequential)                   |             |                       | Verilog ch4,5,7                   |
+|      | 08/31/22 |                | Verilog-III & xilinx tool                 | HW #1       |                       | Verilog ch6,8,9,10                |
 | 3    | 09/05/22 | FPGAs          | Labor Day                                 |             |                       |                                   |
-|      | 09/07/22 |                | FPGA introduction                         | HW #2       |                       | Verilog ch 10 & ch 6              |
-| 4    | 09/12/22 |                | FPGA structure                            |             | Project #1            | Verilog ch 11                     |
-|      | 09/14/22 | Architecture   | ISA & review pipeline                     | HW #3       |                       | FPGA ch 2  & ch 3 & ch 4          |
-| 5    | 09/19/22 |                | project #2 description                    |             |                       | FPGA ch 5 &ch 6 & ch 7 & ch 8     |
+|      | 09/07/22 |                | FPGA introduction                         | HW #2       |                       | Verilog ch6,10                    |
+| 4    | 09/12/22 |                | FPGA structure                            |             | Project #1            | Verilog ch11                      |
+|      | 09/14/22 | Architecture   | ISA & review pipeline                     | HW #3       |                       | FPGA ch2,3,4                      |
+| 5    | 09/19/22 |                | project #2 description                    |             |                       | FPGA ch5,6,7,8                    |
 |      | 09/21/22 |                | Out of order processor                    | HW #4       |                       |                                   |
 | 6    | 09/26/22 |                | Out of order processor                    |             |                       |                                   |
 |      | 09/28/22 |                | Branch predictor                          | HW #5       |                       |                                   |
@@ -183,7 +183,7 @@ Homework assignments are individual, but you can get help from others. If you ge
 |      | 10/12/22 |                | Mid-term                                  | HW #7       |                       |                                   |
 | 9    | 10/17/22 |                | Fall Break                                |             |                       |                                   |
 |      | 10/19/22 |                | Power                                     | HW #8       |                       |                                   |
-| 10   | 10/24/22 | HLS            | High-level synthesis                      |             | Project #3            | HLS ch 2 & ch 3                   |
+| 10   | 10/24/22 | HLS            | High-level synthesis                      |             | Project #3            | HLS ch2,3                         |
 |      | 10/26/22 |                | Floating Points                           |             |                       |                                   |
 | 11   | 10/31/22 |                | Hardware Design Pattens                   |             |                       |                                   |
 |      | 11/02/22 |                | Special Topic (Guest lecture)             |             |                       |                                   |
@@ -195,7 +195,7 @@ Homework assignments are individual, but you can get help from others. If you ge
 |      | 11/23/22 |                | Graphics accelerators                     |             |                       |                                   |
 | 15   | 11/28/22 |                | DMA                                       |             |                       |                                   |
 |      | 11/30/22 |                | Security                                  |             |                       |                                   |
-| 16   | 12/05/22 |                | Research presentation & review            |             | Project #5            |                                   |             
+| 16   | 12/05/22 |                | Research presentations                    |             | Project #5            |                                   |             
 |      | 12/07/22 |                | Review Day                                |             |                       |                                   |    
 | 17   | 12/12/22 |                | Final exam                                |             |                       |                                   |
 |      | 12/14/22 |                |                                           |             |                       |                                   |
