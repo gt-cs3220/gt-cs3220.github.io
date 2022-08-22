@@ -177,9 +177,9 @@ Homework assignments are individual, but you can get help from others. If you ge
 |      | 09/21/22 |                | Out of order processor                    | HW #4       |                       |                                   |
 | 6    | 09/26/22 |                | Out of order processor                    |             |                       |                                   |
 |      | 09/28/22 |                | Branch predictor                          | HW #5       |                       |                                   |
-| 7    | 10/03/22 |                | No lecture (offline video)                |             |                       |                                   |
+| 7    | 10/03/22 |                | No lecture (offline video)                |             | Project #2            |                                   |
 |      | 10/05/22 |                | Branch predictor                          | HW #6       |                       |                                   |
-| 8    | 10/10/22 |                | Review Day                                |             | Project #2            |                                   |
+| 8    | 10/10/22 |                | Review Day                                |             |                       |                                   |
 |      | 10/12/22 |                | Mid-term                                  | HW #7       |                       |                                   |
 | 9    | 10/17/22 |                | Fall Break                                |             |                       |                                   |
 |      | 10/19/22 |                | Power                                     | HW #8       |                       |                                   |
@@ -197,5 +197,5 @@ Homework assignments are individual, but you can get help from others. If you ge
 |      | 11/30/22 |                | Security                                  |             |                       |                                   |
 | 16   | 12/05/22 |                | Research presentations                    |             | Project #5            |                                   |             
 |      | 12/07/22 |                | Review Day                                |             |                       |                                   |    
-| 17   | 12/12/22 |                | Final exam                                |             |                       |                                   |
+| 17   | 12/09/22 |                | Final exam (6:00-8:50 PM)                 |             |                       |                                   |
 |      | 12/14/22 |                |                                           |             |                       |                                   |
