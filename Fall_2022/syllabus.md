@@ -154,9 +154,6 @@ No form of harassment or discrimination is allowed in this class. In keeping wit
 
 As members of the Georgia Tech community, we are committed to creating a learning environment in which all of our students feel safe and included. Because we are individuals with varying needs, we are reliant on your feedback to achieve this goal. To that end, we invite you to enter into dialogue with us about the things we can stop, start, and continue doing to make our classroom an environment in which every student feels valued and can engage actively in our learning community.
 
-**Class Mode**
-The course will also be broadcast by bluejean which the links are in the canvas for your convenience. **Recording of the video is not guaranteed to be provided** 
-
 **Homework**
 Except for the first week, homework assignments are released on Wednesday. Homework assignments will be a mixture of preparation for projects and simple questions to answer the lecture contents.
 Homework assignments are individual, but you can get help from others. If you get help from others students, please include their names. 
