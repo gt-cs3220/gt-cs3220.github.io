@@ -17,19 +17,29 @@ Use the following tutorial https://www.youtube.com/watch?v=KesfzF9z6Aw
 Task #3: create a new VIVADO project
 
 1- give a name for your project
+
 2- select RTL project as project type
+
 3- add the source files: design1.v and design2.v
+
 4- skip contraints option
+
 5- use the pynq-z2 board
+
 6- click File -> "Add Sources"
+
 7- click "Add or create simulaiton sources"
+
 8- add testbench.v
+
 9- clock "Simulation" -> "Run Simulation"
+
 10- check out the generated simulation waveform (see out_1 and out_2 chanegs accross time)
 
 Task #4: Modify testbench.v to use design2 module as DUT (Device Under Test).
 
 11- rerun the simulation again
+
 12- check out the generated simulation waveform (see out_1 and out_2 chanegs accross time)
 
 Once you are done, please answer the question in Canvas HW#2 quiz section. 
