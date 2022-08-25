@@ -1,4 +1,4 @@
-# Vitis/Vivado Installation Steps (Most steps are updated at 2020. We will use 2022.2 in Fall 2022) 
+# Vitis/Vivado Installation Steps (Most steps are updated at 2020. We will use 2022.1 in Fall 2022) 
 ### Warning
 ```diff
 - 1. This tutorial works for Win10 and Linux. If you use MacOS, you could use VirtualBox or VMWare as virtual machine to isntall Linux.
