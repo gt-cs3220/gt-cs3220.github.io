@@ -70,7 +70,7 @@ Again, please make sure your have at least 150G space on your disk. You could in
 <img src="https://github.com/gt-cs3220/gt-cs3220.github.io/blob/master/Vivado_Installation_Steps/step_images/step3b_new.png" width="70%">
 \
 **Important !!!!!! Please make sure your installation directory's name has no space.** \
-Like here if I change "**Xilinx2020**" to "**Xilinx 2020**", then it will cause error.
+Like here if I change "**Xilinx2020**" to "**Xilinx 2022**", then it will cause error.
 <img src="https://github.com/gt-cs3220/gt-cs3220.github.io/blob/master/Vivado_Installation_Steps/step_images/step6c.png" width="70%">
 \
 Please remember your installation directory.
