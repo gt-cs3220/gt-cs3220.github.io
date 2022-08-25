@@ -19,7 +19,7 @@ Go to  https://www.xilinx.com/support/download.html "**Download**".
 
 ## Step 2
 Scroll down to "**Vivado Design Suite - HLx Editions - 2022.1  Full Product Installation**", and click 
-"**Xilinx Unified Installer 2020.2: Windows Self Extracting Web Installer**"
+"**Xilinx Unified Installer 2022.1: Windows Self Extracting Web Installer**"
 
 <img src="https://github.com/gt-cs3220/gt-cs3220.github.io/blob/master/Vivado_Installation_Steps/step_images/step.png" width="70%">
 
