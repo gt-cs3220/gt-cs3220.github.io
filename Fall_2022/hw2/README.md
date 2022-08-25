@@ -2,6 +2,9 @@ Homework #2 Assignment
 
 In this assignments, you will get familiar with Xilinx tool chain and Verilog. 
 
+    $ git clone --depth=1 https://github.com/gt-cs3220/gt-cs3220.github.io.git   
+    $ cd gt-cs3220.github.io/Fall_2022/hw2
+
 Task #0: install VIVADO
 
 Use the following tutorial https://gt-cs3220.github.io/Vivado_Installation_Steps/vivado_install_steps.html
