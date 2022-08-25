@@ -165,7 +165,7 @@ Homework assignments are individual, but you can get help from others. If you ge
 | 1    | 08/22/22 |                | Introduction & review                     |             |                       | Verilog ch1 & FPGA ch1            |
 |      | 08/24/22 | Verilog        | Verilog-I (introduction)                  | HW #0       |                       | Verilog ch2,3                     |
 | 2    | 08/29/22 |                | Verilog-II (sequential)                   |             |                       | Verilog ch4,5,7                   |
-|      | 08/31/22 |                | Verilog-III & xilinx tool                 | HW #1       |                       | Verilog ch6,8,9,10                |
+|      | 08/31/22 |                | Verilog-III                               | HW #1       |                       | Verilog ch6,8,9,10                |
 | 3    | 09/05/22 | FPGAs          | Labor Day                                 |             |                       |                                   |
 |      | 09/07/22 |                | FPGA introduction                         | HW #2       |                       | Verilog ch6,10                    |
 | 4    | 09/12/22 |                | FPGA structure                            |             | Project #1            | Verilog ch11                      |
@@ -183,16 +183,16 @@ Homework assignments are individual, but you can get help from others. If you ge
 | 10   | 10/24/22 | HLS            | High-level synthesis                      |             | Project #3            | HLS ch2,3                         |
 |      | 10/26/22 |                | Floating Points                           |             |                       |                                   |
 | 11   | 10/31/22 |                | Hardware Design Pattens                   |             |                       |                                   |
-|      | 11/02/22 |                | Special Topic (Guest lecture)             |             |                       |                                   |
-| 12   | 11/07/22 |                | GPU Introduction                          |             |                       |                                   |
-|      | 11/09/22 |                | GPU Microarchitecture                     | HW #9       |                       |                                   |
-| 13   | 11/14/22 | Accelerators   | Vortex accelerator                        |             | Project #4            |                                   |
-|      | 11/16/22 |                | ML accelerators                           | HW#10       |                       |                                   |
-| 14   | 11/21/22 |                | Graph accelerators                        |             |                       |                                   |
-|      | 11/23/22 |                | Graphics accelerators                     |             |                       |                                   |
-| 15   | 11/28/22 |                | DMA                                       |             |                       |                                   |
-|      | 11/30/22 |                | Security                                  |             |                       |                                   |
-| 16   | 12/05/22 |                | Research presentations                    |             | Project #5            |                                   |             
-|      | 12/07/22 |                | Review Day                                |             |                       |                                   |    
+|      | 11/02/22 |                | GPU Introduction                          |             |                       |                                   |
+| 12   | 11/07/22 |                | GPU Microarchitecture                     |             |                       |                                   |
+|      | 11/09/22 |                | Vortex accelerator                        | HW #9       |                       |                                   |
+| 13   | 11/14/22 | Accelerators   | ML accelerators                           |             | Project #4            |                                   |
+|      | 11/16/22 |                | Graphics accelerators                     | HW#10       |                       |                                   |
+| 14   | 11/21/22 |                | Thanksgiving                              |             |                       |                                   |
+|      | 11/23/22 |                | DMA                                       |             |                       |                                   |
+| 15   | 11/28/22 |                | Security                                  |             |                       |                                   |
+|      | 11/30/22 |                | Research presentations                    |             |                       |                                   |
+| 16   | 12/05/22 |                | Review Day                                |             | Project #5            |                                   |             
+|      | 12/07/22 |                |                                           |             |                       |                                   |    
 | 17   | 12/09/22 |                | Final exam (6:00-8:50 PM)                 |             |                       |                                   |
 |      | 12/14/22 |                |                                           |             |                       |                                   |
