@@ -1,11 +1,11 @@
-# Vitis/Vivado Installation Steps (Most steps are updated at 2020. We will use 2021.2 in Spring 2022) 
+# Vitis/Vivado Installation Steps (Most steps are updated at 2020. We will use 2022.2 in Fall 2022) 
 ### Warning
 ```diff
 - 1. This tutorial works for Win10 and Linux. If you use MacOS, you could use VirtualBox or VMWare as virtual machine to isntall Linux.
 - 2. Please make sure you disk has at least 150G free space. You could install Vivado in portable storage device.
 ```
-### Supported operating systems for Vivado *2021.2*
-Please note that this instruction is an old version and in Spring 2022, we will use 2021.2. 
+### Supported operating systems for Vivado *2022.1*
+Please note that this instruction is an old version and in Fall 2022, we will use 2022.1. 
 We will provide an updated information but you can still probably use the same information with minor modifications. 
 You need to install Vitis and vivado for the course. 
 (the original doc was made in 2020 and only new important information's figures are updated. So you might see some discrepancy of the screen shots. ) 
@@ -18,7 +18,7 @@ Go to  https://www.xilinx.com/support/download.html "**Download**".
 <img src="https://github.com/gt-cs3220/gt-cs3220.github.io/blob/master/Vivado_Installation_Steps/step_images/step1.png" width="70%">
 
 ## Step 2
-Scroll down to "**Vivado Design Suite - HLx Editions - 2021.2  Full Product Installation**", and click 
+Scroll down to "**Vivado Design Suite - HLx Editions - 2022.1  Full Product Installation**", and click 
 "**Xilinx Unified Installer 2020.2: Windows Self Extracting Web Installer**"
 
 <img src="https://github.com/gt-cs3220/gt-cs3220.github.io/blob/master/Vivado_Installation_Steps/step_images/step.png" width="70%">
@@ -93,5 +93,5 @@ To install the board files, extract the zip file under the following directory:
 
 <Xilinx installation directory>\Vivado\<version>\data\xhub\boards\XilinixBoardStore\boards\Xilinx
 
-e.g.) Xilinix\Vivado\2021.2\data\xhub\boards\XilinxBoardStore\boards\Xilinx\pynq-z2 
+e.g.) Xilinix\Vivado\2022.1\data\xhub\boards\XilinxBoardStore\boards\Xilinx\pynq-z2 
 
