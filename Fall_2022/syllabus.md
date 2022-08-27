@@ -15,8 +15,8 @@
 
 **TA's office hours:**
 
-* Sam's Office Hour: Monday 2:00pm - 3:00pm in KACB 2335.
-* Ruobing's Office Hour: TBD
+* Sam's Office Hour: Monday 2:00pm - 3:00pm in KACB 2335
+* Ruobing's Office Hour: Wednesday 2:00pm - 3:00pm in KACB 2335
 
 
 **Communication method** 
