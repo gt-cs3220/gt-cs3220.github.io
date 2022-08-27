@@ -12,17 +12,18 @@
 
 **TAs**: Ruobing Han, Sam Jijina
 
-**Note about TA office hours**: TBD
+
+**TA's office hours:**
+
+* Sam's Office Hour: Monday 2:00pm - 3:00pm in KACB 2335.
+* Ruobing's Office Hour: TBD
+
 
 **Communication method** 
 Please use piazza private posting to communicate with the instructor and the TAs. For general questions, please use piazza public posting so that other students can reply as well. 
  
 **Participation points**
-Students who provide helpful postings will receive extra participation points. (up to 3 points in total) 
-
-**TA's office hours:** The office hour information will be posted in piazza. 
-
-**TA's office location:** Bluejeans
+Students who provide helpful postings will receive extra participation points. (up to 3 points in total)  
 
 **Class homepage**: https://gt-cs3220.github.io/
 
