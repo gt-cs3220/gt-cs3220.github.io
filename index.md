@@ -36,7 +36,7 @@ In this course, we will study hardware implementation of architecture design. Th
 
 #### [Class Syllabus](Fall_2022/syllabus.md)
 
-#### [ICE Access](access_vm_steps/access_vm_doc.md)
+#### [ICE Access](access_vm_steps/access_vm_doc.md) Do not use for Fall 2022
 
 #### [Xilinx Vivado Install Instructions](Vivado_Installation_Steps/vivado_install_steps.md)
 

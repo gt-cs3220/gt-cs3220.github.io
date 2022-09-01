@@ -1,5 +1,6 @@
 # Guide for accessing VM on ICE cluster
 
+# NOTE: Do not use for Fall 2022. There is no cluster access for Fall 2022!
 ## Key Requirements
 1. Internet connection
 2. GT account (same as BuzzPort and Passport)
