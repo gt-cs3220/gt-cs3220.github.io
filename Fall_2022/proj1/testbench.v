@@ -22,7 +22,6 @@ module testbench ();
     
     wire done; 
     
-    //j is the reading address
     integer i;
      
     bubblesort bubblesort(
@@ -39,13 +38,14 @@ module testbench ();
         .dat_out6(dat_out6),
         .dat_out7(dat_out7),
         .dat_out8(dat_out8),
-        .dat_out9(dat_out9));
+        .dat_out9(dat_out9)
+    );
 
 
-//  generate clock and reset 
+    // generate clock and reset 
     initial sim_clk = 1'b0;
     
-    always #(`CLK_PERIOD/2.0)
+    always #(CLK_PERIOD/2.0)
         sim_clk = ~sim_clk; 
      
     initial begin 
