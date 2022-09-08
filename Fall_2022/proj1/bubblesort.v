@@ -15,7 +15,7 @@ module bubblesort (
     output wire done
 ); 
  
-  	reg [15:0] dmem [9:0];
+    reg [15:0] dmem [9:0];
 
     assign dat_out0 = dmem[0];
     assign dat_out1 = dmem[1];
@@ -39,12 +39,12 @@ module bubblesort (
     reg [15:0]  m_din;  // input data
     wire [15:0] m_dout; // output data
     
-  	// Dual-port RAM with asynchronous read
+    // Dual-port RAM with asynchronous read
     always @(posedge clk) begin
-       if (m_we) begin
-          dmem[m_wa] <= m_din;
-       end       
-  	end
+        if (m_we) begin
+            dmem[m_wa] <= m_din;    
+        end       
+    end
     assign m_dout = dmem[m_ra];
   
     // Sorting circuit implementation
