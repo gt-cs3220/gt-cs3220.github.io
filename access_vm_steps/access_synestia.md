@@ -5,19 +5,9 @@
 2. GT account (same as BuzzPort and Passport)
 
 ## Download and install the Cisco AnyConnect GT VPN package
+## Note: Cisco AnyConnect no longer works for GT VPN. GT has moved to use GlobalProtect VPN Client. So please install that instead.
 Please read  [https://faq.oit.gatech.edu/content/how-do-i-get-started-campus-vpn](https://faq.oit.gatech.edu/content/how-do-i-get-started-campus-vpn) on how to download the VPN and set it up for your OS.
 
-![VPN_start_screen](/access_vm_steps/images/vpn1.PNG "VPN_start_screen")
-
-Some tips:
-* Use ```gatech-2fa-Duo``` as the group
-* The Username is your GT Username eg: jdoe3
-* The Password is your GT Account Password (the same one you use to access Canvas)
-* The **Second** Password is your 2FA code (usually given by Duo Mobile)
-    * *Note: You can input* **```push```** *as the **second password** and Duo will send you a verification push to **your phone**.* 
-
-
-![VPN_config_screen](/access_vm_steps/images/vpn2.PNG "VPN_config_screen")
 
 ## Download and install the x2go **client** for your operating system
 Please access [https://wiki.x2go.org/doku.php/download:start](https://wiki.x2go.org/doku.php/download:start) to get the client for your OS
