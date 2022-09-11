@@ -31,6 +31,8 @@ Please access [https://wiki.x2go.org/doku.php/download:start](https://wiki.x2go.
 ## Create a new connection/session in x2go with the following details
 Host : [your assigned host] eg: ```synestia1.cc.gatech.edu```
 
+[NOTE: Your assinged host will be communicated via Piazza. Do not assume you can use any host you choose]
+
 Login : [your GT username] eg: ```jdoe3```
 
 SSH port : 22
