@@ -5,7 +5,7 @@
 2. GT account (same as BuzzPort and Passport)
 
 ## Download and install the Cisco AnyConnect GT VPN package
-## Note: Cisco AnyConnect no longer works for GT VPN. GT has moved to use GlobalProtect VPN Client. So please install that instead.
+## Note: Cisco AnyConnect no longer works for GT VPN. GT has changed to GlobalProtect VPN Client. So please install that instead.
 Please read  [https://faq.oit.gatech.edu/content/how-do-i-get-started-campus-vpn](https://faq.oit.gatech.edu/content/how-do-i-get-started-campus-vpn) on how to download the VPN and set it up for your OS.
 
 
