@@ -52,7 +52,7 @@ module testbench ();
     
     always @(posedge clk) begin 
         cycles <= cycles + 1;
-        if (cycles == 1)
+        if (cycles == 10)
             reset <= 0;
         if (reset == 0 && done == 1) begin 
             rd_en <= 1; 
