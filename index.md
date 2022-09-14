@@ -38,6 +38,8 @@ In this course, we will study hardware implementation of architecture design. Th
 
 #### [ICE Access](access_vm_steps/access_vm_doc.md) Do not use for Fall 2022
 
+#### [VM Access for Remote Vivado](access_vm_steps/access_synestia.md)
+
 #### [Xilinx Vivado Install Instructions](Vivado_Installation_Steps/vivado_install_steps.md)
 
 #### [Xilinx Pynq FPGA instructions](access_pynq_boards\access_pynq_doc.md)
