@@ -29,7 +29,7 @@ esac
 case $part in
 	part1)
 		echo RUNNING PART1$'\n'
-		for filename in $PWD/test/part1/*.mem;do
+		for filename in $PWD/tests/part1/*.mem;do
 			echo $'\n'TESTING: $filename >> part1_tests.log
 			IDMEMINITFILE=$filename make tests>> part1_tests.log
 		done
@@ -43,7 +43,7 @@ case $part in
 	;;
 	part2)
 		echo RUNNING PART2$'\n'
-		for filename in $PWD/test/part2/*.mem;do
+		for filename in $PWD/tests/part2/*.mem;do
 			echo $'\n'TESTING: $filename >> part2_tests.log
 			IDMEMINITFILE=$filename make tests>> part2_tests.log
 		done
@@ -57,7 +57,7 @@ case $part in
 	;;
 	part3)
 		echo RUNNING PART3$'\n'
-		for filename in $PWD/test/part3/*.mem;do
+		for filename in $PWD/tests/part3/*.mem;do
 			echo $'\n'TESTING: $filename >> part3_tests.log
 			IDMEMINITFILE=$filename make tests>> part3_tests.log
 		done
@@ -71,7 +71,7 @@ case $part in
 	;;
 	part4)
 		echo RUNNING PART4$'\n'
-		for filename in $PWD/test/part4/*.mem;do
+		for filename in $PWD/tests/part4/*.mem;do
 			echo $'\n'TESTING: $filename >> part4_tests.log
 			IDMEMINITFILE=$filename make tests>> part4_tests.log
 		done
@@ -85,7 +85,7 @@ case $part in
 	;;
 	exam)
 		echo RUNNING EXAM$'\n'
-		for filename in $PWD/test/exam/*.mem;do
+		for filename in $PWD/tests/exam/*.mem;do
 			echo $'\n'TESTING: $filename >> exam_tests.log
 			IDMEMINITFILE=$filename make tests>> exam_tests.log
 		done
@@ -99,7 +99,7 @@ case $part in
 	;;
 	all)
 		echo RUNNING ALL$'\n'
-		for filename in $PWD/test/part*/*.mem;do
+		for filename in $PWD/tests/part*/*.mem;do
 			echo $'\n'TESTING: $filename >> all_tests.log
 			IDMEMINITFILE=$filename make tests>> all_tests.log
 		done
