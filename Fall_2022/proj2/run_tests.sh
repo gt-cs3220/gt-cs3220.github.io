@@ -7,22 +7,22 @@ echo You have chosen to run $part tests
 
 case $part in 
   part1) 
-    rm part1_tests.log
+    rm -f part1_tests.log
     ;;
   part2) 
-    rm part2_tests.log
+    rm -f part2_tests.log
     ;;
   part3) 
-    rm part3_tests.log
+    rm -f part3_tests.log
     ;;
   part4)
-    rm part4_tests.log
+    rm -f part4_tests.log
 	;;
   exam)
-    rm exam_tests.log
+    rm -f exam_tests.log
 	;;
   all)
-	rm all_tests.log
+	rm -f all_tests.log
 	;;
 esac
 
