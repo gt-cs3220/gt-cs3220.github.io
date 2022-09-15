@@ -9,7 +9,7 @@
 **Description**:
 
 In this assignment, you will design a RISC-V 5-stage pipelined processor using
-verilog. The ISA is a subset of RISC-V ISA. We will use <a href="tinyrv-isa.txt"> Tiny RISC-V version from Cornell </a>  In part-1, you only need to implement *addi, add, beq* instruction to pass all 5 test cases in test/part1/test[1-5].mem file. (a subset of TinyRV1). In part-2, you will add more instructions to test a subset of test suites. 
+verilog. The ISA is a subset of RISC-V ISA. We will use <a href="tinyrv-isa.txt"> Tiny RISC-V version from Cornell </a>  In part-1, you only need to implement *addi, add, beq* instruction to pass all 5 test cases in tests/part1/test[1-5].mem file. (a subset of TinyRV1). In part-2, you will add more instructions to test a subset of test suites. 
 In part-3: you will complete TinyRV2 except CSR related instructions. You might add CSR instructions (CSRR, CSRW) in the later projects. 
 In project #2, you can use a <a href="https://www.veripool.org/verilator/">  verilator </a>  which is a faster way to debug your code. Verilator is a tool to simulate verilog code w/o synthesization or w/o xilinix vivado tool. However, it follows the verilog behavior and it provides more useful warning/error messages. Most importantly, verilator is much faster to simulate than Xilinix vivado behavior simulation. In order to use verilator, you can install verilator in your machine or you can use the ICE cluster. We will go back to Vivado in project #3 to load the design into FPGA. 
 In this design, you don't need to implement data forwarding in this part. 
@@ -42,7 +42,7 @@ You need to pass the test cases in part-2 test suites. T We will provide RISC-V 
 
 **Test cases**: 
 In part-2, all instructions in the test cases in part2 such as  add, addi, auipc, beq, bge, (all branch instructions) jal, jalr instructions will be tested. 
-you need to pass all test cases in test/part2 directory. 
+you need to pass all test cases in tests/part2 directory. 
 To test all test cases together, you can use ```run_tests.sh part2``` 
 and it will produce part[1-3]_results.log and part[1-3]_tests.log. 
 test[7-9] are hand written assembly code which is easier to debug. please use those test cases first. 
