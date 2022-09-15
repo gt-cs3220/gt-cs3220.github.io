@@ -59,7 +59,7 @@ module FE_STAGE(
                                 PC_FE_latch, 
                                 pcplus_FE, // please feel free to add more signals such as valid bits etc. 
                                 inst_count_FE, 
-                                // if you add more bits here, please increase the width of latch in VX_define.vh 
+                                // if you add more bits here, please increase the width of latch in define.vh 
                                 `BUS_CANARY_VALUE // for an error checking of bus encoding/decoding  
                                 };
 
