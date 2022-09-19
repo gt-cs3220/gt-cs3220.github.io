@@ -245,64 +245,17 @@ module DE_STAGE(
                                    bus_canary_DE 
                                   }; 
 
+  // register file and CSRs initialization
+  initial begin
+    for (integer i = 0; i < 32; ++i) 
+      regs[i] = {`DBITS{1'b0}};
+    for (integer i = 0; i < 16; ++i) 
+      csr_regs[i] = {`DBITS{1'b0}};
+  end
 
-
-
-
+  // register file and CSRs write
   always @ (negedge clk) begin 
-  /* register write code is completed for your benefit */ 
-    if (reset) begin 
-      regs[0] <= {`DBITS{1'b0}};
-      regs[1] <= {`DBITS{1'b0}};
-      regs[2] <= {`DBITS{1'b0}};
-      regs[3] <= {`DBITS{1'b0}};
-      regs[4] <= {`DBITS{1'b0}};
-      regs[5] <= {`DBITS{1'b0}};
-      regs[6] <= {`DBITS{1'b0}};
-      regs[7] <= {`DBITS{1'b0}};
-      regs[8] <= {`DBITS{1'b0}};
-      regs[9] <= {`DBITS{1'b0}};
-      regs[10] <= {`DBITS{1'b0}};
-      regs[11] <= {`DBITS{1'b0}};
-      regs[12] <= {`DBITS{1'b0}};
-      regs[13] <= {`DBITS{1'b0}};
-      regs[14] <= {`DBITS{1'b0}};
-      regs[15] <= {`DBITS{1'b0}};
-      regs[16] <= {`DBITS{1'b0}};
-      regs[17] <= {`DBITS{1'b0}};
-      regs[18] <= {`DBITS{1'b0}};
-      regs[19] <= {`DBITS{1'b0}};
-      regs[20] <= {`DBITS{1'b0}};
-      regs[21] <= {`DBITS{1'b0}};
-      regs[22] <= {`DBITS{1'b0}};
-      regs[23] <= {`DBITS{1'b0}};
-      regs[24] <= {`DBITS{1'b0}};
-      regs[25] <= {`DBITS{1'b0}};
-      regs[26] <= {`DBITS{1'b0}};
-      regs[27] <= {`DBITS{1'b0}};
-      regs[28] <= {`DBITS{1'b0}};
-      regs[29] <= {`DBITS{1'b0}};
-      regs[30] <= {`DBITS{1'b0}};
-      regs[31] <= {`DBITS{1'b0}};
-
-      csr_regs[0] <= {`DBITS{1'b0}};
-      csr_regs[1] <= {`DBITS{1'b0}};
-      csr_regs[2] <= {`DBITS{1'b0}};
-      csr_regs[3] <= {`DBITS{1'b0}};
-      csr_regs[4] <= {`DBITS{1'b0}};
-      csr_regs[5] <= {`DBITS{1'b0}};
-      csr_regs[6] <= {`DBITS{1'b0}};
-      csr_regs[7] <= {`DBITS{1'b0}};
-      csr_regs[8] <= {`DBITS{1'b0}};
-      csr_regs[9] <= {`DBITS{1'b0}};
-      csr_regs[10] <= {`DBITS{1'b0}};
-      csr_regs[11] <= {`DBITS{1'b0}};
-      csr_regs[12] <= {`DBITS{1'b0}};
-      csr_regs[13] <= {`DBITS{1'b0}};
-      csr_regs[14] <= {`DBITS{1'b0}};
-      csr_regs[15] <= {`DBITS{1'b0}};
-    end
-    else if (wr_reg_WB) 
+    if (wr_reg_WB) 
 		  	regs[wregno_WB] <= regval_WB; 
     else if (wr_csr_WB) 
 		  	csr_regs[wcsrno_WB] <= regval_WB; 
