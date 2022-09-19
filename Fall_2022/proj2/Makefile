@@ -13,6 +13,8 @@
 ######################################################################
 # Check for sanity to avoid later confusion
 
+.PHONY: default tests submit clean
+
 ifneq ($(words $(CURDIR)),1)
  $(error Unsupported: GNU Make cannot build in directories containing spaces, build elsewhere: '$(CURDIR)')
 endif
