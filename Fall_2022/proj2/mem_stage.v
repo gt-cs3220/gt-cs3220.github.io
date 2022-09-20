@@ -30,7 +30,7 @@ module MEM_STAGE(
   wire [`DBITS-1:0] inst_count_MEM; 
   wire [`INSTBITS-1:0] inst_MEM; 
   wire [`DBITS-1:0] PC_MEM;
- 
+  wire [`REGWORDS-1:0] results;
 
    wire [`BUS_CANARY_WIDTH-1:0] bus_canary_MEM;
 
@@ -60,6 +60,7 @@ module MEM_STAGE(
                                 op_I_MEM,
                                 inst_count_MEM, 
                                  // more signals might need
+                                 results,
                                  bus_canary_MEM
                                  } = from_AGEX_latch;  
  
@@ -70,7 +71,8 @@ module MEM_STAGE(
                                 PC_MEM,
                                 op_I_MEM,
                                 inst_count_MEM, 
-                                        // more signals might need    
+                                        // more signals might need
+                                results,
                               bus_canary_MEM                   
    }; 
 

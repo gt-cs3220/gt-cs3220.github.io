@@ -185,12 +185,30 @@ module DE_STAGE(
 
   //////////////////////////////////
   // **TODO: Complete the rest of the pipeline 
-
+  
+  reg  [`REGWORDS-1:0] regword_1;
+  reg  [`REGWORDS-1:0] regword_2;
   reg  [`DBITS-1:0] sxt_imm_DE;
   always @(*) begin 
+    case (type_I_DE )
+    `R_Type: begin
+      regword_1 = regs[inst_DE[19:15]];
+      regword_2 = regs[inst_DE[24:20]];
+      end
+    `I_Type: begin
+      regword_1 = regs[inst_DE[19:15]];
+      regword_2 = sxt_imm_DE;
+      end
+    `S_Type: begin  
+      regword_1 = regs[inst_DE[19:15]];
+      regword_2 = regs[inst_DE[24:20]];
+      end
+    endcase
     case (type_immediate_DE )  
     `I_immediate: 
-      sxt_imm_DE = {{21{inst_DE[31]}}, inst_DE[30:25], inst_DE[24:21], inst_DE[20]}; 
+      sxt_imm_DE = {{21{inst_DE[31]}}, inst_DE[30:25], inst_DE[24:21], inst_DE[20]};
+    `S_immediate:
+      sxt_imm_DE = {{21{inst_DE[31]}}, inst_DE[30:25], inst_DE[11:8], inst_DE[7]};
       /*
     `S_immediate: 
       sxt_imm_DE =  ... 
@@ -242,6 +260,8 @@ module DE_STAGE(
                                   op_I_DE,
                                   inst_count_DE, 
                                   // more signals might need
+                                  regword_1,
+                                  regword_2,
                                    bus_canary_DE 
                                   }; 
 

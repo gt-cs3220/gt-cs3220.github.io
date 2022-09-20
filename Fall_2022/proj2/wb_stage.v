@@ -15,6 +15,7 @@ module WB_STAGE(
   wire [`INSTBITS-1:0] inst_WB; 
   wire [`DBITS-1:0] PC_WB;
   wire [`DBITS-1:0] inst_count_WB; 
+  wire [`REGWORDS-1:0] results;
   wire [`BUS_CANARY_WIDTH-1:0] bus_canary_WB;
 
   
@@ -28,14 +29,28 @@ module WB_STAGE(
 
 
   // **TODO: Complete the rest of the pipeline**
- 
+  
+  always @ (*) begin
+    case (op_I_WB)
+    `ADD_I: begin
+      wr_reg_WB = 1;
+      wregno_WB = inst_WB[11:7];
+      regval_WB = result;
+    end  
+    `ADDI_I:
+      wr_reg_WB = 1;
+      wregno_WB = inst_WB[11:7];
+      regval_WB = result;
+	endcase  
+  end
     
    assign {
                                 inst_WB,
                                 PC_WB,
                                 op_I_WB,
                                 inst_count_WB, 
-                                // more signals might need                        
+                                // more signals might need
+                                results,                        
                                  bus_canary_WB 
                                  } = from_MEM_latch; 
         
