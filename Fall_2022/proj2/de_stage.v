@@ -205,6 +205,23 @@ module DE_STAGE(
       sxt_imm_DE = 32'b0; 
     endcase  
   end 
+
+  reg  [`REGWORDS-1:0]  regword_1;
+  reg  [`REGWORDS-1:0]  regword_2;
+  always @(*) begin 
+    case (type_I_DE )
+        `R_Type: begin
+          regword_1 = regs[inst_DE[19:15]];
+          regword_2 = regs[inst_DE[24:20]];
+        end
+        `I_Type: begin
+          regword_1 = regs[inst_DE[19:15]];
+          regword_2 = sxt_imm_DE;
+        end  
+    endcase
+  end  
+
+
    wire wr_reg_WB; 
  
  /* this signal is passed from WB stage */ 
@@ -214,11 +231,40 @@ module DE_STAGE(
   wire [`CSRNOBITS-1:0] wcsrno_WB;  // desitnation CSR register ID 
   wire wr_csr_WB; // is this instruction writing into CSR ? 
 
+  wire [6:0] wb_op;
+  wire [`REGNOBITS-1:0] wb_write_to;
   // signals come from WB stage for register WB 
-  assign { wr_reg_WB, wregno_WB, regval_WB, wcsrno_WB, wr_csr_WB} = from_WB_to_DE;  
+  assign { wr_reg_WB, wregno_WB, regval_WB, wcsrno_WB, wr_csr_WB, wb_write_to, wb_op} = from_WB_to_DE;  
 
+  wire [6:0] mem_op;
+  wire [`REGNOBITS-1:0] mem_write_to;
+  assign {mem_write_to, mem_op} = from_MEM_to_DE;
 
-  wire pipeline_stall_DE; 
+  wire [6:0] agex_op;
+  wire [`REGNOBITS-1:0] agex_write_to;
+  assign {agex_write_to, agex_op} = from_MEM_to_DE;
+
+  reg pipeline_stall_DE; 
+
+  always @(*) begin 
+    if (mem_op == `ADD_I || mem_op == `ADDI_I) begin
+      case (type_I_DE )
+        `R_Type: begin
+          if (mem_write_to == inst_DE[19:15] || mem_write_to == inst_DE[24:20])
+            pipeline_stall_DE = 1;
+          else
+            pipeline_stall_DE = 0;  
+        end
+        `I_Type: begin
+          if (mem_write_to == inst_DE[19:15])
+            pipeline_stall_DE = 1;
+          else
+            pipeline_stall_DE = 0;  
+        end  
+      endcase
+    end
+  end  
+
   assign from_DE_to_FE = {pipeline_stall_DE}; // pass the DE stage stall signal to FE stage 
 
 
@@ -242,6 +288,8 @@ module DE_STAGE(
                                   op_I_DE,
                                   inst_count_DE, 
                                   // more signals might need
+                                  regword_1,
+                                  regword_2,
                                    bus_canary_DE 
                                   }; 
 

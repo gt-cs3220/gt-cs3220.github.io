@@ -25,6 +25,8 @@ module AGEX_STAGE(
   wire [`IOPBITS-1:0] op_I_AGEX;
   reg br_cond_AGEX; // 1 means a branch condition is satisified. 0 means a branch condition is not satisifed 
 
+  wire [`REGWORDS-1:0] regword_1;
+  wire [`REGWORDS-1:0] regword_2;
 
   wire[`BUS_CANARY_WIDTH-1:0] bus_canary_AGEX; 
  
@@ -48,14 +50,14 @@ module AGEX_STAGE(
 
   // compute ALU operations  (alu out or memory addresses)
  
+  reg [`REGWORDS-1:0] result;
   always @ (*) begin
-  /*
-  case (op_I_AGEX)
-    `ADD_I: 
-       //  ...
-
-	 endcase 
-   */
+    case (op_I_AGEX)
+      `ADD_I: 
+        result = regword_1 + regword_2;
+      `ADDI_I:
+        result = regword_1 + regword_2;
+    endcase 
   end 
 
   // branch target needs to be computed here 
@@ -76,6 +78,8 @@ module AGEX_STAGE(
     op_I_AGEX,
     inst_count_AGEX, 
             // more signals might need
+    regword_1,
+    regword_2,
     bus_canary_AGEX
   } = from_DE_latch;    
  
@@ -85,8 +89,12 @@ module AGEX_STAGE(
     op_I_AGEX,
     inst_count_AGEX, 
             // more signals might need
+    result,
     bus_canary_AGEX     
   }; 
+
+  //sends opcode and write to reg to de
+  assign from_AGEX_to_DE = inst_AGEX[11:0];
  
   always @ (posedge clk) begin
     if (reset) begin
