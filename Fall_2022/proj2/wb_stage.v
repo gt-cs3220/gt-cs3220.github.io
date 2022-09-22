@@ -16,7 +16,6 @@ module WB_STAGE(
   wire [`DBITS-1:0] PC_WB;
   wire [`DBITS-1:0] inst_count_WB; 
   wire [`BUS_CANARY_WIDTH-1:0] bus_canary_WB;
-
   
   wire wr_reg_WB; // is this instruction writing into a register file? 
   
@@ -28,14 +27,21 @@ module WB_STAGE(
 
 
   // **TODO: Complete the rest of the pipeline**
- 
+
+  wire [`REGWORDS-1:0] result;
+
+  assign wregno_WB = inst_WB[11:7];
+  assign regval_WB = result;
+
+  assign wr_reg_WB = (op_I_WB == `ADDI_I) ? 1 : 0;
     
    assign {
                                 inst_WB,
                                 PC_WB,
                                 op_I_WB,
                                 inst_count_WB, 
-                                // more signals might need                        
+                                // more signals might need  
+                                result,                      
                                  bus_canary_WB 
                                  } = from_MEM_latch; 
         

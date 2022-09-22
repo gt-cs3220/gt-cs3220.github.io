@@ -222,6 +222,7 @@ module DE_STAGE(
   assign from_DE_to_FE = {pipeline_stall_DE}; // pass the DE stage stall signal to FE stage 
 
 
+
   // decoding the contents of FE latch out. the order should be matched with the fe_stage.v 
   assign {
             inst_DE,
@@ -242,7 +243,9 @@ module DE_STAGE(
                                   op_I_DE,
                                   inst_count_DE, 
                                   // more signals might need
-                                   bus_canary_DE 
+                                  regword_1,
+                                  regword_2,
+                                  bus_canary_DE 
                                   }; 
 
   // register file and CSRs initialization
@@ -264,13 +267,34 @@ module DE_STAGE(
   always @ (posedge clk) begin // you need to expand this always block 
     if (reset) begin
       DE_latch <= {`DE_latch_WIDTH{1'b0}};
-      end
-     else begin  
-      if (pipeline_stall_DE) 
+      dest_reg <= {`REGNOBITS{1'b0}};
+    end
+    else begin  
+      if (pipeline_stall_DE) begin
         DE_latch <= {`DE_latch_WIDTH{1'b0}};
-      else
-          DE_latch <= DE_latch_contents;
-     end 
+        dest_reg <= dest_reg;
+      end
+      else begin
+        DE_latch <= DE_latch_contents;
+        dest_reg <= inst_DE[19:15];
+      end
+    end 
+
+    if (dest_reg == inst_DE[19:15]) 
+      stall <= 1;
+    else if (wr_reg_WB)
+      stall <= 0;
   end
+
+  wire  [`REGWORDS-1:0]  regword_1;
+  wire  [`REGWORDS-1:0]  regword_2;
+
+  reg  [`REGNOBITS-1:0]  dest_reg;
+  reg  stall;
+
+  assign regword_1 = regs[dest_reg];
+  assign regword_2 = sxt_imm_DE;
+
+  assign pipeline_stall_DE = stall;
 
 endmodule

@@ -16,7 +16,7 @@
 // address space is m 0x00000000 to 0x000fffff
 // [NOTICE] please note that both imem and dmem use the SAME "IDMEMINITFILE".
 // you need to change this line to change which test file to read 
-`define IDMEMINITFILE "tests/part1/test1.mem"
+`define IDMEMINITFILE "/home/edward/GitHub/Source/gt-cs3220.github.io/Fall_2022/proj2/tests/part1/test2.mem"
 `define IMEMADDRBITS  16
 `define IMEMWORDBITS  2
 `define IMEMWORDS	  (1 << (`IMEMADDRBITS - `IMEMWORDBITS))
@@ -191,10 +191,10 @@
 /** please update the following define with your own values */ 
 
 `define FE_latch_WIDTH  (`INSTBITS+`DBITS+`DBITS+ `DBITS+ `BUS_CANARY_WIDTH)
-`define DE_latch_WIDTH  (`INSTBITS+`DBITS+`DBITS+ `IOPBITS + `DBITS+ `BUS_CANARY_WIDTH)
+`define DE_latch_WIDTH  (`INSTBITS+`DBITS+`DBITS+ `IOPBITS + `DBITS+ `DBITS + `DBITS + `BUS_CANARY_WIDTH)
 
-`define AGEX_latch_WIDTH   (`INSTBITS+`DBITS+ `IOPBITS + `DBITS+ `BUS_CANARY_WIDTH)
-`define MEM_latch_WIDTH    (`INSTBITS+`DBITS+ `IOPBITS + `DBITS+  `BUS_CANARY_WIDTH) 
+`define AGEX_latch_WIDTH   (`INSTBITS+`DBITS+ `IOPBITS + `DBITS+ `DBITS+ `BUS_CANARY_WIDTH)
+`define MEM_latch_WIDTH    (`INSTBITS+`DBITS+ `IOPBITS + `DBITS+ `DBITS+ `BUS_CANARY_WIDTH) 
 
 `define from_DE_to_FE_WIDTH  1 
 `define from_AGEX_to_FE_WIDTH 1

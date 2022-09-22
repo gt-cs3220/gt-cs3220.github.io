@@ -32,6 +32,8 @@ module MEM_STAGE(
   wire [`DBITS-1:0] PC_MEM;
  
 
+  wire[`REGWORDS-1:0] result;
+
    wire [`BUS_CANARY_WIDTH-1:0] bus_canary_MEM;
 
 // **TODO: Complete the rest of the pipeline 
@@ -60,6 +62,7 @@ module MEM_STAGE(
                                 op_I_MEM,
                                 inst_count_MEM, 
                                  // more signals might need
+                                 result,
                                  bus_canary_MEM
                                  } = from_AGEX_latch;  
  
@@ -70,12 +73,13 @@ module MEM_STAGE(
                                 PC_MEM,
                                 op_I_MEM,
                                 inst_count_MEM, 
-                                        // more signals might need    
+                                        // more signals might need   
+                                result, 
                               bus_canary_MEM                   
    }; 
 
   always @ (posedge clk) begin
-    if (reset) begin
+    if (reset || ) begin
         MEM_latch <= {`MEM_latch_WIDTH{1'b0}}; 
     end else begin 
         MEM_latch <= MEM_latch_contents;
