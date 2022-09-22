@@ -21,7 +21,7 @@ module WB_STAGE(
   wire [`BUS_CANARY_WIDTH-1:0] bus_canary_WB;
 
   
-  reg wr_reg_WB; // is this instruction writing into a register file? 
+  wire wr_reg_WB; // is this instruction writing into a register file? 
   
   reg [`REGNOBITS-1:0] wregno_WB; // destination register ID 
   reg [`DBITS-1:0] regval_WB;  // the contents to be written in the register file (or CSR )
@@ -32,18 +32,22 @@ module WB_STAGE(
 
   // **TODO: Complete the rest of the pipeline**
   
+  assign wr_reg_WB = (op_I_WB == `ADD_I || op_I_WB == `ADDI_I) ? 1 : 0;
+
   always @ (*) begin
     case (op_I_WB)
       `ADD_I: begin
-        wr_reg_WB = 1;
         wregno_WB = inst_WB[11:7];
         regval_WB = result;
       end  
       `ADDI_I: begin
-        wr_reg_WB = 1;
         wregno_WB = inst_WB[11:7];
         regval_WB = result;
-      end  
+      end 
+      default: begin
+        wregno_WB = 0;
+        regval_WB = 0;
+      end 
     endcase 
   end 
     
@@ -63,7 +67,7 @@ module WB_STAGE(
 
 
 // we send register write (and CSR register) information to DE stage (also opcode and write to reg)
-assign from_WB_to_DE = {wr_reg_WB, wregno_WB, regval_WB, wcsrno_WB, wr_csr_WB, inst_WB[11:0]} ;  
+assign from_WB_to_DE = {wr_reg_WB, wregno_WB, regval_WB, wcsrno_WB, wr_csr_WB} ;  
 
 // this code need to be commented out when we synthesize the code later 
     // special workaround to get tests Pass/Fail status

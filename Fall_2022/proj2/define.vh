@@ -201,9 +201,9 @@
 `define from_MEM_to_FE_WIDTH 1
 `define from_WB_to_FE_WIDTH 1
 
-`define from_AGEX_to_DE_WIDTH 12 
-`define from_MEM_to_DE_WIDTH  12
-`define from_WB_to_DE_WIDTH  (1 + `REGNOBITS + `DBITS + `CSRNOBITS + 1 + 12) 
+`define from_AGEX_to_DE_WIDTH 1 
+`define from_MEM_to_DE_WIDTH  1
+`define from_WB_to_DE_WIDTH  (1 + `REGNOBITS + `DBITS + `CSRNOBITS + 1) 
 
 `define from_MEM_to_AGEX_WIDTH  1
 `define from_WB_to_AGEX_WIDTH  1

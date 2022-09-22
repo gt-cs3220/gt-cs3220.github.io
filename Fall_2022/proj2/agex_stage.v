@@ -92,9 +92,6 @@ module AGEX_STAGE(
     result,
     bus_canary_AGEX     
   }; 
-
-  //sends opcode and write to reg to de
-  assign from_AGEX_to_DE = inst_AGEX[11:0];
  
   always @ (posedge clk) begin
     if (reset) begin

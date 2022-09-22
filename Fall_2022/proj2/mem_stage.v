@@ -77,9 +77,6 @@ module MEM_STAGE(
                               bus_canary_MEM                   
    }; 
 
-  //sends opcode and write to reg to de
-  assign from_MEM_to_DE = inst_MEM[11:0];
-
   always @ (posedge clk) begin
     if (reset) begin
         MEM_latch <= {`MEM_latch_WIDTH{1'b0}}; 
