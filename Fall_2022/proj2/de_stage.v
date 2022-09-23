@@ -190,10 +190,10 @@ module DE_STAGE(
   always @(*) begin 
     case (type_immediate_DE )  
     `I_immediate: 
-      sxt_imm_DE = {{21{inst_DE[31]}}, inst_DE[30:25], inst_DE[24:21], inst_DE[20]}; 
-      /*
+      sxt_imm_DE = {{21{inst_DE[31]}}, inst_DE[30:25], inst_DE[24:21], inst_DE[20]};  
     `S_immediate: 
-      sxt_imm_DE =  ... 
+      sxt_imm_DE = {{21{inst_DE[31]}}, inst_DE[30:25], inst_DE[11:8], inst_DE[7]}; 
+    /*
     `B_immediate: 
       sxt_imm_DE = ... 
     `U_immediate: 
@@ -208,15 +208,23 @@ module DE_STAGE(
 
   reg  [`REGWORDS-1:0]  regword_1;
   reg  [`REGWORDS-1:0]  regword_2;
+  reg  [`REGWORDS-1:0]  regword_3;
   always @(*) begin 
     case (type_I_DE )
         `R_Type: begin
           regword_1 = regs[inst_DE[19:15]];
           regword_2 = regs[inst_DE[24:20]];
+          regword_3 = 0;
         end
         `I_Type: begin
           regword_1 = regs[inst_DE[19:15]];
           regword_2 = sxt_imm_DE;
+          regword_3 = 0;
+        end  
+        `S_Type: begin
+          regword_1 = regs[inst_DE[19:15]];
+          regword_2 = regs[inst_DE[24:20]];
+          regword_3 = sxt_imm_DE;
         end  
     endcase
   end  
@@ -235,6 +243,9 @@ module DE_STAGE(
   assign { wr_reg_WB, wregno_WB, regval_WB, wcsrno_WB, wr_csr_WB} = from_WB_to_DE;  
 
   wire pipeline_stall_DE;
+  //wire bubble;
+
+  //assign bubble = (pipeline_stall_DE || type_I_DE == `S_Type) ? 1 : 0;
 
   assign from_DE_to_FE = {pipeline_stall_DE}; // pass the DE stage stall signal to FE stage 
 
@@ -252,7 +263,7 @@ module DE_STAGE(
 // assign wire to send the contents of DE latch to other pipeline stages  
   assign DE_latch_out = DE_latch; 
 
-   assign DE_latch_contents = {
+  assign DE_latch_contents = {
                                   inst_DE,
                                   PC_DE,
                                   pcplus_DE,
@@ -261,6 +272,7 @@ module DE_STAGE(
                                   // more signals might need
                                   regword_1,
                                   regword_2,
+                                  regword_3,
                                    bus_canary_DE 
                                   }; 
 

@@ -27,6 +27,7 @@ module AGEX_STAGE(
 
   wire [`REGWORDS-1:0] regword_1;
   wire [`REGWORDS-1:0] regword_2;
+  wire [`REGWORDS-1:0] regword_3;
 
   wire[`BUS_CANARY_WIDTH-1:0] bus_canary_AGEX; 
  
@@ -35,7 +36,9 @@ module AGEX_STAGE(
   
   always @ (*) begin
     case (op_I_AGEX)
-      `BEQ_I : br_cond_AGEX = 1; // write correct code to check the branch condition. 
+      `BEQ_I : 
+        if (regword_1 == regword_2)
+          br_cond_AGEX = 1; 
       /*
       `BNE_I : ...
       `BLT_I : ...
@@ -63,13 +66,13 @@ module AGEX_STAGE(
   // branch target needs to be computed here 
   // computed branch target needs to send to other pipeline stages (pctarget_AGEX)
 
+  reg [`DBITS-1:0] target;
   always @(*)begin  
-  /*
-    if (op_I_AGEX == `JAL_I) 
-    ... 
-    */
+    if (op_I_AGEX == `BEQ_I)
+      target = PC_AGEX + regword_3;
   end 
 
+  assign from_AGEX_to_FE = {br_cond_AGEX, target};
 
   assign  {
     inst_AGEX,
@@ -80,6 +83,7 @@ module AGEX_STAGE(
             // more signals might need
     regword_1,
     regword_2,
+    regword_3,
     bus_canary_AGEX
   } = from_DE_latch;    
  
