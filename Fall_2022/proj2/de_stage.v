@@ -243,9 +243,6 @@ module DE_STAGE(
   assign { wr_reg_WB, wregno_WB, regval_WB, wcsrno_WB, wr_csr_WB} = from_WB_to_DE;  
 
   wire pipeline_stall_DE;
-  //wire bubble;
-
-  //assign bubble = (pipeline_stall_DE || type_I_DE == `S_Type) ? 1 : 0;
 
   assign from_DE_to_FE = {pipeline_stall_DE}; // pass the DE stage stall signal to FE stage 
 
