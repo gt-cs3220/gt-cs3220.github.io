@@ -32,7 +32,7 @@ module WB_STAGE(
 
   // **TODO: Complete the rest of the pipeline**
   
-  assign wr_reg_WB = (op_I_WB == `ADD_I || op_I_WB == `ADDI_I) ? 1 : 0;
+  assign wr_reg_WB = (op_I_WB == `ADD_I || op_I_WB == `ADDI_I || op_I_WB == `AUIPC_I || op_I_WB == `JAL_I) ? 1 : 0;
 
   always @ (*) begin
     case (op_I_WB)
@@ -41,6 +41,14 @@ module WB_STAGE(
         regval_WB = result;
       end  
       `ADDI_I: begin
+        wregno_WB = inst_WB[11:7];
+        regval_WB = result;
+      end 
+      `AUIPC_I: begin
+        wregno_WB = inst_WB[11:7];
+        regval_WB = result;
+      end 
+      `JAL_I: begin
         wregno_WB = inst_WB[11:7];
         regval_WB = result;
       end 

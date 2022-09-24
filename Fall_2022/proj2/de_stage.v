@@ -193,14 +193,12 @@ module DE_STAGE(
       sxt_imm_DE = {{21{inst_DE[31]}}, inst_DE[30:25], inst_DE[24:21], inst_DE[20]};  
     `S_immediate: 
       sxt_imm_DE = {{21{inst_DE[31]}}, inst_DE[30:25], inst_DE[11:8], inst_DE[7]}; 
-    /*
     `B_immediate: 
-      sxt_imm_DE = ... 
+      sxt_imm_DE = {{20{inst_DE[31]}}, inst_DE[7], inst_DE[30:25], inst_DE[11:8], 1'b0}; 
     `U_immediate: 
-      sxt_imm_DE = ... 
+      sxt_imm_DE = {inst_DE[31], inst_DE[30:20], inst_DE[19:12], 12'b0};
     `J_immediate: 
-      sxt_imm_DE = ... 
-      */ 
+      sxt_imm_DE = {{12{inst_DE[31]}}, inst_DE[19:12], inst_DE[20], inst_DE[30:25], inst_DE[24:21], 1'b0};
     default:
       sxt_imm_DE = 32'b0; 
     endcase  
@@ -226,6 +224,11 @@ module DE_STAGE(
           regword_2 = regs[inst_DE[24:20]];
           regword_3 = sxt_imm_DE;
         end  
+        `U_Type: begin
+          regword_1 = 0;
+          regword_2 = 0;
+          regword_3 = sxt_imm_DE;
+        end
     endcase
   end  
 
@@ -303,7 +306,7 @@ module DE_STAGE(
       if (pipeline_stall_DE) 
         DE_latch <= {`DE_latch_WIDTH{1'b0}};
       else
-          if (op_I_DE == `ADD_I || op_I_DE == `ADDI_I)
+          if (op_I_DE == `ADD_I || op_I_DE == `ADDI_I || op_I_DE == `AUIPC_I || op_I_DE == `JAL_I)
             busy_bits[inst_DE[11:7]] <= 1; 
           DE_latch <= DE_latch_contents;
      end 

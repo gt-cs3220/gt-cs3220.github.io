@@ -38,14 +38,24 @@ module AGEX_STAGE(
     case (op_I_AGEX)
       `BEQ_I : 
         if (regword_1 == regword_2)
-          br_cond_AGEX = 1; 
-      /*
-      `BNE_I : ...
-      `BLT_I : ...
-      `BGE_I : ...
-      `BLTU_I: ..
-      `BGEU_I : ...
-      */
+          br_cond_AGEX = 1;    
+      `BNE_I :
+        if (regword_1 != regword_2)
+          br_cond_AGEX = 1;    
+      `BLT_I : 
+        if (regword_1 < regword_2)
+          br_cond_AGEX = 1;    
+      `BGE_I : 
+        if (regword_1 >= regword_2)
+          br_cond_AGEX = 1;    
+      `BLTU_I: 
+        if (regword_1 < regword_2)
+          br_cond_AGEX = 1;    
+      `BGEU_I : 
+        if (regword_1 >= regword_2)
+          br_cond_AGEX = 1;    
+      `JAL_I:
+        br_cond_AGEX = 1;
       default : br_cond_AGEX = 1'b0;
     endcase
   end
@@ -60,6 +70,10 @@ module AGEX_STAGE(
         result = regword_1 + regword_2;
       `ADDI_I:
         result = regword_1 + regword_2;
+      `AUIPC_I:
+        result = PC_AGEX + regword_2;
+      `JAL_I:
+        result = pcplus_AGEX;
     endcase 
   end 
 
@@ -68,7 +82,7 @@ module AGEX_STAGE(
 
   reg [`DBITS-1:0] target;
   always @(*)begin  
-    if (op_I_AGEX == `BEQ_I)
+    if (op_I_AGEX == `BEQ_I || op_I_AGEX == `BNE_I || op_I_AGEX == `BLT_I || op_I_AGEX == `BGE_I || op_I_AGEX == `BLTU_I || op_I_AGEX == `BGEU_I || op_I_AGEX == `JAL_I)
       target = PC_AGEX + regword_3;
   end 
 
