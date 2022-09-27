@@ -306,7 +306,7 @@ module DE_STAGE(
       if (pipeline_stall_DE) 
         DE_latch <= {`DE_latch_WIDTH{1'b0}};
       else
-          if (op_I_DE == `ADD_I || op_I_DE == `ADDI_I || op_I_DE == `AUIPC_I || op_I_DE == `JAL_I)
+          if (op_I_DE == `ADD_I || op_I_DE == `ADDI_I || op_I_DE == `AUIPC_I || op_I_DE == `JAL_I || op_I_DE == `JALR_I)
             busy_bits[inst_DE[11:7]] <= 1; 
           DE_latch <= DE_latch_contents;
      end 

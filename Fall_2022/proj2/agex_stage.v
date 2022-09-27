@@ -89,7 +89,7 @@ module AGEX_STAGE(
     if (op_I_AGEX == `BEQ_I || op_I_AGEX == `BNE_I || op_I_AGEX == `BLT_I || op_I_AGEX == `BGE_I || op_I_AGEX == `BLTU_I || op_I_AGEX == `BGEU_I || op_I_AGEX == `JAL_I)
       target = PC_AGEX + regword_3;
     if (op_I_AGEX == `JALR_I)
-      target = regword_1 + regword_2;
+      target = (regword_1 + regword_2) & 32'hFFFFFFFE;
 
   end 
 

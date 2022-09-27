@@ -83,7 +83,10 @@ module FE_STAGE(
       inst_count_FE <= inst_count_FE + 1; 
       end 
     else 
-      PC_FE_latch <= PC_FE_latch;
+      if (from_AGEX_to_FE[32] == 1)
+        PC_FE_latch <= from_AGEX_to_FE[31:0];
+      else
+        PC_FE_latch <= PC_FE_latch;
   end
   
 
