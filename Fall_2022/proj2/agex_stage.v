@@ -18,8 +18,8 @@ module AGEX_STAGE(
   wire[`AGEX_latch_WIDTH-1:0] AGEX_latch_contents; 
   
    
-  wire [`INSTBITS-1:0]inst_AGEX; 
-  wire [`DBITS-1:0]PC_AGEX;
+  wire [`INSTBITS-1:0] inst_AGEX; 
+  wire [`DBITS-1:0] PC_AGEX;
   wire [`DBITS-1:0] inst_count_AGEX; 
   wire [`DBITS-1:0] pcplus_AGEX; 
   wire [`IOPBITS-1:0] op_I_AGEX;
@@ -56,6 +56,8 @@ module AGEX_STAGE(
           br_cond_AGEX = 1;    
       `JAL_I:
         br_cond_AGEX = 1;
+      `JALR_I:
+        br_cond_AGEX = 1;
       default : br_cond_AGEX = 1'b0;
     endcase
   end
@@ -74,6 +76,8 @@ module AGEX_STAGE(
         result = PC_AGEX + regword_2;
       `JAL_I:
         result = pcplus_AGEX;
+      `JALR_I:
+        result = pcplus_AGEX;
     endcase 
   end 
 
@@ -84,6 +88,9 @@ module AGEX_STAGE(
   always @(*)begin  
     if (op_I_AGEX == `BEQ_I || op_I_AGEX == `BNE_I || op_I_AGEX == `BLT_I || op_I_AGEX == `BGE_I || op_I_AGEX == `BLTU_I || op_I_AGEX == `BGEU_I || op_I_AGEX == `JAL_I)
       target = PC_AGEX + regword_3;
+    if (op_I_AGEX == `JALR_I)
+      target = regword_1 + regword_2;
+
   end 
 
   assign from_AGEX_to_FE = {br_cond_AGEX, target};
