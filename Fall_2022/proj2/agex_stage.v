@@ -32,7 +32,9 @@ module AGEX_STAGE(
   wire[`BUS_CANARY_WIDTH-1:0] bus_canary_AGEX; 
  
   // **TODO: Complete the rest of the pipeline 
- 
+  wire signed [`REGWORDS-1:0] s_regword_1 = regword_1;
+  wire signed [`REGWORDS-1:0] s_regword_2 = regword_2;
+  wire signed [`REGWORDS-1:0] s_regword_3 = regword_3;
   
   always @ (*) begin
     case (op_I_AGEX)
@@ -43,10 +45,10 @@ module AGEX_STAGE(
         if (regword_1 != regword_2)
           br_cond_AGEX = 1;    
       `BLT_I : 
-        if (regword_1 < regword_2)
+        if (s_regword_1 < s_regword_2)
           br_cond_AGEX = 1;    
       `BGE_I : 
-        if (regword_1 >= regword_2)
+        if (s_regword_1 >= s_regword_2)
           br_cond_AGEX = 1;    
       `BLTU_I: 
         if (regword_1 < regword_2)
@@ -58,13 +60,12 @@ module AGEX_STAGE(
         br_cond_AGEX = 1;
       `JALR_I:
         br_cond_AGEX = 1;
-      default : br_cond_AGEX = 1'b0;
+      default : br_cond_AGEX = 0;
     endcase
   end
 
-
   // compute ALU operations  (alu out or memory addresses)
- 
+
   reg [`REGWORDS-1:0] result;
   always @ (*) begin
     case (op_I_AGEX)
@@ -72,12 +73,18 @@ module AGEX_STAGE(
         result = regword_1 + regword_2;
       `ADDI_I:
         result = regword_1 + regword_2;
+      `SUB_I:
+        result = regword_1 - regword_2;
+      `LUI_I:
+        result = regword_2;
       `AUIPC_I:
         result = PC_AGEX + regword_2;
       `JAL_I:
-        result = pcplus_AGEX;
+        result = PC_AGEX + 4;
       `JALR_I:
-        result = pcplus_AGEX;
+        result = PC_AGEX + 4;
+      default:
+        result = 0;
     endcase 
   end 
 
@@ -94,6 +101,8 @@ module AGEX_STAGE(
   end 
 
   assign from_AGEX_to_FE = {br_cond_AGEX, target};
+
+  assign from_AGEX_to_DE = br_cond_AGEX;
 
   assign  {
     inst_AGEX,

@@ -249,7 +249,6 @@ module DE_STAGE(
 
   assign from_DE_to_FE = {pipeline_stall_DE}; // pass the DE stage stall signal to FE stage 
 
-
   // decoding the contents of FE latch out. the order should be matched with the fe_stage.v 
   assign {
             inst_DE,
@@ -286,29 +285,60 @@ module DE_STAGE(
 
   // register file and CSRs write
   always @ (negedge clk) begin 
-    if (wr_reg_WB) 
-		  	regs[wregno_WB] <= regval_WB; 
+    if (wr_reg_WB) begin
+      if (wregno_WB != 0)
+        regs[wregno_WB] <= regval_WB;
+    end 
     else if (wr_csr_WB) 
-		  	csr_regs[wcsrno_WB] <= regval_WB; 
-  end
+      csr_regs[wcsrno_WB] <= regval_WB;
+    end
 
   reg [`DBITS-1:0] busy_bits;
 
-  assign pipeline_stall_DE = ((inst_DE[19:15] != 0 && busy_bits[inst_DE[19:15]]) || (inst_DE[24:20] != 0 && busy_bits[inst_DE[24:20]])) ? 1 : 0;
+  assign pipeline_stall_DE = pipeline_stall_DE_reg;
   
+  reg pipeline_stall_DE_reg;
+  always @ (*) begin
+    case (op_I_DE)
+      `ADD_I : 
+        pipeline_stall_DE_reg = ((inst_DE[19:15] != 0 && busy_bits[inst_DE[19:15]]) || (inst_DE[24:20] != 0 && busy_bits[inst_DE[24:20]])) ? 1 : 0;
+      `ADDI_I :
+        pipeline_stall_DE_reg = (inst_DE[19:15] != 0 && busy_bits[inst_DE[19:15]]) ? 1 : 0;
+      `SUB_I : 
+        pipeline_stall_DE_reg = ((inst_DE[19:15] != 0 && busy_bits[inst_DE[19:15]]) || (inst_DE[24:20] != 0 && busy_bits[inst_DE[24:20]])) ? 1 : 0;
+      `BEQ_I : 
+        pipeline_stall_DE_reg = ((inst_DE[19:15] != 0 && busy_bits[inst_DE[19:15]]) || (inst_DE[24:20] != 0 && busy_bits[inst_DE[24:20]])) ? 1 : 0;
+      `BNE_I :   
+        pipeline_stall_DE_reg = ((inst_DE[19:15] != 0 && busy_bits[inst_DE[19:15]]) || (inst_DE[24:20] != 0 && busy_bits[inst_DE[24:20]])) ? 1 : 0;
+      `BLT_I :   
+        pipeline_stall_DE_reg = ((inst_DE[19:15] != 0 && busy_bits[inst_DE[19:15]]) || (inst_DE[24:20] != 0 && busy_bits[inst_DE[24:20]])) ? 1 : 0;
+      `BGE_I :   
+        pipeline_stall_DE_reg = ((inst_DE[19:15] != 0 && busy_bits[inst_DE[19:15]]) || (inst_DE[24:20] != 0 && busy_bits[inst_DE[24:20]])) ? 1 : 0;
+      `BLTU_I : 
+        pipeline_stall_DE_reg = ((inst_DE[19:15] != 0 && busy_bits[inst_DE[19:15]]) || (inst_DE[24:20] != 0 && busy_bits[inst_DE[24:20]])) ? 1 : 0;
+      `BGEU_I : 
+        pipeline_stall_DE_reg = ((inst_DE[19:15] != 0 && busy_bits[inst_DE[19:15]]) || (inst_DE[24:20] != 0 && busy_bits[inst_DE[24:20]])) ? 1 : 0;
+      `JALR_I :
+        pipeline_stall_DE_reg = (inst_DE[19:15] != 0 && busy_bits[inst_DE[19:15]]) ? 1 : 0;
+      default :
+        pipeline_stall_DE_reg = 0;
+    endcase
+  end
+
   always @ (posedge clk) begin // you need to expand this always block 
     if (reset) begin
       DE_latch <= {`DE_latch_WIDTH{1'b0}};
       end
-     else begin  
+    else begin  
       if (wr_reg_WB)
         busy_bits[wregno_WB] <= 0;
-      if (pipeline_stall_DE) 
+      if (pipeline_stall_DE || from_AGEX_to_DE) begin
         DE_latch <= {`DE_latch_WIDTH{1'b0}};
+      end
       else
-          if (op_I_DE == `ADD_I || op_I_DE == `ADDI_I || op_I_DE == `AUIPC_I || op_I_DE == `JAL_I || op_I_DE == `JALR_I)
-            busy_bits[inst_DE[11:7]] <= 1; 
-          DE_latch <= DE_latch_contents;
+        if (op_I_DE == `ADD_I || op_I_DE == `ADDI_I || op_I_DE == `SUB_I || op_I_DE == `LUI_I || op_I_DE == `AUIPC_I || op_I_DE == `JAL_I || op_I_DE == `JALR_I)
+          busy_bits[inst_DE[11:7]] <= 1;
+        DE_latch <= DE_latch_contents;
      end 
   end
 

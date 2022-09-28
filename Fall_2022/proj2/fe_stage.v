@@ -36,6 +36,11 @@ module FE_STAGE(
   wire [`INSTBITS-1:0] inst_FE;  // instruction value in the FE stage 
   wire [`DBITS-1:0] pcplus_FE;  // pc plus value in the FE stage 
   wire stall_pipe_FE; // signal to indicate when a front-end needs to be stall
+
+  wire br_cond_FE;
+  wire [`DBITS-1:0] br_PC;
+
+  assign {br_cond_FE, br_PC} = from_AGEX_to_FE;
   
   wire [`FE_latch_WIDTH-1:0] FE_latch_contents;  // the signals that will be FE latch contents 
   
@@ -71,22 +76,20 @@ module FE_STAGE(
 
   always @ (posedge clk) begin
   /* you need to extend this always block */
-   if (reset) begin 
+    if (reset) begin 
       PC_FE_latch <= `STARTPC;
       inst_count_FE <= 1;  /* inst_count starts from 1 for easy human reading. 1st fetch instructions can have 1 */ 
       end 
-     else if (!stall_pipe_FE) begin
-      if (from_AGEX_to_FE[32] == 1)
-        PC_FE_latch <= from_AGEX_to_FE[31:0];
-      else
-        PC_FE_latch <= pcplus_FE;
+    else if (br_cond_FE) begin
+      PC_FE_latch <= br_PC;
+      inst_count_FE <= inst_count_FE + 1;
+    end
+    else if (!stall_pipe_FE) begin
+      PC_FE_latch <= pcplus_FE;
       inst_count_FE <= inst_count_FE + 1; 
-      end 
+    end 
     else 
-      if (from_AGEX_to_FE[32] == 1)
-        PC_FE_latch <= from_AGEX_to_FE[31:0];
-      else
-        PC_FE_latch <= PC_FE_latch;
+      PC_FE_latch <= PC_FE_latch;
   end
   
 
@@ -99,10 +102,12 @@ module FE_STAGE(
      else  
         begin 
          // this is just an example. you need to expand the contents of if/else
-         if  (stall_pipe_FE)
-            FE_latch <= FE_latch; 
-          else 
-            FE_latch <= FE_latch_contents; 
+        if (br_cond_FE)
+          FE_latch <= {`FE_latch_WIDTH{1'b0}};
+        if (stall_pipe_FE)
+          FE_latch <= FE_latch;
+        else 
+          FE_latch <= FE_latch_contents; 
         end  
   end
 

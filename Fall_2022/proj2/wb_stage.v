@@ -23,8 +23,8 @@ module WB_STAGE(
   
   wire wr_reg_WB; // is this instruction writing into a register file? 
   
-  reg [`REGNOBITS-1:0] wregno_WB; // destination register ID 
-  reg [`DBITS-1:0] regval_WB;  // the contents to be written in the register file (or CSR )
+  wire [`REGNOBITS-1:0] wregno_WB; // destination register ID 
+  wire [`DBITS-1:0] regval_WB;  // the contents to be written in the register file (or CSR )
   
   wire [`CSRNOBITS-1:0] wcsrno_WB;  // desitnation CSR register ID 
   wire wr_csr_WB; // is this instruction writing into CSR ? 
@@ -32,32 +32,9 @@ module WB_STAGE(
 
   // **TODO: Complete the rest of the pipeline**
   
-  assign wr_reg_WB = (op_I_WB == `ADD_I || op_I_WB == `ADDI_I || op_I_WB == `AUIPC_I || op_I_WB == `JAL_I || op_I_WB == `JALR_I) ? 1 : 0;
-
-  always @ (*) begin
-    case (op_I_WB)
-      `ADD_I: begin
-        wregno_WB = inst_WB[11:7];
-        regval_WB = result;
-      end  
-      `ADDI_I: begin
-        wregno_WB = inst_WB[11:7];
-        regval_WB = result;
-      end 
-      `AUIPC_I: begin
-        wregno_WB = inst_WB[11:7];
-        regval_WB = result;
-      end 
-      `JAL_I: begin
-        wregno_WB = inst_WB[11:7];
-        regval_WB = result;
-      end 
-      default: begin
-        wregno_WB = 0;
-        regval_WB = 0;
-      end 
-    endcase 
-  end 
+  assign wr_reg_WB = (op_I_WB == `ADD_I || op_I_WB == `ADDI_I || op_I_WB == `SUB_I || op_I_WB == `LUI_I || op_I_WB == `AUIPC_I || op_I_WB == `JAL_I || op_I_WB == `JALR_I) ? 1 : 0;
+  assign wregno_WB = inst_WB[11:7];
+  assign regval_WB = result;
     
    assign {
                                 inst_WB,
