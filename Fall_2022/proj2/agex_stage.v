@@ -40,22 +40,34 @@ module AGEX_STAGE(
     case (op_I_AGEX)
       `BEQ_I : 
         if (regword_1 == regword_2)
-          br_cond_AGEX = 1;    
+          br_cond_AGEX = 1;  
+        else
+          br_cond_AGEX = 0;  
       `BNE_I :
         if (regword_1 != regword_2)
-          br_cond_AGEX = 1;    
+          br_cond_AGEX = 1;   
+        else
+          br_cond_AGEX = 0;
       `BLT_I : 
         if (s_regword_1 < s_regword_2)
-          br_cond_AGEX = 1;    
+          br_cond_AGEX = 1;  
+        else
+          br_cond_AGEX = 0;  
       `BGE_I : 
         if (s_regword_1 >= s_regword_2)
-          br_cond_AGEX = 1;    
+          br_cond_AGEX = 1;   
+        else
+          br_cond_AGEX = 0; 
       `BLTU_I: 
         if (regword_1 < regword_2)
-          br_cond_AGEX = 1;    
+          br_cond_AGEX = 1;  
+        else
+          br_cond_AGEX = 0;  
       `BGEU_I : 
         if (regword_1 >= regword_2)
           br_cond_AGEX = 1;    
+        else
+          br_cond_AGEX = 0;
       `JAL_I:
         br_cond_AGEX = 1;
       `JALR_I:

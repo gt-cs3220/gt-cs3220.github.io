@@ -330,16 +330,21 @@ module DE_STAGE(
       DE_latch <= {`DE_latch_WIDTH{1'b0}};
       end
     else begin  
-      if (wr_reg_WB)
+      if (wr_reg_WB) begin
         busy_bits[wregno_WB] <= 0;
-      if (pipeline_stall_DE || from_AGEX_to_DE) begin
+      end  
+      if (pipeline_stall_DE == 1 || from_AGEX_to_DE) begin
         DE_latch <= {`DE_latch_WIDTH{1'b0}};
       end
-      else
-        if (op_I_DE == `ADD_I || op_I_DE == `ADDI_I || op_I_DE == `SUB_I || op_I_DE == `LUI_I || op_I_DE == `AUIPC_I || op_I_DE == `JAL_I || op_I_DE == `JALR_I)
-          busy_bits[inst_DE[11:7]] <= 1;
+      else begin
+        if (op_I_DE == `ADD_I || op_I_DE == `ADDI_I || op_I_DE == `SUB_I || op_I_DE == `LUI_I || op_I_DE == `AUIPC_I || op_I_DE == `JAL_I || op_I_DE == `JALR_I) begin
+          if (inst_DE[11:7] != 0) begin
+            busy_bits[inst_DE[11:7]] <= 1;
+          end
+        end
         DE_latch <= DE_latch_contents;
-     end 
+      end
+    end 
   end
 
 endmodule
