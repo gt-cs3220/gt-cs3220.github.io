@@ -216,8 +216,8 @@ module DE_STAGE(
         end
         `I_Type: begin
           regword_1 = regs[inst_DE[19:15]];
-          regword_2 = sxt_imm_DE;
-          regword_3 = 0;
+          regword_2 = 0;
+          regword_3 = sxt_imm_DE;
         end  
         `S_Type: begin
           regword_1 = regs[inst_DE[19:15]];
@@ -242,8 +242,9 @@ module DE_STAGE(
   wire [`CSRNOBITS-1:0] wcsrno_WB;  // desitnation CSR register ID 
   wire wr_csr_WB; // is this instruction writing into CSR ? 
 
+  wire clr_busybit;
   // signals come from WB stage for register WB 
-  assign { wr_reg_WB, wregno_WB, regval_WB, wcsrno_WB, wr_csr_WB} = from_WB_to_DE;  
+  assign { wr_reg_WB, wregno_WB, regval_WB, wcsrno_WB, wr_csr_WB, clr_busybit} = from_WB_to_DE;  
 
   wire pipeline_stall_DE;
 
@@ -299,27 +300,13 @@ module DE_STAGE(
   
   reg pipeline_stall_DE_reg;
   always @ (*) begin
-    case (op_I_DE)
-      `ADD_I : 
+    case (type_I_DE)
+      `R_Type :
         pipeline_stall_DE_reg = ((inst_DE[19:15] != 0 && busy_bits[inst_DE[19:15]]) || (inst_DE[24:20] != 0 && busy_bits[inst_DE[24:20]])) ? 1 : 0;
-      `ADDI_I :
+      `I_Type :
         pipeline_stall_DE_reg = (inst_DE[19:15] != 0 && busy_bits[inst_DE[19:15]]) ? 1 : 0;
-      `SUB_I : 
+      `S_Type :
         pipeline_stall_DE_reg = ((inst_DE[19:15] != 0 && busy_bits[inst_DE[19:15]]) || (inst_DE[24:20] != 0 && busy_bits[inst_DE[24:20]])) ? 1 : 0;
-      `BEQ_I : 
-        pipeline_stall_DE_reg = ((inst_DE[19:15] != 0 && busy_bits[inst_DE[19:15]]) || (inst_DE[24:20] != 0 && busy_bits[inst_DE[24:20]])) ? 1 : 0;
-      `BNE_I :   
-        pipeline_stall_DE_reg = ((inst_DE[19:15] != 0 && busy_bits[inst_DE[19:15]]) || (inst_DE[24:20] != 0 && busy_bits[inst_DE[24:20]])) ? 1 : 0;
-      `BLT_I :   
-        pipeline_stall_DE_reg = ((inst_DE[19:15] != 0 && busy_bits[inst_DE[19:15]]) || (inst_DE[24:20] != 0 && busy_bits[inst_DE[24:20]])) ? 1 : 0;
-      `BGE_I :   
-        pipeline_stall_DE_reg = ((inst_DE[19:15] != 0 && busy_bits[inst_DE[19:15]]) || (inst_DE[24:20] != 0 && busy_bits[inst_DE[24:20]])) ? 1 : 0;
-      `BLTU_I : 
-        pipeline_stall_DE_reg = ((inst_DE[19:15] != 0 && busy_bits[inst_DE[19:15]]) || (inst_DE[24:20] != 0 && busy_bits[inst_DE[24:20]])) ? 1 : 0;
-      `BGEU_I : 
-        pipeline_stall_DE_reg = ((inst_DE[19:15] != 0 && busy_bits[inst_DE[19:15]]) || (inst_DE[24:20] != 0 && busy_bits[inst_DE[24:20]])) ? 1 : 0;
-      `JALR_I :
-        pipeline_stall_DE_reg = (inst_DE[19:15] != 0 && busy_bits[inst_DE[19:15]]) ? 1 : 0;
       default :
         pipeline_stall_DE_reg = 0;
     endcase
@@ -330,14 +317,14 @@ module DE_STAGE(
       DE_latch <= {`DE_latch_WIDTH{1'b0}};
       end
     else begin  
-      if (wr_reg_WB) begin
+      if (wr_reg_WB || clr_busybit) begin
         busy_bits[wregno_WB] <= 0;
       end  
       if (pipeline_stall_DE == 1 || from_AGEX_to_DE) begin
         DE_latch <= {`DE_latch_WIDTH{1'b0}};
       end
       else begin
-        if (op_I_DE == `ADD_I || op_I_DE == `ADDI_I || op_I_DE == `SUB_I || op_I_DE == `LUI_I || op_I_DE == `AUIPC_I || op_I_DE == `JAL_I || op_I_DE == `JALR_I) begin
+        if (type_I_DE == `R_Type || type_I_DE == `I_Type || type_I_DE == `U_Type) begin
           if (inst_DE[11:7] != 0) begin
             busy_bits[inst_DE[11:7]] <= 1;
           end

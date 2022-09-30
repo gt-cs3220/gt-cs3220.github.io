@@ -32,6 +32,7 @@ module MEM_STAGE(
   wire [`DBITS-1:0] PC_MEM;
 
   wire[`REGWORDS-1:0] result;
+  wire store_slti;
 
    wire [`BUS_CANARY_WIDTH-1:0] bus_canary_MEM;
 
@@ -62,6 +63,7 @@ module MEM_STAGE(
                                 inst_count_MEM, 
                                  // more signals might need
                                  result,
+                                 store_slti,
                                  bus_canary_MEM
                                  } = from_AGEX_latch;  
  
@@ -74,7 +76,8 @@ module MEM_STAGE(
                                 inst_count_MEM, 
                                         // more signals might need
                                 result,    
-                              bus_canary_MEM                   
+                                store_slti,
+                                bus_canary_MEM                   
    }; 
 
   always @ (posedge clk) begin

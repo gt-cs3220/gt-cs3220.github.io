@@ -81,24 +81,64 @@ module AGEX_STAGE(
   reg [`REGWORDS-1:0] result;
   always @ (*) begin
     case (op_I_AGEX)
-      `ADD_I: 
+      `ADD_I : 
         result = regword_1 + regword_2;
-      `ADDI_I:
-        result = regword_1 + regword_2;
-      `SUB_I:
+      `ADDI_I :
+        result = regword_1 + regword_3;
+      `SUB_I :
         result = regword_1 - regword_2;
-      `LUI_I:
+      `MUL_I :
+        result = regword_1 * regword_2;
+      `AND_I :
+        result = regword_1 & regword_2;
+      `ANDI_I :
+        result = regword_1 & regword_3;
+      `OR_I :
+        result = regword_1 | regword_2;
+      `ORI_I :
+        result = regword_1 | regword_3;
+      `XOR_I :
+        result = regword_1 ^ regword_2;
+      `XORI_I :
+        result = regword_1 ^ regword_3;
+      `SLT_I :
+        result = {{31'b0}, {regword_1 < s_regword_2}};
+      `SLTU_I :
+        result = {{31'b0}, {regword_1 < regword_2}};
+      `SLTI_I :
+        result = {{31'b0}, {s_regword_1 < s_regword_3}};
+      `SLTIU_I :
+        result = {{31'b0}, {regword_1 < regword_3}};
+      `LUI_I :
         result = regword_2;
-      `AUIPC_I:
+      `AUIPC_I :
         result = PC_AGEX + regword_2;
-      `JAL_I:
+      `JAL_I :
         result = PC_AGEX + 4;
-      `JALR_I:
+      `JALR_I :
         result = PC_AGEX + 4;
-      default:
+      default :
         result = 0;
     endcase 
   end 
+
+  reg store_slti;
+  always @ (*) begin
+    case (op_I_AGEX)
+      `SLTI_I : 
+        if (s_regword_1 < s_regword_3)
+          store_slti = 1;
+        else
+          store_slti = 0;
+      `SLTIU_I :
+        if (regword_1 < regword_3)
+          store_slti = 1;
+        else
+          store_slti = 0;
+      default :
+        store_slti = 0;
+    endcase
+  end
 
   // branch target needs to be computed here 
   // computed branch target needs to send to other pipeline stages (pctarget_AGEX)
@@ -108,8 +148,7 @@ module AGEX_STAGE(
     if (op_I_AGEX == `BEQ_I || op_I_AGEX == `BNE_I || op_I_AGEX == `BLT_I || op_I_AGEX == `BGE_I || op_I_AGEX == `BLTU_I || op_I_AGEX == `BGEU_I || op_I_AGEX == `JAL_I)
       target = PC_AGEX + regword_3;
     if (op_I_AGEX == `JALR_I)
-      target = (regword_1 + regword_2) & 32'hFFFFFFFE;
-
+      target = (regword_1 + regword_3) & 32'hFFFFFFFE;
   end 
 
   assign from_AGEX_to_FE = {br_cond_AGEX, target};
@@ -136,6 +175,7 @@ module AGEX_STAGE(
     inst_count_AGEX, 
             // more signals might need
     result,
+    store_slti,
     bus_canary_AGEX     
   }; 
  

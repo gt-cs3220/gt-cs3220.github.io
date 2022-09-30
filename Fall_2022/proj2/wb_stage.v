@@ -17,6 +17,7 @@ module WB_STAGE(
   wire [`DBITS-1:0] inst_count_WB; 
 
   wire [`REGWORDS-1:0] result;
+  wire store_slti;
 
   wire [`BUS_CANARY_WIDTH-1:0] bus_canary_WB;
 
@@ -29,12 +30,13 @@ module WB_STAGE(
   wire [`CSRNOBITS-1:0] wcsrno_WB;  // desitnation CSR register ID 
   wire wr_csr_WB; // is this instruction writing into CSR ? 
 
-
+  wire clr_busybit;
   // **TODO: Complete the rest of the pipeline**
   
-  assign wr_reg_WB = ((op_I_WB == `ADD_I || op_I_WB == `ADDI_I || op_I_WB == `SUB_I || op_I_WB == `LUI_I || op_I_WB == `AUIPC_I || op_I_WB == `JAL_I || op_I_WB == `JALR_I) && inst_WB[11:7] != 0) ? 1 : 0;
+  assign wr_reg_WB = ((op_I_WB == `ADD_I || op_I_WB == `ADDI_I || op_I_WB == `SUB_I || op_I_WB == `MUL_I || op_I_WB == `AND_I || op_I_WB == `ANDI_I || op_I_WB == `OR_I || op_I_WB == `ORI_I || op_I_WB == `XOR_I || op_I_WB == `XORI_I || op_I_WB == `LUI_I || op_I_WB == `AUIPC_I || op_I_WB == `JAL_I || op_I_WB == `JALR_I || store_slti) && inst_WB[11:7] != 0) ? 1 : 0;
   assign wregno_WB = inst_WB[11:7];
   assign regval_WB = result;
+  assign clr_busybit = (op_I_WB == `SLTI_I || op_I_WB == `SLTIU_I) ? 1 : 0;
     
    assign {
                                 inst_WB,
@@ -42,9 +44,10 @@ module WB_STAGE(
                                 op_I_WB,
                                 inst_count_WB, 
                                 // more signals might need      
-                                result,                  
-                                 bus_canary_WB 
-                                 } = from_MEM_latch; 
+                                result,
+                                store_slti,                  
+                                bus_canary_WB 
+                                } = from_MEM_latch; 
         
         // write register by sending data to the DE stage 
         
@@ -52,7 +55,7 @@ module WB_STAGE(
 
 
 // we send register write (and CSR register) information to DE stage (also opcode and write to reg)
-assign from_WB_to_DE = {wr_reg_WB, wregno_WB, regval_WB, wcsrno_WB, wr_csr_WB} ;  
+assign from_WB_to_DE = {wr_reg_WB, wregno_WB, regval_WB, wcsrno_WB, wr_csr_WB, clr_busybit};  
 
 // this code need to be commented out when we synthesize the code later 
     // special workaround to get tests Pass/Fail status
