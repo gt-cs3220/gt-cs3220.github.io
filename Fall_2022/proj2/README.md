@@ -70,7 +70,7 @@ In that case, you will get 50% of part-2.
 **Description**: 
 In this part, you will complete the pipeline to test RISC-V ISA (except CSR instructions).  Your program should run with testall3.mem case we provide. For project-2, we will evaluate your design with only behavioral simulation.  
 
-**Grading:** If you pass testall3.mem (you need to see "Pass" ) you will get 10 pts.
+**Grading:** If you pass all part3 tests (you need to see "Pass" ) you will get 10 pts.
 If you don't pass testall3.mem, you will get a partial grading based on the coverage of part 3 test suites. 
 
 **What to submit**:
