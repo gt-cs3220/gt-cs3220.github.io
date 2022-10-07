@@ -172,25 +172,25 @@ Homework assignments are individual, but you can get help from others. If you ge
 | 4    | 09/12/22 |                | FPGA structure                            |             | Project #1            | Verilog ch11                      |
 |      | 09/14/22 | Architecture   | ISA & review pipeline                     | HW #4       |                       | FPGA ch2,3,4                      |
 | 5    | 09/19/22 |                | project #2 description                    |             |                       | FPGA ch5,6,7,8                    |
-|      | 09/21/22 |                | Out of order processor                    | HW #5       |                       |                                   |
+|      | 09/21/22 |                | Out of order processor                    |             |                       |                                   |
 | 6    | 09/26/22 |                | Out of order processor                    |             |                       |                                   |
-|      | 09/28/22 |                | Branch predictor                          | HW #6       |                       |                                   |
+|      | 09/28/22 |                | Branch predictor                          |             |                       |                                   |
 | 7    | 10/03/22 |                | No lecture (offline video)                |             | Project #2            |                                   |
-|      | 10/05/22 |                | Branch predictor                          | HW #7       |                       |                                   |
+|      | 10/05/22 |                | Branch predictor                          |             |                       |                                   |
 | 8    | 10/10/22 |                | Review Day                                |             |                       |                                   |
-|      | 10/12/22 |                | Mid-term                                  | HW #8       |                       |                                   |
+|      | 10/12/22 |                | Mid-term                                  |             |                       |                                   |
 | 9    | 10/17/22 |                | Fall Break                                |             |                       |                                   |
-|      | 10/19/22 |                | Power                                     | HW #9       |                       |                                   |
+|      | 10/19/22 |                | Power                                     | HW #5       |                       |                                   |
 | 10   | 10/24/22 | HLS            | High-level synthesis                      |             | Project #3            | HLS ch2,3                         |
-|      | 10/26/22 |                | Floating Points                           |             |                       |                                   |
+|      | 10/26/22 |                | Floating Points                           | HW #6       |                       |                                   |
 | 11   | 10/31/22 |                | Hardware Design Pattens                   |             |                       |                                   |
-|      | 11/02/22 |                | GPU Introduction                          |             |                       |                                   |
+|      | 11/02/22 |                | GPU Introduction                          | HW #7       |                       |                                   |
 | 12   | 11/07/22 |                | GPU Microarchitecture                     |             |                       |                                   |
-|      | 11/09/22 |                | Vortex accelerator                        | HW #10      |                       |                                   |
+|      | 11/09/22 |                | Vortex accelerator                        | HW #8       |                       |                                   |
 | 13   | 11/14/22 | Accelerators   | ML accelerators                           |             | Project #4            |                                   |
-|      | 11/16/22 |                | Graphics accelerators                     |             |                       |                                   |
+|      | 11/16/22 |                | Graphics accelerators                     | HW #9       |                       |                                   |
 | 14   | 11/21/22 |                | Thanksgiving                              |             |                       |                                   |
-|      | 11/23/22 |                | DMA                                       |             |                       |                                   |
+|      | 11/23/22 |                | DMA                                       | HW #10      |                       |                                   |
 | 15   | 11/28/22 |                | Security                                  |             |                       |                                   |
 |      | 11/30/22 |                | Research presentations                    |             |                       |                                   |
 | 16   | 12/05/22 |                | Review Day                                |             | Project #5            |                                   |             
