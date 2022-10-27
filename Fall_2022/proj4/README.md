@@ -178,11 +178,13 @@ Grades are based on reports and the ability of generating bitstreams. If your de
 *Q: I passed all test cases but still failed towers.mem. what should I do? 
 
 *A: some debugging tips 
-1) make  sure, you are not looking at wrong message (it should be reg10's value, not "Failed/Passed" message)
+
+(1) make  sure, you are not looking at wrong message (it should be reg10's value, not "Failed/Passed" message)
 
 (2) you gave enough time to run 
 
-(too short/too long will show a wrong value.) Too long, the PC will be overflow and restart the program.  few Piazza posting shows tips how to do that. 
+(too short/too long will show a wrong value.) Too long, the PC will be overflow and restart the program.  
+few Piazza posting shows tips how to do that. 
 
 (3) check w/o branch predictor and see whether a pipeline flush is causing a problem.
 
