@@ -70,20 +70,18 @@ assign from_WB_to_DE = {wr_reg_WB, wregno_WB, regval_WB, wcsrno_WB, wr_csr_WB} ;
   if (wr_reg_WB)
     last_WB_value[wregno_WB] <= regval_WB;
   end
- // assign reg10_val = 32'd33; // to check out2 works correctly 
  
- //assign reg10_val = reg10_val_latch;  // to check reg10 value  
- always @(posedge reset) 
-    reg10_val_latch <= 0; 
-    
-    
+ // assign reg10_val = 32'd33; // to check out2 works with constants  
+ // assign reg10_val = reg10_val_latch;  // to check out2 works with WB
  always @(posedge clk) begin 
-    
-    //if ((last_WB_value[10] == 32'hff) && (reg10_val_latch == 0)) // reg10 should be 0xff 
-    if ((last_WB_value[10] == 32'hf0) && (reg10_val_latch == 0))  // intentionally check reg10 value is other than 0xff to really prove that this logic works as expected 
-        reg10_val_latch <= 32'hff; 
-  end 
-   
+   if (reset) begin
+     reg10_val_latch <= 0;
+   end else begin
+      // uncomment lines below to write 0xhff
+      /*if (wr_reg_WB && wregno_WB == 10 && reg10_val_latch == 0)
+        reg10_val_latch <= 32'hff;*/
+   end
+ end   
     
   always @(posedge clk) begin 
 // don't use WB_counters[0] 
