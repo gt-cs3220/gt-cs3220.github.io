@@ -77,20 +77,24 @@ assign reg10_val = 32'd33;
 //assign reg10_val = reg10_val_latch;  // to check reg10 value
 ```
 ```
-always @(posedge clk) begin
-    //if ((last_WB_value[10] == 32'hff) && (reg10_val_latch == 0)) // reg10 should be 0xff
-    if ((last_WB_value[10] == 32'hf0) && (reg10_val_latch == 0))  // intentionally check reg10 value is other than 0xff to really prove that this logic works as expected
+ always @(posedge clk) begin 
+   if (reset) begin
+     reg10_val_latch <= 0;
+   end else begin
+      // comment out the 2 lines below in step [18]
+      if (wr_reg_WB && wregno_WB == 10 && reg10_val_latch == 0)
         reg10_val_latch <= 32'hff;
-end
+   end
+ end
 ```
 
 [2] Create a block design, IP repo setting to import IP from step-1, and add comm IP to the block diagram. 
 <img src="figs/addcom.png">
 
-[3] Add pipeline to block diagram. 
+[3] Add pipeline frame to block diagram. 
 <img src="figs/addriscv.png"> 
 
-[4] Connect pipeline and comm module (in1 in common <-> out1, in2 in common <->out2) manually. 
+[4] Connect pipeline frame and comm module (in1 in common <-> out1, in2 in common <->out2) manually. 
 <img src="figs/connect.png"> 
 
 [5] Add Zynq PS module from IP repo and then use auto-connect features to complete all the connections. If clock or reset connections are missing, you can connect them manually. 
@@ -137,7 +141,7 @@ change reg10_val to store reg10_val_latch.
 [17] Generate bistream and repeat the steps 8 -12. 
 Check whether out2 value is 255. *include the screenshot of ipynb on your report*
 
-[18] modify the wb_stage.v to set reg10 value to something else to prove that 0xff is only when it works fine. 
+[18] modify the wb_stage.v to not set reg10_val_latch such that reg10_val will remain zero.
 
 [19] Repeat the step to generate bitstreams run ipynb. 
 *include the screenshot of ipynb on your report*
