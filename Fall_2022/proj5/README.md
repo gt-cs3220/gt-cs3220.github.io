@@ -8,7 +8,7 @@ The Sobel edge algorithm is built on top of a convolution function and  we are o
 
 The provided convolution operation is a basic implementation which is not scalable. Optimizing the convolution operation is your main task in this project. 
 
-## Part-1: Improving the provided Convolution Operation (13 pts)
+## Part-1: Improving the provided Convolution Operation (10 pts)
 
 example.cpp is a naive CNN implemenation. Due to the navie implemenation only 30x30 size can fit into the zynq board. Your job is to optimize the code so that a large image can fit into the board. 
 
@@ -36,11 +36,11 @@ You should also show BRAM and DSP unit usage for your designs. <img src="figs/re
 Draw three charts (y-axis: total latency, BRAM usage, DSP usage), x-axis different designs. 
 
 * Grading Policy * 
-A+ (13 pts) : Great design which improves performance and supports scalalbe image  
-A (11 pts) : Good design improves performance and support scalable image sizes but the provided solutions
-B (9 pts): show 4 different design options but not much performance improvements or scalability
+(10 pts) : improves performance and supports scalalbe image  
+(8 pts) : improves performance or support scalable image
+(6 pts): show 4 different design options but not much performance improvements or scalability
 
-## Part-2 Produce Bit-stream and running it on Pynq boards (2 pts)
+## Part-2 Produce Bit-stream and running it on Pynq boards (5 pts)
 
 In this step you will use Vitis and Vivado to build the FPGA block diagram as you did in project #4.
 This Sobel accelerator uses DMA to transfer images between CPU and the FPGA, so you need to use a different interconnect. Please refer to DMA instructions provided in the DMA directory for instructions on how to set up DMA.
@@ -55,14 +55,13 @@ Every operations are performed using python code.
 In cv_edge_fpga, convolution operations are offloaded to FPGA. 
 
 * Grading Policy* 
-A+ (5 pts): complete the design and demonstrate the edge detection (bonus 3 pts)  
-(filter value need to be sent to the vitis) 
-A (2 pts): see gray/solid box 
-B (1 pt): Be able to synthesize and produce bit streams (no running on jupyter notebook) 
+(5 pts): complete the design and demonstrate the edge detection 
+(3 pts): see gray/solid box 
+(2 pt): Be able to synthesize and produce bit streams (doesn't run on jupyter notebook) 
 
 ## What to submit
  
-[1] project5_report.pdf: Max 3 pages (including figures) describing the designs you have tried. 
+[1] project5_report.pdf: Max 3 pages (including all figures) describing the designs you have tried. 
 [2] bit stream of the best performing design & tcl & hwh 
 [3] source code of your example.cpp 
 [4] Vivado project (please include the source code) 
