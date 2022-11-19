@@ -14,7 +14,7 @@ example.cpp is a naive CNN implemenation. Due to the navie implemenation only 30
 
 To optimize the code, understanding the HLS compiler's outcome reports are critical.
 
-Please look at solution/Open Report (Synthesis) and Solution/Open Schedule Viewer to analyze the results. Please use this [Vitis HLS Manual]("https://www.xilinx.com/support/documentation/sw_manuals/xilinx2019_2/ug1393-vitis-application-acceleration.pdf") and [Vitis HLS Optimization Guide]("https://docs.xilinx.com/r/2022.1-English/ug1399-vitis-hls/Optimization-Techniques-in-Vitis-HLS") as reference. You should also checkout the following convolution tiling tutotial "https://sharc-knowledgebase.netlify.app/articles/cnn/tiling-based_convolution_for_hls".
+Please look at solution/Open Report (Synthesis) and Solution/Open Schedule Viewer to analyze the results. Please use this [Vitis HLS Manual](https://www.xilinx.com/support/documentation/sw_manuals/xilinx2019_2/ug1393-vitis-application-acceleration.pdf) and [Vitis HLS Optimization Guide](https://docs.xilinx.com/r/2022.1-English/ug1399-vitis-hls/Optimization-Techniques-in-Vitis-HLS) as reference. You should also checkout the following convolution tiling tutotial "https://sharc-knowledgebase.netlify.app/articles/cnn/tiling-based_convolution_for_hls".
 
 In this design, you will optimize your code so that it can handle bigger image sizes or faster. You should have at least 4 designs to compare. Two that should require code refactoring and two that explores pragmas optimization.
 
