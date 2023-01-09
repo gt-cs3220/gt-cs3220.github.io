@@ -1,4 +1,4 @@
-# CS 3220 Processor Design Fall 2022 Syllabus
+# CS 3220 Processor Design Spring 2023 Syllabus
 
 **Course Title: CS3220**
 
