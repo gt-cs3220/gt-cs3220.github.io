@@ -35,6 +35,7 @@ In this course, we will study hardware implementation of architecture design. Th
 - High-Level Synthesis 
 
 #### [Class Syllabus](Spring_2023/syllabus.md)
+#### [Useful Links](Spring_2023/sw.md)
 
 
 
