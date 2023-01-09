@@ -36,6 +36,5 @@ In this course, we will study hardware implementation of architecture design. Th
 
 #### [Class Syllabus](Spring_2023/syllabus.md)
 
-#### [VM Access for Remote Vivado](access_vm_steps/access_synestia.md)
 
 
