@@ -35,13 +35,12 @@ sudo apt install gtkwave
 
 
 ## Ready to run?
-Step 1: Go to ledmodule folder, compile the verilog module of **ledmodule**. 
+Step 1: compile the verilog module of **adder_var_seq**. 
 ```
 verilator --cc adder_var_seq.v --top-module adder_var_seq
 ```
 
-Step 2: Create the Cpp simulation file for Verilator. Pls take a look at the **ledmodule.cpp** in the parent folder. The detail explainations are listed inside the script.
-1. 
+Step 2: Create the Cpp simulation file for Verilator. Pls take a look at the **adder_var_seq.cpp** in the current folder. The detail explainations are listed inside the script.
 
 
 Step 3: Compile the executable file

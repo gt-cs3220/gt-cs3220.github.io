@@ -30,13 +30,12 @@ Please check homebrew link for any dependencies you may need.
 
 
 ## Ready to run?
-Step 1: Go to ledmodule folder, compile the verilog module of **ledmodule**. 
+Step 1: compile the verilog module of **adder_var_seq**. 
 ```
 verilator --cc adder_var_seq.v --top-module adder_var_seq
 ```
 
-Step 2: Create the Cpp simulation file for Verilator. Pls take a look at the **ledmodule.cpp** in the parent folder. The detail explainations are listed inside the script.
-1. 
+Step 2: Create the Cpp simulation file for Verilator. Pls take a look at the **adder_var_seq.cpp** in the current folder. The detail explainations are listed inside the script.
 
 
 Step 3: Compile the executable file
@@ -47,3 +46,4 @@ verilator -Wall --trace --exe --build -cc adder_var_seq.cpp adder_var_seq.v
 Step 4: Open the GTKWaver to open the generated trace
 open "GTKWaver" -> "Open New Tab" -> "Select the generated waveform.vcd" -> "click on Top" -> "Right click the signals below" -> "Recurse Import" -> "Append" 
 Then all waveforms will show up in the Waves window.
+
