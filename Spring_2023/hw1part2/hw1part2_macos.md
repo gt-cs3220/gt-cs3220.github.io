@@ -4,7 +4,7 @@ OS tested: macOS Ventura 13.1
 
 It should theoretically be fine with older macOS versions as well (Monterey, BigSur, Catalina).
 
-## Install all related prerequistics
+## Install all related prerequistes
 Some things are here for the sake of completion. Skip any step if you already have it, eg. I expect most people using macOS already have homebrew.
 
 ### Install homebrew
