@@ -1,6 +1,7 @@
 # HW1Part2
 ## system requirment
 OS tested: macOS Ventura 13.1
+
 It should theoretically be fine with older macOS versions as well (Monterey, BigSur, Catalina).
 
 ## Install all related prerequistics
