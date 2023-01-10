@@ -163,9 +163,9 @@ As members of the Georgia Tech community, we are committed to creating a learnin
 | week | date    | Topic category       | topic                               | HW deadline                         | Project deadline  |
 | ---- | ------- | -------------------- | ----------------------------------- | ----------------------------------- | ----------------- |
 | 1    | 1/9/23  | Verilog              | introduction & review               |                                     |                   |
-|      | 1/11/23 | Verilog              | introduction to verilog             | HW #1 (Sun): no grading (pass/fail) |                   |
+|      | 1/11/23 | Verilog              | introduction to verilog             | [HW #1 (part-1 Sun)](hw1.md)no grading (pass/fail) |                   |
 | 2    | 1/16/23 |                      | MLK                                 |                                     |                   |
-|      | 1/18/23 | Architecture         | review pipeline                     | HW #2 (W)                           |                   |
+|      | 1/18/23 | Architecture         | review pipeline                     | HW #2 (F)                           |                   |
 | 3    | 1/23/23 | Architecture         | pipeline review & project #1 review |                                     |                   |
 |      | 1/25/23 | Architecture         | out of order processor              |                                     | Project #1:Part-1 |
 | 4    | 1/30/23 | Architecture         | out of order processor              |                                     |                   |
