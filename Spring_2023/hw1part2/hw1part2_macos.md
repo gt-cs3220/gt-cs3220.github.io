@@ -4,7 +4,7 @@ OS tested: macOS Ventura 13.1
 
 It should theoretically be fine with older macOS versions as well (Monterey, BigSur, Catalina).
 
-## Install all related prerequistics
+## Install all related prerequisites
 Some things are here for the sake of completion. Skip any step if you already have it, eg. I expect most people using macOS already have homebrew.
 
 ### Install homebrew
@@ -37,16 +37,19 @@ verilator --cc adder_var_seq.v --top-module adder_var_seq
 
 Step 2: Create the Cpp simulation file for Verilator. Pls take a look at the **adder_var_seq.cpp** in the current folder. The detail explainations are listed inside the script.
 
+
 Step 3: Compile the executable file
 ```
 verilator -Wall --trace --exe --build -cc adder_var_seq.cpp adder_var_seq.v
 ```
 
-Step 4: Run the exectuable file and obtain the waveform file (.vcd)
+Step 4: Run the executable file.
+Inside `obj_dir` there should be a `Vadder_var_seq` executable. Run it. 
 ```
-./obj_dir/Vadder_var_seq
+./Vadder_var_seq
 ```
 
 Step 5: Open the GTKWaver to open the generated trace
 open "GTKWaver" -> "Open New Tab" -> "Select the generated waveform.vcd" -> "click on Top" -> "Right click the signals below" -> "Recurse Import" -> "Append" 
 Then all waveforms will show up in the Waves window.
+
