@@ -1,21 +1,5 @@
 ## CS3220 - Software Links 
 
-**Installing Verilator**
-
-*MAC*
-1) Install <a href="https://brew.sh/"> HomeBrew </a> if you do not have it  
-`/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
-
-2) Run `brew update`
-
-3) Run `brew upgrade`
-
-4) Run `brew install verilator` 
-
-*Linux/WSL*
-1) Run `apt-get install verilator` 
-
-2) If any issues arise, install <a href="https://verilator.org/guide/latest/install.html#install-prerequisites"> prerequisites </a> that are missing
 
 **References**
 

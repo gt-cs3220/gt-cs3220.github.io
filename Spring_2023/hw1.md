@@ -8,7 +8,7 @@ In this assignment, you will get ready to do project #1 and HW #2.
 Please see  [Useful Links](sw.md) for the links. 
 
 **Part 2**  Install verilator/GTK Wave  and test it. 
-We will provide more examples and announce it. 
+Please look at [MAC](hw1part2/hw1part2_macos.md) [Linux](hw1part2/hw1part2_ubuntu.md) [Windows](hw1part2/hw1part2_window.md) to install verilator/GTK Wave and test the installation. 
 
 
 **Part 3** Pipeline design 
