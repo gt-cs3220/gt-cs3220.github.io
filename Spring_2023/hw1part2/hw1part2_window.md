@@ -63,12 +63,19 @@ sudo apt install gtkwave
 ```
 
 ## Ready to run?
-Step 1: compile the verilog module of **adder_var_seq**. 
+Step 0: go back to parent directory and then download the testing file from repo 
 ```
+cd ~
+git clone https://github.com/gt-cs3220/gt-cs3220.github.io
+```
+
+Step 1: Change to the path of tested hw1part2 and compile the verilog module of **adder_var_seq**. 
+```
+cd gt-cs3220.github.io/Spring_2023/hw1part2/
 verilator --cc adder_var_seq.v --top-module adder_var_seq
 ```
 
-Step 2: Create the Cpp simulation file for Verilator. Pls take a look at the **adder_var_seq.cpp** in the current folder. The detail explainations are listed inside the script.
+Step 2: Create the Cpp simulation file for Verilator. Pls take a look at the **adder_var_seq.cpp** in the current folder. The detail explainations are listed inside the  **adder_var_seq.cpp**.
 
 Step 3: Compile the executable file
 ```
