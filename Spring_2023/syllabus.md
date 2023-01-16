@@ -165,17 +165,17 @@ As members of the Georgia Tech community, we are committed to creating a learnin
 | 1    | 1/9/23  | Verilog              | introduction & review               |                                     |                   |
 |      | 1/11/23 | Verilog              | introduction to verilog             | [HW #1 (part-1 Sun)](hw1.md)no grading (pass/fail) |                   |
 | 2    | 1/16/23 |                      | MLK                                 |                                     |                   |
-|      | 1/18/23 | Architecture         | review pipeline                     | HW #2 (F)                           |                   |
-| 3    | 1/23/23 | Architecture         | pipeline review & project #1 review |                                     |                   |
-|      | 1/25/23 | Architecture         | out of order processor              |                                     | Project #1:Part-1 |
+|      | 1/18/23 | Architecture         | review pipeline                     |                                     |                   |
+| 3    | 1/23/23 | Architecture         | pipeline review & project #1 review |       |                   |
+|      | 1/25/23 | Architecture         | out of order processor              |  [HW #2 (W)](homework2_fifo/README.md)                                    |     |
 | 4    | 1/30/23 | Architecture         | out of order processor              |                                     |                   |
-|      | 2/1/23  | Architecture         | Cache and memory systems            |                                     | Part-2 (F)        |
-| 5    | 2/6/23  | Architecture         | branch predictor                    |                                     |                   |
-|      | 2/8/23  | Architecture         | GPU architecture                    |                                     | Part-3 (F)        |
+|      | 2/1/23  | Architecture         | Cache and memory systems            |                                     | Pro#1: Part-1 (W)        |
+| 5    | 2/6/23  | Architecture         | branch predictor                    |                            |                   |
+|      | 2/8/23  | Architecture         | GPU architecture                    |     HW #3 (F)                                 | Proj#1: Part-2 (W)        |
 | 6    | 2/13/23 | Architecture         | Vortex architecture                 |                                     |                   |
-|      | 2/15/23 | Architecture         | graphics                            | HW#3 (W)                            |                   |
+|      | 2/15/23 | Architecture         | graphics                            |                         | Proj#3: part-3 (W)                  |
 | 7    | 2/20/23 | FPGA                 | Pynq & Jupyter notebook             |                                     |                   |
-|      | 2/22/23 | FPGA                 | FPGA structure                      | HW #4 (No grading: pass/fail)       | Project #2        |
+|      | 2/22/23 | FPGA                 | FPGA structure                      | HW #4 (No grading: pass/fail)       | Project #2  (F)      |
 | 8    | 2/27/23 |                      | Review                              |                                     |                   |
 |      | 3/1/23  |                      | mid-term                            |                                     |                   |
 | 9    | 3/6/23  | Verilog+architecture | Hardware design patterns-I          |                                     |                   |
