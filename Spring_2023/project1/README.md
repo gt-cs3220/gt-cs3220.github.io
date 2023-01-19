@@ -219,7 +219,7 @@ you can probably use  RISC-V interpreter or other RISC-V machine to execute the 
 **(A)** The provided frame should load the first instruction correctly. If you don't see any instruction, please check whether the contents of imem. With Verilator, FE_stage.v has the code to print out the imem contents.
 
 
-## FAQ  for part-2
+# FAQ  for part-2
 
 **(Q)** can I change the print messages of sim_main.cpp? 
 
@@ -328,7 +328,7 @@ but if (s_regval1_AGEX < s_regval2_AGEX) returns true.
 
 **(A)** Yes, even though immediate values are sign-extended, if we want to treat the immediate value as 2's complement value such as in ``` SLTI_I```  instruction case, you need to put ```signed``` keyword. 
 
-## FAQ - part #3 
+# FAQ - part #3 
 
 **(Q)** Can you explain the behavior of ```slti``` and ```sltiu```. Does it store the outcome of shift value? 
 

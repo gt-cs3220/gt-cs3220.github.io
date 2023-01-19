@@ -1,0 +1,179 @@
+
+part2/and.elf:     file format elf32-littleriscv
+
+
+Disassembly of section .text:
+
+00000200 <_start>:
+ 200:	00000093          	li	ra,0
+ 204:	00000113          	li	sp,0
+ 208:	00000193          	li	gp,0
+ 20c:	00000213          	li	tp,0
+ 210:	00000293          	li	t0,0
+ 214:	00000313          	li	t1,0
+ 218:	00000393          	li	t2,0
+ 21c:	00000413          	li	s0,0
+ 220:	00000493          	li	s1,0
+ 224:	00000513          	li	a0,0
+ 228:	00000593          	li	a1,0
+ 22c:	00000613          	li	a2,0
+ 230:	00000693          	li	a3,0
+ 234:	00000713          	li	a4,0
+ 238:	00000793          	li	a5,0
+ 23c:	00000813          	li	a6,0
+ 240:	00000893          	li	a7,0
+ 244:	00000913          	li	s2,0
+ 248:	00000993          	li	s3,0
+ 24c:	00000a13          	li	s4,0
+ 250:	00000a93          	li	s5,0
+ 254:	00000b13          	li	s6,0
+ 258:	00000b93          	li	s7,0
+ 25c:	00000c13          	li	s8,0
+ 260:	00000c93          	li	s9,0
+ 264:	00000d13          	li	s10,0
+ 268:	00000d93          	li	s11,0
+ 26c:	00000e13          	li	t3,0
+ 270:	00000e93          	li	t4,0
+ 274:	00000f13          	li	t5,0
+ 278:	00000f93          	li	t6,0
+
+0000027c <test_2>:
+ 27c:	ff0100b7          	lui	ra,0xff010
+ 280:	f0008093          	addi	ra,ra,-256 # ff00ff00 <begin_signature+0xff00fa70>
+ 284:	0f0f1137          	lui	sp,0xf0f1
+ 288:	f0f10113          	addi	sp,sp,-241 # f0f0f0f <begin_signature+0xf0f0a7f>
+ 28c:	0020f733          	and	a4,ra,sp
+ 290:	0f0013b7          	lui	t2,0xf001
+ 294:	f0038393          	addi	t2,t2,-256 # f000f00 <begin_signature+0xf000a70>
+ 298:	00200193          	li	gp,2
+ 29c:	16771863          	bne	a4,t2,40c <fail>
+
+000002a0 <test_3>:
+ 2a0:	ff0100b7          	lui	ra,0xff010
+ 2a4:	f0008093          	addi	ra,ra,-256 # ff00ff00 <begin_signature+0xff00fa70>
+ 2a8:	0f0f1137          	lui	sp,0xf0f1
+ 2ac:	f0f10113          	addi	sp,sp,-241 # f0f0f0f <begin_signature+0xf0f0a7f>
+ 2b0:	0020f0b3          	and	ra,ra,sp
+ 2b4:	0f0013b7          	lui	t2,0xf001
+ 2b8:	f0038393          	addi	t2,t2,-256 # f000f00 <begin_signature+0xf000a70>
+ 2bc:	00300193          	li	gp,3
+ 2c0:	14709663          	bne	ra,t2,40c <fail>
+
+000002c4 <test_4>:
+ 2c4:	0ff010b7          	lui	ra,0xff01
+ 2c8:	ff008093          	addi	ra,ra,-16 # ff00ff0 <begin_signature+0xff00b60>
+ 2cc:	f0f0f137          	lui	sp,0xf0f0f
+ 2d0:	0f010113          	addi	sp,sp,240 # f0f0f0f0 <begin_signature+0xf0f0ec60>
+ 2d4:	0020f133          	and	sp,ra,sp
+ 2d8:	00f003b7          	lui	t2,0xf00
+ 2dc:	0f038393          	addi	t2,t2,240 # f000f0 <begin_signature+0xeffc60>
+ 2e0:	00400193          	li	gp,4
+ 2e4:	12711463          	bne	sp,t2,40c <fail>
+
+000002e8 <test_5>:
+ 2e8:	ff0100b7          	lui	ra,0xff010
+ 2ec:	f0008093          	addi	ra,ra,-256 # ff00ff00 <begin_signature+0xff00fa70>
+ 2f0:	0010f0b3          	and	ra,ra,ra
+ 2f4:	ff0103b7          	lui	t2,0xff010
+ 2f8:	f0038393          	addi	t2,t2,-256 # ff00ff00 <begin_signature+0xff00fa70>
+ 2fc:	00500193          	li	gp,5
+ 300:	10709663          	bne	ra,t2,40c <fail>
+
+00000304 <test_6>:
+ 304:	00000213          	li	tp,0
+ 308:	0ff010b7          	lui	ra,0xff01
+ 30c:	ff008093          	addi	ra,ra,-16 # ff00ff0 <begin_signature+0xff00b60>
+ 310:	f0f0f137          	lui	sp,0xf0f0f
+ 314:	0f010113          	addi	sp,sp,240 # f0f0f0f0 <begin_signature+0xf0f0ec60>
+ 318:	0020f733          	and	a4,ra,sp
+ 31c:	00000013          	nop
+ 320:	00070313          	mv	t1,a4
+ 324:	00120213          	addi	tp,tp,1 # 1 <_start-0x1ff>
+ 328:	00200293          	li	t0,2
+ 32c:	fc521ee3          	bne	tp,t0,308 <test_6+0x4>
+ 330:	00f003b7          	lui	t2,0xf00
+ 334:	0f038393          	addi	t2,t2,240 # f000f0 <begin_signature+0xeffc60>
+ 338:	00600193          	li	gp,6
+ 33c:	0c731863          	bne	t1,t2,40c <fail>
+
+00000340 <test_7>:
+ 340:	00000213          	li	tp,0
+ 344:	ff0100b7          	lui	ra,0xff010
+ 348:	f0008093          	addi	ra,ra,-256 # ff00ff00 <begin_signature+0xff00fa70>
+ 34c:	0f0f1137          	lui	sp,0xf0f1
+ 350:	f0f10113          	addi	sp,sp,-241 # f0f0f0f <begin_signature+0xf0f0a7f>
+ 354:	0020f733          	and	a4,ra,sp
+ 358:	00120213          	addi	tp,tp,1 # 1 <_start-0x1ff>
+ 35c:	00200293          	li	t0,2
+ 360:	fe5212e3          	bne	tp,t0,344 <test_7+0x4>
+ 364:	0f0013b7          	lui	t2,0xf001
+ 368:	f0038393          	addi	t2,t2,-256 # f000f00 <begin_signature+0xf000a70>
+ 36c:	00700193          	li	gp,7
+ 370:	08771e63          	bne	a4,t2,40c <fail>
+
+00000374 <test_8>:
+ 374:	00000213          	li	tp,0
+ 378:	0f0f1137          	lui	sp,0xf0f1
+ 37c:	f0f10113          	addi	sp,sp,-241 # f0f0f0f <begin_signature+0xf0f0a7f>
+ 380:	ff0100b7          	lui	ra,0xff010
+ 384:	f0008093          	addi	ra,ra,-256 # ff00ff00 <begin_signature+0xff00fa70>
+ 388:	0020f733          	and	a4,ra,sp
+ 38c:	00120213          	addi	tp,tp,1 # 1 <_start-0x1ff>
+ 390:	00200293          	li	t0,2
+ 394:	fe5212e3          	bne	tp,t0,378 <test_8+0x4>
+ 398:	0f0013b7          	lui	t2,0xf001
+ 39c:	f0038393          	addi	t2,t2,-256 # f000f00 <begin_signature+0xf000a70>
+ 3a0:	00800193          	li	gp,8
+ 3a4:	06771463          	bne	a4,t2,40c <fail>
+
+000003a8 <test_9>:
+ 3a8:	ff0100b7          	lui	ra,0xff010
+ 3ac:	f0008093          	addi	ra,ra,-256 # ff00ff00 <begin_signature+0xff00fa70>
+ 3b0:	00107133          	and	sp,zero,ra
+ 3b4:	00000393          	li	t2,0
+ 3b8:	00900193          	li	gp,9
+ 3bc:	04711863          	bne	sp,t2,40c <fail>
+
+000003c0 <test_10>:
+ 3c0:	00ff00b7          	lui	ra,0xff0
+ 3c4:	0ff08093          	addi	ra,ra,255 # ff00ff <begin_signature+0xfefc6f>
+ 3c8:	0000f133          	and	sp,ra,zero
+ 3cc:	00000393          	li	t2,0
+ 3d0:	00a00193          	li	gp,10
+ 3d4:	02711c63          	bne	sp,t2,40c <fail>
+
+000003d8 <test_11>:
+ 3d8:	000070b3          	and	ra,zero,zero
+ 3dc:	00000393          	li	t2,0
+ 3e0:	00b00193          	li	gp,11
+ 3e4:	02709463          	bne	ra,t2,40c <fail>
+
+000003e8 <test_12>:
+ 3e8:	111110b7          	lui	ra,0x11111
+ 3ec:	11108093          	addi	ra,ra,273 # 11111111 <begin_signature+0x11110c81>
+ 3f0:	22222137          	lui	sp,0x22222
+ 3f4:	22210113          	addi	sp,sp,546 # 22222222 <begin_signature+0x22221d92>
+ 3f8:	0020f033          	and	zero,ra,sp
+ 3fc:	00000393          	li	t2,0
+ 400:	00c00193          	li	gp,12
+ 404:	00701463          	bne	zero,t2,40c <fail>
+ 408:	00301e63          	bne	zero,gp,424 <pass>
+
+0000040c <fail>:
+ 40c:	00000193          	li	gp,0
+ 410:	00000013          	nop
+ 414:	00000013          	nop
+ 418:	00000013          	nop
+ 41c:	00000013          	nop
+ 420:	0180006f          	j	438 <end>
+
+00000424 <pass>:
+ 424:	00100193          	li	gp,1
+ 428:	00000013          	nop
+ 42c:	00000013          	nop
+ 430:	00000013          	nop
+ 434:	00000013          	nop
+
+00000438 <end>:
+ 438:	00000013          	nop
+ 43c:	00000013          	nop
