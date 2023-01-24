@@ -96,6 +96,7 @@ Before attempting the following steps, please ensure you are connected to campus
       ![Screen Shot 2022-01-10 at 10 47 00 PM](https://user-images.githubusercontent.com/57438552/148877990-88a318c6-b155-42ca-8a6b-9bdd4c6a9ef7.png)
 
 
+**( Skip to "Using Verilator on ICE" if not using Vivado or Vitis)**
 8. Once you have gotten to the desktop, you can then clock on the icon to open the Vivado or Vitis tool. 
       ![Screen Shot 2022-01-10 at 10 47 34 PM](https://user-images.githubusercontent.com/57438552/148878051-e3cd9b7a-a9de-4769-8709-f58475bee33d.png)
 
@@ -124,6 +125,49 @@ Below is a short video of all the steps showing how to open the VNC desktop:
 Once you get VNC environment get a terminal and type ```module load cs3220'''. 
 You don't need to call vivado. 
 ![screenshot](images/loadmodule.png)
+
+**Modifications to the instructions in HW1Part2***
+
+Step 1: compile the verilog module of **adder_var_seq**. 
+```
+cd gt-cs3220.github.io/Spring_2023/hw1part2/
+verilator --cc adder_var_seq.v --top-module adder_var_seq
+```
+
+Step 2: Create the Cpp simulation file for Verilator. Pls take a look at the **adder_var_seq.cpp** in the current folder. The detail explainations are listed inside the **adder_var_seq.cpp**.
+
+Step 3: Compile the executable file
+```
+verilator -Wall --trace --exe --build -cc adder_var_seq.cpp adder_var_seq.v
+```
+Note: If you see an error saying `--build` is not a valid option, don't panic. Run without `--build`
+```
+verilator -Wall --trace --exe -cc adder_var_seq.cpp adder_var_seq.v
+```
+
+Step 3(a): Make the executable file (only if you had to skip `--build`)
+Inside the obj_dir:
+```
+make -f Vadder_var_seq.mk
+```
+
+Step 4: Run the exectuable file and obtain the waveform file (.vcd)
+```
+./obj_dir/Vadder_var_seq
+```
+
+Step 5: Open the GTKWaver to open the generated trace
+open "GTKWaver" -> "Open New Tab" -> "Select the generated waveform.vcd" -> "click on Top" -> "Right click the signals below" -> "Recurse Import" -> "Append" 
+Then all waveforms will show up in the Waves window.
+
+**Note**
+We have asked for GTKWave installation on coc-ice cluster but it may be a while. In the meantime you can ftp the waveform.vcd to your local machine and use gtkwave. From your terminal in the local personal machine use: 
+```
+scp akar34@coc-ice.pace.gatech.edu:/storage/home/hcocice1/akar34/test/gt-cs3220.github.io/Spring_2023/hw1part2/obj_dir/waveform.vcd .
+```
+Replace username with your own and waveform.vcd path with your own path.
+
+
 
 ## FAQs
 
