@@ -74,7 +74,7 @@ module FE_STAGE(
 
 
   // **TODO: Complete the rest of the pipeline 
-   assign stall_pipe_FE = 1;  // you need to modify this line for your design 
+   assign stall_pipe_FE = 0;  // you need to modify this line for your design 
 
   always @ (posedge clk) begin
   /* you need to extend this always block */

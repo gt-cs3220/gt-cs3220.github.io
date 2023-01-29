@@ -32,7 +32,11 @@ module AGEX_STAGE(
 
  
  // **TODO: Complete the rest of the pipeline 
- 
+  wire [`DBITS-1:0] regval_1_AGEX;
+  wire [`DBITS-1:0] regval_2_AGEX;
+  wire [`DBITS-1:0] sxt_imm_AGEX;
+  wire [`REGNOBITS-1:0] rd_AGEX;
+  wire wr_reg_AGEX;
   
   always @ (*) begin
     case (op_I_AGEX)
@@ -48,17 +52,18 @@ module AGEX_STAGE(
     endcase
   end
 
-
+  reg [`DBITS-1:0] aluout_AGEX;
  // compute ALU operations  (alu out or memory addresses)
  
   always @ (*) begin
-  /*
   case (op_I_AGEX)
-    `ADD_I: 
-       //  ...
-
+    `ADD_I:
+      aluout_AGEX = regval_1_AGEX + regval_2_AGEX;
+    `ADDI_I:
+      aluout_AGEX = regval_1_AGEX + sxt_imm_AGEX;
+    `BEQ_I:
+      aluout_AGEX = PC_AGEX + sxt_imm_AGEX;
 	 endcase 
-   */
   end 
 
 // branch target needs to be computed here 
@@ -79,7 +84,12 @@ end
                                   PC_AGEX,
                                   pcplus_AGEX,
                                   op_I_AGEX,
-                                  inst_count_AGEX
+                                  inst_count_AGEX,
+                                  regval_1_AGEX,
+                                  regval_2_AGEX,
+                                  sxt_imm_AGEX,
+                                  rd_AGEX,
+                                  wr_reg_AGEX
                                           // more signals might need
                                   } = from_DE_latch; 
     
@@ -89,7 +99,10 @@ end
                                 inst_AGEX,
                                 PC_AGEX,
                                 op_I_AGEX,
-                                inst_count_AGEX
+                                inst_count_AGEX,
+                                aluout_AGEX,
+                                rd_AGEX,
+                                wr_reg_AGEX
                                        // more signals might need
                                  }; 
  

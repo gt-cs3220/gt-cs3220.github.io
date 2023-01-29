@@ -197,11 +197,11 @@ always @(*) begin
   case (type_immediate_DE )  
   `I_immediate: 
     sxt_imm_DE = {{21{inst_DE[31]}}, inst_DE[30:25], inst_DE[24:21], inst_DE[20]}; 
-    /*
   `S_immediate: 
-     sxt_imm_DE =  ... 
+     sxt_imm_DE =  {{21{inst_DE[31]}}, inst_DE[30:25], inst_DE[11:8], inst_DE[7]};
    `B_immediate: 
-     sxt_imm_DE = ... 
+     sxt_imm_DE = {{20{inst_DE[31]}}, inst_DE[7], inst_DE[30:25], inst_DE[11:8], 1'b0};
+    /*
    `U_immediate: 
      sxt_imm_DE = ... 
    `J_immediate: 
@@ -212,10 +212,47 @@ always @(*) begin
   endcase  
 end 
    wire wr_reg_WB; 
- 
 
 
+  wire [`REGNOBITS-1:0] rs1_DE;
+  wire [`REGNOBITS-1:0] rs2_DE;
+  wire [`REGNOBITS-1:0] rd_DE;
 
+  assign rs1_DE = inst_DE[19:15];
+  assign rs2_DE = inst_DE[24:20];
+  assign rd_DE = inst_DE[11:7];
+
+  wire [`DBITS-1:0] regval_1_DE;
+  wire [`DBITS-1:0] regval_2_DE;
+  wire wr_reg_DE;
+
+  reg rs1_read_DE;
+  reg rs2_read_DE;
+
+  always @(*) begin
+    case (type_I_DE)
+      `I_Type:
+        begin
+          rs1_read_DE = 1;
+          rs2_read_DE = 0;
+        end
+      `R_Type:
+        begin
+          rs1_read_DE = 1;
+          rs2_read_DE = 1;
+        end
+      `S_Type:
+        begin
+          rs1_read_DE = 1;
+          rs2_read_DE = 1;
+        end
+    endcase
+  end
+
+  assign regval_1_DE = regs[rs1_DE];
+  assign regval_2_DE = regs[rs2_DE];
+
+  assign wr_reg_DE = ((op_I_DE == `ADD_I) || (op_I_DE == `ADDI_I)) ? 1 : 0;
  
  /* this signal is passed from WB stage */ 
   wire wr_reg_WB; // is this instruction writing into a register file? 
@@ -227,7 +264,7 @@ end
   assign { wr_reg_WB, wregno_WB, regval_WB} = from_WB_to_DE;  
 
 
-  wire pipeline_stall_DE; 
+  wire pipeline_stall_DE;
   assign from_DE_to_FE = {pipeline_stall_DE}; // pass the DE stage stall signal to FE stage 
 
 
@@ -250,7 +287,12 @@ end
                                   PC_DE,
                                   pcplus_DE,
                                   op_I_DE,
-                                  inst_count_DE
+                                  inst_count_DE,
+                                  regval_1_DE,
+                                  regval_2_DE,
+                                  sxt_imm_DE,
+                                  rd_DE,
+                                  wr_reg_DE
                                   // more signals might need
                                   }; 
 
