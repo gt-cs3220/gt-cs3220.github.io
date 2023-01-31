@@ -28,8 +28,6 @@ module AGEX_STAGE(
   wire [`DBITS-1:0] pcplus_AGEX; 
   wire [`IOPBITS-1:0] op_I_AGEX;
   reg br_cond_AGEX; // 1 means a branch condition is satisified. 0 means a branch condition is not satisifed 
-
-
  
  // **TODO: Complete the rest of the pipeline 
   wire [`DBITS-1:0] regval_1_AGEX;
@@ -40,7 +38,10 @@ module AGEX_STAGE(
   
   always @ (*) begin
     case (op_I_AGEX)
-      `BEQ_I : br_cond_AGEX = 1; // write correct code to check the branch condition. 
+      `BEQ_I :
+      begin
+        br_cond_AGEX = regval_1_AGEX == regval_2_AGEX ? 1 : 0; // write correct code to check the branch condition. 
+      end
       /*
       `BNE_I : ...
       `BLT_I : ...
@@ -93,7 +94,8 @@ end
                                           // more signals might need
                                   } = from_DE_latch; 
     
- 
+  assign from_AGEX_to_DE = {br_cond_AGEX, wr_reg_AGEX, rd_AGEX};
+  assign from_AGEX_to_FE = {br_cond_AGEX, aluout_AGEX};
   assign AGEX_latch_contents = {
                                 valid_AGEX,
                                 inst_AGEX,
@@ -105,7 +107,6 @@ end
                                 wr_reg_AGEX
                                        // more signals might need
                                  }; 
- 
   always @ (posedge clk ) begin
     if(reset) begin
       AGEX_latch <= {`AGEX_latch_WIDTH{1'b0}};

@@ -12,7 +12,6 @@ module DE_STAGE(
   output wire [`DE_latch_WIDTH-1:0] DE_latch_out
 );
 
-  `UNUSED_VAR (from_MEM_to_DE)
 
   /* pipeline latch*/ 
   reg [`DE_latch_WIDTH-1:0] DE_latch; 
@@ -20,7 +19,7 @@ module DE_STAGE(
 
   /* architecture register file */ 
   reg [`DBITS-1:0] regs [`REGWORDS-1:0];
-
+  reg [`REGWORDS-1:0] busy_bits;
   
   /* decode signals */
   wire valid_DE;
@@ -188,7 +187,6 @@ always @(*) begin
 end
   
 
-
 //////////////////////////////////
     // **TODO: Complete the rest of the pipeline 
 
@@ -221,30 +219,38 @@ end
   assign rs1_DE = inst_DE[19:15];
   assign rs2_DE = inst_DE[24:20];
   assign rd_DE = inst_DE[11:7];
-
   wire [`DBITS-1:0] regval_1_DE;
   wire [`DBITS-1:0] regval_2_DE;
   wire wr_reg_DE;
-
+  reg hazard;
   reg rs1_read_DE;
   reg rs2_read_DE;
-
+  reg rs_busy;
   always @(*) begin
     case (type_I_DE)
       `I_Type:
         begin
           rs1_read_DE = 1;
           rs2_read_DE = 0;
+          hazard = ((wr_reg_AGEX && rs1_DE == wregno_AGEX) || (wr_reg_MEM && rs1_DE == wregno_MEM) 
+                     || (wr_reg_WB && rs1_DE == wregno_WB)) ? 1 : 0;
+
         end
       `R_Type:
         begin
           rs1_read_DE = 1;
           rs2_read_DE = 1;
+          hazard = ((wr_reg_AGEX && (rs1_DE == wregno_AGEX || rs2_DE == wregno_AGEX)) ||
+                     (wr_reg_MEM && (rs1_DE == wregno_MEM || rs2_DE == wregno_MEM)) ||
+                     (wr_reg_WB && (rs1_DE == wregno_WB || rs2_DE == wregno_WB))) ? 1 : 0;
         end
       `S_Type:
         begin
           rs1_read_DE = 1;
           rs2_read_DE = 1;
+           hazard = ((wr_reg_AGEX && (rs1_DE == wregno_AGEX || rs2_DE == wregno_AGEX)) ||
+                     (wr_reg_MEM && (rs1_DE == wregno_MEM || rs2_DE == wregno_MEM)) ||
+                     (wr_reg_WB && (rs1_DE == wregno_WB || rs2_DE == wregno_WB))) ? 1 : 0;
         end
     endcase
   end
@@ -258,16 +264,23 @@ end
   wire wr_reg_WB; // is this instruction writing into a register file? 
   wire [`REGNOBITS-1:0] wregno_WB; // destination register ID 
   wire [`DBITS-1:0] regval_WB;  // the contents to be written in the register file (or CSR )
-
-
+  wire wr_reg_MEM; // is this instruction writing into a register file? 
+  wire [`REGNOBITS-1:0] wregno_MEM; // destination register ID 
   // signals come from WB stage for register WB 
   assign { wr_reg_WB, wregno_WB, regval_WB} = from_WB_to_DE;  
-
+  assign { wr_reg_MEM, wregno_MEM } = from_MEM_to_DE;
 
   wire pipeline_stall_DE;
+  assign pipeline_stall_DE = hazard;
   assign from_DE_to_FE = {pipeline_stall_DE}; // pass the DE stage stall signal to FE stage 
-
-
+  wire br_cond_DE;
+  wire [`REGNOBITS-1:0] wregno_AGEX; 
+  wire wr_reg_AGEX;
+  assign {
+    br_cond_DE,
+    wr_reg_AGEX,
+    wregno_AGEX 
+  } = from_AGEX_to_DE;
 // decoding the contents of FE latch out. the order should be matched with the fe_stage.v 
   assign {
             valid_DE,
@@ -295,7 +308,6 @@ end
                                   wr_reg_DE
                                   // more signals might need
                                   }; 
-
 
 
 
@@ -346,8 +358,10 @@ always @ (posedge clk) begin // you need to expand this always block
       DE_latch <= {`DE_latch_WIDTH{1'b0}};
       end
      else begin  
-      if (pipeline_stall_DE) 
+      if (pipeline_stall_DE || br_cond_DE || hazard) 
+        begin
         DE_latch <= {`DE_latch_WIDTH{1'b0}};
+        end
       else
           DE_latch <= DE_latch_contents;
      end 

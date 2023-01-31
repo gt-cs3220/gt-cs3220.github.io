@@ -1,10 +1,7 @@
  `include "define.vh" 
 
 
-module FE_STAGE(
-  input wire clk,
-  input wire reset,
-  input wire [`from_DE_to_FE_WIDTH-1:0] from_DE_to_FE,
+module FE_STAGE( input wire clk, input wire reset, input wire [`from_DE_to_FE_WIDTH-1:0] from_DE_to_FE,
   input wire [`from_AGEX_to_FE_WIDTH-1:0] from_AGEX_to_FE,   
   input wire [`from_MEM_to_FE_WIDTH-1:0] from_MEM_to_FE,   
   input wire [`from_WB_to_FE_WIDTH-1:0] from_WB_to_FE, 
@@ -34,7 +31,7 @@ module FE_STAGE(
   /* pipeline latch */ 
   reg [`FE_latch_WIDTH-1:0] FE_latch;  // FE latch 
   wire valid_FE;
-   
+  wire br_cond_FE; 
   `UNUSED_VAR(valid_FE)
   reg [`DBITS-1:0] PC_FE_latch; // PC latch in the FE stage   // you could use a part of FE_latch as a PC latch as well 
   
@@ -45,7 +42,7 @@ module FE_STAGE(
   wire [`INSTBITS-1:0] inst_FE;  // instruction value in the FE stage 
   wire [`DBITS-1:0] pcplus_FE;  // pc plus value in the FE stage 
   wire stall_pipe_FE; // signal to indicate when a front-end needs to be stall
-  
+  reg [`DBITS-1:0] branch_pc_FE;
   wire [`FE_latch_WIDTH-1:0] FE_latch_contents;  // the signals that will be FE latch contents 
   
   // reading instruction from imem 
@@ -54,7 +51,9 @@ module FE_STAGE(
   // wire to send the FE latch contents to the DE stage 
   assign FE_latch_out = FE_latch; 
  
-
+  assign {
+    stall_pipe_FE
+  } = from_DE_to_FE;
   // This is the value of "incremented PC", computed in the FE stage
   assign pcplus_FE = PC_FE_latch + `INSTSIZE;
   
@@ -70,11 +69,11 @@ module FE_STAGE(
                                 
                                 };
 
-
-
-
+  assign {
+    br_cond_FE,
+    branch_pc_FE
+  } = from_AGEX_to_FE;
   // **TODO: Complete the rest of the pipeline 
-   assign stall_pipe_FE = 0;  // you need to modify this line for your design 
 
   always @ (posedge clk) begin
   /* you need to extend this always block */
@@ -82,6 +81,8 @@ module FE_STAGE(
       PC_FE_latch <= `STARTPC;
       inst_count_FE <= 1;  /* inst_count starts from 1 for easy human reading. 1st fetch instructions can have 1 */ 
       end 
+      else if (br_cond_FE)
+        PC_FE_latch <= branch_pc_FE;
      else if(!stall_pipe_FE) begin 
       PC_FE_latch <= pcplus_FE;
       inst_count_FE <= inst_count_FE + 1; 
@@ -98,6 +99,10 @@ module FE_STAGE(
             inst_count_FE <= 1;  /* inst_count starts from 1 for easy human reading. 1st fetch instructions can have 1 */ 
             // ...
         end 
+     else if (br_cond_FE == 1'b1)
+        begin
+            FE_latch <= {`FE_latch_WIDTH{1'b0}};
+        end
      else  
         begin 
          // this is just an example. you need to expand the contents of if/else
@@ -109,5 +114,4 @@ module FE_STAGE(
             FE_latch <= FE_latch_contents; 
         end  
   end
-
 endmodule

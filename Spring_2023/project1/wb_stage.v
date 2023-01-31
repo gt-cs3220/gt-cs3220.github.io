@@ -27,8 +27,7 @@ module WB_STAGE(
 
   wire [`DBITS-1:0] aluout_WB; // ALU output
 
-  // **TODO: Complete the rest of the pipeline**
- 
+  // **TODO: Complete the rest of the pipeline** 
   assign wregno_WB = rd_WB;
   assign regval_WB = aluout_WB;
    assign {                     

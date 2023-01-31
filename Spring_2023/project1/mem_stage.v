@@ -60,7 +60,7 @@ module MEM_STAGE(
   wire [`DBITS-1:0] aluout_MEM;
   wire [`REGNOBITS-1:0] rd_MEM;
   wire wr_reg_MEM;
-    
+  assign from_MEM_to_DE = {wr_reg_MEM, rd_MEM};   
    assign MEM_latch_out = MEM_latch; 
 
    assign {
