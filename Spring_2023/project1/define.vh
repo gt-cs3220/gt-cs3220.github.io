@@ -18,7 +18,7 @@
 // address space is m 0x00000000 to 0x000fffff
   // [NOTICE] please note that both imem and dmem use the SAME "IDMEMINITFILE".
   // you need to change this line to change which test file to read 
-  `define IDMEMINITFILE "./test/part1/test4.mem"
+  `define IDMEMINITFILE "./test/part1/test2.mem"
   `define IMEMADDRBITS  16
   `define IMEMWORDBITS  2
   `define IMEMWORDS	  (1 << (`IMEMADDRBITS - `IMEMWORDBITS))
@@ -208,12 +208,12 @@
   `define MEM_latch_WIDTH    (1 + `INSTBITS+`DBITS+ `IOPBITS + `DBITS+ `DBITS+`REGNOBITS + 1) 
 
   `define from_DE_to_FE_WIDTH  (1) 
-  `define from_AGEX_to_FE_WIDTH (1)
+  `define from_AGEX_to_FE_WIDTH (1 + `DBITS)
   `define from_MEM_to_FE_WIDTH (1)
   `define from_WB_to_FE_WIDTH (1)
 
-  `define from_AGEX_to_DE_WIDTH (1) 
-  `define from_MEM_to_DE_WIDTH  (1)
+  `define from_AGEX_to_DE_WIDTH (1 + 1 + `REGNOBITS) 
+  `define from_MEM_to_DE_WIDTH  (1 + `REGNOBITS)
   `define from_WB_to_DE_WIDTH  (1 + `REGNOBITS + `DBITS ) 
 
   `define from_MEM_to_AGEX_WIDTH  (1)
