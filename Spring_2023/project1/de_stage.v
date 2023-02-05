@@ -199,12 +199,10 @@ always @(*) begin
      sxt_imm_DE =  {{21{inst_DE[31]}}, inst_DE[30:25], inst_DE[11:8], inst_DE[7]};
    `B_immediate: 
      sxt_imm_DE = {{20{inst_DE[31]}}, inst_DE[7], inst_DE[30:25], inst_DE[11:8], 1'b0};
-    /*
    `U_immediate: 
-     sxt_imm_DE = ... 
+     sxt_imm_DE = {inst_DE[31], inst_DE[30:20], inst_DE[19:12], {12{1'b0}}}; 
    `J_immediate: 
-    sxt_imm_DE = ... 
-    */ 
+    sxt_imm_DE = {{12{inst_DE[31]}}, inst_DE[19:12], inst_DE[20], inst_DE[30:25], inst_DE[24:21], 1'b0}; 
    default:
     sxt_imm_DE = 32'b0; 
   endcase  
@@ -258,7 +256,10 @@ end
   assign regval_1_DE = regs[rs1_DE];
   assign regval_2_DE = regs[rs2_DE];
 
-  assign wr_reg_DE = ((op_I_DE == `ADD_I) || (op_I_DE == `ADDI_I)) ? 1 : 0;
+  assign wr_reg_DE = ((op_I_DE == `ADD_I) || (op_I_DE == `ADDI_I)) || 
+                        (op_I_DE == `AUIPC_I) || (op_I_DE == `JAL_I) || 
+                        (op_I_DE == `JALR_I) || (op_I_DE == `LUI_I) ||
+                        (op_I_DE == `SUB_I) ? 1 : 0;
  
  /* this signal is passed from WB stage */ 
   wire wr_reg_WB; // is this instruction writing into a register file? 
@@ -348,7 +349,7 @@ end
       regs[30] <= {`DBITS{1'b0}};
       regs[31] <= {`DBITS{1'b0}};
     end
-    else if(wr_reg_WB) 
+    else if(wr_reg_WB && wregno_WB != 0) 
 		  	regs[wregno_WB] <= regval_WB; 
   end
 

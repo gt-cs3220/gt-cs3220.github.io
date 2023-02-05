@@ -28,7 +28,8 @@ module AGEX_STAGE(
   wire [`DBITS-1:0] pcplus_AGEX; 
   wire [`IOPBITS-1:0] op_I_AGEX;
   reg br_cond_AGEX; // 1 means a branch condition is satisified. 0 means a branch condition is not satisifed 
- 
+  reg [`DBITS-1:0] pctarget_AGEX;
+
  // **TODO: Complete the rest of the pipeline 
   wire [`DBITS-1:0] regval_1_AGEX;
   wire [`DBITS-1:0] regval_2_AGEX;
@@ -42,13 +43,27 @@ module AGEX_STAGE(
       begin
         br_cond_AGEX = regval_1_AGEX == regval_2_AGEX ? 1 : 0; // write correct code to check the branch condition. 
       end
-      /*
-      `BNE_I : ...
-      `BLT_I : ...
-      `BGE_I : ...
-      `BLTU_I: ..
-      `BGEU_I : ...
-      */
+      `BNE_I : br_cond_AGEX = regval_1_AGEX != regval_2_AGEX ? 1 : 0; 
+      `BLT_I : begin
+        if (regval_1_AGEX[`DBITS-1] == 1'b1 && regval_2_AGEX[`DBITS-1] == 1'b1)
+           br_cond_AGEX = regval_1_AGEX > regval_2_AGEX ? 1 : 0;
+        else if (regval_1_AGEX[`DBITS-1] == 1'b0 && regval_2_AGEX[`DBITS-1] == 1'b0)
+           br_cond_AGEX = regval_1_AGEX < regval_2_AGEX ? 1 : 0;
+        else
+           br_cond_AGEX = regval_1_AGEX[`DBITS-1] == 1'b1 ? 1 : 0;
+       end
+      `BGE_I : begin
+        if (regval_1_AGEX[`DBITS-1] == 1'b1 && regval_2_AGEX[`DBITS-1] == 1'b1)
+           br_cond_AGEX = regval_1_AGEX <= regval_2_AGEX ? 1 : 0;
+        else if (regval_1_AGEX[`DBITS-1] == 1'b0 && regval_2_AGEX[`DBITS-1] == 1'b0)
+           br_cond_AGEX = regval_1_AGEX >= regval_2_AGEX ? 1 : 0;
+        else
+           br_cond_AGEX = regval_1_AGEX[`DBITS-1] == 1'b0 ? 1 : 0;
+       end
+
+      `BLTU_I: br_cond_AGEX = regval_1_AGEX < regval_2_AGEX ? 1 : 0;
+      `BGEU_I :  br_cond_AGEX = regval_1_AGEX >= regval_2_AGEX ? 1 : 0;
+      `JAL_I, `JALR_I, `JR_I: br_cond_AGEX = 1'b1;
       default : br_cond_AGEX = 1'b0;
     endcase
   end
@@ -60,21 +75,32 @@ module AGEX_STAGE(
   case (op_I_AGEX)
     `ADD_I:
       aluout_AGEX = regval_1_AGEX + regval_2_AGEX;
+    `SUB_I:
+      aluout_AGEX = regval_1_AGEX - regval_2_AGEX;
     `ADDI_I:
       aluout_AGEX = regval_1_AGEX + sxt_imm_AGEX;
-    `BEQ_I:
-      aluout_AGEX = PC_AGEX + sxt_imm_AGEX;
+    `AUIPC_I:
+      aluout_AGEX = PC_AGEX + (sxt_imm_AGEX << 12);
+    `LUI_I:
+      aluout_AGEX = sxt_imm_AGEX << 12;
+    `JAL_I, `JALR_I:
+      aluout_AGEX = pcplus_AGEX;
 	 endcase 
   end 
 
 // branch target needs to be computed here 
 // computed branch target needs to send to other pipeline stages (pctarget_AGEX)
-
 always @(*)begin  
-/*
-  if (op_I_AGEX == `JAL_I) 
-  ... 
-  */
+  if (op_I_AGEX == `JALR_I) 
+    pctarget_AGEX = (regval_1_AGEX + sxt_imm_AGEX) & 32'hfffffffe;
+  else if (op_I_AGEX == `JR_I)
+    pctarget_AGEX = regval_1_AGEX;
+  else if (op_I_AGEX == `JAL_I)
+    pctarget_AGEX = PC_AGEX + sxt_imm_AGEX;
+  else if (op_I_AGEX == `BEQ_I || op_I_AGEX == `BNE_I || op_I_AGEX == `BGE_I || op_I_AGEX == `BLT_I || op_I_AGEX == `BGEU_I || op_I_AGEX == `BLTU_I)
+    pctarget_AGEX = PC_AGEX + sxt_imm_AGEX;
+  else
+    pctarget_AGEX = pcplus_AGEX;
 end 
 
 
@@ -95,7 +121,7 @@ end
                                   } = from_DE_latch; 
     
   assign from_AGEX_to_DE = {br_cond_AGEX, wr_reg_AGEX, rd_AGEX};
-  assign from_AGEX_to_FE = {br_cond_AGEX, aluout_AGEX};
+  assign from_AGEX_to_FE = {br_cond_AGEX, pctarget_AGEX};
   assign AGEX_latch_contents = {
                                 valid_AGEX,
                                 inst_AGEX,
