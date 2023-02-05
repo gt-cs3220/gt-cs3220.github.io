@@ -1,0 +1,60 @@
+
+TESTING: /home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part2/addi.mem
+-- VERILATE ----------------
+/home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part2/addi.mem
+/home/sanya/classes/spring23/cs3220/Spring_2023/project1/define.vh
+sed -i '' 's|define IDMEMINITFILE.*|define IDMEMINITFILE "/home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part2/addi.mem"|g'  /home/sanya/classes/spring23/cs3220/Spring_2023/project1/define.vh
+
+TESTING: /home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part2/add.mem
+-- VERILATE ----------------
+/home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part2/add.mem
+/home/sanya/classes/spring23/cs3220/Spring_2023/project1/define.vh
+sed -i '' 's|define IDMEMINITFILE.*|define IDMEMINITFILE "/home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part2/add.mem"|g'  /home/sanya/classes/spring23/cs3220/Spring_2023/project1/define.vh
+
+TESTING: /home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part2/auipc.mem
+-- VERILATE ----------------
+/home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part2/auipc.mem
+/home/sanya/classes/spring23/cs3220/Spring_2023/project1/define.vh
+sed -i '' 's|define IDMEMINITFILE.*|define IDMEMINITFILE "/home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part2/auipc.mem"|g'  /home/sanya/classes/spring23/cs3220/Spring_2023/project1/define.vh
+
+TESTING: /home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part2/beq.mem
+-- VERILATE ----------------
+/home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part2/beq.mem
+/home/sanya/classes/spring23/cs3220/Spring_2023/project1/define.vh
+sed -i '' 's|define IDMEMINITFILE.*|define IDMEMINITFILE "/home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part2/beq.mem"|g'  /home/sanya/classes/spring23/cs3220/Spring_2023/project1/define.vh
+
+TESTING: /home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part2/bge.mem
+-- VERILATE ----------------
+/home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part2/bge.mem
+/home/sanya/classes/spring23/cs3220/Spring_2023/project1/define.vh
+sed -i '' 's|define IDMEMINITFILE.*|define IDMEMINITFILE "/home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part2/bge.mem"|g'  /home/sanya/classes/spring23/cs3220/Spring_2023/project1/define.vh
+
+TESTING: /home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part2/jal.mem
+-- VERILATE ----------------
+/home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part2/jal.mem
+/home/sanya/classes/spring23/cs3220/Spring_2023/project1/define.vh
+sed -i '' 's|define IDMEMINITFILE.*|define IDMEMINITFILE "/home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part2/jal.mem"|g'  /home/sanya/classes/spring23/cs3220/Spring_2023/project1/define.vh
+
+TESTING: /home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part2/jalr.mem
+-- VERILATE ----------------
+/home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part2/jalr.mem
+/home/sanya/classes/spring23/cs3220/Spring_2023/project1/define.vh
+sed -i '' 's|define IDMEMINITFILE.*|define IDMEMINITFILE "/home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part2/jalr.mem"|g'  /home/sanya/classes/spring23/cs3220/Spring_2023/project1/define.vh
+
+TESTING: /home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part2/test7.mem
+-- VERILATE ----------------
+/home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part2/test7.mem
+/home/sanya/classes/spring23/cs3220/Spring_2023/project1/define.vh
+sed -i '' 's|define IDMEMINITFILE.*|define IDMEMINITFILE "/home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part2/test7.mem"|g'  /home/sanya/classes/spring23/cs3220/Spring_2023/project1/define.vh
+
+TESTING: /home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part2/test8.mem
+-- VERILATE ----------------
+/home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part2/test8.mem
+/home/sanya/classes/spring23/cs3220/Spring_2023/project1/define.vh
+sed -i '' 's|define IDMEMINITFILE.*|define IDMEMINITFILE "/home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part2/test8.mem"|g'  /home/sanya/classes/spring23/cs3220/Spring_2023/project1/define.vh
+
+TESTING: /home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part2/test9.mem
+-- VERILATE ----------------
+/home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part2/test9.mem
+/home/sanya/classes/spring23/cs3220/Spring_2023/project1/define.vh
+sed -i '' 's|define IDMEMINITFILE.*|define IDMEMINITFILE "/home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part2/test9.mem"|g'  /home/sanya/classes/spring23/cs3220/Spring_2023/project1/define.vh

@@ -230,29 +230,23 @@ end
         begin
           rs1_read_DE = 1;
           rs2_read_DE = 0;
-          hazard = ((wr_reg_AGEX && rs1_DE == wregno_AGEX) || (wr_reg_MEM && rs1_DE == wregno_MEM) 
-                     || (wr_reg_WB && rs1_DE == wregno_WB)) ? 1 : 0;
 
         end
       `R_Type:
         begin
           rs1_read_DE = 1;
           rs2_read_DE = 1;
-          hazard = ((wr_reg_AGEX && (rs1_DE == wregno_AGEX || rs2_DE == wregno_AGEX)) ||
-                     (wr_reg_MEM && (rs1_DE == wregno_MEM || rs2_DE == wregno_MEM)) ||
-                     (wr_reg_WB && (rs1_DE == wregno_WB || rs2_DE == wregno_WB))) ? 1 : 0;
         end
       `S_Type:
         begin
           rs1_read_DE = 1;
           rs2_read_DE = 1;
-           hazard = ((wr_reg_AGEX && (rs1_DE == wregno_AGEX || rs2_DE == wregno_AGEX)) ||
-                     (wr_reg_MEM && (rs1_DE == wregno_MEM || rs2_DE == wregno_MEM)) ||
-                     (wr_reg_WB && (rs1_DE == wregno_WB || rs2_DE == wregno_WB))) ? 1 : 0;
         end
     endcase
   end
-
+  assign hazard = ((wr_reg_AGEX && ((rs1_read_DE && rs1_DE == wregno_AGEX) || (rs2_read_DE && rs2_DE == wregno_AGEX))) ||
+                     (wr_reg_MEM && ((rs1_read_DE && rs1_DE == wregno_MEM) || (rs2_read_DE && rs2_DE == wregno_MEM))) ||
+                     (wr_reg_WB && ((rs1_read_DE && rs1_DE == wregno_WB) || (rs2_read_DE && rs2_DE == wregno_WB)))) ? 1 : 0;
   assign regval_1_DE = regs[rs1_DE];
   assign regval_2_DE = regs[rs2_DE];
 
