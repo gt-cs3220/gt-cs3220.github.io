@@ -41,10 +41,14 @@ Implement functionality for the main buffer structure in the FIFO and functional
 
 **We have provided the testbench code (fifo.cpp).**
 
-Follow instructions from [hw1part2](https://github.com/gt-cs3220/gt-cs3220.github.io/tree/master/Spring_2023/hw1part2) to compile the verilog code, run the testbench and view the waveoforms.
+1. Follow instructions from [hw1part2](https://github.com/gt-cs3220/gt-cs3220.github.io/tree/master/Spring_2023/hw1part2) to compile the verilog code, run the testbench and view the waveforms.
 
 e.g.)
  verilator -Wall --trace --exe --build -cc fifo.v fifo.cpp
+
+OR
+2. Use the makefile provide to build and run the code.
+    make (will compile, build and execute the testbench)
 
 **What to submit:**
 1. **fifo.v**
