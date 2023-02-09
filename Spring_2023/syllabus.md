@@ -171,9 +171,9 @@ As members of the Georgia Tech community, we are committed to creating a learnin
 | 4    | 1/30/23 | Architecture         | out of order processor              |                                     |                   |
 |      | 2/1/23  | Architecture         | Cache and memory systems            |                                     | [Proj#1](project1/README.md): Part-1 (W)        |
 | 5    | 2/6/23  | Architecture         | branch predictor                    |                            |                   |
-|      | 2/8/23  | Architecture         | GPU architecture                    |     HW #3 (F)                                 | Proj#1: Part-2 (W)        |
+|      | 2/8/23  | Architecture         | GPU architecture                    |                                     | Proj#1: Part-2 (W)        |
 | 6    | 2/13/23 | Architecture         | Vortex architecture                 |                                     |                   |
-|      | 2/15/23 | Architecture         | graphics                            |                         | Proj#3: part-3 (W)                  |
+|      | 2/15/23 | Architecture         | graphics                            |           HW #3 (F)               | Proj#3: part-3 (W)                  |
 | 7    | 2/20/23 | FPGA                 | Pynq & Jupyter notebook             |                                     |                   |
 |      | 2/22/23 | FPGA                 | FPGA structure                      | HW #4 (No grading: pass/fail)       | Project #2  (F)      |
 | 8    | 2/27/23 |                      | Review                              |                                     |                   |
