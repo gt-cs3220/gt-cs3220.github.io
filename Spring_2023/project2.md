@@ -3,7 +3,7 @@
 This is project is a continuation of project #1.
 In this project, you will be optimizing your CPU pipeline by adding a branch predictor (BP) and a branch target buffer (BTB). 
 
-## Part-1: Baseline Branch Predictor/BTB (8 points): 
+## Part-1: Baseline Branch Predictor/BTB (10 points): 
 In this design, you will add a baseline branch predictor and the BTB to your pipeline. 
 The baseline branch predictor uses a G-share branch predictor. 
 
@@ -11,7 +11,7 @@ The branch history register (BHR) length is 8 bits.
 The BTB size is 16.
 
 Use XOR of PC[9:2] bits and BHR to index the Pattern History Table (PHT). 
-Each of the 2bit counter in the PHT is initialized with 00.
+Each of the 2bit counter in the PHT is initialized with 1 (weekly taken).
 
 Summary of the algorithm 
 
@@ -29,18 +29,11 @@ If an instruction is a branch, insert the target address into the BTB.
 Index the BP with the index value that was propagated with the instruction to update the BP (2-bit saturating counter is updated). 
 Update the BHR (use the old BHR that was propagated with the instruction to update the BHR). 
 
-Pleae print out cycle count in the sim_main.cpp
-**Change in sim_main.cpp** 
-```
-if (1 == exitcode)
-    std::cout<<"Passed! cycle_count:" << last_print_inst_count_WB << std::endl;
-else
-    std::cout<<"Failed. exitcode: "<<exitcode<<std::endl;
-```
+
 
 **Grading**: 
 We will check whether </test/part4/testall.mem> is correctly executed or not. 
-There won’t be any performance improvement in testall.mem because the final execution time is mostly controlled by the key release routine. With the branch predictor/BTB, your code should finish testall.mem correctly. 
+There won’t be any performance improvement in testall.mem because the final execution time is already fixed by the test code.  With the branch predictor/BTB, your code should finish testall.mem correctly. 
 
 **What to submit:**
 **A zip file of your source code. The zip file must contain the following:**
@@ -48,7 +41,7 @@ type ```make submit``` will generate a submission.zip.
 Please submit the submission.zip file. Each submission for each group.
 
 
-## Part-2 Performance Improvements (2 points)
+## Part-2 Performance Improvements (Bonus 2 points)
 In this design, you can change your BTB and BR designs to improve performance of </test/towers/towers.mem>. You probably want to add counters to measure branch predictor accuracy (correctly predicted branches vs. mispredicted branches.).
 You can explore other BHR hashing functions (e.g. using different bits of PC for the XOR operation), or change the branch predictor size or BTB. You could also implement another branch predictor. 
 Your scores will be depending on the performance improvement. If you get more than 5% performance improvement over the baseline configuration, you will receive 2 pts, if not, you will get 1 pt based on your report contents.  
@@ -110,9 +103,6 @@ Please also make it sure when you update BTB/BP, only explicitly branch instruct
 
 [A] No. 
 
-[Q] Can I submit only part-2 late? 
-
-[A] Yes, you can choose to submit only the optional task with 20% penalty. so instead of 2 extra points, you will get 1.6 extra point. 
 
 [Q] Let’s say my instruction stream is as follows: BR(2), ADD, BR(1)
 When BR(1) is in EX, it will update the BHR. But BR(2) will be in FETCH at that time.
@@ -128,9 +118,9 @@ And Front-end uses the previous cycle's BHR value (i.e., reading is done only in
 
 In this assignment, since our pipeline is shallow, I doubt that this would affect any performance though. 
 
-[Q] How to initialize PHT as zero? 
+[Q] How to initialize PHT as one? 
 
-[A] You explicitly put 0 when it resets. 
+[A] You explicitly put 1 when it resets. 
 
 
 [Q] How do I print out the number of corrected branches and the number of mispredicted branches? Do I have to check VCD outputs? 
