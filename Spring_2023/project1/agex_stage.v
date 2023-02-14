@@ -1,6 +1,5 @@
 `include "define.vh" 
 
-
 module AGEX_STAGE(
   input wire clk,
   input wire reset,
@@ -77,12 +76,58 @@ module AGEX_STAGE(
       aluout_AGEX = regval_1_AGEX + regval_2_AGEX;
     `SUB_I:
       aluout_AGEX = regval_1_AGEX - regval_2_AGEX;
+    `AND_I:
+      aluout_AGEX = regval_1_AGEX & regval_2_AGEX;
+    `OR_I:
+      aluout_AGEX = regval_1_AGEX | regval_2_AGEX;
+    `XOR_I:
+      aluout_AGEX = regval_1_AGEX ^ regval_2_AGEX;
+    `SLT_I:
+       begin
+        if (regval_1_AGEX[`DBITS-1] == 1'b1 && regval_2_AGEX[`DBITS-1] == 1'b1)
+           aluout_AGEX = regval_1_AGEX > regval_2_AGEX ? 1 : 0;
+        else if (regval_1_AGEX[`DBITS-1] == 1'b0 && regval_2_AGEX[`DBITS-1] == 1'b0)
+           aluout_AGEX = regval_1_AGEX < regval_2_AGEX ? 1 : 0;
+        else
+           aluout_AGEX = regval_2_AGEX[`DBITS-1] == 1'b0 ? 1 : 0;
+       end
+    `SLTU_I:
+      aluout_AGEX = regval_1_AGEX < regval_2_AGEX ? 1 : 0;
+    `SRA_I:
+      aluout_AGEX = regval_1_AGEX >>> regval_2_AGEX[4:0];
+    `SRL_I:
+      aluout_AGEX = regval_1_AGEX >> regval_2_AGEX[4:0];
+    `SLL_I:
+      aluout_AGEX = regval_1_AGEX << regval_2_AGEX[4:0];
     `ADDI_I:
       aluout_AGEX = regval_1_AGEX + sxt_imm_AGEX;
+    `ANDI_I:
+      aluout_AGEX = regval_1_AGEX & sxt_imm_AGEX;
+    `ORI_I:
+      aluout_AGEX = regval_1_AGEX | sxt_imm_AGEX;
+    `XORI_I:
+      aluout_AGEX = regval_1_AGEX ^ sxt_imm_AGEX;
+    `SLTI_I:
+       begin
+        if (regval_1_AGEX[`DBITS-1] == 1'b1 && sxt_imm_AGEX[`DBITS-1] == 1'b1)
+           aluout_AGEX = regval_1_AGEX > sxt_imm_AGEX ? 1 : 0;
+        else if (regval_1_AGEX[`DBITS-1] == 1'b0 && regval_2_AGEX[`DBITS-1] == 1'b0)
+           aluout_AGEX = regval_1_AGEX < sxt_imm_AGEX ? 1 : 0;
+        else
+           aluout_AGEX = regval_2_AGEX[`DBITS-1] == 1'b0 ? 1 : 0;
+       end
+    `SLTIU_I:
+      aluout_AGEX = regval_1_AGEX < sxt_imm_AGEX ? 1 : 0;
+    `SRAI_I:
+      aluout_AGEX = regval_1_AGEX >>> inst_AGEX[24:20];
+    `SRLI_I:
+      aluout_AGEX = regval_1_AGEX >> inst_AGEX[24:20]; 
+    `SLLI_I:
+      aluout_AGEX = regval_1_AGEX << inst_AGEX[24:20]; 
+    `LUI_I:
+      aluout_AGEX = sxt_imm_AGEX;
     `AUIPC_I:
       aluout_AGEX = PC_AGEX + (sxt_imm_AGEX << 12);
-    `LUI_I:
-      aluout_AGEX = sxt_imm_AGEX << 12;
     `JAL_I, `JALR_I:
       aluout_AGEX = pcplus_AGEX;
 	 endcase 

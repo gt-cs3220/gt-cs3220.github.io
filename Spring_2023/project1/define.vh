@@ -18,7 +18,7 @@
 // address space is m 0x00000000 to 0x000fffff
   // [NOTICE] please note that both imem and dmem use the SAME "IDMEMINITFILE".
   // you need to change this line to change which test file to read 
-  `define IDMEMINITFILE "./test/part2/jalr.mem"
+  `define IDMEMINITFILE "/home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/xor.mem"
   `define IMEMADDRBITS  16
   `define IMEMWORDBITS  2
   `define IMEMWORDS	  (1 << (`IMEMADDRBITS - `IMEMWORDBITS))
@@ -89,7 +89,6 @@
   `define U_immediate 3
   `define S_immediate 4 
   `define B_immediate 5  
-
 
   `define CSRR_OPCODE 7'b1110011 
   `define CSRR_FUNCT3 3'b010
