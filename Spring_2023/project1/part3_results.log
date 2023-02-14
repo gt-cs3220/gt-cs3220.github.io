@@ -19,7 +19,7 @@ Passed!
 TESTING: /home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/lui.mem
 Passed!
 TESTING: /home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/lw.mem
-Failed. exitcode: 0
+Passed!
 TESTING: /home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/ori.mem
 Passed!
 TESTING: /home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/or.mem
@@ -49,7 +49,7 @@ Passed!
 TESTING: /home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/sub.mem
 Passed!
 TESTING: /home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/sw.mem
-Failed. exitcode: 0
+Passed!
 TESTING: /home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/test10.mem
 Passed!
 TESTING: /home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/xori.mem

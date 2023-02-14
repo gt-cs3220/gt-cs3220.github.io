@@ -68,6 +68,7 @@ module AGEX_STAGE(
   end
   reg signed [`DBITS-1:0] sign_temp;
   reg [`DBITS-1:0] aluout_AGEX;
+  reg [`DBITS-1:0] memaddr_AGEX;
  // compute ALU operations  (alu out or memory addresses)
  
   always @ (*) begin
@@ -136,6 +137,13 @@ module AGEX_STAGE(
       aluout_AGEX = sxt_imm_AGEX;
     `AUIPC_I:
       aluout_AGEX = PC_AGEX + (sxt_imm_AGEX << 12);
+    `LW_I:
+      memaddr_AGEX = regval_1_AGEX + sxt_imm_AGEX;
+    `SW_I:
+      begin
+      aluout_AGEX = regval_2_AGEX;
+      memaddr_AGEX = regval_1_AGEX + sxt_imm_AGEX;
+      end
     `JAL_I, `JALR_I:
       aluout_AGEX = pcplus_AGEX;
 	 endcase 
@@ -183,7 +191,8 @@ end
                                 inst_count_AGEX,
                                 aluout_AGEX,
                                 rd_AGEX,
-                                wr_reg_AGEX
+                                wr_reg_AGEX,
+                                memaddr_AGEX
                                        // more signals might need
                                  }; 
   always @ (posedge clk ) begin
