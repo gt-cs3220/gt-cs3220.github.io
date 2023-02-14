@@ -17,7 +17,7 @@ Passed!
 TESTING: /home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/jalr.mem
 Passed!
 TESTING: /home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/lui.mem
-Failed. exitcode: 0
+Passed!
 TESTING: /home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/lw.mem
 Failed. exitcode: 0
 TESTING: /home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/ori.mem
@@ -31,7 +31,7 @@ Passed!
 TESTING: /home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/sll.mem
 Passed!
 TESTING: /home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/slti.mem
-Failed. exitcode: 0
+Passed!
 TESTING: /home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/sltiu.mem
 Passed!
 TESTING: /home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/slt.mem
@@ -39,9 +39,9 @@ Passed!
 TESTING: /home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/sltu.mem
 Passed!
 TESTING: /home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/srai.mem
-Failed. exitcode: 0
+Passed!
 TESTING: /home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/sra.mem
-Failed. exitcode: 0
+Passed!
 TESTING: /home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/srli.mem
 Passed!
 TESTING: /home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/srl.mem
@@ -51,7 +51,7 @@ Passed!
 TESTING: /home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/sw.mem
 Failed. exitcode: 0
 TESTING: /home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/test10.mem
-Failed. exitcode: -7
+Passed!
 TESTING: /home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/xori.mem
 Passed!
 TESTING: /home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/xor.mem

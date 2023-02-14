@@ -256,7 +256,7 @@ end
                         (op_I_DE == `ORI_I) || (op_I_DE == `AND_I) ||
                         (op_I_DE == `ANDI_I) || (op_I_DE == `XOR_I) ||
                         (op_I_DE == `XORI_I) || (op_I_DE == `SLL_I) ||
-                         (op_I_DE == `SLT_I) ||
+                         (op_I_DE == `SLT_I) || (op_I_DE == `MUL_I) || 
                         (op_I_DE == `SLTU_I) || (op_I_DE == `SRA_I) || 
                         (op_I_DE == `SRL_I) || (op_I_DE == `SLL_I) ||
                         (op_I_DE == `SLTI_I) || (op_I_DE == `SLTIU_I) ||

@@ -66,7 +66,7 @@ module AGEX_STAGE(
       default : br_cond_AGEX = 1'b0;
     endcase
   end
-
+  reg signed [`DBITS-1:0] sign_temp;
   reg [`DBITS-1:0] aluout_AGEX;
  // compute ALU operations  (alu out or memory addresses)
  
@@ -94,11 +94,16 @@ module AGEX_STAGE(
     `SLTU_I:
       aluout_AGEX = regval_1_AGEX < regval_2_AGEX ? 1 : 0;
     `SRA_I:
-      aluout_AGEX = regval_1_AGEX >>> regval_2_AGEX[4:0];
+    begin
+      sign_temp = regval_1_AGEX;
+      aluout_AGEX = sign_temp >>> regval_2_AGEX[4:0];
+      end
     `SRL_I:
       aluout_AGEX = regval_1_AGEX >> regval_2_AGEX[4:0];
     `SLL_I:
       aluout_AGEX = regval_1_AGEX << regval_2_AGEX[4:0];
+    `MUL_I:
+      aluout_AGEX = regval_1_AGEX * regval_2_AGEX[4:0];
     `ADDI_I:
       aluout_AGEX = regval_1_AGEX + sxt_imm_AGEX;
     `ANDI_I:
@@ -111,15 +116,18 @@ module AGEX_STAGE(
        begin
         if (regval_1_AGEX[`DBITS-1] == 1'b1 && sxt_imm_AGEX[`DBITS-1] == 1'b1)
            aluout_AGEX = regval_1_AGEX > sxt_imm_AGEX ? 1 : 0;
-        else if (regval_1_AGEX[`DBITS-1] == 1'b0 && regval_2_AGEX[`DBITS-1] == 1'b0)
+        else if (regval_1_AGEX[`DBITS-1] == 1'b0 && sxt_imm_AGEX[`DBITS-1] == 1'b0)
            aluout_AGEX = regval_1_AGEX < sxt_imm_AGEX ? 1 : 0;
         else
-           aluout_AGEX = regval_2_AGEX[`DBITS-1] == 1'b0 ? 1 : 0;
+           aluout_AGEX = sxt_imm_AGEX[`DBITS-1] == 1'b0 ? 1 : 0;
        end
     `SLTIU_I:
       aluout_AGEX = regval_1_AGEX < sxt_imm_AGEX ? 1 : 0;
     `SRAI_I:
-      aluout_AGEX = regval_1_AGEX >>> inst_AGEX[24:20];
+    begin
+            sign_temp = regval_1_AGEX;
+      aluout_AGEX = sign_temp >>> inst_AGEX[24:20];
+      end
     `SRLI_I:
       aluout_AGEX = regval_1_AGEX >> inst_AGEX[24:20]; 
     `SLLI_I:
