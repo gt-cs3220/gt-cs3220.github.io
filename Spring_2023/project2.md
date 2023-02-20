@@ -27,7 +27,7 @@ The instruction carries the BHR index  (e.g. BHR xor PC) information that was us
 If a branch is mispredicted, flush the pipeline.
 If an instruction is a branch, insert the target address into the BTB. 
 Index the BP with the index value that was propagated with the instruction to update the BP (2-bit saturating counter is updated). 
-Update the BHR (use the old BHR that was propagated with the instruction to update the BHR). 
+Update the BHR (use the old BHR that was propagated with the instruction to update the PHT). 
 
 
 
