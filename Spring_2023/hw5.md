@@ -9,6 +9,8 @@ Please install [vitis tool chain in Xilinix] (https://www.xilinx.com/support/dow
 
 From project #3, you will use VMs. Please see [CoC-ICE](https://github.com/gt-cs3220/gt-cs3220.github.io/blob/master/access_vm_steps/access_vm_doc.md)
 
+and please make it sure you do "module load cs3220" to set up vivado/vitis on your path 
+
 [**Step 1**]
 The example that we wil use is 2D convolution line buffer. 
 you can directly download including other examples using this command:
