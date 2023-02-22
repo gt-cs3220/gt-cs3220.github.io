@@ -31,8 +31,8 @@ Update the BHR.
 
 
 
-**Grading**:
-**NOTE: part4 test has been added to the project1 direction. Pull/Fetch the latest code to get the latest test code"
+**Grading**:  
+**NOTE: part4 test has been added to the project1 direction. Pull/Fetch the latest code to get the latest test code"  
 We will check whether </test/part4/testall.mem> is correctly executed or not. 
 There won’t be any performance improvement in testall.mem because the final execution time is already fixed by the test code.  With the branch predictor/BTB, your code should finish testall.mem correctly. 
 
