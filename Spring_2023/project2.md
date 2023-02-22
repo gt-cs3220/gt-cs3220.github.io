@@ -27,11 +27,12 @@ The instruction carries the BHR index  (e.g. BHR xor PC) information that was us
 If a branch is mispredicted, flush the pipeline.
 If an instruction is a branch, insert the target address into the BTB. 
 Index the BP with the index value that was propagated with the instruction to update the BP (2-bit saturating counter is updated). 
-Update the BHR (use the old BHR that was propagated with the instruction to update the PHT). 
+Update the BHR. 
 
 
 
-**Grading**: 
+**Grading**:
+**NOTE: part4 test has been added to the project1 direction. Pull/Fetch the latest code to get the latest test code"
 We will check whether </test/part4/testall.mem> is correctly executed or not. 
 There won’t be any performance improvement in testall.mem because the final execution time is already fixed by the test code.  With the branch predictor/BTB, your code should finish testall.mem correctly. 
 
