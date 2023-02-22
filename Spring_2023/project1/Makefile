@@ -50,7 +50,7 @@ LDFLAGS +=
 
 default:
 	@echo "-- VERILATE ----------------"
-	$(VERILATOR) $(VL_FLAGS) sim_main.cpp fe_stage.v de_stage.v mem_stage.v wb_stage.v agex_stage.v -CFLAGS '$(CXXFLAGS)'
+	$(VERILATOR) $(VL_FLAGS) sim_main.cpp fe_stage.v de_stage.v mem_stage.v wb_stage.v agex_stage.v br_predictor.v updater.v -CFLAGS '$(CXXFLAGS)'
 	@echo "-- COMPILE -----------------"
 	$(MAKE) -j 4 -C obj_dir -f Vpipeline.mk 
 	@echo "-- RUN ---------------------"
@@ -62,7 +62,7 @@ tests:
 	@echo $(IDMEMINITFILE)
 	@echo $(VX_DEFINE)
 	sed -i  $(SED_STRING) $(VX_DEFINE)
-	$(VERILATOR) $(VL_FLAGS) sim_main.cpp fe_stage.v de_stage.v mem_stage.v wb_stage.v agex_stage.v -CFLAGS '$(CXXFLAGS)'
+	$(VERILATOR) $(VL_FLAGS) sim_main.cpp fe_stage.v de_stage.v mem_stage.v wb_stage.v agex_stage.v br_predictor.v updater.v -CFLAGS '$(CXXFLAGS)'
 	@echo "-- COMPILE -----------------"
 	$(MAKE) -j 4 -C obj_dir -f Vpipeline.mk
 	@echo "-- RUN ---------------------"

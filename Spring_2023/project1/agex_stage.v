@@ -8,7 +8,8 @@ module AGEX_STAGE(
   input wire [`DE_latch_WIDTH-1:0] from_DE_latch,
   output wire [`AGEX_latch_WIDTH-1:0] AGEX_latch_out,
   output wire [`from_AGEX_to_FE_WIDTH-1:0] from_AGEX_to_FE,
-  output wire [`from_AGEX_to_DE_WIDTH-1:0] from_AGEX_to_DE
+  output wire [`from_AGEX_to_DE_WIDTH-1:0] from_AGEX_to_DE,
+  output wire [`from_AGEX_to_updater_WIDTH-1:0] from_AGEX_to_updater
 );
 
   `UNUSED_VAR (from_MEM_to_AGEX)
@@ -28,7 +29,9 @@ module AGEX_STAGE(
   wire [`IOPBITS-1:0] op_I_AGEX;
   reg br_cond_AGEX; // 1 means a branch condition is satisified. 0 means a branch condition is not satisifed 
   reg [`DBITS-1:0] pctarget_AGEX;
-
+  wire [7:0] BHR_AGEX;
+  wire [7:0] PHT_index_AGEX;
+  wire [1:0] PHT_entry_AGEX;
  // **TODO: Complete the rest of the pipeline 
   wire [`DBITS-1:0] regval_1_AGEX;
   wire [`DBITS-1:0] regval_2_AGEX;
@@ -42,7 +45,9 @@ module AGEX_STAGE(
       begin
         br_cond_AGEX = regval_1_AGEX == regval_2_AGEX ? 1 : 0; // write correct code to check the branch condition. 
       end
-      `BNE_I : br_cond_AGEX = regval_1_AGEX != regval_2_AGEX ? 1 : 0; 
+      `BNE_I : 
+          br_cond_AGEX = regval_1_AGEX != regval_2_AGEX ? 1 : 0; 
+
       `BLT_I : begin
         if (regval_1_AGEX[`DBITS-1] == 1'b1 && regval_2_AGEX[`DBITS-1] == 1'b1)
            br_cond_AGEX = regval_1_AGEX > regval_2_AGEX ? 1 : 0;
@@ -164,8 +169,8 @@ always @(*)begin
     pctarget_AGEX = pcplus_AGEX;
 end 
 
-
-
+   wire is_branch;
+   wire taken;
     assign  {                     
                                   valid_AGEX,
                                   inst_AGEX,
@@ -177,12 +182,19 @@ end
                                   regval_2_AGEX,
                                   sxt_imm_AGEX,
                                   rd_AGEX,
-                                  wr_reg_AGEX
+                                  wr_reg_AGEX,
+                                  taken,
+                                  is_branch,
+                                  BHR_AGEX,
+                                  PHT_index_AGEX,
+                                  PHT_entry_AGEX
                                           // more signals might need
                                   } = from_DE_latch; 
     
   assign from_AGEX_to_DE = {br_cond_AGEX, wr_reg_AGEX, rd_AGEX};
   assign from_AGEX_to_FE = {br_cond_AGEX, pctarget_AGEX};
+
+  assign from_AGEX_to_updater = {PC_AGEX, is_branch, br_cond_AGEX, pctarget_AGEX, BHR_AGEX, PHT_index_AGEX, PHT_entry_AGEX};
   assign AGEX_latch_contents = {
                                 valid_AGEX,
                                 inst_AGEX,
@@ -206,8 +218,5 @@ end
             AGEX_latch <= AGEX_latch_contents ;
         end 
   end
-
-
-
 
 endmodule

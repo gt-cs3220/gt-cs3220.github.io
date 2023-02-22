@@ -5,6 +5,8 @@ module FE_STAGE( input wire clk, input wire reset, input wire [`from_DE_to_FE_WI
   input wire [`from_AGEX_to_FE_WIDTH-1:0] from_AGEX_to_FE,   
   input wire [`from_MEM_to_FE_WIDTH-1:0] from_MEM_to_FE,   
   input wire [`from_WB_to_FE_WIDTH-1:0] from_WB_to_FE, 
+  input wire [`from_predictor_to_FE_WIDTH-1:0] from_predictor_to_FE,
+  output wire [`from_FE_to_predictor_WIDTH-1:0] from_FE_to_predictor,
   output wire [`FE_latch_WIDTH-1:0] FE_latch_out
 );
 
@@ -64,16 +66,35 @@ module FE_STAGE( input wire clk, input wire reset, input wire [`from_DE_to_FE_WI
                                 inst_FE, 
                                 PC_FE_latch, 
                                 pcplus_FE, // please feel free to add more signals such as valid bits etc. 
-                                inst_count_FE
+                                inst_count_FE,
                                  // if you add more bits here, please increase the width of latch in VX_define.vh 
-                                
+                                taken,
+                                BHR_FE,
+                                PHT_index_FE,
+                                PHT_entry_FE
                                 };
 
+  wire [`DBITS-1:0] target_addr;
+  wire taken;
+  wire [7:0] PHT_index_FE;
+  wire [7:0] BHR_FE;
+  wire [1:0] PHT_entry_FE;
+  wire [3:0] BTB_index_FE;
+  wire [60:0] BTB_entry_FE;
   assign {
     br_cond_FE,
     branch_pc_FE
   } = from_AGEX_to_FE;
   // **TODO: Complete the rest of the pipeline 
+  assign from_FE_to_predictor = {PC_FE_latch};
+  assign {
+    taken,
+    target_addr,
+    BHR_FE,
+    PHT_index_FE,
+    PHT_entry_FE,
+    BTB_index_FE
+  } = from_predictor_to_FE;
 
   always @ (posedge clk) begin
   /* you need to extend this always block */
@@ -81,6 +102,8 @@ module FE_STAGE( input wire clk, input wire reset, input wire [`from_DE_to_FE_WI
       PC_FE_latch <= `STARTPC;
       inst_count_FE <= 1;  /* inst_count starts from 1 for easy human reading. 1st fetch instructions can have 1 */ 
       end 
+   else if (taken)
+     PC_FE_latch <= target_addr;
       else if (br_cond_FE)
         PC_FE_latch <= branch_pc_FE;
      else if(!stall_pipe_FE) begin 

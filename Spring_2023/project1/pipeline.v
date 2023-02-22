@@ -13,7 +13,10 @@ module pipeline (
   wire [`DE_latch_WIDTH-1:0] DE_latch_out; 
   wire [`AGEX_latch_WIDTH-1:0] AGEX_latch_out; 
   wire [`MEM_latch_WIDTH-1:0] MEM_latch_out;
-
+  wire [`from_FE_to_predictor_WIDTH-1:0] from_FE_to_predictor;
+  wire [`from_AGEX_to_updater_WIDTH-1:0] from_AGEX_to_updater;
+  wire [`from_predictor_to_FE_WIDTH-1:0] from_predictor_to_FE;
+  wire [`from_updater_to_predictor_WIDTH-1:0] from_updater_to_predictor;
   wire [`from_DE_to_FE_WIDTH-1:0] from_DE_to_FE;
   wire [`from_AGEX_to_FE_WIDTH-1:0] from_AGEX_to_FE;
   wire [`from_MEM_to_FE_WIDTH-1:0] from_MEM_to_FE;
@@ -35,9 +38,19 @@ module pipeline (
     .from_AGEX_to_FE(from_AGEX_to_FE),
     .from_MEM_to_FE(from_MEM_to_FE),
     .from_WB_to_FE(from_WB_to_FE),
+    .from_FE_to_predictor(from_FE_to_predictor),
+    .from_predictor_to_FE(from_predictor_to_FE),
     .FE_latch_out(FE_latch_out)
   ); 
                      
+  BR_PREDICTOR my_BR_PREDICTOR(
+    .clk(clk),
+    .reset(reset),
+    .from_FE_to_predictor(from_FE_to_predictor),
+    .from_predictor_to_FE(from_predictor_to_FE),
+    .from_updater_to_predictor(from_updater_to_predictor)
+  );
+
   DE_STAGE my_DE_stage(
     .clk(clk),
     .reset(reset),
@@ -57,7 +70,15 @@ module pipeline (
     .from_DE_latch(DE_latch_out),
     .AGEX_latch_out(AGEX_latch_out),
     .from_AGEX_to_FE(from_AGEX_to_FE),
-    .from_AGEX_to_DE(from_AGEX_to_DE)
+    .from_AGEX_to_DE(from_AGEX_to_DE),
+    .from_AGEX_to_updater(from_AGEX_to_updater)
+  );
+
+  UPDATER my_updater(
+    .clk(clk),
+    .reset(reset),
+    .from_AGEX_to_updater(from_AGEX_to_updater),
+    .from_updater_to_predictor(from_updater_to_predictor)
   );
 
   MEM_STAGE my_MEM_stage(

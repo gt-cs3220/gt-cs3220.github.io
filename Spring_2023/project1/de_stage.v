@@ -28,7 +28,7 @@ module DE_STAGE(
   wire [`DBITS-1:0] pcplus_DE; 
   wire [`DBITS-1:0] inst_count_DE; 
   wire[`DE_latch_WIDTH-1:0] DE_latch_contents; 
-
+  reg taken;
  
 
 // extracting a part of opcode 
@@ -186,7 +186,13 @@ always @(*) begin
 
 end
   
-
+reg is_branch;
+assign is_branch = (op_I_DE ==  `BEQ_I ) || 
+      (op_I_DE == `BNE_I) || 
+      (op_I_DE == `BLT_I) || 
+      (op_I_DE == `BGE_I) || 
+      (op_I_DE == `BLTU_I) || 
+      (op_I_DE == `BGEU_I);
 //////////////////////////////////
     // **TODO: Complete the rest of the pipeline 
 
@@ -290,9 +296,15 @@ end
             inst_DE,
             PC_DE, 
             pcplus_DE,
-            inst_count_DE 
+            inst_count_DE,
+            taken,
+            BHR_DE,
+            PHT_index_DE,
+            PHT_entry_DE
             }  = from_FE_latch;  // based on the contents of the latch, you can decode the content 
-
+wire [7:0] BHR_DE;
+wire [7:0] PHT_index_DE;
+wire [1:0] PHT_entry_DE;
 
 // assign wire to send the contents of DE latch to other pipeline stages  
   assign DE_latch_out = DE_latch; 
@@ -308,7 +320,12 @@ end
                                   regval_2_DE,
                                   sxt_imm_DE,
                                   rd_DE,
-                                  wr_reg_DE
+                                  wr_reg_DE,
+                                  taken,
+                                  is_branch,
+                                  BHR_DE,
+                                  PHT_index_DE,
+                                  PHT_entry_DE
                                   // more signals might need
                                   }; 
 
