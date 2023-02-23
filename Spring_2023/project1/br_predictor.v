@@ -18,30 +18,30 @@ module BR_PREDICTOR(
 
   reg [1:0] PHT[0:255];
   reg [7:0] BHR;
-  reg [60:0] BTB[0:15];
+  reg [58:0] BTB[0:15];
   integer i;
   initial
     begin
       for (i = 0; i < 256; i++)
-        PHT[i] = 1;
+        PHT[i] = 2'b10;
     end
   wire [7:0] PHT_index;
-  wire [60:0] BTB_entry;
-  assign BTB_entry = BTB[PC_BR[3:0]];
+  wire [58:0] BTB_entry;
+  assign BTB_entry = BTB[PC_BR[5:2]];
   assign PHT_index = BHR ^ PC_BR[9:2];
   wire BTB_hit;
-  assign BTB_hit = (BTB_entry[60:33] == PC_BR[`DBITS-1:4] && BTB_entry[32] == 1);
+  assign BTB_hit = (BTB_entry[58:33] == PC_BR[`DBITS-1:6] && BTB_entry[32] == 1);
   wire [`DBITS-1:0] target_addr;
   assign target_addr = BTB_entry[`DBITS-1:0];
   wire taken;
   assign taken = PHT[PHT_index] >= 2 ? 1 : 0;     
-  assign from_predictor_to_FE = {taken, target_addr, BHR, PHT_index, PHT[PHT_index], PC_BR[3:0]}; 
+  assign from_predictor_to_FE = {taken, BTB_hit, target_addr, BHR, PHT_index, PHT[PHT_index], PC_BR[3:0]}; 
   
   wire [7:0] updated_BHR;
   wire [7:0] PHT_index_updater;
   wire [1:0] PHT_entry_updater;
   wire [3:0] BTB_index_updater;
-  wire [60:0] BTB_entry_updater;
+  wire [58:0] BTB_entry_updater;
   wire br_cond_predictor;
   wire is_branch;
 

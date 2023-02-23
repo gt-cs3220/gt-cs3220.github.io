@@ -4,7 +4,7 @@ TESTING: /home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/add
 /home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/add.mem
 /home/sanya/classes/spring23/cs3220/Spring_2023/project1/define.vh
 sed -i  's|define IDMEMINITFILE.*|define IDMEMINITFILE "/home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/add.mem"|g'  /home/sanya/classes/spring23/cs3220/Spring_2023/project1/define.vh
-/home/sanya/classes/spring23/verilator//bin/verilator --exe -cc pipeline.v --top-module pipeline --trace --trace-structs --assert -Wpedantic -Wno-DECLFILENAME -Wno-UNUSED --x-initial unique --x-assign unique sim_main.cpp fe_stage.v de_stage.v mem_stage.v wb_stage.v agex_stage.v -CFLAGS '-DIDMEMINITFILE=/home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/add.mem -DVCD_OUTPUT -DDPRINTF'
+/home/sanya/classes/spring23/verilator//bin/verilator --exe -cc pipeline.v --top-module pipeline --trace --trace-structs --assert -Wpedantic -Wno-DECLFILENAME -Wno-UNUSED --x-initial unique --x-assign unique sim_main.cpp fe_stage.v de_stage.v mem_stage.v wb_stage.v agex_stage.v br_predictor.v updater.v -CFLAGS '-DIDMEMINITFILE=/home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/add.mem -DVCD_OUTPUT -DDPRINTF'
 -- COMPILE -----------------
 make -j 4 -C obj_dir -f Vpipeline.mk
 make[1]: Entering directory '/home/sanya/classes/spring23/cs3220/Spring_2023/project1/obj_dir'
@@ -31,7 +31,7 @@ TESTING: /home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/and
 /home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/andi.mem
 /home/sanya/classes/spring23/cs3220/Spring_2023/project1/define.vh
 sed -i  's|define IDMEMINITFILE.*|define IDMEMINITFILE "/home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/andi.mem"|g'  /home/sanya/classes/spring23/cs3220/Spring_2023/project1/define.vh
-/home/sanya/classes/spring23/verilator//bin/verilator --exe -cc pipeline.v --top-module pipeline --trace --trace-structs --assert -Wpedantic -Wno-DECLFILENAME -Wno-UNUSED --x-initial unique --x-assign unique sim_main.cpp fe_stage.v de_stage.v mem_stage.v wb_stage.v agex_stage.v -CFLAGS '-DIDMEMINITFILE=/home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/andi.mem -DVCD_OUTPUT -DDPRINTF'
+/home/sanya/classes/spring23/verilator//bin/verilator --exe -cc pipeline.v --top-module pipeline --trace --trace-structs --assert -Wpedantic -Wno-DECLFILENAME -Wno-UNUSED --x-initial unique --x-assign unique sim_main.cpp fe_stage.v de_stage.v mem_stage.v wb_stage.v agex_stage.v br_predictor.v updater.v -CFLAGS '-DIDMEMINITFILE=/home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/andi.mem -DVCD_OUTPUT -DDPRINTF'
 -- COMPILE -----------------
 make -j 4 -C obj_dir -f Vpipeline.mk
 make[1]: Entering directory '/home/sanya/classes/spring23/cs3220/Spring_2023/project1/obj_dir'
@@ -58,7 +58,7 @@ TESTING: /home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/and
 /home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/and.mem
 /home/sanya/classes/spring23/cs3220/Spring_2023/project1/define.vh
 sed -i  's|define IDMEMINITFILE.*|define IDMEMINITFILE "/home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/and.mem"|g'  /home/sanya/classes/spring23/cs3220/Spring_2023/project1/define.vh
-/home/sanya/classes/spring23/verilator//bin/verilator --exe -cc pipeline.v --top-module pipeline --trace --trace-structs --assert -Wpedantic -Wno-DECLFILENAME -Wno-UNUSED --x-initial unique --x-assign unique sim_main.cpp fe_stage.v de_stage.v mem_stage.v wb_stage.v agex_stage.v -CFLAGS '-DIDMEMINITFILE=/home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/and.mem -DVCD_OUTPUT -DDPRINTF'
+/home/sanya/classes/spring23/verilator//bin/verilator --exe -cc pipeline.v --top-module pipeline --trace --trace-structs --assert -Wpedantic -Wno-DECLFILENAME -Wno-UNUSED --x-initial unique --x-assign unique sim_main.cpp fe_stage.v de_stage.v mem_stage.v wb_stage.v agex_stage.v br_predictor.v updater.v -CFLAGS '-DIDMEMINITFILE=/home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/and.mem -DVCD_OUTPUT -DDPRINTF'
 -- COMPILE -----------------
 make -j 4 -C obj_dir -f Vpipeline.mk
 make[1]: Entering directory '/home/sanya/classes/spring23/cs3220/Spring_2023/project1/obj_dir'
@@ -85,7 +85,7 @@ TESTING: /home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/bge
 /home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/bgeu.mem
 /home/sanya/classes/spring23/cs3220/Spring_2023/project1/define.vh
 sed -i  's|define IDMEMINITFILE.*|define IDMEMINITFILE "/home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/bgeu.mem"|g'  /home/sanya/classes/spring23/cs3220/Spring_2023/project1/define.vh
-/home/sanya/classes/spring23/verilator//bin/verilator --exe -cc pipeline.v --top-module pipeline --trace --trace-structs --assert -Wpedantic -Wno-DECLFILENAME -Wno-UNUSED --x-initial unique --x-assign unique sim_main.cpp fe_stage.v de_stage.v mem_stage.v wb_stage.v agex_stage.v -CFLAGS '-DIDMEMINITFILE=/home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/bgeu.mem -DVCD_OUTPUT -DDPRINTF'
+/home/sanya/classes/spring23/verilator//bin/verilator --exe -cc pipeline.v --top-module pipeline --trace --trace-structs --assert -Wpedantic -Wno-DECLFILENAME -Wno-UNUSED --x-initial unique --x-assign unique sim_main.cpp fe_stage.v de_stage.v mem_stage.v wb_stage.v agex_stage.v br_predictor.v updater.v -CFLAGS '-DIDMEMINITFILE=/home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/bgeu.mem -DVCD_OUTPUT -DDPRINTF'
 -- COMPILE -----------------
 make -j 4 -C obj_dir -f Vpipeline.mk
 make[1]: Entering directory '/home/sanya/classes/spring23/cs3220/Spring_2023/project1/obj_dir'
@@ -112,7 +112,7 @@ TESTING: /home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/blt
 /home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/blt.mem
 /home/sanya/classes/spring23/cs3220/Spring_2023/project1/define.vh
 sed -i  's|define IDMEMINITFILE.*|define IDMEMINITFILE "/home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/blt.mem"|g'  /home/sanya/classes/spring23/cs3220/Spring_2023/project1/define.vh
-/home/sanya/classes/spring23/verilator//bin/verilator --exe -cc pipeline.v --top-module pipeline --trace --trace-structs --assert -Wpedantic -Wno-DECLFILENAME -Wno-UNUSED --x-initial unique --x-assign unique sim_main.cpp fe_stage.v de_stage.v mem_stage.v wb_stage.v agex_stage.v -CFLAGS '-DIDMEMINITFILE=/home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/blt.mem -DVCD_OUTPUT -DDPRINTF'
+/home/sanya/classes/spring23/verilator//bin/verilator --exe -cc pipeline.v --top-module pipeline --trace --trace-structs --assert -Wpedantic -Wno-DECLFILENAME -Wno-UNUSED --x-initial unique --x-assign unique sim_main.cpp fe_stage.v de_stage.v mem_stage.v wb_stage.v agex_stage.v br_predictor.v updater.v -CFLAGS '-DIDMEMINITFILE=/home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/blt.mem -DVCD_OUTPUT -DDPRINTF'
 -- COMPILE -----------------
 make -j 4 -C obj_dir -f Vpipeline.mk
 make[1]: Entering directory '/home/sanya/classes/spring23/cs3220/Spring_2023/project1/obj_dir'
@@ -139,7 +139,7 @@ TESTING: /home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/blt
 /home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/bltu.mem
 /home/sanya/classes/spring23/cs3220/Spring_2023/project1/define.vh
 sed -i  's|define IDMEMINITFILE.*|define IDMEMINITFILE "/home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/bltu.mem"|g'  /home/sanya/classes/spring23/cs3220/Spring_2023/project1/define.vh
-/home/sanya/classes/spring23/verilator//bin/verilator --exe -cc pipeline.v --top-module pipeline --trace --trace-structs --assert -Wpedantic -Wno-DECLFILENAME -Wno-UNUSED --x-initial unique --x-assign unique sim_main.cpp fe_stage.v de_stage.v mem_stage.v wb_stage.v agex_stage.v -CFLAGS '-DIDMEMINITFILE=/home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/bltu.mem -DVCD_OUTPUT -DDPRINTF'
+/home/sanya/classes/spring23/verilator//bin/verilator --exe -cc pipeline.v --top-module pipeline --trace --trace-structs --assert -Wpedantic -Wno-DECLFILENAME -Wno-UNUSED --x-initial unique --x-assign unique sim_main.cpp fe_stage.v de_stage.v mem_stage.v wb_stage.v agex_stage.v br_predictor.v updater.v -CFLAGS '-DIDMEMINITFILE=/home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/bltu.mem -DVCD_OUTPUT -DDPRINTF'
 -- COMPILE -----------------
 make -j 4 -C obj_dir -f Vpipeline.mk
 make[1]: Entering directory '/home/sanya/classes/spring23/cs3220/Spring_2023/project1/obj_dir'
@@ -166,7 +166,7 @@ TESTING: /home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/bne
 /home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/bne.mem
 /home/sanya/classes/spring23/cs3220/Spring_2023/project1/define.vh
 sed -i  's|define IDMEMINITFILE.*|define IDMEMINITFILE "/home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/bne.mem"|g'  /home/sanya/classes/spring23/cs3220/Spring_2023/project1/define.vh
-/home/sanya/classes/spring23/verilator//bin/verilator --exe -cc pipeline.v --top-module pipeline --trace --trace-structs --assert -Wpedantic -Wno-DECLFILENAME -Wno-UNUSED --x-initial unique --x-assign unique sim_main.cpp fe_stage.v de_stage.v mem_stage.v wb_stage.v agex_stage.v -CFLAGS '-DIDMEMINITFILE=/home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/bne.mem -DVCD_OUTPUT -DDPRINTF'
+/home/sanya/classes/spring23/verilator//bin/verilator --exe -cc pipeline.v --top-module pipeline --trace --trace-structs --assert -Wpedantic -Wno-DECLFILENAME -Wno-UNUSED --x-initial unique --x-assign unique sim_main.cpp fe_stage.v de_stage.v mem_stage.v wb_stage.v agex_stage.v br_predictor.v updater.v -CFLAGS '-DIDMEMINITFILE=/home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/bne.mem -DVCD_OUTPUT -DDPRINTF'
 -- COMPILE -----------------
 make -j 4 -C obj_dir -f Vpipeline.mk
 make[1]: Entering directory '/home/sanya/classes/spring23/cs3220/Spring_2023/project1/obj_dir'
@@ -193,7 +193,7 @@ TESTING: /home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/jal
 /home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/jal.mem
 /home/sanya/classes/spring23/cs3220/Spring_2023/project1/define.vh
 sed -i  's|define IDMEMINITFILE.*|define IDMEMINITFILE "/home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/jal.mem"|g'  /home/sanya/classes/spring23/cs3220/Spring_2023/project1/define.vh
-/home/sanya/classes/spring23/verilator//bin/verilator --exe -cc pipeline.v --top-module pipeline --trace --trace-structs --assert -Wpedantic -Wno-DECLFILENAME -Wno-UNUSED --x-initial unique --x-assign unique sim_main.cpp fe_stage.v de_stage.v mem_stage.v wb_stage.v agex_stage.v -CFLAGS '-DIDMEMINITFILE=/home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/jal.mem -DVCD_OUTPUT -DDPRINTF'
+/home/sanya/classes/spring23/verilator//bin/verilator --exe -cc pipeline.v --top-module pipeline --trace --trace-structs --assert -Wpedantic -Wno-DECLFILENAME -Wno-UNUSED --x-initial unique --x-assign unique sim_main.cpp fe_stage.v de_stage.v mem_stage.v wb_stage.v agex_stage.v br_predictor.v updater.v -CFLAGS '-DIDMEMINITFILE=/home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/jal.mem -DVCD_OUTPUT -DDPRINTF'
 -- COMPILE -----------------
 make -j 4 -C obj_dir -f Vpipeline.mk
 make[1]: Entering directory '/home/sanya/classes/spring23/cs3220/Spring_2023/project1/obj_dir'
@@ -220,7 +220,7 @@ TESTING: /home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/jal
 /home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/jalr.mem
 /home/sanya/classes/spring23/cs3220/Spring_2023/project1/define.vh
 sed -i  's|define IDMEMINITFILE.*|define IDMEMINITFILE "/home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/jalr.mem"|g'  /home/sanya/classes/spring23/cs3220/Spring_2023/project1/define.vh
-/home/sanya/classes/spring23/verilator//bin/verilator --exe -cc pipeline.v --top-module pipeline --trace --trace-structs --assert -Wpedantic -Wno-DECLFILENAME -Wno-UNUSED --x-initial unique --x-assign unique sim_main.cpp fe_stage.v de_stage.v mem_stage.v wb_stage.v agex_stage.v -CFLAGS '-DIDMEMINITFILE=/home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/jalr.mem -DVCD_OUTPUT -DDPRINTF'
+/home/sanya/classes/spring23/verilator//bin/verilator --exe -cc pipeline.v --top-module pipeline --trace --trace-structs --assert -Wpedantic -Wno-DECLFILENAME -Wno-UNUSED --x-initial unique --x-assign unique sim_main.cpp fe_stage.v de_stage.v mem_stage.v wb_stage.v agex_stage.v br_predictor.v updater.v -CFLAGS '-DIDMEMINITFILE=/home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/jalr.mem -DVCD_OUTPUT -DDPRINTF'
 -- COMPILE -----------------
 make -j 4 -C obj_dir -f Vpipeline.mk
 make[1]: Entering directory '/home/sanya/classes/spring23/cs3220/Spring_2023/project1/obj_dir'
@@ -247,7 +247,7 @@ TESTING: /home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/lui
 /home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/lui.mem
 /home/sanya/classes/spring23/cs3220/Spring_2023/project1/define.vh
 sed -i  's|define IDMEMINITFILE.*|define IDMEMINITFILE "/home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/lui.mem"|g'  /home/sanya/classes/spring23/cs3220/Spring_2023/project1/define.vh
-/home/sanya/classes/spring23/verilator//bin/verilator --exe -cc pipeline.v --top-module pipeline --trace --trace-structs --assert -Wpedantic -Wno-DECLFILENAME -Wno-UNUSED --x-initial unique --x-assign unique sim_main.cpp fe_stage.v de_stage.v mem_stage.v wb_stage.v agex_stage.v -CFLAGS '-DIDMEMINITFILE=/home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/lui.mem -DVCD_OUTPUT -DDPRINTF'
+/home/sanya/classes/spring23/verilator//bin/verilator --exe -cc pipeline.v --top-module pipeline --trace --trace-structs --assert -Wpedantic -Wno-DECLFILENAME -Wno-UNUSED --x-initial unique --x-assign unique sim_main.cpp fe_stage.v de_stage.v mem_stage.v wb_stage.v agex_stage.v br_predictor.v updater.v -CFLAGS '-DIDMEMINITFILE=/home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/lui.mem -DVCD_OUTPUT -DDPRINTF'
 -- COMPILE -----------------
 make -j 4 -C obj_dir -f Vpipeline.mk
 make[1]: Entering directory '/home/sanya/classes/spring23/cs3220/Spring_2023/project1/obj_dir'
@@ -274,7 +274,7 @@ TESTING: /home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/lw.
 /home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/lw.mem
 /home/sanya/classes/spring23/cs3220/Spring_2023/project1/define.vh
 sed -i  's|define IDMEMINITFILE.*|define IDMEMINITFILE "/home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/lw.mem"|g'  /home/sanya/classes/spring23/cs3220/Spring_2023/project1/define.vh
-/home/sanya/classes/spring23/verilator//bin/verilator --exe -cc pipeline.v --top-module pipeline --trace --trace-structs --assert -Wpedantic -Wno-DECLFILENAME -Wno-UNUSED --x-initial unique --x-assign unique sim_main.cpp fe_stage.v de_stage.v mem_stage.v wb_stage.v agex_stage.v -CFLAGS '-DIDMEMINITFILE=/home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/lw.mem -DVCD_OUTPUT -DDPRINTF'
+/home/sanya/classes/spring23/verilator//bin/verilator --exe -cc pipeline.v --top-module pipeline --trace --trace-structs --assert -Wpedantic -Wno-DECLFILENAME -Wno-UNUSED --x-initial unique --x-assign unique sim_main.cpp fe_stage.v de_stage.v mem_stage.v wb_stage.v agex_stage.v br_predictor.v updater.v -CFLAGS '-DIDMEMINITFILE=/home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/lw.mem -DVCD_OUTPUT -DDPRINTF'
 -- COMPILE -----------------
 make -j 4 -C obj_dir -f Vpipeline.mk
 make[1]: Entering directory '/home/sanya/classes/spring23/cs3220/Spring_2023/project1/obj_dir'
@@ -301,7 +301,7 @@ TESTING: /home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/ori
 /home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/ori.mem
 /home/sanya/classes/spring23/cs3220/Spring_2023/project1/define.vh
 sed -i  's|define IDMEMINITFILE.*|define IDMEMINITFILE "/home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/ori.mem"|g'  /home/sanya/classes/spring23/cs3220/Spring_2023/project1/define.vh
-/home/sanya/classes/spring23/verilator//bin/verilator --exe -cc pipeline.v --top-module pipeline --trace --trace-structs --assert -Wpedantic -Wno-DECLFILENAME -Wno-UNUSED --x-initial unique --x-assign unique sim_main.cpp fe_stage.v de_stage.v mem_stage.v wb_stage.v agex_stage.v -CFLAGS '-DIDMEMINITFILE=/home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/ori.mem -DVCD_OUTPUT -DDPRINTF'
+/home/sanya/classes/spring23/verilator//bin/verilator --exe -cc pipeline.v --top-module pipeline --trace --trace-structs --assert -Wpedantic -Wno-DECLFILENAME -Wno-UNUSED --x-initial unique --x-assign unique sim_main.cpp fe_stage.v de_stage.v mem_stage.v wb_stage.v agex_stage.v br_predictor.v updater.v -CFLAGS '-DIDMEMINITFILE=/home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/ori.mem -DVCD_OUTPUT -DDPRINTF'
 -- COMPILE -----------------
 make -j 4 -C obj_dir -f Vpipeline.mk
 make[1]: Entering directory '/home/sanya/classes/spring23/cs3220/Spring_2023/project1/obj_dir'
@@ -328,7 +328,7 @@ TESTING: /home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/or.
 /home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/or.mem
 /home/sanya/classes/spring23/cs3220/Spring_2023/project1/define.vh
 sed -i  's|define IDMEMINITFILE.*|define IDMEMINITFILE "/home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/or.mem"|g'  /home/sanya/classes/spring23/cs3220/Spring_2023/project1/define.vh
-/home/sanya/classes/spring23/verilator//bin/verilator --exe -cc pipeline.v --top-module pipeline --trace --trace-structs --assert -Wpedantic -Wno-DECLFILENAME -Wno-UNUSED --x-initial unique --x-assign unique sim_main.cpp fe_stage.v de_stage.v mem_stage.v wb_stage.v agex_stage.v -CFLAGS '-DIDMEMINITFILE=/home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/or.mem -DVCD_OUTPUT -DDPRINTF'
+/home/sanya/classes/spring23/verilator//bin/verilator --exe -cc pipeline.v --top-module pipeline --trace --trace-structs --assert -Wpedantic -Wno-DECLFILENAME -Wno-UNUSED --x-initial unique --x-assign unique sim_main.cpp fe_stage.v de_stage.v mem_stage.v wb_stage.v agex_stage.v br_predictor.v updater.v -CFLAGS '-DIDMEMINITFILE=/home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/or.mem -DVCD_OUTPUT -DDPRINTF'
 -- COMPILE -----------------
 make -j 4 -C obj_dir -f Vpipeline.mk
 make[1]: Entering directory '/home/sanya/classes/spring23/cs3220/Spring_2023/project1/obj_dir'
@@ -355,7 +355,7 @@ TESTING: /home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/sim
 /home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/simple.mem
 /home/sanya/classes/spring23/cs3220/Spring_2023/project1/define.vh
 sed -i  's|define IDMEMINITFILE.*|define IDMEMINITFILE "/home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/simple.mem"|g'  /home/sanya/classes/spring23/cs3220/Spring_2023/project1/define.vh
-/home/sanya/classes/spring23/verilator//bin/verilator --exe -cc pipeline.v --top-module pipeline --trace --trace-structs --assert -Wpedantic -Wno-DECLFILENAME -Wno-UNUSED --x-initial unique --x-assign unique sim_main.cpp fe_stage.v de_stage.v mem_stage.v wb_stage.v agex_stage.v -CFLAGS '-DIDMEMINITFILE=/home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/simple.mem -DVCD_OUTPUT -DDPRINTF'
+/home/sanya/classes/spring23/verilator//bin/verilator --exe -cc pipeline.v --top-module pipeline --trace --trace-structs --assert -Wpedantic -Wno-DECLFILENAME -Wno-UNUSED --x-initial unique --x-assign unique sim_main.cpp fe_stage.v de_stage.v mem_stage.v wb_stage.v agex_stage.v br_predictor.v updater.v -CFLAGS '-DIDMEMINITFILE=/home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/simple.mem -DVCD_OUTPUT -DDPRINTF'
 -- COMPILE -----------------
 make -j 4 -C obj_dir -f Vpipeline.mk
 make[1]: Entering directory '/home/sanya/classes/spring23/cs3220/Spring_2023/project1/obj_dir'
@@ -382,7 +382,7 @@ TESTING: /home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/sll
 /home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/slli.mem
 /home/sanya/classes/spring23/cs3220/Spring_2023/project1/define.vh
 sed -i  's|define IDMEMINITFILE.*|define IDMEMINITFILE "/home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/slli.mem"|g'  /home/sanya/classes/spring23/cs3220/Spring_2023/project1/define.vh
-/home/sanya/classes/spring23/verilator//bin/verilator --exe -cc pipeline.v --top-module pipeline --trace --trace-structs --assert -Wpedantic -Wno-DECLFILENAME -Wno-UNUSED --x-initial unique --x-assign unique sim_main.cpp fe_stage.v de_stage.v mem_stage.v wb_stage.v agex_stage.v -CFLAGS '-DIDMEMINITFILE=/home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/slli.mem -DVCD_OUTPUT -DDPRINTF'
+/home/sanya/classes/spring23/verilator//bin/verilator --exe -cc pipeline.v --top-module pipeline --trace --trace-structs --assert -Wpedantic -Wno-DECLFILENAME -Wno-UNUSED --x-initial unique --x-assign unique sim_main.cpp fe_stage.v de_stage.v mem_stage.v wb_stage.v agex_stage.v br_predictor.v updater.v -CFLAGS '-DIDMEMINITFILE=/home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/slli.mem -DVCD_OUTPUT -DDPRINTF'
 -- COMPILE -----------------
 make -j 4 -C obj_dir -f Vpipeline.mk
 make[1]: Entering directory '/home/sanya/classes/spring23/cs3220/Spring_2023/project1/obj_dir'
@@ -409,7 +409,7 @@ TESTING: /home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/sll
 /home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/sll.mem
 /home/sanya/classes/spring23/cs3220/Spring_2023/project1/define.vh
 sed -i  's|define IDMEMINITFILE.*|define IDMEMINITFILE "/home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/sll.mem"|g'  /home/sanya/classes/spring23/cs3220/Spring_2023/project1/define.vh
-/home/sanya/classes/spring23/verilator//bin/verilator --exe -cc pipeline.v --top-module pipeline --trace --trace-structs --assert -Wpedantic -Wno-DECLFILENAME -Wno-UNUSED --x-initial unique --x-assign unique sim_main.cpp fe_stage.v de_stage.v mem_stage.v wb_stage.v agex_stage.v -CFLAGS '-DIDMEMINITFILE=/home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/sll.mem -DVCD_OUTPUT -DDPRINTF'
+/home/sanya/classes/spring23/verilator//bin/verilator --exe -cc pipeline.v --top-module pipeline --trace --trace-structs --assert -Wpedantic -Wno-DECLFILENAME -Wno-UNUSED --x-initial unique --x-assign unique sim_main.cpp fe_stage.v de_stage.v mem_stage.v wb_stage.v agex_stage.v br_predictor.v updater.v -CFLAGS '-DIDMEMINITFILE=/home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/sll.mem -DVCD_OUTPUT -DDPRINTF'
 -- COMPILE -----------------
 make -j 4 -C obj_dir -f Vpipeline.mk
 make[1]: Entering directory '/home/sanya/classes/spring23/cs3220/Spring_2023/project1/obj_dir'
@@ -436,7 +436,7 @@ TESTING: /home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/slt
 /home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/slti.mem
 /home/sanya/classes/spring23/cs3220/Spring_2023/project1/define.vh
 sed -i  's|define IDMEMINITFILE.*|define IDMEMINITFILE "/home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/slti.mem"|g'  /home/sanya/classes/spring23/cs3220/Spring_2023/project1/define.vh
-/home/sanya/classes/spring23/verilator//bin/verilator --exe -cc pipeline.v --top-module pipeline --trace --trace-structs --assert -Wpedantic -Wno-DECLFILENAME -Wno-UNUSED --x-initial unique --x-assign unique sim_main.cpp fe_stage.v de_stage.v mem_stage.v wb_stage.v agex_stage.v -CFLAGS '-DIDMEMINITFILE=/home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/slti.mem -DVCD_OUTPUT -DDPRINTF'
+/home/sanya/classes/spring23/verilator//bin/verilator --exe -cc pipeline.v --top-module pipeline --trace --trace-structs --assert -Wpedantic -Wno-DECLFILENAME -Wno-UNUSED --x-initial unique --x-assign unique sim_main.cpp fe_stage.v de_stage.v mem_stage.v wb_stage.v agex_stage.v br_predictor.v updater.v -CFLAGS '-DIDMEMINITFILE=/home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/slti.mem -DVCD_OUTPUT -DDPRINTF'
 -- COMPILE -----------------
 make -j 4 -C obj_dir -f Vpipeline.mk
 make[1]: Entering directory '/home/sanya/classes/spring23/cs3220/Spring_2023/project1/obj_dir'
@@ -463,7 +463,7 @@ TESTING: /home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/slt
 /home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/sltiu.mem
 /home/sanya/classes/spring23/cs3220/Spring_2023/project1/define.vh
 sed -i  's|define IDMEMINITFILE.*|define IDMEMINITFILE "/home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/sltiu.mem"|g'  /home/sanya/classes/spring23/cs3220/Spring_2023/project1/define.vh
-/home/sanya/classes/spring23/verilator//bin/verilator --exe -cc pipeline.v --top-module pipeline --trace --trace-structs --assert -Wpedantic -Wno-DECLFILENAME -Wno-UNUSED --x-initial unique --x-assign unique sim_main.cpp fe_stage.v de_stage.v mem_stage.v wb_stage.v agex_stage.v -CFLAGS '-DIDMEMINITFILE=/home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/sltiu.mem -DVCD_OUTPUT -DDPRINTF'
+/home/sanya/classes/spring23/verilator//bin/verilator --exe -cc pipeline.v --top-module pipeline --trace --trace-structs --assert -Wpedantic -Wno-DECLFILENAME -Wno-UNUSED --x-initial unique --x-assign unique sim_main.cpp fe_stage.v de_stage.v mem_stage.v wb_stage.v agex_stage.v br_predictor.v updater.v -CFLAGS '-DIDMEMINITFILE=/home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/sltiu.mem -DVCD_OUTPUT -DDPRINTF'
 -- COMPILE -----------------
 make -j 4 -C obj_dir -f Vpipeline.mk
 make[1]: Entering directory '/home/sanya/classes/spring23/cs3220/Spring_2023/project1/obj_dir'
@@ -490,7 +490,7 @@ TESTING: /home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/slt
 /home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/slt.mem
 /home/sanya/classes/spring23/cs3220/Spring_2023/project1/define.vh
 sed -i  's|define IDMEMINITFILE.*|define IDMEMINITFILE "/home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/slt.mem"|g'  /home/sanya/classes/spring23/cs3220/Spring_2023/project1/define.vh
-/home/sanya/classes/spring23/verilator//bin/verilator --exe -cc pipeline.v --top-module pipeline --trace --trace-structs --assert -Wpedantic -Wno-DECLFILENAME -Wno-UNUSED --x-initial unique --x-assign unique sim_main.cpp fe_stage.v de_stage.v mem_stage.v wb_stage.v agex_stage.v -CFLAGS '-DIDMEMINITFILE=/home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/slt.mem -DVCD_OUTPUT -DDPRINTF'
+/home/sanya/classes/spring23/verilator//bin/verilator --exe -cc pipeline.v --top-module pipeline --trace --trace-structs --assert -Wpedantic -Wno-DECLFILENAME -Wno-UNUSED --x-initial unique --x-assign unique sim_main.cpp fe_stage.v de_stage.v mem_stage.v wb_stage.v agex_stage.v br_predictor.v updater.v -CFLAGS '-DIDMEMINITFILE=/home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/slt.mem -DVCD_OUTPUT -DDPRINTF'
 -- COMPILE -----------------
 make -j 4 -C obj_dir -f Vpipeline.mk
 make[1]: Entering directory '/home/sanya/classes/spring23/cs3220/Spring_2023/project1/obj_dir'
@@ -517,7 +517,7 @@ TESTING: /home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/slt
 /home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/sltu.mem
 /home/sanya/classes/spring23/cs3220/Spring_2023/project1/define.vh
 sed -i  's|define IDMEMINITFILE.*|define IDMEMINITFILE "/home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/sltu.mem"|g'  /home/sanya/classes/spring23/cs3220/Spring_2023/project1/define.vh
-/home/sanya/classes/spring23/verilator//bin/verilator --exe -cc pipeline.v --top-module pipeline --trace --trace-structs --assert -Wpedantic -Wno-DECLFILENAME -Wno-UNUSED --x-initial unique --x-assign unique sim_main.cpp fe_stage.v de_stage.v mem_stage.v wb_stage.v agex_stage.v -CFLAGS '-DIDMEMINITFILE=/home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/sltu.mem -DVCD_OUTPUT -DDPRINTF'
+/home/sanya/classes/spring23/verilator//bin/verilator --exe -cc pipeline.v --top-module pipeline --trace --trace-structs --assert -Wpedantic -Wno-DECLFILENAME -Wno-UNUSED --x-initial unique --x-assign unique sim_main.cpp fe_stage.v de_stage.v mem_stage.v wb_stage.v agex_stage.v br_predictor.v updater.v -CFLAGS '-DIDMEMINITFILE=/home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/sltu.mem -DVCD_OUTPUT -DDPRINTF'
 -- COMPILE -----------------
 make -j 4 -C obj_dir -f Vpipeline.mk
 make[1]: Entering directory '/home/sanya/classes/spring23/cs3220/Spring_2023/project1/obj_dir'
@@ -544,7 +544,7 @@ TESTING: /home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/sra
 /home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/srai.mem
 /home/sanya/classes/spring23/cs3220/Spring_2023/project1/define.vh
 sed -i  's|define IDMEMINITFILE.*|define IDMEMINITFILE "/home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/srai.mem"|g'  /home/sanya/classes/spring23/cs3220/Spring_2023/project1/define.vh
-/home/sanya/classes/spring23/verilator//bin/verilator --exe -cc pipeline.v --top-module pipeline --trace --trace-structs --assert -Wpedantic -Wno-DECLFILENAME -Wno-UNUSED --x-initial unique --x-assign unique sim_main.cpp fe_stage.v de_stage.v mem_stage.v wb_stage.v agex_stage.v -CFLAGS '-DIDMEMINITFILE=/home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/srai.mem -DVCD_OUTPUT -DDPRINTF'
+/home/sanya/classes/spring23/verilator//bin/verilator --exe -cc pipeline.v --top-module pipeline --trace --trace-structs --assert -Wpedantic -Wno-DECLFILENAME -Wno-UNUSED --x-initial unique --x-assign unique sim_main.cpp fe_stage.v de_stage.v mem_stage.v wb_stage.v agex_stage.v br_predictor.v updater.v -CFLAGS '-DIDMEMINITFILE=/home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/srai.mem -DVCD_OUTPUT -DDPRINTF'
 -- COMPILE -----------------
 make -j 4 -C obj_dir -f Vpipeline.mk
 make[1]: Entering directory '/home/sanya/classes/spring23/cs3220/Spring_2023/project1/obj_dir'
@@ -571,7 +571,7 @@ TESTING: /home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/sra
 /home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/sra.mem
 /home/sanya/classes/spring23/cs3220/Spring_2023/project1/define.vh
 sed -i  's|define IDMEMINITFILE.*|define IDMEMINITFILE "/home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/sra.mem"|g'  /home/sanya/classes/spring23/cs3220/Spring_2023/project1/define.vh
-/home/sanya/classes/spring23/verilator//bin/verilator --exe -cc pipeline.v --top-module pipeline --trace --trace-structs --assert -Wpedantic -Wno-DECLFILENAME -Wno-UNUSED --x-initial unique --x-assign unique sim_main.cpp fe_stage.v de_stage.v mem_stage.v wb_stage.v agex_stage.v -CFLAGS '-DIDMEMINITFILE=/home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/sra.mem -DVCD_OUTPUT -DDPRINTF'
+/home/sanya/classes/spring23/verilator//bin/verilator --exe -cc pipeline.v --top-module pipeline --trace --trace-structs --assert -Wpedantic -Wno-DECLFILENAME -Wno-UNUSED --x-initial unique --x-assign unique sim_main.cpp fe_stage.v de_stage.v mem_stage.v wb_stage.v agex_stage.v br_predictor.v updater.v -CFLAGS '-DIDMEMINITFILE=/home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/sra.mem -DVCD_OUTPUT -DDPRINTF'
 -- COMPILE -----------------
 make -j 4 -C obj_dir -f Vpipeline.mk
 make[1]: Entering directory '/home/sanya/classes/spring23/cs3220/Spring_2023/project1/obj_dir'
@@ -598,7 +598,7 @@ TESTING: /home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/srl
 /home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/srli.mem
 /home/sanya/classes/spring23/cs3220/Spring_2023/project1/define.vh
 sed -i  's|define IDMEMINITFILE.*|define IDMEMINITFILE "/home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/srli.mem"|g'  /home/sanya/classes/spring23/cs3220/Spring_2023/project1/define.vh
-/home/sanya/classes/spring23/verilator//bin/verilator --exe -cc pipeline.v --top-module pipeline --trace --trace-structs --assert -Wpedantic -Wno-DECLFILENAME -Wno-UNUSED --x-initial unique --x-assign unique sim_main.cpp fe_stage.v de_stage.v mem_stage.v wb_stage.v agex_stage.v -CFLAGS '-DIDMEMINITFILE=/home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/srli.mem -DVCD_OUTPUT -DDPRINTF'
+/home/sanya/classes/spring23/verilator//bin/verilator --exe -cc pipeline.v --top-module pipeline --trace --trace-structs --assert -Wpedantic -Wno-DECLFILENAME -Wno-UNUSED --x-initial unique --x-assign unique sim_main.cpp fe_stage.v de_stage.v mem_stage.v wb_stage.v agex_stage.v br_predictor.v updater.v -CFLAGS '-DIDMEMINITFILE=/home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/srli.mem -DVCD_OUTPUT -DDPRINTF'
 -- COMPILE -----------------
 make -j 4 -C obj_dir -f Vpipeline.mk
 make[1]: Entering directory '/home/sanya/classes/spring23/cs3220/Spring_2023/project1/obj_dir'
@@ -625,7 +625,7 @@ TESTING: /home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/srl
 /home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/srl.mem
 /home/sanya/classes/spring23/cs3220/Spring_2023/project1/define.vh
 sed -i  's|define IDMEMINITFILE.*|define IDMEMINITFILE "/home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/srl.mem"|g'  /home/sanya/classes/spring23/cs3220/Spring_2023/project1/define.vh
-/home/sanya/classes/spring23/verilator//bin/verilator --exe -cc pipeline.v --top-module pipeline --trace --trace-structs --assert -Wpedantic -Wno-DECLFILENAME -Wno-UNUSED --x-initial unique --x-assign unique sim_main.cpp fe_stage.v de_stage.v mem_stage.v wb_stage.v agex_stage.v -CFLAGS '-DIDMEMINITFILE=/home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/srl.mem -DVCD_OUTPUT -DDPRINTF'
+/home/sanya/classes/spring23/verilator//bin/verilator --exe -cc pipeline.v --top-module pipeline --trace --trace-structs --assert -Wpedantic -Wno-DECLFILENAME -Wno-UNUSED --x-initial unique --x-assign unique sim_main.cpp fe_stage.v de_stage.v mem_stage.v wb_stage.v agex_stage.v br_predictor.v updater.v -CFLAGS '-DIDMEMINITFILE=/home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/srl.mem -DVCD_OUTPUT -DDPRINTF'
 -- COMPILE -----------------
 make -j 4 -C obj_dir -f Vpipeline.mk
 make[1]: Entering directory '/home/sanya/classes/spring23/cs3220/Spring_2023/project1/obj_dir'
@@ -652,7 +652,7 @@ TESTING: /home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/sub
 /home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/sub.mem
 /home/sanya/classes/spring23/cs3220/Spring_2023/project1/define.vh
 sed -i  's|define IDMEMINITFILE.*|define IDMEMINITFILE "/home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/sub.mem"|g'  /home/sanya/classes/spring23/cs3220/Spring_2023/project1/define.vh
-/home/sanya/classes/spring23/verilator//bin/verilator --exe -cc pipeline.v --top-module pipeline --trace --trace-structs --assert -Wpedantic -Wno-DECLFILENAME -Wno-UNUSED --x-initial unique --x-assign unique sim_main.cpp fe_stage.v de_stage.v mem_stage.v wb_stage.v agex_stage.v -CFLAGS '-DIDMEMINITFILE=/home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/sub.mem -DVCD_OUTPUT -DDPRINTF'
+/home/sanya/classes/spring23/verilator//bin/verilator --exe -cc pipeline.v --top-module pipeline --trace --trace-structs --assert -Wpedantic -Wno-DECLFILENAME -Wno-UNUSED --x-initial unique --x-assign unique sim_main.cpp fe_stage.v de_stage.v mem_stage.v wb_stage.v agex_stage.v br_predictor.v updater.v -CFLAGS '-DIDMEMINITFILE=/home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/sub.mem -DVCD_OUTPUT -DDPRINTF'
 -- COMPILE -----------------
 make -j 4 -C obj_dir -f Vpipeline.mk
 make[1]: Entering directory '/home/sanya/classes/spring23/cs3220/Spring_2023/project1/obj_dir'
@@ -679,7 +679,7 @@ TESTING: /home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/sw.
 /home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/sw.mem
 /home/sanya/classes/spring23/cs3220/Spring_2023/project1/define.vh
 sed -i  's|define IDMEMINITFILE.*|define IDMEMINITFILE "/home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/sw.mem"|g'  /home/sanya/classes/spring23/cs3220/Spring_2023/project1/define.vh
-/home/sanya/classes/spring23/verilator//bin/verilator --exe -cc pipeline.v --top-module pipeline --trace --trace-structs --assert -Wpedantic -Wno-DECLFILENAME -Wno-UNUSED --x-initial unique --x-assign unique sim_main.cpp fe_stage.v de_stage.v mem_stage.v wb_stage.v agex_stage.v -CFLAGS '-DIDMEMINITFILE=/home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/sw.mem -DVCD_OUTPUT -DDPRINTF'
+/home/sanya/classes/spring23/verilator//bin/verilator --exe -cc pipeline.v --top-module pipeline --trace --trace-structs --assert -Wpedantic -Wno-DECLFILENAME -Wno-UNUSED --x-initial unique --x-assign unique sim_main.cpp fe_stage.v de_stage.v mem_stage.v wb_stage.v agex_stage.v br_predictor.v updater.v -CFLAGS '-DIDMEMINITFILE=/home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/sw.mem -DVCD_OUTPUT -DDPRINTF'
 -- COMPILE -----------------
 make -j 4 -C obj_dir -f Vpipeline.mk
 make[1]: Entering directory '/home/sanya/classes/spring23/cs3220/Spring_2023/project1/obj_dir'
@@ -706,7 +706,7 @@ TESTING: /home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/tes
 /home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/test10.mem
 /home/sanya/classes/spring23/cs3220/Spring_2023/project1/define.vh
 sed -i  's|define IDMEMINITFILE.*|define IDMEMINITFILE "/home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/test10.mem"|g'  /home/sanya/classes/spring23/cs3220/Spring_2023/project1/define.vh
-/home/sanya/classes/spring23/verilator//bin/verilator --exe -cc pipeline.v --top-module pipeline --trace --trace-structs --assert -Wpedantic -Wno-DECLFILENAME -Wno-UNUSED --x-initial unique --x-assign unique sim_main.cpp fe_stage.v de_stage.v mem_stage.v wb_stage.v agex_stage.v -CFLAGS '-DIDMEMINITFILE=/home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/test10.mem -DVCD_OUTPUT -DDPRINTF'
+/home/sanya/classes/spring23/verilator//bin/verilator --exe -cc pipeline.v --top-module pipeline --trace --trace-structs --assert -Wpedantic -Wno-DECLFILENAME -Wno-UNUSED --x-initial unique --x-assign unique sim_main.cpp fe_stage.v de_stage.v mem_stage.v wb_stage.v agex_stage.v br_predictor.v updater.v -CFLAGS '-DIDMEMINITFILE=/home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/test10.mem -DVCD_OUTPUT -DDPRINTF'
 -- COMPILE -----------------
 make -j 4 -C obj_dir -f Vpipeline.mk
 make[1]: Entering directory '/home/sanya/classes/spring23/cs3220/Spring_2023/project1/obj_dir'
@@ -733,7 +733,7 @@ TESTING: /home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/xor
 /home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/xori.mem
 /home/sanya/classes/spring23/cs3220/Spring_2023/project1/define.vh
 sed -i  's|define IDMEMINITFILE.*|define IDMEMINITFILE "/home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/xori.mem"|g'  /home/sanya/classes/spring23/cs3220/Spring_2023/project1/define.vh
-/home/sanya/classes/spring23/verilator//bin/verilator --exe -cc pipeline.v --top-module pipeline --trace --trace-structs --assert -Wpedantic -Wno-DECLFILENAME -Wno-UNUSED --x-initial unique --x-assign unique sim_main.cpp fe_stage.v de_stage.v mem_stage.v wb_stage.v agex_stage.v -CFLAGS '-DIDMEMINITFILE=/home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/xori.mem -DVCD_OUTPUT -DDPRINTF'
+/home/sanya/classes/spring23/verilator//bin/verilator --exe -cc pipeline.v --top-module pipeline --trace --trace-structs --assert -Wpedantic -Wno-DECLFILENAME -Wno-UNUSED --x-initial unique --x-assign unique sim_main.cpp fe_stage.v de_stage.v mem_stage.v wb_stage.v agex_stage.v br_predictor.v updater.v -CFLAGS '-DIDMEMINITFILE=/home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/xori.mem -DVCD_OUTPUT -DDPRINTF'
 -- COMPILE -----------------
 make -j 4 -C obj_dir -f Vpipeline.mk
 make[1]: Entering directory '/home/sanya/classes/spring23/cs3220/Spring_2023/project1/obj_dir'
@@ -760,7 +760,7 @@ TESTING: /home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/xor
 /home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/xor.mem
 /home/sanya/classes/spring23/cs3220/Spring_2023/project1/define.vh
 sed -i  's|define IDMEMINITFILE.*|define IDMEMINITFILE "/home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/xor.mem"|g'  /home/sanya/classes/spring23/cs3220/Spring_2023/project1/define.vh
-/home/sanya/classes/spring23/verilator//bin/verilator --exe -cc pipeline.v --top-module pipeline --trace --trace-structs --assert -Wpedantic -Wno-DECLFILENAME -Wno-UNUSED --x-initial unique --x-assign unique sim_main.cpp fe_stage.v de_stage.v mem_stage.v wb_stage.v agex_stage.v -CFLAGS '-DIDMEMINITFILE=/home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/xor.mem -DVCD_OUTPUT -DDPRINTF'
+/home/sanya/classes/spring23/verilator//bin/verilator --exe -cc pipeline.v --top-module pipeline --trace --trace-structs --assert -Wpedantic -Wno-DECLFILENAME -Wno-UNUSED --x-initial unique --x-assign unique sim_main.cpp fe_stage.v de_stage.v mem_stage.v wb_stage.v agex_stage.v br_predictor.v updater.v -CFLAGS '-DIDMEMINITFILE=/home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part3/xor.mem -DVCD_OUTPUT -DDPRINTF'
 -- COMPILE -----------------
 make -j 4 -C obj_dir -f Vpipeline.mk
 make[1]: Entering directory '/home/sanya/classes/spring23/cs3220/Spring_2023/project1/obj_dir'

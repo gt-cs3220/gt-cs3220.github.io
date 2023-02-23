@@ -191,9 +191,12 @@ end
                                           // more signals might need
                                   } = from_DE_latch; 
     
-  assign from_AGEX_to_DE = {br_cond_AGEX, wr_reg_AGEX, rd_AGEX};
-  assign from_AGEX_to_FE = {br_cond_AGEX, pctarget_AGEX};
-
+  assign from_AGEX_to_DE = {flush, wr_reg_AGEX, rd_AGEX};
+  assign from_AGEX_to_FE = {flush, flush_target};
+  reg flush; 
+  assign flush = (br_cond_AGEX != taken && is_branch) ? 1 : 0;
+  reg [`DBITS-1:0] flush_target;
+  assign flush_target = br_cond_AGEX ? pctarget_AGEX : PC_AGEX + `INSTSIZE; 
   assign from_AGEX_to_updater = {PC_AGEX, is_branch, br_cond_AGEX, pctarget_AGEX, BHR_AGEX, PHT_index_AGEX, PHT_entry_AGEX};
   assign AGEX_latch_contents = {
                                 valid_AGEX,

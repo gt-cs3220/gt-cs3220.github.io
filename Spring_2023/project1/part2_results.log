@@ -1,10 +1,20 @@
 TESTING: /home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part2/addi.mem
+Passed!
 TESTING: /home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part2/add.mem
+Passed!
 TESTING: /home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part2/auipc.mem
+Passed!
 TESTING: /home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part2/beq.mem
+Passed!
 TESTING: /home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part2/bge.mem
+Passed!
 TESTING: /home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part2/jal.mem
+Passed!
 TESTING: /home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part2/jalr.mem
+Passed!
 TESTING: /home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part2/test7.mem
+Failed. exitcode: 0
 TESTING: /home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part2/test8.mem
+Passed!
 TESTING: /home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part2/test9.mem
+Passed!

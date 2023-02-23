@@ -19,21 +19,35 @@ assign {PC_updater, is_branch, br_cond_updater, target_addr, BHR_updater, PHT_in
 assign PHT_index_updater = PC_updater[9:2] ^ BHR_updater;
 
 wire [7:0] updated_BHR;
-wire [1:0] updated_PHT_entry;
-wire [60:0] updated_BTB_entry;
+reg [1:0] updated_PHT_entry;
+wire [58:0] updated_BTB_entry;
 wire [3:0] BTB_index;
 wire [`DBITS-1:0] target_addr;
 
-assign updated_BHR = BHR_updater << 1 | {8{br_cond_updater}};
-assign updated_PHT_entry = br_cond_updater ? PHT_entry_updater + 1 : PHT_entry_updater - 1; 
-assign updated_BTB_entry = {PC_updater[`DBITS-1:4] << 33, 1'b1 << 32, target_addr};
+assign updated_BHR = BHR_updater << 1 | {7'b0, br_cond_updater};
+always @(*) begin
+        if (br_cond_updater) begin
+                if (PHT_entry_updater == 2'b11)
+                   updated_PHT_entry = 2'b11; 
+                else
+                   updated_PHT_entry = PHT_entry_updater + 1;
+        end
+        else begin
+                if (PHT_entry_updater == 2'b00)
+                        updated_PHT_entry = 2'b00;
+                else
+                        updated_PHT_entry = PHT_entry_updater - 1;
+
+        end
+end
+assign updated_BTB_entry = {PC_updater[`DBITS-1:6] << 33, 1'b1 << 32, target_addr};
 
 assign from_updater_to_predictor = {
   is_branch,
   updated_BHR,
   PHT_index_updater,
   updated_PHT_entry,
-  PC_updater[3:0],
+  PC_updater[5:2],
   updated_BTB_entry
 };
 endmodule

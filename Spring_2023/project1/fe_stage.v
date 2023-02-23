@@ -68,7 +68,7 @@ module FE_STAGE( input wire clk, input wire reset, input wire [`from_DE_to_FE_WI
                                 pcplus_FE, // please feel free to add more signals such as valid bits etc. 
                                 inst_count_FE,
                                  // if you add more bits here, please increase the width of latch in VX_define.vh 
-                                taken,
+                                predicted_take,
                                 BHR_FE,
                                 PHT_index_FE,
                                 PHT_entry_FE
@@ -89,20 +89,21 @@ module FE_STAGE( input wire clk, input wire reset, input wire [`from_DE_to_FE_WI
   assign from_FE_to_predictor = {PC_FE_latch};
   assign {
     taken,
+    BTB_hit,
     target_addr,
     BHR_FE,
     PHT_index_FE,
     PHT_entry_FE,
     BTB_index_FE
   } = from_predictor_to_FE;
-
+  wire BTB_hit;
   always @ (posedge clk) begin
   /* you need to extend this always block */
    if (reset) begin 
       PC_FE_latch <= `STARTPC;
       inst_count_FE <= 1;  /* inst_count starts from 1 for easy human reading. 1st fetch instructions can have 1 */ 
       end 
-   else if (taken)
+   else if (predicted_take)
      PC_FE_latch <= target_addr;
       else if (br_cond_FE)
         PC_FE_latch <= branch_pc_FE;
@@ -114,6 +115,8 @@ module FE_STAGE( input wire clk, input wire reset, input wire [`from_DE_to_FE_WI
       PC_FE_latch <= PC_FE_latch;
   end
   
+  wire predicted_take;
+  assign predicted_take = BTB_hit && taken;
 
   always @ (posedge clk) begin
     if(reset) 
