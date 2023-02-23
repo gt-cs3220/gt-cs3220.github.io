@@ -15,6 +15,9 @@ case $part in
   part3) 
     rm part3_tests.log
     ;;
+  part4) 
+    rm part4_tests.log
+    ;;
 esac
 
 case $part in
@@ -66,13 +69,13 @@ case $part in
                         echo $'\n'TESTING: $filename >> part4_tests.log
                         IDMEMINITFILE=$filename make tests>> part4_tests.log
                 done
-                grep -E 'TESTING|Failed|Passed' part3_tests.log>part4_results.log
+                grep -E 'TESTING|Failed|Passed' part4_tests.log>part4_results.log
                 echo "Total number of tests:"
-                grep -i testing part3_tests.log | wc -l
+                grep -i testing part4_tests.log | wc -l
                 echo "Number of passed tests:"
-                grep -i passed part3_tests.log | wc -l
+                grep -i passed part4_tests.log | wc -l
                 echo "Number of failed tests:"
-                grep -i failed part3_tests.log | wc -l
+                grep -i failed part4_tests.log | wc -l
         ;;
 	all)
 		echo RUNNING ALL$'\n'
