@@ -212,7 +212,7 @@ make[1]: Leaving directory '/home/sanya/classes/spring23/cs3220/Spring_2023/proj
 -- RUN ---------------------
 obj_dir/Vpipeline
 Total instructions=0, cycles=0, IPC=-nan
-Failed. exitcode: 0
+Passed!
 -- DONE --------------------
 
 TESTING: /home/sanya/classes/spring23/cs3220/Spring_2023/project1/test/part2/test8.mem

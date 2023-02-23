@@ -141,7 +141,7 @@ module AGEX_STAGE(
     `LUI_I:
       aluout_AGEX = sxt_imm_AGEX;
     `AUIPC_I:
-      aluout_AGEX = PC_AGEX + (sxt_imm_AGEX << 12);
+      aluout_AGEX = PC_AGEX + sxt_imm_AGEX;
     `LW_I:
       memaddr_AGEX = regval_1_AGEX + sxt_imm_AGEX;
     `SW_I:
@@ -194,7 +194,7 @@ end
   assign from_AGEX_to_DE = {flush, wr_reg_AGEX, rd_AGEX};
   assign from_AGEX_to_FE = {flush, flush_target};
   reg flush; 
-  assign flush = (br_cond_AGEX != taken && is_branch) ? 1 : 0;
+  assign flush = (br_cond_AGEX != taken) ? 1 : 0;
   reg [`DBITS-1:0] flush_target;
   assign flush_target = br_cond_AGEX ? pctarget_AGEX : PC_AGEX + `INSTSIZE; 
   assign from_AGEX_to_updater = {PC_AGEX, is_branch, br_cond_AGEX, pctarget_AGEX, BHR_AGEX, PHT_index_AGEX, PHT_entry_AGEX};
