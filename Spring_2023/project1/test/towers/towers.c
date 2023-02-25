@@ -19,7 +19,7 @@
 
 // This is the number of discs in the puzzle.
 
-#define NUM_DISCS  8
+#define NUM_DISCS  2
 
 //--------------------------------------------------------------------------
 // List data structure and functions

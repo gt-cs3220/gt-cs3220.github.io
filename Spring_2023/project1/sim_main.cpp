@@ -95,7 +95,7 @@ int main(int argc, char** argv, char** env) {
     std::cout << "Total instructions=" << std::dec << inst_count_WB << ", cycles=" << (timestamp_WB / 2) << ", IPC=" << ((inst_count_WB * 2.0f) / timestamp_WB) << std::endl; 
 #endif
 
-    int exitcode = (int)dut->pipeline->my_WB_stage->last_WB_value[3];
+    int exitcode = (int)dut->pipeline->my_WB_stage->last_WB_value[10];
 
     // Final model cleanup
     dut->final();

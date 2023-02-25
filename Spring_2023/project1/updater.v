@@ -40,7 +40,7 @@ always @(*) begin
 
         end
 end
-assign updated_BTB_entry = {PC_updater[`DBITS-1:6] << 33, 1'b1 << 32, target_addr};
+assign updated_BTB_entry = {PC_updater[`DBITS-1:6], 1'b1, target_addr};
 
 assign from_updater_to_predictor = {
   is_branch,

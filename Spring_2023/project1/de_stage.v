@@ -280,7 +280,7 @@ end
   assign { wr_reg_MEM, wregno_MEM } = from_MEM_to_DE;
 
   wire pipeline_stall_DE;
-  assign pipeline_stall_DE = hazard || PC_DE > 32'h500;
+  assign pipeline_stall_DE = hazard || PC_DE > 32'h7a0;
   assign from_DE_to_FE = {pipeline_stall_DE}; // pass the DE stage stall signal to FE stage 
   wire br_cond_DE;
   wire [`REGNOBITS-1:0] wregno_AGEX; 
