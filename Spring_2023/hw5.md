@@ -27,14 +27,35 @@ On windows, you can use "Vitis HLS 2020.2 Command Prompt"
 
  <img src="figs/vitis_commands.png" width="100"> 
 
+Open x_hls.tcl file 
+
+```vim x_hls.tcl``` 
+
+Change the ```set hls_exec 0``` into ```set hls_exec 2``` in the following file.
+
+
+Then open the run_hls.tcl file.
+
+```vim run_hls.tcl``` 
+
+To set up for a Pynq boards change 
+
+```
+set_part {xcvu9p-flga2104-2-i} 
+create_clock -period 6.66
+``` 
+
+to 
+
+```
+set_part {xc7z020-clg400-1} 
+create_clock -period 10
+```
+
+After the above two modifications, launch the vitis_hls c-sim, c-synthesis and C/RTL co-sim.
+
 ```vitis_hls -f run_hls.tcl```
 
-To enable the simulation you need to change the variable in ```x_hls.tcl``` file. 
-
-To set up for a Pynq boards change ```set_part {xcvu9p-flga2104-2-i}
-create_clock -period 6.66``` to 
-
-```set_part {xc7z020-clg400-1} create_clock -period 10```. This is in run_hls.tcl file.
 
 Please open  both tcl files and read it. Understanding the tcl files will be very helpful to understand the steps in this assignment. 
 
@@ -42,9 +63,7 @@ Known issues:
 * If you see an error like "command 'ap_source' returned error code" in your linux, you need to install the following libraries using:  ```sudo apt-get install gcc-multilib g++-multilib```
 
 
-[**Step 3**]
-Do RTL simulation 
-set ```hls_exec 0``` to set ```hls_exec 2``` in ```x_hls.tcl``` file 
+[**Step 3**] Understand the performance of the design.
 
 Open ```"proj_2D_convolution_with_linebuffer/solution1/sim/report/filter11x11_strm_cosim.rpt"```
 
