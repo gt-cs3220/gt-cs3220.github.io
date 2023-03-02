@@ -4,12 +4,9 @@ In this assignments, you will learn Vivado HLS.
 
 **please review 10.lec_hls.pptx for background.** 
 
-In this assignment, you will create a simple Vivado HLS project. 
-Please install [vitis tool chain in Xilinix] (https://www.xilinx.com/support/download/index.html/content/xilinx/en/downloadNav/vitis.html). 
+In this assignment, you will create a simple Vivado HLS project.
 
-From project #3, you will use VMs. Please see [CoC-ICE](https://github.com/gt-cs3220/gt-cs3220.github.io/blob/master/access_vm_steps/access_vm_doc.md)
-
-and please make it sure you do "module load cs3220" to set up vivado/vitis on your path 
+The Xilinx Vitis HLS toolchain has been provided in the Synestia clusters. See the instructions to access Virtual Machine (with GUI) on synestia cluster [here](https://github.gatech.edu/jyoung9/crnch_pynq_cluster_admin/blob/master/user_docs/synestia-slurm-ood.md)
 
 [**Step 1**]
 The example that we wil use is 2D convolution line buffer. 
