@@ -92,12 +92,11 @@ Start Vitis HLS program
 
 1. Click on “Create New Project” in the very first page.
 
-2. Specify the “Project name” and “location” of the project
+2. Specify the “Project name” and “location” of the project.
 
 3. Click on “Add Files…” to add “<file_name>.cpp” and “<file_name>.h” 
 
-4. In the same window, click on Browse, to choose the top function (you can add it 
- later)
+4. In the same window, click on Browse, to choose the top function (you can add it later as well).
 
 5. In the next window, click on “Add Files…” to add “<file_name>_test.cpp”, which is our testbench. 
 
