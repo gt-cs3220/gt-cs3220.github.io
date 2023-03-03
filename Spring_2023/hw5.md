@@ -6,7 +6,7 @@ In this assignments, you will learn Vivado HLS.
 
 In this assignment, you will create a simple Vivado HLS project.
 
-The Xilinx Vitis HLS toolchain has been provided in the Synestia clusters. See the instructions to access Virtual Machine (with GUI) on synestia cluster [here](https://github.gatech.edu/jyoung9/crnch_pynq_cluster_admin/blob/master/user_docs/synestia-slurm-ood.md)
+The Xilinx Vitis HLS toolchain has been provided in the Synestia clusters. See the instructions to access Virtual Machine (with GUI) on synestia cluster (synestia_cluster_access.md in the same folder with hw5.md)
 
 [**Step 1**]
 The example that we wil use is 2D convolution line buffer. 
