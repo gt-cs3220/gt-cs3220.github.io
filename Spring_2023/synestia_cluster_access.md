@@ -54,21 +54,20 @@ You need to first be connected to the [Georgia Tech VPN using GlobalProtect](htt
 
 Once you have logged in, you should see this screen with options for both the Pynq board cluster and for the Synestia VMs `(Synth and Emu)`.
 
-<img src="https://github.gatech.edu/jyoung9/crnch_pynq_cluster_admin/blob/93710755fb926d78eac128f5a5a94b2ee7931595/user_docs/figures/pynq_cluster_synestia_ood.png"  width="600" height="400">
+![figure 1](figures/pynq_cluster_synestia_ood.png)
 
 ### VNC GUI Session with OOD
+![figure 2 VNC GUI](figures/synestia_ood_vnc_desktop.png)
 
-<img src="https://github.gatech.edu/jyoung9/crnch_pynq_cluster_admin/blob/93710755fb926d78eac128f5a5a94b2ee7931595/user_docs/figures/synestia_ood_vnc_desktop.png"  width="600" height="400">
-
-<img src="https://github.gatech.edu/jyoung9/crnch_pynq_cluster_admin/blob/93710755fb926d78eac128f5a5a94b2ee7931595/user_docs/figures/synestia_ood_vnc_desktop_2.png"  width="600" height="400">
+![figure 3 VNC GUI](figures/synestia_ood_vnc_desktop2.png)
 
 ### Jupyter Notebook with OOD
 
-<img src="https://github.gatech.edu/jyoung9/crnch_pynq_cluster_admin/blob/93710755fb926d78eac128f5a5a94b2ee7931595/user_docs/figures/synestia_ood_nb_1.png"  width="600" height="400">
+![figure 4 VNC GUI](figures/synestia_ood_nb_1.png)
 
-<img src="https://github.gatech.edu/jyoung9/crnch_pynq_cluster_admin/blob/93710755fb926d78eac128f5a5a94b2ee7931595/user_docs/figures/synestia_ood_nb_2.png"  width="400" height="300">
+![figure 5 VNC GUI](figures/synestia_ood_nb_2.png)
 
-<img src="https://github.gatech.edu/jyoung9/crnch_pynq_cluster_admin/blob/93710755fb926d78eac128f5a5a94b2ee7931595/user_docs/figures/synestia_ood_nb3.png"  width="600" height="400">
+![figure 6 VNC GUI](figures/synestia_ood_nb3.png)
 
 ### References:
 
