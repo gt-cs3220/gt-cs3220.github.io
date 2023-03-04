@@ -59,7 +59,7 @@ Once you have logged in, you should see this screen with options for both the Py
 ### VNC GUI Session with OOD
 ![figure 2 VNC GUI](figures/synestia_ood_vnc_desktop.png)
 
-![figure 3 VNC GUI](figures/synestia_ood_vnc_desktop2.png)
+![figure 3 VNC GUI](figures/synestia_ood_vnc_desktop_2.png)
 
 ### Jupyter Notebook with OOD
 
