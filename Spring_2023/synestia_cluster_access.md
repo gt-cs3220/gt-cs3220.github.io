@@ -18,20 +18,18 @@ You need to first be connected to the [Georgia Tech VPN using GlobalProtect](htt
 
 1) SSH to the main login node `synestia2.cc.gatech.edu` with your GT username and password.
      - NOTE: Do not run any Vivado commands on this node! Admins will have the power to kill any jobs that are not scheduling jobs.
-3) Request a new interactive job on a specific node. 
+3) Request a new interactive job on a specific node using `salloc`. Note that you shouldn't need to use other commands like srun.
 
 ```
 ## Get a node allocation for one node, with two CPU cores, for one hour
 $ salloc -p synestia  --nodes=1 --ntasks-per-node=2 --time=01:00:00
 salloc: Granted job allocation 4063
+gburdell@synestia1:~$
+
 ## Use squeue to see your job and how long it has run
 gburdell@synestia2:~$ squeue
         JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
         4063  synestia interact  gburdell  R       0:08      1 synestia1
-## Use srun to ssh to your allocated node
-gburdell@synestia2:~$ srun --pty bash -i
-## Then you can run any Vivado commands here
-gburdell@synestia1:~$
 ```
 
 When you are finished, you can type `exit` which will relinquish your job:
@@ -43,6 +41,17 @@ salloc: Relinquishing job allocation 4063
 salloc: Job allocation 4063 has been revoked.
 ```
 
+Alternatively, if you job does not finish correctly, you may need to cancel your job allocation. You can do this by using `squeue` to get your jobID and `scancel` to cancel your allocation.
+
+```
+//Print out information about your job state
+gburdell@synestia2:~$ squeue
+PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)                                                                                       
+              4150  synestia interact  gburdell  R       1:32      1 synestia4
+//Cancel your job once done
+gburdell@synestia2:~$ scancel 4150
+salloc: Job allocation 4150 has been revoked.
+```
 
 ## Using Open OnDemand (OOD)
 
@@ -54,20 +63,21 @@ You need to first be connected to the [Georgia Tech VPN using GlobalProtect](htt
 
 Once you have logged in, you should see this screen with options for both the Pynq board cluster and for the Synestia VMs `(Synth and Emu)`.
 
-![figure 1](figures/pynq_cluster_synestia_ood.png)
+<img src="https://github.gatech.edu/jyoung9/crnch_pynq_cluster_admin/blob/93710755fb926d78eac128f5a5a94b2ee7931595/user_docs/figures/pynq_cluster_synestia_ood.png"  width="600" height="400">
 
 ### VNC GUI Session with OOD
-![figure 2 VNC GUI](figures/synestia_ood_vnc_desktop.png)
 
-![figure 3 VNC GUI](figures/synestia_ood_vnc_desktop_2.png)
+<img src="https://github.gatech.edu/jyoung9/crnch_pynq_cluster_admin/blob/93710755fb926d78eac128f5a5a94b2ee7931595/user_docs/figures/synestia_ood_vnc_desktop.png"  width="600" height="400">
+
+<img src="https://github.gatech.edu/jyoung9/crnch_pynq_cluster_admin/blob/93710755fb926d78eac128f5a5a94b2ee7931595/user_docs/figures/synestia_ood_vnc_desktop_2.png"  width="600" height="400">
 
 ### Jupyter Notebook with OOD
 
-![figure 4 VNC GUI](figures/synestia_ood_nb_1.png)
+<img src="https://github.gatech.edu/jyoung9/crnch_pynq_cluster_admin/blob/93710755fb926d78eac128f5a5a94b2ee7931595/user_docs/figures/synestia_ood_nb_1.png"  width="600" height="400">
 
-![figure 5 VNC GUI](figures/synestia_ood_nb_2.png)
+<img src="https://github.gatech.edu/jyoung9/crnch_pynq_cluster_admin/blob/93710755fb926d78eac128f5a5a94b2ee7931595/user_docs/figures/synestia_ood_nb_2.png"  width="400" height="300">
 
-![figure 6 VNC GUI](figures/synestia_ood_nb3.png)
+<img src="https://github.gatech.edu/jyoung9/crnch_pynq_cluster_admin/blob/93710755fb926d78eac128f5a5a94b2ee7931595/user_docs/figures/synestia_ood_nb3.png"  width="600" height="400">
 
 ### References:
 
