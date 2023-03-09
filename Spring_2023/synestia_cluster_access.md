@@ -90,3 +90,11 @@ Once you have logged in, you should see this screen with options for both the Py
 This is more for your information and not a requirement!
 * [YouTube - Introduction to Slurm (Part 3)](https://youtu.be/MI9jHavOt5o) - short videos from the official Slurm playlist if you'd like to dig deeper on how to use Slurm. 
 * [YouTube - Introduction to Slurm (Part 4)](https://youtu.be/aljhVYwyAoM) - short videos from the official Slurm playlist if you'd like to dig deeper on how to use Slurm.  
+
+### Q&A
+If the ODD doesn't work for you, you could also try 
+```
+ssh -Y <gtid>@synestia2.cc.gatech.edu
+vitis_hls
+```
+Then the GUI could also show up, (tested on Ubuntu OS).
