@@ -35,7 +35,15 @@ CUDA provides a grid abstraction such that you can imagine this code running for
 
 The sample cpp code for five-point stencil has been provided in **stencil.cpp** in the c_stencil subfolder. In the provided example, we sample 128 points from linear function **y=2x** by the step of **h=0.05**. The results are the derivative of the function **y=2x**, which is 2. 
 
-**Deliverable 1:** The first part of this assignment is (1) understand how c_stencil/stencil.cpp works (2) modify hls_template/hls_stencil_shift.cpp to write a HLS version of stencil kernel (3) your HLS code should pass C_simulation, C_synthesis and C/RTL Co-sim. (4) You need to benchmark the performance of your HLS design following the same instructions that you learn in HOMEWORK #5.
+**Deliverable 1:** The first part of this assignment is (1) understand how c_stencil/stencil.cpp works (2) modify hls_template/hls_stencil_shift.cpp to write a HLS version of stencil kernel (3) your HLS code should pass C_simulation, C_synthesis and C/RTL Co-sim. (4) You need to benchmark the performance of your HLS design following the same instructions that you learn in HOMEWORK #5. 
+
+**Note that:** We provide the tcl file to run the flow in the terminal without GUI in ./hls_template/test_hls.tcl. Here are steps to run it.
+```
+cd <path_to_GT-CS3220.GITHUB.IO>/Spring_2023/project3/hls_template
+vitis_hls -f test_hls.tcl
+```
+Then the report will show up in the path ```./hls_template/project3/solution1/sim/report/stencil5_cosim.rpt```.
+
 
 ## FPGA Optimization
 The code above performs very well on the SIMT architecture of the GPU. The computation is "embarassingly parallel," the GPU grid abstraction maps very naturally and directly to the underlying simulation grid, and the caches exploit data reuse effectively.
@@ -48,6 +56,7 @@ A [shift register](https://en.wikipedia.org/wiki/Shift_register) is an array of 
 With this building block, then, we can consider a different way to implement a stencil kernel. Instead of the data-parallel model where we run the same code on different data, we can think of a the data as flowing in a stream through the shift register. Each cycle we can perform one stencil computation, shift, and push one new input element into the shift register.
 
 **Deliverable 2:** (1) optimize your HLS code with shift register to improve the performance. (2) compare the performance between optimized implementation and the previous section. The performance should be measured through the C/RTL co-simulation latency (referring to hw5.md for detail). For implementation of shift register, you could refer to the Xilinx documentation for help [Xilinx Shift Register](https://xilinx.github.io/Vitis_Accel_Examples/2022.1/html/shift_register.html).
+
 
 ## Questions
 1. Why is the shift register version more efficient than the original code for the FPGA? Why is the GPU/CPU able to execute the original version efficiently anyway? [hint] Thinking of how CPU and GPU improve the throughput for parallel code.
