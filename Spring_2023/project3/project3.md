@@ -9,7 +9,7 @@ For example, if we are working with a 3D fluid simulation and we discretize each
 
 We will consider a very simple 1-dimensional first derivative [5-point stencil](https://en.wikipedia.org/wiki/Five-point_stencil) and consider an implementation in HLS. The equation is:
 
-$$f'(x) \approx \frac{-f(x + 2h) + 8f(x + h) - 8f(x-h) + f(x+2h)}{12h}$$
+$$f'(x) \approx \frac{-f(x + 2h) + 8f(x + h) - 8f(x-h) + f(x-2h)}{12h}$$
 
 where $h$ is the grid step size.
 
