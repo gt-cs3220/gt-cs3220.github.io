@@ -4,7 +4,7 @@
 
 ## Part 0 : Open jupyter notebook on pynq board cluster
 
-[step 1] Allocate pynq board resources through [slurm workload manager](https://slurm.schedmd.com/quickstart.hhw#6tml). Make sure you're connected to Georgia Tech network or through the GT VPN.
+[step 1] Allocate pynq board resources through [slurm workload manager](https://slurm.schedmd.com/quickstart.html). Make sure you're connected to Georgia Tech network or through the GT VPN.
 ```
 [local]$ ssh [your GT account username]@synestia2.cc.gatech.edu
 [synestia2]$ . /net/cs3220_share/student_scripts/init_student_vivado_env.sh
@@ -16,21 +16,30 @@ Running the scripts will allocate a 1-hour job on one of the available pynq boar
 [step 2] If the job launch was successful, you should see instructions like this:
 ```
 Submitting job via sbatch lab1.sbatch...
-Submitted batch job 82
+Submitted batch job 1386
 
 Job successfully submitted!
 Waiting for job to start...
 
+The authenticity of host 'pynq-z2-35 (130.207.113.112)' can't be established.
+ECDSA key fingerprint is SHA256:KQwfmg8xjzp90Ro9Owk/nE4LaAJ4zIvn9+sd28k9Ydg.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added 'pynq-z2-35,130.207.113.112' (ECDSA) to the list of known hosts.
+jtong45@pynq-z2-35's password: 
 Starting jupyter notebook...
 
 Connect to your jupyter notebook via the following steps:
    1) Press SHIFT + ~ then SHIFT + C to open an SSH console (The prompt 'ssh>' should appear on the next line)
       ***Note: '~' MUST be the first character on the line to be recognized as the escape character, in which case it will not appear on your terminal.***
       ***If you see the '~' character when you start typing, delete it, hit 'ENTER' and type 'SHIFT' + '~' + 'C' again.***
-   2) Type -L 51001:pynq-z2-1:51001 and then ENTER
-   3) Connect your browser to http://localhost:51001/?token=8dc6a1794a5f3d36d7ac733caab6f7d91a9d9c1137f9cbd2
+   2) Type -L :pynq-z2-35: and then ENTER
+   3) Connect your browser to http://localhost:/
 ```
-Follow the prompted instructions and start your jupyter notebook. The SSH console commands may not work for VS Code terminals. The notebook password is ```xilinx```.
+
+
+The above message shows the ip address of the PYNQ board, which is '130.207.113.112', then copy '130.207.113.112' into the URL in the browser and open PYNQ notebook, the notebook password is ```xilinx```.
+
+You could also follow the prompted instructions and start your jupyter notebook. The SSH console commands may not work for VS Code terminals. The notebook password is ```xilinx```.
 
 Other useful instructions:
 - ```sinfo``` checks the status of pynq board resources and show whether they are down, allocated or idle(available)
@@ -68,29 +77,30 @@ In this part, you will create a bitstream from Vivado and extend the tutorial to
 ### Step-Vitis: Open Vitis HLS and generate ip
 
 
-**Start Vitis HLS program (similar to HW#9)**
+**Start Vitis HLS program (similar to HW#5)**
+Note that the following figures are using a different version of HLS, pls follow the texts if the figure looks different from the Vitis HLS/Vivado in synestia cluster.
 
 [1] Click on “Create New Project” in the very first page.
 
 [2] Specify the “Project name” and “location” of the project
 
-[3] Click on “Add Files…” to add “<file_name>.cpp” and “<file_name>.h”. Do not add the test file yet.
+[3] Click on “Add Files…” to add “add.cpp” and “adder.h”. Put "add" as the top function. Do not add the test file yet.
 
 [4] In the same window, click on Browse, to choose the top function (you can add it later).
 
-[5] In the next window, click on “Add Files…” to add “test_<file_name>.cpp”, which is our testbench.
+[5] In the next window, click on “Add Files…” to add “add_test.cpp”, which is our testbench.
 
-[6] In the next window, you can leave Solution Name and Period as it is, and just click on “…” to choose **pynq** boards. Then click “Finish”.
+[6] In the next window, you can leave Solution Name and Period as it is, and just click on “…” to choose **pynq-z2** boards. Then click “Finish”.
 
 [7] Then, your project is opened. You can see the files in the left. 
 
-[8] If you haven't added top module, open "project settings" and click "Synthesis" and add top module "add" in this example as top function. 
+[8] If you haven't added top module, open "project settings" -> "Synthesis" and add top module "add" in this example as top function. 
 
 [9] To test the project, you can first “Run C Simulation” (you can find it under Project tab, or in the shortcuts). Once you click on that, a window appears, in which you may choose “Launch Debugger”, if you want to debug your code. Otherwise, you can just click on “OK” to run.
 
 [10] "Solution"->"Run C Synthesis" ->"All Solutions"
 
-[11] Set HLS version number: "Solution"->"Solution Settings":Export RTL : Ip Configuration: Version 0.0.1" 
+[11] Set HLS version number: "Solution" -> "Solution Settings" -> "Export" -> find "Format Selection" block and click (Configuration...) -> Modify Version as "0.0.1" in the pop-up window.
 <img src="figs/hw6/hls_version.png">
 
 [12] "solution"->"Export RTL"   
@@ -108,21 +118,19 @@ In this part, you will create a bitstream from Vivado and extend the tutorial to
 
 **Start Vivado application**
 
-[1] Create new project, select RTL project and then select pynq-z2 or pynq-z1 for your board. (you don't need to add any new files and just select default options)
+[1] Create new project, select RTL project and then select pynq-z2 for your board. (you don't need to add any new files and just select default options)
 
 [2] Click on the "IP Integrator/Create Block design," use default name "design_1", do "OK"
 
 <img src="figs/hw6/setting.png">
 
-[3] Project setting -> IP -> IP Repository -> Add the directory from the step-Vitis. 
-
-```<project_name>/solution1/impl/ip```
+[3] Project setting -> IP -> IP Repository -> click the "+" icon to add the directory ```<project_name>/solution1/impl/ip``` from the Vitis HLS step. 
 
 <img src="figs/hw6/ipsetting.png">
 
 <img src="figs/hw6/ipadd.png">
 
-[4] On the block design windiw, add our HLS IP module (e.g., add in hw #10), add Zynq Processing system 
+[4] Create Block Design (using default name **design_1**) -> In the Diagram Window, right click -> add ip -> search **Zynq Processing system** and add our HLS IP module **Add**.
 
 <img src="figs/hw6/add_diagram.png">
 
@@ -130,11 +138,11 @@ In this part, you will create a bitstream from Vivado and extend the tutorial to
 
 <img src="figs/hw6/add_ps.png"> 
 
-[5] Click on the "Run block automation" and "Run connection automation"
+[5] Click on the "Run block automation" and "Run connection automation" -> Click "Validate Design"
 
 <img src="figs/hw6/connection.png">
 
-[6] Go to "sources" and right click on your block design name, click on "Create HLD wrapper". Click on "Let Vivado do" option and press "OK". 
+[6] Go to "sources" and right click on your block design name, click on "Create HDL wrapper". Click on "Let Vivado do ..." option and press "OK". 
 
 <img src="figs/hw6/addhwwrapp.png">
 

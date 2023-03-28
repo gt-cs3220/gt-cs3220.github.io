@@ -63,21 +63,22 @@ You need to first be connected to the [Georgia Tech VPN using GlobalProtect](htt
 
 Once you have logged in, you should see this screen with options for both the Pynq board cluster and for the Synestia VMs `(Synth and Emu)`.
 
-<img src="https://github.gatech.edu/jyoung9/crnch_pynq_cluster_admin/blob/93710755fb926d78eac128f5a5a94b2ee7931595/user_docs/figures/pynq_cluster_synestia_ood.png"  width="600" height="400">
+
+<img src="https://github.com/gt-cs3220/gt-cs3220.github.io/blob/master/Spring_2023/figures/pynq_cluster_synestia_ood.png"  width="600" height="400">
 
 ### VNC GUI Session with OOD
 
-<img src="https://github.gatech.edu/jyoung9/crnch_pynq_cluster_admin/blob/93710755fb926d78eac128f5a5a94b2ee7931595/user_docs/figures/synestia_ood_vnc_desktop.png"  width="600" height="400">
+<img src="https://github.com/gt-cs3220/gt-cs3220.github.io/blob/master/Spring_2023/figures/synestia_ood_vnc_desktop.png"  width="600" height="400">
 
-<img src="https://github.gatech.edu/jyoung9/crnch_pynq_cluster_admin/blob/93710755fb926d78eac128f5a5a94b2ee7931595/user_docs/figures/synestia_ood_vnc_desktop_2.png"  width="600" height="400">
+<img src="https://github.com/gt-cs3220/gt-cs3220.github.io/blob/master/Spring_2023/figures/synestia_ood_vnc_desktop_2.png"  width="600" height="400">
 
 ### Jupyter Notebook with OOD
 
-<img src="https://github.gatech.edu/jyoung9/crnch_pynq_cluster_admin/blob/93710755fb926d78eac128f5a5a94b2ee7931595/user_docs/figures/synestia_ood_nb_1.png"  width="600" height="400">
+<img src="https://github.com/gt-cs3220/gt-cs3220.github.io/blob/master/Spring_2023/figures/synestia_ood_nb_1.png"  width="600" height="400">
 
-<img src="https://github.gatech.edu/jyoung9/crnch_pynq_cluster_admin/blob/93710755fb926d78eac128f5a5a94b2ee7931595/user_docs/figures/synestia_ood_nb_2.png"  width="400" height="300">
+<img src="https://github.com/gt-cs3220/gt-cs3220.github.io/blob/master/Spring_2023/figures/synestia_ood_nb_2.png"  width="400" height="300">
 
-<img src="https://github.gatech.edu/jyoung9/crnch_pynq_cluster_admin/blob/93710755fb926d78eac128f5a5a94b2ee7931595/user_docs/figures/synestia_ood_nb3.png"  width="600" height="400">
+<img src="https://github.com/gt-cs3220/gt-cs3220.github.io/blob/master/Spring_2023/figures/synestia_ood_nb3.png"  width="600" height="400">
 
 ### References:
 
