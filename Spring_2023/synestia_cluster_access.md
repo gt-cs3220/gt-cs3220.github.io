@@ -68,17 +68,36 @@ Once you have logged in, you should see this screen with options for both the Py
 
 ### VNC GUI Session with OOD
 
-<img src="https://github.com/gt-cs3220/gt-cs3220.github.io/blob/master/Spring_2023/figures/synestia_ood_vnc_desktop.png"  width="600" height="400">
+To request a VNC session for the Xilinx GUI tools, go to the `Synth and Emu` tab and select `Synestia Desktop`.
 
-<img src="https://github.com/gt-cs3220/gt-cs3220.github.io/blob/master/Spring_2023/figures/synestia_ood_vnc_desktop_2.png"  width="600" height="400">
+<img src="https://github.com/gt-cs3220/gt-cs3220.github.io/blob/master/Spring_2023/figures/synestia_ood_vnc_desktop.png"  width="600" height="300">
 
-### Jupyter Notebook with OOD
+Then you should be able to hit `Submit` to request a desktop job. You should not need to change any of the job parameters. The job will queue and when successful, you should see the following screen. Click `Launch Synestia Desktop` to open your VNC session.
 
-<img src="https://github.com/gt-cs3220/gt-cs3220.github.io/blob/master/Spring_2023/figures/synestia_ood_nb_1.png"  width="600" height="400">
+<img src="https://github.com/gt-cs3220/gt-cs3220.github.io/blob/master/Spring_2023/figures/synestia_ood_vnc_desktop_2.png"  width="600" height="300">
 
-<img src="https://github.com/gt-cs3220/gt-cs3220.github.io/blob/master/Spring_2023/figures/synestia_ood_nb_2.png"  width="400" height="300">
+Note that you can also run JupyterLab on the synestias. However, keep in mind that these VMs will not have the pynq files that are present on the Pynq-Z2 boards. See the next section for information on how to run Jupyter with the Pynq FPGAs.
 
-<img src="https://github.com/gt-cs3220/gt-cs3220.github.io/blob/master/Spring_2023/figures/synestia_ood_nb3.png"  width="600" height="400">
+### JupyterLab on Pynq boards with OOD
+
+The Pynq boards run JupyterLab and can also be accessed with OOD. On the main screen, go to the `Pynq-Z2` tab and select `Jupyter`.
+
+<img src="https://github.com/gt-cs3220/gt-cs3220.github.io/blob/master/Spring_2023/figures/synestia_ood_pynq_1.png"  width="600" height="300">
+
+This will bring up a tab to submit a new job. You should not need to change any of the parameter fields, so just hit `Submit`. Your job should queue and when successful (usually 1-2 minutes), it will display the following graphic with the `Connect to Jupyter` field. Select `Connect to Jupyter` to proceed and wait for your JupyterLab instance to open in a new tab. 
+
+<img src="https://github.com/gt-cs3220/gt-cs3220.github.io/blob/master/Spring_2023/figures/synestia_ood_pynq_2.png"  width="600" height="300">
+
+Once your JupyterLab screen has opened you should be able to open and run any Pynq-enabled notebooks.
+
+<img src="https://github.com/gt-cs3220/gt-cs3220.github.io/blob/master/Spring_2023/figures/synestia_ood_pynq_3.png"  width="600" height="400">
+
+### Q&A
+If you run into issues with Open OnDemand, please share a screenshot of your output and ideally your `output.log` with the TAs. You can find this log by clicking on the blue URL entitled `Session ID`. Click on the blue URL link (`7ad2...` in this example) and you should see several files. Copy the `output.log` contents to share with the TAs.
+
+<img src="https://github.com/gt-cs3220/gt-cs3220.github.io/blob/master/Spring_2023/figures/synestia_ood_pynq_2.png"  width="600" height="300">
+
+Please remember to not run jobs on the login node, synestia2!
 
 ### References:
 
@@ -92,10 +111,4 @@ This is more for your information and not a requirement!
 * [YouTube - Introduction to Slurm (Part 3)](https://youtu.be/MI9jHavOt5o) - short videos from the official Slurm playlist if you'd like to dig deeper on how to use Slurm. 
 * [YouTube - Introduction to Slurm (Part 4)](https://youtu.be/aljhVYwyAoM) - short videos from the official Slurm playlist if you'd like to dig deeper on how to use Slurm.  
 
-### Q&A
-If the ODD doesn't work for you, you could also try 
-```
-ssh -Y <gtid>@synestia2.cc.gatech.edu
-vitis_hls
-```
-Then the GUI could also show up, (tested on Ubuntu OS).
+
