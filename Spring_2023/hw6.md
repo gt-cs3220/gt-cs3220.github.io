@@ -2,55 +2,15 @@
 
 **(Due: 04/03/23) Monday 6pm**
 
+
+
+
 ## Part 0 : Open jupyter notebook on pynq board cluster
 
-[step 1] Allocate pynq board resources through [slurm workload manager](https://slurm.schedmd.com/quickstart.html). Make sure you're connected to Georgia Tech network or through the GT VPN.
-```
-[local]$ ssh [your GT account username]@synestia2.cc.gatech.edu
-[synestia2]$ . /net/cs3220_share/student_scripts/init_student_vivado_env.sh
-[synestia2]$ run-jupyter-pynq.sh
-```
-Running the scripts will allocate a 1-hour job on one of the available pynq boards. When prompted for password please enter the password for your GT account. 
 
+Please use synestia cluster [access](https://github.com/gt-cs3220/gt-cs3220.github.io/blob/master/Spring_2023/synestia_cluster_access.md) to know how to access pynq board. 
+We are encourage to use [ODD](https://github.com/gt-cs3220/gt-cs3220.github.io/blob/master/Spring_2023/synestia_cluster_access.md#using-open-ondemand-ood) 
 
-[step 2] If the job launch was successful, you should see instructions like this:
-```
-Submitting job via sbatch lab1.sbatch...
-Submitted batch job 1386
-
-Job successfully submitted!
-Waiting for job to start...
-
-The authenticity of host 'pynq-z2-35 (130.207.113.112)' can't be established.
-ECDSA key fingerprint is SHA256:KQwfmg8xjzp90Ro9Owk/nE4LaAJ4zIvn9+sd28k9Ydg.
-Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
-Warning: Permanently added 'pynq-z2-35,130.207.113.112' (ECDSA) to the list of known hosts.
-jtong45@pynq-z2-35's password: 
-Starting jupyter notebook...
-
-Connect to your jupyter notebook via the following steps:
-   1) Press SHIFT + ~ then SHIFT + C to open an SSH console (The prompt 'ssh>' should appear on the next line)
-      ***Note: '~' MUST be the first character on the line to be recognized as the escape character, in which case it will not appear on your terminal.***
-      ***If you see the '~' character when you start typing, delete it, hit 'ENTER' and type 'SHIFT' + '~' + 'C' again.***
-   2) Type -L :pynq-z2-35: and then ENTER
-   3) Connect your browser to http://localhost:/
-```
-
-
-The above message shows the ip address of the PYNQ board, which is '130.207.113.112', then copy '130.207.113.112' into the URL in the browser and open PYNQ notebook, the notebook password is ```xilinx```.
-
-You could also follow the prompted instructions and start your jupyter notebook. The SSH console commands may not work for VS Code terminals. The notebook password is ```xilinx```.
-
-Other useful instructions:
-- ```sinfo``` checks the status of pynq board resources and show whether they are down, allocated or idle(available)
-- ```squeue``` shows information about current submitted jobs
-- ```scancel [job id]``` terminate a current job. Get your job id by ```squeue```
-- ```slurm-jupyter-notebook -p pynq-cluster -N 1 --job-name lab2 --time=[Required time, e.g. 90:00]``` allow you to specify a longer job time
-- adding ```-w [board name, e.g. pynq-z2-30]``` to the above command allow you to specify the board you want to access. When using this option please first make sure the board is shown ```idle``` with ```sinfo```
-
-Common platform issues (WIP):
-- When running ```run-jupyter-pynq.sh``` terminal prints ```ssh: Could not resolve hostname ps aux | awk "match(\\$0,/jupyter.*port=([0-9]*)/,a) {print a[1]; exit}": Device or resource busy``` and doesn't assign board; root cause unclear, could be racing condition when multiple users trying to access resource. Increase sleep time or rebooting might help. Temporal solution: try again or specify another pynq board with the ```-w``` option.
-- When loading overlay in the first notebook block it prints TimeoutError ```[Errno 110] Connection timed out```; boards that give timeout need rebooting. Resolving the issue with test script improvement (WIP). Temporal solution: try again or specify another pynq board with the ```-w``` option.
 
 ## Part 1 : Follow the overlay tutorial with providied bistream  
 
