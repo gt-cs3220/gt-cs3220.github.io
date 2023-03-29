@@ -24,6 +24,9 @@ The tutorial file is copied from this repo: https://github.com/PeterOgden/overla
 
 [step 2] Go to the directory with your GT account ID and upload files to pynq board's ARM processor  
 (scalaradd.ipynb, tutorial_1.bit, tutorial_1.hwh) 
+
+If you are using onDemand GUI, you can skip this step since the ARM processor on Pynq board already has an access to your home. 
+
 <img src="figs/hw6/jupyter0.png">
 
 [step 3] Open scalaradd.ipynb in jupyternotebook and edit the file location to your directory (```/nethome/[GT account ID]```) in cell 1 and 7
@@ -60,7 +63,7 @@ Note that the following figures are using a different version of HLS, pls follow
 
 [10] "Solution"->"Run C Synthesis" ->"All Solutions"
 
-[11] Set HLS version number: "Solution" -> "Solution Settings" -> "Export" -> find "Format Selection" block and click (Configuration...) -> Modify Version as "0.0.1" in the pop-up window.
+[11] (you don't need for vivtis 2020 which is on synestia) Set HLS version number: "Solution" -> "Solution Settings" -> "Export" -> find "Format Selection" block and click (Configuration...) -> Modify Version as "0.0.1" in the pop-up window.
 <img src="figs/hw6/hls_version.png">
 
 [12] "solution"->"Export RTL"   
@@ -84,7 +87,7 @@ Note that the following figures are using a different version of HLS, pls follow
 
 <img src="figs/hw6/setting.png">
 
-[3] Project setting -> IP -> IP Repository -> click the "+" icon to add the directory ```<project_name>/solution1/impl/ip``` from the Vitis HLS step. 
+[3] Project Manager -> IP -> IP Repository -> click the "+" icon to add the directory ```<project_name>/solution1/impl/ip``` from the Vitis HLS step. 
 
 <img src="figs/hw6/ipsetting.png">
 
@@ -133,7 +136,7 @@ you can find hwh file.
 
 
 
-### (Optional task) Part 3 Convert the add example to take 3 inputs and change the name of module to add3
+### Part 3: Convert the add example to take 3 inputs and change the name of module to add3
 
 **IMP Note: Please create new Vitis HLS project and new Vivado project for part 3**
 
@@ -141,16 +144,17 @@ In Part 2 you created an addition IP that used 2 ports (a & b). For Part 3, you 
 
 ```d = a + b + c```
 
-Name of module is add3.
+Name of module is add3. (create add3.cpp add3.h myadd3.ipynb for 3 incput cases) 
 
 Overview of general steps we follow:
 
-Step [1] Open Vitis HLS and generate ip 
+Step [1] Open Vitis HLS and generate ip  : please pay attention to create HLS interface for d. 
 
 Step [2] Open Vivado: Add ip and PS and generate bitstream, metafiles  
 
 Step [3] Copy the bitstream of add3 into jupyter (pynq boards) 
 
+Step [4] Update myadd.ipynb to work with new module add3 and change the new file as myadd3.ipynb 
 
 Useful github links: 
 
@@ -161,7 +165,11 @@ Overlay tutorial code:  [https://github.com/PeterOgden/overlay_tutorial]
 
 
 
-**What to submit**: Please answer the question in hw6 in canvas. 
+**What to submit**:  add3.cpp add3.h a myadd3.ipynb, a screenshot of working proof from the jupyter notebook  
+ 
+** Grading poicy ** 
+(1 pt) If you cannot complete part-3, submit a screenshot of part-2. 
+If you complete part-3, you will get a full 3-point credit. 
 
 **In order to do project #4, hw#6 needs to be completed first. Please finish it ASAP.**
 
