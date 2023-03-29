@@ -166,7 +166,8 @@ Overlay tutorial code:  [https://github.com/PeterOgden/overlay_tutorial]
 
 
 **What to submit**:  add3.cpp add3.h a myadd3.ipynb, a screenshot of working proof from the jupyter notebook  
- 
+Example screenshot 
+<img src="figs/hw6/hw6_answer.png">
 ** Grading poicy ** 
 (1 pt) If you cannot complete part-3, submit a screenshot of part-2. 
 If you complete part-3, you will get a full 3-point credit. 
