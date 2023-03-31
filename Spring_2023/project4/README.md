@@ -35,7 +35,7 @@ In this paprt, you will change your design at least 3 models. You keep the funci
 
 *[Step-1-Vitis]*
 
-Create a comm IP from vitis.
+Create a comm IP from vitis or use the one provided with this project. 
 This vitis code doesn't have any contents other than having ports (inputs and output arguments) to verilog modules with memory-mapped connection using AXI lite protocol. So you can consider this vitis code as an AXI-Lite adapter, and luckily vitis generates all the necessary code for us. 
 Please use the following tutorials as guide:
 
