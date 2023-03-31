@@ -142,7 +142,10 @@ change reg10_val to store reg10_val_latch.
 
 [16] Analyze the timing report to get the FMAX 
 
-[17] Repeat this step after you change your architecture desigsns. 
+[17] The FMAX (MHz) a design can run on hardware in a given implementation = 1000/(T-WNS), with WNS positive or negative.
+<img src="figs/fmax.png">
+
+[18] Repeat this step after you change your architecture desigsns. 
 
 **What to submit** 
 
