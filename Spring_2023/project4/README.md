@@ -35,7 +35,7 @@ In this paprt, you will change your design at least 3 models. You keep the funci
 
 *[Step-1-Vitis]*
 
-Create a comm IP from vitis.
+Create a comm IP from vitis or use the one provided with this project. 
 This vitis code doesn't have any contents other than having ports (inputs and output arguments) to verilog modules with memory-mapped connection using AXI lite protocol. So you can consider this vitis code as an AXI-Lite adapter, and luckily vitis generates all the necessary code for us. 
 Please use the following tutorials as guide:
 
@@ -107,9 +107,9 @@ assign reg10_val = 32'd33;
 
 [6] Create HDL wrapper go to “sources” and right click on your block design name, click on “Create HDD wrapper”. Click on “Let Vivado manage wrapper and auto-update” option and press “OK”. Make the design_wrapper as a *top module* by right click in the source code "Set as Top". 
 
-[7] Synthesize/implementation/generate bitstreams
+[7] Synthesize/implementation/generate bitstreams (we skip 8-12 for project 4) 
 
-[9] Click on Project -> Generate Bitstream (it will ask to synthesize etc. and click yes)
+[8] Click on Project -> Generate Bitstream (it will ask to synthesize etc. and click yes)
 
 [9] Click on File -> Export -> Export block design, select the option of including bitstream
 
@@ -142,7 +142,10 @@ change reg10_val to store reg10_val_latch.
 
 [16] Analyze the timing report to get the FMAX 
 
-[17] Repeat this step after you change your architecture desigsns. 
+[17] The FMAX (MHz) a design can run on hardware in a given implementation = 1000/(T-WNS), with WNS positive or negative.
+<img src="figs/fmax.png">
+
+[18] Repeat synthesizations after you change your architecture desigsns. 
 
 **What to submit** 
 
