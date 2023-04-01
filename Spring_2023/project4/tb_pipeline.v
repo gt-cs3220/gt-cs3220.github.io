@@ -9,7 +9,7 @@ module tb_project();
 
     pipeline  my_pipeline(
         .clk   (clk),
-        .reset (reset),
+        .reset_n (reset_n),
         .out1  (out1),
         .out2  (out2)
     );
@@ -19,12 +19,12 @@ module tb_project();
    
        initial begin    
            clk = 0;
-           reset = 0;
+           reseti_n = 0;
    
-           #2 reset = 1;
+           #2 reset_n = 0;
        //    i = 0;
            
-           #10 reset = 0; 
+           #10 reset_n = 1; 
    
        end
    
