@@ -97,9 +97,9 @@ Textbooks: All online books are available in the library . (http://library.gatec
 
 **Option #2: Research track** 
 
-Projects #1-4, homeworks, mid-term are the same as option #1. 
+Projects #1-3, homeworks, mid-term are the same as option #1. 
 
-Project #5, and the final exam can be substituted with a research project. 
+Projects #4-5, and the final exam can be substituted with a research project. 
 
 The research project topics will be announced in the later semester.
 
@@ -178,19 +178,19 @@ As members of the Georgia Tech community, we are committed to creating a learnin
 |      | 2/22/23 | FPGA                 | FPGA structure                      | HW #4 (No grading: pass/fail)       | Project #2  (F)      |
 | 8    | 2/27/23 |                      | Review                              |                                     |                   |
 |      | 3/1/23  |                      | mid-term                            |                                     |                   |
-| 9    | 3/6/23  | Verilog+architecture | Hardware design patterns-I          |                                     |                   |
-|      | 3/8/23  | Verilog+architecture | Hardware design patterns-II         | HW #5 (W)                           |                   |
-| 10   | 3/13/23 | FPGA                 | FPGA introduction                   |                                     |                   |
-|      | 3/15/23 | Architecture         | IEEE Floating points                |                                     | Project #3 (F)       |
+| 9    | 3/6/23  | HLS |  HLS        |                                     |                   |
+|      | 3/8/23  | HLS |   Hw#5 + HLS       | HW #5 (W)                           |                   |
+| 10   | 3/13/23 | Architecture               | Hardware design patterns-I                 |                                     |                   |
+|      | 3/15/23 | Architecture         |  Hardware design patterns-II                                         |                                     | Project #3 (F)       |
 | 11   | 3/20/23 |                      | Spring break                        |                                     |                   |
 |      | 3/22/23 |                      | Spring break                        |                                     |                   |
-| 12   | 3/27/23 | HLS                  | HLS optimization (I)                |                                     |                   |
-|      | 3/29/23 | HLS                  | project #5                          | HW #6 (W)                           |                   |
-| 13   | 4/3/23  | HLS                  | ML accelerator                      |                                     |                   |
-|      | 4/5/23  | Architecture         | systolic Arrays                     |                                     | Project #4 (F)        |
-| 14   | 4/10/23 | HLS                  | HLS optimization (II)               |                                     |                   |
-|      | 4/12/23 | Architecture         | Power                               | HW #7 (W)                           |                   |
+| 12   | 3/27/23 |  Architecture                  | Power|                                     |                   |
+|      | 3/29/23 | FPGA                  | HW #6                        |                          |                   |
+| 13   | 4/3/23  | Architecture                    |    ML accelerators               |          HW #6 (M)                             |                   |
+|      | 4/5/23  | Architecture      |   systolic arrays                      |                                     |        |
+| 14   | 4/10/23 | Architecture                  | Project #5               |                                     |                 Project #4 (M)   |
+|      | 4/12/23 | Architecture         |IEEE Floating poitns |                            |                   |
 | 15   | 4/17/23 | Architecture         | security                            |                                     |                   |
-|      | 4/19/23 |                      | research presentation               |                                     | Project #5 (F)       |
-| 16   | 4/24/23 |                      | Review                              |                                     |                   |
+|      | 4/19/23 |                      | research presentation               |                  HW #7 (W)                   | |
+| 16   | 4/24/23 |                      | Review                              |                                     | Project #5 (M)       |
 |      | 4/28/23 |                      | Final exam  2:40 pm - 5:30 pm       |                                     |                   |
