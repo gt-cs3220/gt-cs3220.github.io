@@ -13,7 +13,7 @@ If your verilog code followed general HDL rules, you code would just run fine wi
 But if your code has uninitialized code or sequential code, it might not work with vivado simulation. In that case, you have to debug your code.
 
 Please make sure your add test code and set the path correctly. 
-Please use the towers.mem program binary from project #2. Please note that the provided tb_project2.v is testing part-2's pipeline design. so complete the step [1.a] & [2] in [part-2](#change) to make your pipeline compile with tb file. 
+Please use the towers.mem program binary from project #2. Please note that the provided tb_project.v is testing part-2's pipeline design. so complete the step [1.a] & [2] in [part-2](#change) to make your pipeline compile with tb file. 
 
 Please, refer to the following video for the step by step process of setting up your project inside the Vivado IDE (https://gtvault-my.sharepoint.com/:v:/g/personal/hkim358_gatech_edu/EUBkMA18qbFKifiMjaO4rN8BCrTy4NOPdCG6KvJ_Jr9cOA?e=e3ZkXN) 
 
