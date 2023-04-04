@@ -19,7 +19,7 @@ module tb_project();
    
        initial begin    
            clk = 0;
-           reseti_n = 0;
+           reset_n = 0;
    
            #2 reset_n = 0;
        //    i = 0;
