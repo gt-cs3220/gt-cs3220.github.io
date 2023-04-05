@@ -41,9 +41,7 @@ Create a comm IP from vitis or use the one provided with this project. (use comm
 This vitis code doesn't have any contents other than having ports (inputs and output arguments) to verilog modules with memory-mapped connection using AXI lite protocol. So you can consider this vitis code as an AXI-Lite adapter, and luckily vitis generates all the necessary code for us. 
 Please use the following tutorials as guide:
 
-(https://projects.digilentinc.com/whitney-knitter/rapid-prototyping-vitis-hls-ip-designs-using-pynq-f76910)
-
-(https://www.hackster.io/whitney-knitter/rapid-prototyping-vitis-hls-ip-designs-using-pynq-f76910)
+(https://www.hackster.io/whitney-knitter/rapid-prototyping-vitis-hls-ip-designs-using-pynq-f76910) The method to create Vitis IP is the same process like what we did in hw6.
 
 (https://www.youtube.com/watch?v=4WnFQFHrtkg&t=416s)
 
