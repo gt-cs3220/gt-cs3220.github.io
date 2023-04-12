@@ -1,4 +1,4 @@
-# Project 5 (15 pts) : Edge detection FPGA accelerator
+# Project 5 (10 pts) : Edge detection FPGA accelerator
 
 ## Description
 
@@ -20,11 +20,11 @@ In this design, you will optimize your code to handle bigger image sizes or fast
 
 The possible options of code are:
 
-[1] Remove copy loops 
+[1] Remove copy loops (It will improve the performance) 
 
-[2] Convert the code to use tiled convolution operation.
+[2] Convert the code to use tiled convolution operation. (it will provide the scalability) 
 
-[3] Convert the code to use line buffers: 
+[3] Convert the code to use line buffers (or sliding window). ( It will provide the scalability)  
 
 Please see algorithm_2D_convolution_linebuffer directory example. Complete convolution implementation based on the line buffer. Using line buffer, you can even scale up your design. Please synthesize the code and check the results. Please note that you cannot just copy the HLS example code but it is OK to implement your code based on the HLS example code. 
 
@@ -39,7 +39,7 @@ Draw three charts (y-axis: total latency, BRAM usage, DSP usage), x-axis differe
 
 Please note that part-1 does not require for you to run the code on pynq boards. 
 
-## Part-2 Produce Bit-stream and running it on Pynq boards (5 pts)
+## Part-2 Produce Bit-stream and running it on Pynq boards (Bonus 2 pts)
 
 In this step you will use Vitis and Vivado to build the FPGA block diagram as you did in project #4.
 This Sobel accelerator uses DMA to transfer images between CPU and the FPGA, so you need to use a different interconnect. Please refer to DMA instructions provided in the DMA directory for instructions on how to set up DMA.
@@ -57,9 +57,8 @@ The provided jupyternotebook code is a minimum code to start. It requires for yo
 
 
 * Grading Policy* 
-(5 pts): complete the design and demonstrate the edge detection 
-(3 pts): see gray/solid box 
-(2 pt): Be able to synthesize and produce bit streams (doesn't run on jupyter notebook) 
+(2 pts): complete the design and demonstrate the edge detection 
+(1 pt): see gray/solid box 
 
 ## What to submit
  
@@ -68,6 +67,7 @@ The provided jupyternotebook code is a minimum code to start. It requires for yo
 [3] source code of your example.cpp 
 [4] Vivado project (please include the source code) 
 [5] A screenshot of the notebook jupyter included in the report. 
+[6] modified ipynb file 
 
 *FAQ* 
 
