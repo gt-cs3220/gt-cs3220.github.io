@@ -78,3 +78,5 @@ The provided jupyternotebook code is a minimum code to start. It requires for yo
 *[Q]: what should I discuss in the report? 
 
 *[A]: Discuss what optimizations you did and how the latency has been changed. 
+
+
