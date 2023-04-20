@@ -36,6 +36,11 @@ Draw three charts (y-axis: total latency, BRAM usage, DSP usage), x-axis differe
 * Grading Policy * 
 (10 pts) : improves performance and supports scalalbe image  
 (8 pts) : improves performance or support scalable image
+Details on the grade distrubition based on implementation:
+1. Removing loops only                                  3 pts
+2. Removing loops + other significant optimizations     5 pts
+3. Tiled or line buffer implementation                  8 pts
+4. Line buffer + other optimizations                    10 pts
 
 Please note that part-1 does not require for you to run the code on pynq boards. 
 
